@@ -207,4 +207,8 @@ body {
     font-size: 30px;
     margin-top: 40px;
   }
-  
+  a{
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
