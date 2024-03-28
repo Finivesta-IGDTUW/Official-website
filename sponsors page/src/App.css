@@ -1,0 +1,73 @@
+.our_sponsors{
+  /* title text */
+  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  font-size: 60px; 
+  margin-top: 4rem;}
+
+.our_partners{
+  /* second heading */
+  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  font-size: 60px; 
+  margin-top: 4rem;}
+ 
+body{background-color:black;}
+
+.sponsors_container{
+  /* our sponsors wala box */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap:85px;
+  padding:13px;
+  margin-left: 120px;
+  margin-right: 120px ; 
+  margin-top: 100px;
+  justify-content: space-around;
+}
+.partners_container{
+  /* our partners wala box */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap:85px;
+  padding:13px;
+  margin-left: 120px;
+  margin-right: 120px ; 
+  justify-content: space-around;
+
+}
+.logos img{
+  height: 15rem;
+  width: 15rem;
+}
+@media(max-width:600px){
+  .our_sponsors{
+      /* title text */
+      font-size: 50px; }
+  
+  .our_partners{
+      /* second heading */   
+      font-size: 50px; 
+  }
+  .box1{
+      margin-top: 80px;
+  }
+
+}
+/* Media queriess <3 */
+@media(max-width:450px){
+  .our_sponsors{
+      /* title text */
+      font-size: 35px; }
+  
+  .our_partners{
+      /* second heading */    
+      font-size: 35px;}
+  .box1{
+      margin-top: 50px;
+  }
+}
