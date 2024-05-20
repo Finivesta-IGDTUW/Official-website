@@ -44,7 +44,7 @@ function App() {
     
 <div>
   {/* Akhriti's code */}
- { <section className="hero" style={{ backgroundImage: `url(${"./imgs/Home.jpeg"}) ` }}>
+ { <section className="hero" style={{ backgroundImage: `url(${"./imgsH/Home.jpeg"}) ` }}>
       <div className="content">
         <h1><span>FINANCE</span> AND <span>ECONOMICS</span> SOCIETY</h1>
         <p>
@@ -66,7 +66,7 @@ function App() {
                 <p className="abc">Finivesta, the Finance and Economics society of IGDTUW, is a women-led organization that provides students with various opportunities that helps them to enhance their financial knowledge, gain practical insights through workshops, seminars, events and competitions with the aim of encapsulating financial principles, patience, risk management in bright young minds.We strive for excellence in every financial domain and connect students to various shareholders of the same and nurture young minds with the values of passion and self investment.</p>
             </div>
             <div className="col-1">
-                <img src="./imgs/F1.jpg" ></img>
+                <img src="./imgsH/F1.jpg" ></img>
             </div>
         </div>
         <div className="list">
@@ -95,45 +95,45 @@ function App() {
       
       <div className="box">
       <a href='https://www.linkedin.com/feed/update/urn:li:activity:7160561756463853568/' target='_blank' rel='noreferrer'>
-            <img src={"./imgs/Finlatics.png"} alt="Finlatics"/>
+            <img src={"./imgsH/Finlatics.png"} alt="Finlatics"/>
             </a>
           </div>
      
 
       <div className="box">
       <a href='https://www.instagram.com/p/C2opSv9yFFC/' target='_blank' rel='noreferrer'>
-        <img src={"./imgs/Melange.png"} alt="Money Melange"/>
+        <img src={"./imgsH/Melange.png"} alt="Money Melange"/>
         </a>
       </div>
 
       <div className="box">
       <a href='https://www.instagram.com/p/C2AVhH4SE0P/' target='_blank' rel='noreferrer'>
-          <img src={"./imgs/Kharche pe charcha.png"} alt="kharche pr charcha"/>
+          <img src={"./imgsH/Kharche pe charcha.png"} alt="kharche pr charcha"/>
           </a>
       </div>
 
 
       <div className="box"> 
       <a href='https://www.instagram.com/p/CzqYKwRLp24/' target='_blank' rel='noreferrer'>
-          <img src={"./imgs/BiddingBitz.png"} alt="speaker"/>
+          <img src={"./imgsH/BiddingBitz.png"} alt="speaker"/>
           </a>
       </div>
 
       <div className="box">
       <a href='https://www.instagram.com/p/CzbC7cLPrex/' target='_blank' rel='noreferrer'>
-        <img src={"./imgs/Speaker.png"} alt="speaker"/>
+        <img src={"./imgsH/Speaker.png"} alt="speaker"/>
         </a>
       </div>
 
       <div className="box">
       <a href='https://www.instagram.com/p/CxXRs1Pywdn/' target='_blank' rel='noreferrer'>
-          <img src={"./imgs/CollegeTrading.png"} alt="speaker"/>
+          <img src={"./imgsH/CollegeTrading.png"} alt="speaker"/>
           </a>
       </div>
 
       <div className="box">
       <a href='https://www.instagram.com/p/CxAA9weLEea/?img_index=1' target='_blank' rel='noreferrer'>
-          <img src={"./imgs/Orientation.png"} alt="speaker"/>
+          <img src={"./imgsH/Orientation.png"} alt="speaker"/>
           </a>
       </div>
      
