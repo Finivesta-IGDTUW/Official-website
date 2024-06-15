@@ -1,0 +1,477 @@
+/* found out about SVG images can try those here
+since unable to use fontawesome stylesheet in head of html*/
+
+
+* { 
+  margin: 0; 
+  padding: 0; 
+} 
+
+.background { 
+  background: #222222; 
+  background-blend-mode: darken; 
+  background-size: cover; 
+  overflow: hidden;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the logo */
+.logo {
+  float: left;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 2px;
+  padding-top: 7px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: right; /* Align the content to the right */
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 20px;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-link-active {
+  color: #5f8e33;
+}
+
+.box-main { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  max-width: 80%; 
+  margin: auto; 
+  height: 80%;
+  width: 100%; 
+  flex-direction: column;
+} 
+
+.text-big {
+  font-weight: 500; 
+  font-family: 'Poppins', sans-serif;
+  color: rgb(195, 195, 195);
+  padding-top: 18vh;
+}
+
+.text-small { 
+  font-size: 24px; 
+  color: rgb(170, 170, 170);
+  font-family: 'Poppins', sans-serif;
+  filter: drop-shadow(10px 5px 3px black);
+  font-size: 2vw;
+  padding-top: 9vh;
+}
+
+.main {
+  display: flexbox; 
+  text-align: center;
+  align-items: justify; 
+  justify-content: space-between; 
+  background-image: url('./Media/TeamPic.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 2.439;
+  background-color: rgba(0, 0, 0, 0.55);
+  background-blend-mode: multiply;
+}
+/*https://stackoverflow.com/questions/12112746/how-can-i-tint-a-background-image-with-css*/
+
+.cores {
+  display: block;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-size: xx-large;
+  color: #fff1f1;
+  background-color: #010100;
+  text-align: center;
+  padding-top: 50px;
+  height: auto;
+  gap: 50px;
+}
+
+.cores-photo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.photo {
+  width: 250px;
+  object-fit: cover;
+  justify-self: center;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.photo a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 64.5px;
+}
+
+.photo:hover .image{
+  opacity: 0.5;
+}
+
+.photo:hover .overlay{
+  opacity: 1;
+}
+
+@media (min-width: 1210px) {
+  .photo {
+    width: 350px
+  }
+
+  .overlay {
+    padding-top: 17px;
+    padding-bottom: 70px;
+  }
+
+  p {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .text-big {
+    padding-top: 150px;
+  }
+
+  .text-small {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cores-photo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .text-big {
+    padding-top: 140px;
+  }
+
+  .text-small {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cores-photo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .photo {
+    width: 300px;
+  }
+
+  .overlay {
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .text-big {
+    padding-top: 100px;
+  }
+
+  .text-small {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 510px) {
+  a {
+    font-size: 10px;
+  }
+
+  .text-big {
+    padding-top: 12vh;
+    font-size: 20px;
+  }
+
+  .text-small {
+    padding-top: 6vh;
+  }
+}
+
+@media (max-width: 430px) {
+  .photo {
+    width: 200px
+  }
+
+  .overlay {
+    padding-top: 6px;
+    padding-bottom: 60px;
+  }
+
+  p {
+    font-size: 3vw;
+  }
+
+  a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  a {
+    font-size: 5px;
+  }
+
+  .text-big {
+    font-size: 15px;
+  }
+}
+
+hr {
+  height: 0.1px;
+  background-color: #5f8e33;
+  border: none;
+}
+
+.social {
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  color: #fff1f1;
+  background-color: #010100; 
+  text-align: center; 
+  height: 200px;
+}
+
+.social p {
+  font-size: 35px;
+  padding-top: 10px;
+}
+
+/* .social-icon {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+  justify-self: center;
+  grid-template-columns: repeat(3, 1fr);
+  height: 39px;
+  filter: invert(58%) sepia(0%) saturate(1779%) hue-rotate(92deg) brightness(93%) contrast(82%);
+} */
+
+.footer { 
+  background-color: #222222; 
+} 
+
+.text-footer { 
+  text-align: center; 
+  padding: 15px; 
+  font-family:'Poppins', sans-serif; 
+  display: flex; 
+  justify-content: center; 
+  color: #898989;
+  font-size: 12px;  
+} 
+
+.fbut {
+  color: #5f8e33;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.fbut-active {
+  color: #555;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+}
+
+.section {
+  background-size: cover;
+  background-position: center;
+}
+
+
+.footer-content {
+  display: flexbox;
+  text-align: center;
+  gap: 2px;
+  padding: 5px; 
+  box-sizing: border-box;/* Add padding to create a gap from the edges */
+}
+
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+
+.hamburger {
+  display: none;
+  right: 0;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 776px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.icons img {
+  filter: invert(65%) sepia(99%) saturate(6868%) hue-rotate(90deg) brightness(94%) contrast(88%);
+  width: 30px; 
+  height: 30px;
+  /* filter: invert(100%); (for white icons)*/
+}
+
+.title {
+  color: #5f8e33;
+}
+
+.social-icon {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+  justify-self: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.social-icon a {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  /* height: auto; */
+  border-radius: 50%; /* Create a circular shape */
+  background-color: white; /* Set the background color to white */
+}
+
+.social-icon a img {  
+  filter: brightness(0%);
+  /* filter: invert(65%) sepia(99%) saturate(6868%) hue-rotate(90deg) brightness(94%) contrast(88%); */
+  width: 30px; /* Adjust the size of the icons */
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the icons */
+}
+
