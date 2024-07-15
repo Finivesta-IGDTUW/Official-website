@@ -1,0 +1,115 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: #333333;
+    z-index: 1000;
+  }
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+}
+
+.logoheader a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logoheader a span {
+    color: #8739fa;
+}
+
+.logoheader img {
+    height: max-content;
+    width: auto;
+}
+  
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+  
+.menu a {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu {
+    margin-block-start: 0;
+    padding-inline-start: 0;
+}
+
+.menu:hover a {
+    opacity: 0.4;
+}
+
+.menu a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+}
+
+.logoheader img{
+    width:4rem;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .menu {
+        flex-direction: column;
+        background-color: #333333;
+        align-items: start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .menu a {
+        margin-left: 12px;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}

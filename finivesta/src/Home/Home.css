@@ -1,0 +1,317 @@
+
+.Home {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  /* font: 'Poppins'; */
+  /* outline: 1px solid red; */
+  
+    
+  } 
+  
+  
+  
+  
+  /*Aakriti's code*/
+  /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  } */
+  
+  .hero {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    background-size: cover; /* Makes the background image cover the entire container */
+    background-position: center center;
+    background-image: url('./Images/Home.jpeg');
+  }
+  
+  /* Media queries for responsiveness */
+  @media only screen and (max-width: 768px) {
+    .hero {
+      background-size: contain; /* Adjust for smaller screens */
+      background-repeat: no-repeat;
+      background-position: top;
+      zoom: normal;
+    }
+  
+    .content{
+      width: 90%;
+    }
+  
+    .content h1{
+      width: 90%;
+  
+    }
+  
+    .content p{
+      max-width: 90%;
+    }
+  }
+  
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%; /* Adjusted for responsiveness */
+    margin: 0 auto; /* Center horizontally */
+    color: black;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    margin-top: 10%; /* Adjusted for responsiveness */
+    padding: 0 20px; /* Added padding for responsiveness */
+  }
+  
+  .content h1 {
+    font-size: 5vw; /* Responsive font size */
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    max-width: 40%;
+  }
+  
+  .content h1 span {
+    color: #71B139;
+  }
+  
+  .content p {
+    font-size: 1.7vw; /* Responsive font size */
+    font-weight: 300;
+    line-height: 1.5;
+    max-width:40%;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: flex-start; /* Adjust as needed */
+  }
+  
+  .button1,
+  .button2 {
+    margin: 1.5%; /* Adjust margins between buttons */
+    padding: 1% 2%; /* Adjust padding for buttons */
+    border-radius: 10px;
+    margin-left: 0%;
+    ; /* Responsive font size */
+  }
+  
+  .button1 {
+    background-color: #71B139;
+    color: white;
+    border: none;
+    font-size: 2vw
+  }
+  
+  .button2 {
+    background-color: transparent;
+    color: white;
+    border: 1px solid transparent; /* Added border for visibility */
+    font-size: 1.3vw;
+  }
+  
+  
+  
+  /*Jhalak's code  */
+  .course{
+    padding: 5vh 0;
+    background-color: black;
+  }
+  
+  .subtitle{
+    font-size: 65px;
+    font-weight: 600;
+    /* font-family: 'Poppins',sans-serif; */
+    margin-top: 20px;
+    color: #71b139;
+    margin-bottom: 0%;
+    text-align: center;
+  }
+  
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  
+  .col-1{
+    flex-basis: 40%;
+  }
+  
+  .col-1 img{
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  
+  .col-2{
+    flex-basis: 52%;
+  }
+  
+  .abc{
+    color: white;
+    /* font-family: 'Poppins',sans-serif; */
+    font-size: 28px;
+  }
+  
+  .list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .list div{
+    background: #71B139;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 200;
+    border-radius: 25px;
+  }
+  
+  .list div h1{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    /* font-family: 'Poppins',sans-serif; */
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .list div p{
+    color: white;
+    /* font-family: 'Poppins',sans-serif; */
+    font-size: 22px;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  
+  @media screen and (max-width: 600px){
+    .abc{
+        font-size: 20px;
+    }
+    .list div p{
+        font-size: 10px;
+    } 
+  }
+  @media screen and (min-width: 601px) and (max-width: 1000px){
+    .abc{
+        font-size: 25px;
+    }
+    .list div p{
+        font-size: 17px;
+    } 
+  }
+  @media screen and (min-width: 1001px){
+    .abc{
+        font-size: 28px;
+    }
+    .list div p{
+        font-size: 22px;
+    } 
+  }
+  @media screen and (max-width: 1000px){
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+  }
+  
+  
+    
+  /* Dishas Code */
+  
+  .Carousel{
+    height: 100%;
+    width: 100%;
+    background-color: #222222;
+  }
+  
+  .carousel{
+    padding: 1rem;
+    background-color: #222222;
+    color: #fff;
+    height: 100vh;
+    width: 98.7vw;
+    text-align: center;
+    /* margin: 0 10px; */
+    /* overflow-x: hidden !important; */
+  }
+  .carousel h2{
+    text-align: center;
+    font-size: 50px;
+    color: #71B139;
+    padding: 0px 0px 80px 0px;
+  }
+  .box img{
+    
+    height:300px;
+    width: 300px;
+  
+   
+  }
+  @media screen and (min-width: 1280px){
+  .box img{
+    height: 350px !important;
+    width: 350px !important;
+  }
+  .box{
+    /* margin: 1rem; */
+    width: 360px !important;
+    height: 360px !important;
+    margin: 10px;
+  }
+  }
+  .box{
+    /* margin: 1rem; */
+    width: 310px !important;
+    height: 310px;
+    margin: 10px;
+  }
+  
+  button.slick-arrow.slick-prev{
+  width: 30px;
+  height: 30px;
+  }
+  button.slick-arrow.slick-prev::before{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    }
+    button.slick-arrow.slick-next{
+      width: 30px;
+      height: 30px;
+      }
+      button.slick-arrow.slick-next::before{
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        }
+        .slick-dots li.slick-active button:before{
+          color: #fff !important;
+          opacity: 1 !important;
+        }
+        .slick-dots li button:before{
+          color: #fff !important;
+          opacity: .25 !important;
+        } 

@@ -286,58 +286,7 @@ hr {
   filter: invert(58%) sepia(0%) saturate(1779%) hue-rotate(92deg) brightness(93%) contrast(82%);
 }
 
-.footer { 
-  background-color: #222222; 
-} 
 
-.text-footer { 
-  text-align: center; 
-  padding: 15px; 
-  font-family:'Poppins', sans-serif; 
-  display: flex; 
-  justify-content: center; 
-  color: #898989; 
-} 
-
-.fbut {
-  color: #5f8e33;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 2vw;
-}
-
-.fbut-active {
-  color: #555;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
-}
-
-.section {
-  background-size: cover;
-  background-position: center;
-}
-
-
-.footer-content {
-  display: grid;
-  text-align: center;
-  gap: 2px;
-  padding: 5px; 
-  box-sizing: border-box;
-  grid-template-columns: repeat(6, 1fr) ;
-}
-
-@media (max-width: 440px) {
-  .footer-content {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .f-but {
-    font-size: 4vw;
-  }
-}
 
 
 ::-webkit-scrollbar{

@@ -1,0 +1,201 @@
+.Events{
+    margin: 0;
+    padding: 5px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* overflow-x: hidden; */
+  background-color: black;
+  color: white;
+  
+  }
+  
+  
+  
+  /* My code */
+  .Heading{
+    text-align: center;
+    font-size: 60px;
+    position: relative;
+    top: 42px;
+    padding: 10px !important;
+  
+  }
+  
+  .Events div{
+    padding: 10px;
+  }
+  
+  .Year{
+   margin-top: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #71B139;
+    font-size: 50px;
+    position: relative;
+    padding: 20px 130px;
+    margin: 10px;
+  
+   top :85px;
+   /* left:115px; */
+  
+  }
+  /* overflow-x: hidden; */
+  
+  .flex1{
+    /* display: grid; */
+    /* flex-wrap:; */
+    /* overflow: hidden; */
+   
+   /* display: inline-block; */
+   /* grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+   gap: 20px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 30px;
+  margin: 30px;
+  /* padding: 0px !impotant; */
+  
+  
+  }
+  
+  
+  
+  
+  .element{
+   
+    width: 400px;
+    height: 400px;
+    /* display: block; */
+    /* margin: 0 auto; */
+  margin: 100px auto;
+  
+  
+    /* overflow-x: hidden; */
+  
+  }
+  .element img{
+  height: 400px;
+  width: 400px;
+   position:relative;
+  padding: 0px !important;
+   /* position: absolute; */
+  right: 75px;
+  top: 45px;
+  /* left: 10px; */
+  /* top: 10px; */
+  }
+  
+  .element1{
+    background-color: #32D1B542;
+    
+  }
+  .element2{
+    background-color: #427B64;
+  
+  }
+  .element3{
+  background-color:  #35550E;
+  
+  }
+  .element4{
+    background-color:  #436b3f;
+    
+    }
+  .title{
+    position: relative;
+    top:50px;
+    text-align: center;
+    right: 65px;
+    
+  }
+  
+  /* Responsiveness */
+  
+  @media screen and (max-device-width: 500px ) and (min-device-width: 100px){
+    /* .flex1{
+      flex-direction: column;
+    } */
+    .flex1{
+      /* flex-direction: column; */
+      justify-content: center !important;
+      align-items: center !important;
+      /* padding: 20px !important; */
+    
+    }
+  
+    .Year{
+      text-align: center;
+      /* left: 0px !important; */
+    }
+    .element{
+      width: 250px !important;
+      height: 250px !important;
+       margin: 85px 30px !important;
+       /* position: relative !important;
+       left:30px !important; */
+       /* justify-content: center !important; */
+    }
+    .element img{
+      width: 250px !important;
+      height: 250px !important;
+  top:45px !important;
+    }
+  }
+  
+  @media screen and (max-device-width: 900px) and (min-device-width:500px) {
+  
+    .flex1{
+      /* flex-direction: column; */
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  
+    .Year{
+      text-align: center;
+      /* left: 0px !important; */
+    }
+    .element{
+      width: 300px !important;
+      height: 300px !important;
+      margin: 100px 80px!important;
+    
+      /* justify-content: center !important; */
+    }
+    .element img{
+      width: 300px !important;
+      height: 300px !important;
+      top: 45px !important;
+    }
+  }
+  
+  
+  @media screen and (max-device-width: 1300px) and (min-device-width: 900px) {
+    .flex1{
+      /* flex-direction: column; */
+      /* display: flex !important; */
+      justify-content: center !important;
+      align-items: center !important;
+       position: relative !important;
+      left:30px !important;
+    }
+  
+    /* .Year{
+      text-align: center;
+    } */
+    .element{
+      width: 300px !important;
+      height: 300px !important;
+      margin: 100px auto !important;
+      /* justify-content: center !important; */
+  
+     
+    }
+    .element img{
+      width: 300px !important;
+      height: 300px !important;
+      top: 45px !important;
+    }
+  }
