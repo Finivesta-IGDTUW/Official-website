@@ -1,5 +1,5 @@
 import React from "react";
-import "./Youtube.css";
+import "../Resources.css";
 
 import YoutubeImage from '../Images/yt_img2.png';
 
@@ -14,9 +14,9 @@ const Youtube = () => {
 
 
 
-<div class="box">
+<div class="resourcesbox">
 
- <div class="box1">
+ <div class="boxsmall">
   
      <div class="img">
        <img src={YoutubeImage} />
@@ -28,7 +28,7 @@ const Youtube = () => {
     </div>
  </div>
 
- <div class="box2">
+ <div class="boxsmall">
   
     <div class="img">
       <img src={YoutubeImage}/>
@@ -40,7 +40,7 @@ const Youtube = () => {
       
   </div>
 </div>
-<div class="box3">
+<div class="boxsmall">
   
     <div class="img">
       <img src={YoutubeImage}/>
@@ -52,11 +52,8 @@ const Youtube = () => {
     
     </div>
   </div>
-</div>
-
-<div class="container">
   
-  <div class="box4">
+  <div class="boxsmall">
     <div class="img">
       <img src={YoutubeImage}/>
     </div>
@@ -69,7 +66,7 @@ const Youtube = () => {
 
   </div>
 
-  <div class="box5">
+  <div class="boxsmall">
     <div class="img">
       <img src={YoutubeImage}/>
     </div>
@@ -80,7 +77,7 @@ const Youtube = () => {
 
   </div>
 
- <div class="box6">
+ <div class="boxsmall">
     <div class="img">
       <img src={YoutubeImage}/>
     </div>

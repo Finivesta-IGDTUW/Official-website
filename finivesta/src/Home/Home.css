@@ -1,5 +1,4 @@
-
-*{
+.Home {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -254,7 +253,6 @@ font-family: 'Poppins', sans-serif;
   background-color: #222222;
   color: #fff;
   height: 100vh;
-  width: 98.7vw;
   text-align: center;
   /* margin: 0 10px; */
   /* overflow-x: hidden !important; */

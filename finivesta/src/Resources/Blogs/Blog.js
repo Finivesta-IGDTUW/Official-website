@@ -1,5 +1,5 @@
 import React from "react";
-import "./Blog.css";
+import "../Resources.css";
 
 import BlogsImage from '../Images/blogs_img2.png';
 
@@ -7,15 +7,15 @@ const Blog = () => {
   return (
         <div>
 
-            <div class="header">
+            <div class="resources">
             <h1>Blogs</h1>
             <p>Access the wealth of knowledge and tools in our <br/>resource library.</p>
             </div>
 
 
-            <div class="box">
+            <div class="resourcesbox">
 
-            <div class="box1" href="/resources/blogs">
+            <div class="boxsmall">
             
                 <div class="img">
                 <img src={BlogsImage} />
@@ -27,7 +27,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div class="box2">
+            <div class="boxsmall">
             
                 <div class="img">
                 <img src={BlogsImage}/>
@@ -38,7 +38,7 @@ const Blog = () => {
                 
             </div>
             </div>
-            <div class="box3">
+            <div class="boxsmall">
             
                 <div class="img">
                 <img src={BlogsImage}/>
@@ -48,11 +48,8 @@ const Blog = () => {
                 
                 </div>
             </div>
-            </div>
-
-            <div class="container">
             
-            <div class="box4">
+            <div class="boxsmall">
                 <div class="img">
                 <img src={BlogsImage}/>
                 </div>
@@ -63,7 +60,7 @@ const Blog = () => {
 
             </div>
 
-            <div class="box5">
+            <div class="boxsmall">
                 <div class="img">
                 <img src={BlogsImage}/>
                 </div>
@@ -75,7 +72,7 @@ const Blog = () => {
 
             </div>
 
-            <div class="box6">
+            <div class="boxsmall">
                 <div class="img">
                 <img src={BlogsImage}/>
                 </div>

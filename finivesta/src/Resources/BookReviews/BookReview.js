@@ -1,5 +1,5 @@
 import React from "react";
-import "./BookReview.css";
+import "../Resources.css";
 
 import BooksImage from '../Images/book_reviews_img.png';
 
@@ -14,9 +14,9 @@ const BookReview = () => {
 
 
 
-<div class="box">
+<div class="resourcesbox">
 
- <div class="box1">
+ <div class="boxsmall">
   
      <div class="img">
        <img src={BooksImage} />
@@ -27,7 +27,7 @@ const BookReview = () => {
     </div>
  </div>
 
- <div class="box2">
+ <div class="boxsmall">
   
     <div class="img">
       <img src={BooksImage}/>
@@ -37,7 +37,7 @@ const BookReview = () => {
       
   </div>
 </div>
-<div class="box3">
+<div class="boxsmall">
   
     <div class="img">
       <img src={BooksImage}/>
@@ -47,11 +47,8 @@ const BookReview = () => {
     
     </div>
   </div>
-</div>
-
-<div class="container">
   
-  <div class="box4">
+  <div class="boxsmall">
     <div class="img">
       <img src={BooksImage}/>
     </div>
@@ -62,7 +59,7 @@ const BookReview = () => {
 
   </div>
 
-  <div class="box5">
+  <div class="boxsmall">
     <div class="img">
       <img src={BooksImage}/>
     </div>
@@ -73,7 +70,7 @@ const BookReview = () => {
 
   </div>
 
- <div class="box6">
+ <div class="boxsmall">
     <div class="img">
       <img src={BooksImage}/>
     </div>

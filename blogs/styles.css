@@ -16,13 +16,13 @@ body {
     margin-top: 70px; /* Adjust the top and bottom margin as needed */
     margin-bottom: 30px;
     font-size: 2.5em; /* Large font size for the main header title */
-    font-family: poppins;
+    
   }
   
   .header p {
     margin-top: 20px; /* Adjust the top and bottom margin as needed */
     font-size: 20px; /* Slightly larger font size for subtitle */
-    font-family: poppins;
+    
     text-align: center;
   }
   
@@ -53,7 +53,7 @@ body {
   }
   .box1 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
@@ -85,7 +85,7 @@ body {
   
   .box2 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
@@ -113,7 +113,7 @@ body {
   }
   .box3 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
@@ -145,7 +145,7 @@ body {
   }
   .box4 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
@@ -173,7 +173,7 @@ body {
   }
   .box5 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
@@ -200,7 +200,7 @@ body {
   }
   .box6 h2{
     color: white;
-    font-family: poppins;
+    
     margin-left: 25px;
     text-align: left;
     font-weight: 400;
