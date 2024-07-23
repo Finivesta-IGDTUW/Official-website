@@ -18,7 +18,7 @@ const Blog = () => {
             <div class="boxsmall">
             
                 <div class="img">
-                <img src={BlogsImage} />
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>AI in Finance</h2>
@@ -30,7 +30,7 @@ const Blog = () => {
             <div class="boxsmall">
             
                 <div class="img">
-                <img src={BlogsImage}/>
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Finance and Technology</h2>
@@ -41,7 +41,7 @@ const Blog = () => {
             <div class="boxsmall">
             
                 <div class="img">
-                <img src={BlogsImage}/>
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Power of Compounding</h2>
@@ -51,7 +51,7 @@ const Blog = () => {
             
             <div class="boxsmall">
                 <div class="img">
-                <img src={BlogsImage}/>
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Liquidation</h2>
@@ -62,7 +62,7 @@ const Blog = () => {
 
             <div class="boxsmall">
                 <div class="img">
-                <img src={BlogsImage}/>
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Financial Literacy</h2>
@@ -74,7 +74,7 @@ const Blog = () => {
 
             <div class="boxsmall">
                 <div class="img">
-                <img src={BlogsImage}/>
+                <img src={BlogsImage} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Bidding</h2>

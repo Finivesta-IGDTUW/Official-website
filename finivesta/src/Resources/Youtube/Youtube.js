@@ -16,7 +16,7 @@ const Youtube = () => {
 
           <div class="boxsmall">
             <div class="img">
-              <img src={YoutubeImage} />
+              <img src={YoutubeImage} alt="Cover"/>
             </div>
             <div class="text">
               <h2>Budgeting</h2>
@@ -26,7 +26,7 @@ const Youtube = () => {
 
           <div class="boxsmall">
               <div class="img">
-                <img src={YoutubeImage}/>
+                <img src={YoutubeImage} alt="Cover"/>
               </div>
               <div class="text">
                 <h2>Investing</h2>
@@ -37,7 +37,7 @@ const Youtube = () => {
 
           <div class="boxsmall">
             <div class="img">
-              <img src={YoutubeImage}/>
+              <img src={YoutubeImage} alt="Cover"/>
             </div>
             <div class="text">
               <h2>Stock/Share Market</h2>
@@ -48,7 +48,7 @@ const Youtube = () => {
           
           <div class="boxsmall">
             <div class="img">
-              <img src={YoutubeImage}/>
+              <img src={YoutubeImage} alt="Cover"/>
             </div>
             <div class="text">
               <h2>Crypto</h2>
@@ -59,7 +59,7 @@ const Youtube = () => {
 
           <div class="boxsmall">
             <div class="img">
-              <img src={YoutubeImage}/>
+              <img src={YoutubeImage} alt="Cover"/>
             </div>
             <div class="text">
               <h2>Financial Literacy</h2>
@@ -68,7 +68,7 @@ const Youtube = () => {
 
         <div class="boxsmall">
             <div class="img">
-              <img src={YoutubeImage}/>
+              <img src={YoutubeImage} alt="Cover"/>
             </div>
             <div class="text">
               <h2>Bidding</h2>

@@ -13,7 +13,7 @@ const Resources = () => {
         <div className="resources">
             <div className="header">
             <h1>Resources</h1>
-            <p>Access the wealth of knowledge and tools in our resource library.</p>
+            <p>Access the wealth of knowledge and tools in our resource library.<br/>Having trouble here with media queries in boxsmall container on width and margin</p>
             </div>
     
             <div className="resourcesbox">

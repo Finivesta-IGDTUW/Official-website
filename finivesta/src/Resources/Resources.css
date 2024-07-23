@@ -67,6 +67,7 @@ body {
   border-radius:16px;
   background-color: rgb(31, 30, 30);
   margin: 1vw;
+  text-decoration: none;
 }
 
 .boxsmall img{
@@ -80,10 +81,17 @@ body {
   font-weight: 400;
   font-size: 30px;
   margin: 0;
+  text-decoration: none;
 }
 .boxsmall p{
   color: white;
   text-align: justify;
   font-weight: 400;
   font-size: 16px;
+  text-decoration: none;
+}
+
+.boxsmall a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
 }
