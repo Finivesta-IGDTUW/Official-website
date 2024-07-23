@@ -7,9 +7,9 @@ const Blog = () => {
   return (
         <div>
 
-            <div class="resources">
-            <h1>Blogs</h1>
-            <p>Access the wealth of knowledge and tools in our <br/>resource library.</p>
+            <div class="header">
+                <h1>Blogs</h1>
+                <p>Access the wealth of knowledge and tools in our <br/>resource library.</p>
             </div>
 
 
