@@ -10,6 +10,14 @@ import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import Blog from "./Resources/Blogs/Blog";
+
+import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
+import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
+import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
+import Liquidation from "./Resources/Blogs/Blogpages/liquidation";
+import Financialliteracy from "./Resources/Blogs/Blogpages/financial-literacy";
+import Bidding from "./Resources/Blogs/Blogpages/bidding";
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Team from "./Team/Team";
@@ -28,9 +36,18 @@ function App() {
           <Route path="/events" element={<Events/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
-          <Route path="/resources/blogs" element={<Blog/>}/>
-          <Route path="/resources/books" element={<BookReview/>}/>
-          <Route path="/resources/youtube" element={<Youtube/>}/>
+          {/* Under resources */}
+            <Route path="/resources/blogs" element={<Blog/>}/>
+              {/* Blog pages */}
+              <Route path="/resources/blogs/AI-in-finance" element={<AIinfinance/>}/>
+              <Route path="/resources/blogs/finance-and-technology" element={<Financeandtechnology/>}/>
+              <Route path="/resources/blogs/power-of-compounding" element={<Powerofcompounding/>}/>
+              <Route path="/resources/blogs/liquidation" element={<Liquidation/>}/>
+              <Route path="/resources/blogs/financial-literacy" element={<Financialliteracy/>}/>
+              <Route path="/resources/blogs/bidding" element={<Bidding/>}/>
+              
+            <Route path="/resources/books" element={<BookReview/>}/>
+            <Route path="/resources/youtube" element={<Youtube/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>

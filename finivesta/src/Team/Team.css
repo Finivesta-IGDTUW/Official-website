@@ -131,7 +131,7 @@ since unable to use fontawesome stylesheet in head of html*/
 
 @media (min-width: 1210px) {
   
-    p {
+    .Team p {
       font-size: 3vw;
     }
 }
@@ -185,7 +185,7 @@ since unable to use fontawesome stylesheet in head of html*/
 }
 
 @media (max-width: 510px) {
-    a {
+    .Team a {
         font-size: 10px;
     }
   
@@ -197,17 +197,17 @@ since unable to use fontawesome stylesheet in head of html*/
 
 @media (max-width: 430px) {
   
-    p {
+    .Team p {
         font-size: 3vw;
     }
   
-    a {
+    .Team a {
         font-size: 10px;
     }
 }
 
 @media (max-width: 360px) {
-    a {
+    .Team a {
         font-size: 5px;
     }
   

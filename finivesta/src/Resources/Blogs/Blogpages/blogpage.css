@@ -1,0 +1,33 @@
+.blog-page-box{
+    border-radius: 10px;
+    height: max-content;
+    width: 80%;
+    background: rgb(40, 39, 39);
+    padding:1rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+.blog-header{
+    background-color: rgb(183, 38, 62);
+    /* background-image: url(); */
+    width: 90%;
+    margin: auto;
+    margin-top:1.5rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+.blog-header h1{
+    font-size: 2.2rem;
+}
+.blog-para{
+    font-size: 1.1rem;
+    color: white;
+    margin: auto;
+    padding: 5rem;
+    padding-top: 2rem;
+}
