@@ -1,9 +1,20 @@
 import React from "react";
 import "../Resources.css";
 
-import BlogsImage from '../Images/blogs_img2.png';
+import I1 from '../Images/blogs/1.jpg';
+import I2 from '../Images/blogs/2.webp';
+import I3 from '../Images/blogs/3.jpg';
+import I4 from '../Images/blogs/4.jpg';
+import I5 from '../Images/blogs/5.jpg';
+import I6 from '../Images/blogs/6.jpg';
+import I7 from '../Images/blogs/7.jpg';
 
 const Blog = () => {
+
+    const redirectToLink = (url) => {
+        window.location.href = url;
+    };
+
   return (
         <div>
 
@@ -15,73 +26,73 @@ const Blog = () => {
 
             <div class="resourcesbox">
 
-            <div class="boxsmall">
-            
+            <div class="boxsmall blog" onClick={() => redirectToLink("https://docs.google.com/document/d/1JPCbYWxeHt82bj_XBnxiC_ILS0an8TfEgUt6rhlG-hk/edit?usp=sharing")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                    <img src={I1} alt="Cover"/>
                 </div>
                 <div class="text">
-                <h2>AI in Finance</h2>
-                <a href="https://docs.google.com/document/d/1JPCbYWxeHt82bj_XBnxiC_ILS0an8TfEgUt6rhlG-hk/edit?usp=sharing">The financial industry and AI</a>
-                
+                    <h2>AI in Finance</h2>
+                    <a>The financial industry and AI</a>
                 </div>
             </div>
 
-            <div class="boxsmall">
-            
+            <div class="boxsmall blog" onClick={() => redirectToLink("https://docs.google.com/document/d/14UnacR779oQ6MPQMj1Lw1OAdCSSSHjzmtb8LXzM5b1A/edit?usp=sharing")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                <img src={I2} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Finance and Technology</h2>
-                <a href="https://docs.google.com/document/d/14UnacR779oQ6MPQMj1Lw1OAdCSSSHjzmtb8LXzM5b1A/edit?usp=sharing">All about fintech</a>
-                
+                <a>All about fintech</a>          
             </div>
             </div>
-            <div class="boxsmall">
-            
+
+            <div class="boxsmall blog" onClick={() => redirectToLink("")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                <img src={I3} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Power of Compounding</h2>
-                
                 </div>
             </div>
             
-            <div class="boxsmall">
+            <div class="boxsmall blog" onClick={() => redirectToLink("")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                <img src={I4} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Liquidation</h2>
-                
+            </div>
             </div>
 
-            </div>
-
-            <div class="boxsmall">
+            <div class="boxsmall blog" onClick={() => redirectToLink("https://docs.google.com/document/d/1YZBWhPdx8-3grhuQFB4O48oBolRoDktjeqqlCJTduVI/edit?usp=drivesdk")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                <img src={I5} alt="Cover"/>
                 </div>
                 <div class="text">
                 <h2>Financial Literacy</h2>
-                <a href="https://docs.google.com/document/d/1YZBWhPdx8-3grhuQFB4O48oBolRoDktjeqqlCJTduVI/edit?usp=drivesdk">Importance of learning finance</a>
-                
+                <a>Importance of learning finance</a>
+            </div>
             </div>
 
-            </div>
-
-            <div class="boxsmall">
+            <div class="boxsmall blog" onClick={() => redirectToLink("")}>
                 <div class="img">
-                <img src={BlogsImage} alt="Cover"/>
+                    <img src={I6} alt="Cover"/>
                 </div>
                 <div class="text">
-                <h2>Bidding</h2>
-                
+                    <h2>Bidding</h2>
+                </div>
             </div>
 
+            <div class="boxsmall blog" onClick={() => redirectToLink("")}>
+                <div class="img">
+                    <img src={I7} alt="Cover"/>
+                </div>
+                <div class="text">
+                    <h2>Liquidation</h2>
+                </div>
             </div>
+
+
             </div>
 
         </div>

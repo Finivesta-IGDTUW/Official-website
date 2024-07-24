@@ -21,13 +21,13 @@ body {
 .header h1 {
   margin-top: 10vh; /* Adjust the top and bottom margin as needed */
   margin-bottom: 30px;
-  font-size: 2.5em; /* Large font size for the main header title */
+  font-size: 2.2em; /* Large font size for the main header title */
   
 }
 
 .header p {
   margin-top: 20px; /* Adjust the top and bottom margin as needed */
-  font-size: 20px; /* Slightly larger font size for subtitle */
+  font-size: 1em; /* Slightly larger font size for subtitle */
   
   text-align: center;
 }
@@ -35,6 +35,55 @@ body {
 .resourcesbox{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+
+.boxsmall {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 23vw;
+  height: auto;
+  border-radius:16px;
+  background-color: rgb(31, 30, 30);
+  margin: 1vw;
+  text-decoration: none;
+}
+
+.boxsmall img{
+  height: 220px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+}
+
+.review img {
+  height: auto;
+  aspect-ratio: 0.622;
+}
+
+.blog :hover {
+  cursor: pointer;
+}
+
+.boxsmall h2{
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.boxsmall p{
+  color: white;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.boxsmall a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -57,41 +106,4 @@ body {
     width: 90vw;
     margin: 5vw;
   }
-}
-
-.boxsmall {
-  padding: 10px;
-  box-sizing: border-box;
-  width: 23vw;
-  height: auto;
-  border-radius:16px;
-  background-color: rgb(31, 30, 30);
-  margin: 1vw;
-  text-decoration: none;
-}
-
-.boxsmall img{
-  height: 220px;
-  width: 100%;
-  border: 1px solid #FFFFFF;
-}
-.boxsmall h2{
-  color: white;
-  text-align: center;
-  font-weight: 400;
-  font-size: 30px;
-  margin: 0;
-  text-decoration: none;
-}
-.boxsmall p{
-  color: white;
-  text-align: justify;
-  font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.boxsmall a {
-  text-decoration: none;
-  color: rgb(141, 141, 141);
 }
