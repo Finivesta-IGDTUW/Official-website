@@ -1,9 +1,29 @@
 import React from "react";
 import "./Footer.css";
 
+import X from './Media/X.png';
+import Insta from './Media/Insta.png';
+import LinkedIn from './Media/LinkedIn.png';
+
 const Footer = () => {
   return (
         <footer className="footer">
+
+            <div className="socialdiv">
+                <p>Socials</p>
+                <div className="social-icon">
+                    <a href="#">
+                    <img src={Insta} alt="Insta" height="23"/>
+                    </a>
+                    <a href="#">
+                    <img src={X} alt="X" height="29"/>
+                    </a>
+                    <a href="#">
+                    <img src={LinkedIn} alt="LinkedIn" height="23"/>
+                    </a>
+                </div>
+            </div>
+
             <div className="footer-content">
                 <a className="fbut" href="/">Home</a>
                 <a className="fbut" href="/events">Events</a>

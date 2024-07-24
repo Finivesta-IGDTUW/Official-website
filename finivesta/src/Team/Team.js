@@ -20,7 +20,6 @@ import Gargi from './Media/Treas_Gargi.png';
 import Meera from './Media/Treas_Meera.png';
 import Saachi from './Media/Tech_Saachi.png';
 
-import X from './Media/X.png';
 import Insta from './Media/Insta.png';
 import LinkedIn from './Media/LinkedIn.png';
 
@@ -246,21 +245,6 @@ const Team = () => {
                 
                 </div>
             </section>
-
-            <div className="socialdiv">
-                <p>Socials</p>
-                <div className="social-icon">
-                    <a href="#">
-                    <img src={Insta} alt="Insta" height="23"/>
-                    </a>
-                    <a href="#">
-                    <img src={X} alt="X" height="29"/>
-                    </a>
-                    <a href="#">
-                    <img src={LinkedIn} alt="LinkedIn" height="23"/>
-                    </a>
-                </div>
-            </div>
 
         </div> 
         

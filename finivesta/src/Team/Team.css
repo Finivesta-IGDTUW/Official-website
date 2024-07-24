@@ -217,38 +217,6 @@ since unable to use fontawesome stylesheet in head of html*/
 }
 
 
-.socialdiv {
-    display: grid;
-    font-family: 'Poppins', sans-serif;
-    color: #fff1f1;
-    background-color: #010100; 
-    text-align: center; 
-    height: auto;
-    justify-content: center;
-    padding-bottom: 2em;
-}
-
-.socialdiv p {
-    font-size: 35px;
-    padding: 5px 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.social-icon {
-    padding: 5px 0px;
-    display: grid;
-    gap: 10px;
-    text-align: center;
-    width: 260px;
-    justify-self: center;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    height: 39px;
-    filter: invert(58%) sepia(0%) saturate(1779%) hue-rotate(92deg) brightness(93%) contrast(82%);
-}
-
-
 
 
 ::-webkit-scrollbar{
