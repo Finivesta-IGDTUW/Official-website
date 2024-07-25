@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import bid-img.jpeg from './blog-images/bid-img.jpeg';
+
 const Bidding = () => {
   return (
         <div>
