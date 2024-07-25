@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import liq-img.jpeg from './blog-images/liq-img.jpeg';
+
 const Liquidation = () => {
   return (
         <div>
