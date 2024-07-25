@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import comp-img.png from './blog-images/comp-img.png';
+
 const Powerofcompounding = () => {
   return (
         <div>
