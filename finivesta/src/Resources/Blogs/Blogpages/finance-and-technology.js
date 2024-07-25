@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import fintech-img.png from './blog-images/fintech-img.png';
+
 const Financeandtechnology = () => {
   return (
         <div>
