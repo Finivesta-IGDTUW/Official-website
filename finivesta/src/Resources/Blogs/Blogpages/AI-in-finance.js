@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import aifin-img.png from './blog-images/aifin-img.png';
+
 const AIinfinance = () => {
   return (
         <div>
