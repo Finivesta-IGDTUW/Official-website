@@ -1,6 +1,8 @@
 import React from "react";
 import "./blogpage.css";
 
+import finlit-img.png from './blog-images/finlit-img.png';
+
 const Financialliteracy = () => {
   return (
         <div>
