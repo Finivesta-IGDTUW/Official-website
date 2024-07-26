@@ -21,7 +21,7 @@ const BookReview = () => {
 
               <div class="boxsmall">
                   <div class="img review">
-                    <img src={Doglapan} />
+                    <img src={Doglapan} alt="Doglapan Book Cover" />
                   </div>
                   <div class="text">
                     <h2>Review 1</h2>
@@ -30,7 +30,7 @@ const BookReview = () => {
 
             <div class="boxsmall">
                 <div class="img review">
-                  <img src={IntellInvestor}/>
+                  <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 2</h2>
@@ -39,7 +39,7 @@ const BookReview = () => {
 
             <div class="boxsmall">
                 <div class="img review">
-                  <img src={RichDadPoorDad}/>
+                  <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 3</h2>
@@ -48,7 +48,7 @@ const BookReview = () => {
               
               <div class="boxsmall">
                 <div class="img review">
-                  <img src={PsychOfMoney}/>
+                  <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 4</h2>
@@ -57,7 +57,7 @@ const BookReview = () => {
 
               <div class="boxsmall">
                 <div class="img review">
-                  <img src={MillNextDoor}/>
+                  <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 5</h2>
@@ -66,7 +66,7 @@ const BookReview = () => {
 
             <div class="boxsmall">
                 <div class="img review">
-                  <img src={RichestManInBabylon}/>
+                  <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 6</h2>
@@ -75,7 +75,7 @@ const BookReview = () => {
 
             <div class="boxsmall">
                 <div class="img review">
-                  <img src={MoneyOrLife}/>
+                  <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Review 7</h2>
