@@ -6,7 +6,7 @@ import I2 from '../Images/blogs/2.webp';
 import I3 from '../Images/blogs/3.jpg';
 import I4 from '../Images/blogs/4.jpg';
 import I5 from '../Images/blogs/5.jpg';
-import I6 from '../Images/blogs/6.jpg';
+import I6 from '../Images/blogs/6.jpg'; 
 
 const Blog = () => {
     return ( 
@@ -48,7 +48,7 @@ const Blog = () => {
                     </div>
                     <div className="text">
                         <h2>Power of Compounding</h2>
-                        <p className="blog-byline-card">Wealth unlocks through Compounding Magic </p>
+                        <p className="blog-byline-card" >Wealth unlocks through Compounding Magic </p>
                     </div>
                     </a>
                 </div>
