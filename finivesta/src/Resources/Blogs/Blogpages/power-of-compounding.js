@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import comp-img.png from './blog-images/comp-img.png';
-
 const Powerofcompounding = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div className="blog-header" style={{ backgroundImage: "url(comp-img.png)" }}>
+                <div className="blog-header compound">
                     <h1>Power of Compounding</h1>
                     <p> Wealth unlocks through <br/> Compounding Magic </p>
                 </div>

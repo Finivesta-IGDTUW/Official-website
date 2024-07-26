@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import finlit-img.png from './blog-images/finlit-img.png';
-
 const Financialliteracy = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div className="blog-header" style={{ backgroundImage: "url(finlit-img.png)" }}>
+                <div className="blog-header finlit">
                     <h1>Financial Literacy</h1>
                     <p> Empowering Education and <br/> Mastering Finance </p>
                 </div>

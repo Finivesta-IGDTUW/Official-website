@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import fintech-img.png from './blog-images/fintech-img.png';
-
 const Financeandtechnology = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div className="blog-header" style={{ backgroundImage: "url(fintech-img.png)" }}>
+                <div className="blog-header fintech">
                     <h1>Finance & Techhnology</h1>
                     <p> Bridging Finance and Innovation </p>
                 </div>

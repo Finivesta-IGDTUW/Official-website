@@ -37,3 +37,27 @@
     padding: 5rem;
     padding-top: 2rem;
 }
+
+.ai-fin {
+    background-image: url('./blog-images/aifin-img.png');
+}
+
+.fintech {
+    background-image: url('./blog-images/fintech-img.png');
+}
+
+.bid {
+    background-image: url('./blog-images/bid-img.jpeg');
+}
+
+.finlit {
+    background-image: url('./blog-images/finlit-img.png');
+}
+
+.liqui {
+    background-image: url('./blog-images/liq-img.jpeg');
+}
+
+.compound {
+    background-image: url('./blog-images/bid-img.jpeg');
+}

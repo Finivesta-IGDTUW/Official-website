@@ -7,7 +7,6 @@ import I3 from '../Images/blogs/3.jpg';
 import I4 from '../Images/blogs/4.jpg';
 import I5 from '../Images/blogs/5.jpg';
 import I6 from '../Images/blogs/6.jpg';
-import I7 from '../Images/blogs/7.jpg';
 
 const Blog = () => {
     return (
@@ -16,6 +15,7 @@ const Blog = () => {
                 <h1>Blogs</h1>
                 <p>Access the wealth of knowledge and tools in our <br/> resource library.</p>
             </div>
+            
             <div className="resourcesbox">
                 <div className="boxsmall blog" >
                     <a href="/resources/blogs/AI-in-finance">

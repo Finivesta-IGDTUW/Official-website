@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import liq-img.jpeg from './blog-images/liq-img.jpeg';
-
 const Liquidation = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div className="blog-header" style={{ backgroundImage: "url(liq-img.jpeg)" }}>
+                <div className="blog-header liqui">
                     <h1>Liquidation</h1>
                     <p> Turning assets into Financial Opportunities </p>
                 </div>

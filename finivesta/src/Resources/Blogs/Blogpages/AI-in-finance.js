@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import aifin-img.png from './blog-images/aifin-img.png';
-
 const AIinfinance = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div class="blog-header" style={{ backgroundImage: "url(aifin-img.png)" }}>
+                <div class="blog-header ai-fin">
                     <h1>AI in finance</h1>
                     <p> World of artificial intelligence overlaps <br/> with that of finance</p>
                 </div>

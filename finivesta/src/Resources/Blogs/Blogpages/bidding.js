@@ -1,13 +1,11 @@
 import React from "react";
 import "./blogpage.css";
 
-import bid-img.jpeg from './blog-images/bid-img.jpeg';
-
 const Bidding = () => {
   return (
         <div>
             <div className="blog-page-box">
-                <div className="blog-header" style={{ backgroundImage: "url(bid-img.jpeg)" }}>
+                <div className="blog-header bid">
                     <h1>Bidding</h1>
                     <p> Strategic Bidding: Key to Success </p>
                 </div>
