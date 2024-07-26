@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin: auto; 
+  margin: auto;  
   overflow: hidden;
 }
 
@@ -22,7 +22,6 @@ body {
   margin-top: 10vh; /* Adjust the top and bottom margin as needed */
   margin-bottom: 30px;
   font-size: 2.2em; /* Large font size for the main header title */
-  
 }
 
 .header p {
@@ -33,28 +32,38 @@ body {
 }
 
 .resourcesbox{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
 }
 
 
 .boxsmall {
-  padding: 10px;
+  padding: 1.2rem;
   box-sizing: border-box;
-  width: 23vw;
+  width: 22vw;
   height: auto;
   border-radius:16px;
   background-color: rgb(31, 30, 30);
-  margin: 1vw;
+  margin: 1.3vw;
+  margin-bottom: 3vw;
   text-decoration: none;
+  transition: 0.3s ease-out;
 }
 
 .boxsmall img{
-  height: 220px;
+  height: 200px;
   width: 100%;
-  border: 1px solid #FFFFFF;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(9, 11, 10, 0.7);
+  /* border: 1px solid #FFFFFF; */
 }
-
+.boxsmall:hover{
+  transform: translatey(-10px);
+}
 .review img {
   height: auto;
   aspect-ratio: 0.622;
@@ -67,17 +76,23 @@ body {
 .boxsmall h2{
   color: white;
   text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.4rem;
   margin: 0;
   text-decoration: none;
+  height: 2.8rem; /*the height of two lines*/
 }
 
 .boxsmall p{
   color: white;
-  text-align: justify;
+  text-align: center;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.9rem;
+  padding: 0.8rem;
   text-decoration: none;
 }
 
@@ -85,25 +100,41 @@ body {
   text-decoration: none;
   color: rgb(141, 141, 141);
 }
+.bookreview .boxsmall:hover,
+.Youtube .boxsmall:hover{
+    transform: scale(0.98);
+}
+.Youtube .links:hover{
+  text-decoration: underline;
+}
 
-@media only screen and (max-width: 1000px) {
-  .resourcesbox {
-    grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 1900px) {
+  .blogpage .boxsmall{
+    width: 19vw;
+    margin: 3vw;
   }
-
+}
+@media only screen and (min-width: 1500px) {
+  .resources .boxsmall{
+    width: 20vw;
+    margin: 1vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
   .boxsmall {
-    width: 46vw;
+    width: 34vw;
     margin: 2vw;
   }
 }
-
-@media only screen and (max-width: 600px) {
-  .resourcesbox {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
+@media only screen and (max-width: 700px) {
   .boxsmall {
-    width: 90vw;
+    width: 50vw;
+    margin: 5vw;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .boxsmall {
+    width: 80vw;
     margin: 5vw;
   }
 }
