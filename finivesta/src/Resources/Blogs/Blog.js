@@ -12,7 +12,7 @@ import I7 from '../Images/blogs/7.jpg';
 const Blog = () => {
     return (
         <div>
-            <div classNameName="header">
+            <div className="header">
                 <h1>Blogs</h1>
                 <p>Access the wealth of knowledge and tools in our <br/> resource library.</p>
             </div>
