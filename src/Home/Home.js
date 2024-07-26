@@ -56,8 +56,7 @@ const Home = () => {
           <div className="content">
             <h1><span>FINANCE</span> AND <span>ECONOMICS</span> SOCIETY</h1>
             <p>
-             
-            Creating a vibrant women community of finance and economics enthusiasts
+             Creating a vibrant women community of finance and economics enthusiasts
             </p>
             <div className="button-container">
               <button className="button1" data-inline="true" >IGDTUW</button>
