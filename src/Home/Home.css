@@ -168,6 +168,7 @@
   color: white;
   /* font-family: 'Poppins',sans-serif; */
   font-size: 28px;
+  text-align: justify;
 }
 
 .list{
@@ -206,15 +207,19 @@
   margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
+  text-align: justify;
 }
 
 @media screen and (max-width: 600px){
-  .abc{
-      font-size: 20px;
+    .abc{
+        font-size: 16px;
+    }
+    .list div p{
+        font-size: 12px;
+    } 
+    .list div h1{
+      font-size: 35px;
   }
-  .list div p{
-      font-size: 10px;
-  } 
 }
 @media screen and (min-width: 601px) and (max-width: 1000px){
   .abc{
