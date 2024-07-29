@@ -141,7 +141,7 @@
   text-align: center;
 }
 
-.row{
+.rows{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
