@@ -62,9 +62,20 @@ body {
 .boxsmall:hover{
   transform: translatey(-10px);
 }
+
 .review img {
   height: auto;
   aspect-ratio: 0.622;
+}
+
+.video img {
+  height: auto;
+  aspect-ratio: 1.5;
+}
+
+.podcast img {
+  height: auto;
+  aspect-ratio: 1;
 }
 
 .blog :hover {
