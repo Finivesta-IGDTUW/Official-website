@@ -45,7 +45,7 @@ const Resources = () => {
                     </div>
                     <div className="text">
                         <h2>Online Videos</h2>
-                        <p>Top channels on finance, bringing you expert insights, investment strategies, personal finance advice all in one convenient platform.</p>
+                        <p>Top videos and channels on finance, bringing you expert insights, investment strategies, personal finance advice all in one convenient platform.</p>
                     </div>
                 </Link>
 
@@ -55,7 +55,7 @@ const Resources = () => {
                     </div>
                     <div className="text">
                         <h2>Podcasts</h2>
-                        <p>Top youtube channels on finance, Bringing you expert insights, Investment strategies, Personal finance advice all in one convenient platform.</p>
+                        <p>Top podcast episodes and playlists on finance, bringing you expert insights, investment strategies, personal finance advice all in one convenient platform.</p>
                     </div>
                 </Link>
     
@@ -65,7 +65,7 @@ const Resources = () => {
                     </div>
                     <div className="text">
                         <h2>Stock Market & Trading</h2>
-                        <p>Diverse collection of trading resources, Encompassing day trading, forex, cryptocurrency, to equip you with tools for succeeding in trading.</p>
+                        <p>Diverse collection of trading resources, encompassing day trading, forex, cryptocurrency, to equip you with tools for succeeding in trading.</p>
                     </div>
                 </Link>
 
