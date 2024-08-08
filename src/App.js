@@ -19,6 +19,7 @@ import Financialliteracy from "./Resources/Blogs/Blogpages/financial-literacy";
 import Bidding from "./Resources/Blogs/Blogpages/bidding";
 
 import BookReview from "./Resources/BookReviews/BookReview";
+import Podcast from "./Resources/Podcasts/Podcast";
 import Youtube from "./Resources/Youtube/Youtube";
 import Team from "./Team/Team";
 import Contact from "./ContactUs/Contact";
@@ -57,6 +58,8 @@ function App() {
             <Route path="/resources/bookreviews/book-pages/review3" element={<Review3/>}/>
             <Route path="/resources/bookreviews/book-pages/review4" element={<Review4/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
+            <Route path="/resources/podcasts" element={<Podcast/>}/>
+            <Route path="/resources/videos" element={<Youtube/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>

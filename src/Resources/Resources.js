@@ -4,7 +4,8 @@ import "./Resources.css";
 
 import BlogsImage from './Images/blogs_img2.png';
 import BooksImage from './Images/book_reviews_img.png';
-import YoutubeImage from './Images/yt_img2.png';
+import PodcastImages from './Images/podcasts.jpg';
+import VideosImage from './Images/Videos.jpg';
 import ShareMarketImage from './Images/sharemarket_img2.png';
 
 const Resources = () => {
@@ -38,13 +39,23 @@ const Resources = () => {
                     </div>
                 </Link>
 
-                <Link to="/resources/youtube" className="boxsmall">
+                <Link to="/resources/videos" className="boxsmall">
                     <div className="img">
-                        <img src={YoutubeImage} alt="Youtube Channels" />
+                        <img src={VideosImage} alt="Online Videos" />
                     </div>
                     <div className="text">
-                        <h2>Youtube Channels</h2>
-                        <p>Top youtube channels on finance, Bringing you expert insights, Investment strategies, Personal finance advice all in one convenient platform.</p>
+                        <h2>Online Videos</h2>
+                        <p>Top videos and channels on finance, bringing you expert insights, investment strategies, personal finance advice all in one convenient platform.</p>
+                    </div>
+                </Link>
+
+                <Link to="/resources/podcasts" className="boxsmall">
+                    <div className="img">
+                        <img src={PodcastImages} alt="Podcasts" />
+                    </div>
+                    <div className="text">
+                        <h2>Podcasts</h2>
+                        <p>Top podcast episodes and playlists on finance, bringing you expert insights, investment strategies, personal finance advice all in one convenient platform.</p>
                     </div>
                 </Link>
     
@@ -54,7 +65,7 @@ const Resources = () => {
                     </div>
                     <div className="text">
                         <h2>Stock Market & Trading</h2>
-                        <p>Diverse collection of trading resources, Encompassing day trading, forex, cryptocurrency, to equip you with tools for succeeding in trading.</p>
+                        <p>Diverse collection of trading resources, encompassing day trading, forex, cryptocurrency, to equip you with tools for succeeding in trading.</p>
                     </div>
                 </Link>
 

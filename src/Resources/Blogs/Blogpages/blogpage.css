@@ -12,10 +12,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    width: 90%;
-    margin: auto;
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
     margin-top: 1.5rem;
-    height: 30vh;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,8 +34,15 @@
     font-size: 1.2rem;
     color: white;
     margin: auto;
-    padding: 5rem;
-    padding-top: 2rem;
+    padding: 1.5rem;
+}
+
+.blog-para p {
+    text-align: justify;
+}
+
+.blog-para li {
+    text-align: justify;
 }
 
 .ai-fin {
@@ -43,7 +50,7 @@
 }
 
 .fintech {
-    background-image: url('./blog-images/fintech-img.png');
+    background-image: url('./blog-images/tech.webp'); 
 }
 
 .bid {
@@ -59,5 +66,5 @@
 }
 
 .compound {
-    background-image: url('./blog-images/bid-img.jpeg');
+    background-image: url('./blog-images/comp-img.png');
 }
