@@ -20,39 +20,49 @@ const BookReview = () => {
             <div class="resourcesbox">
 
               <div class="boxsmall">
+            {/* <Route path="/resources/bookreviews/book-pages/review1" element={<Review1/>}/> */}
+              <a href="/resources/bookreviews/book-pages/review1">
                   <div class="img review">
+            
                     <img src={Doglapan} />
                   </div>
                   <div class="text">
                     <h2>Review 1</h2>
                   </div>
+                  </a>
               </div>
 
             <div class="boxsmall">
+            <a href="/resources/bookreviews/book-pages/review2">
                 <div class="img review">
                   <img src={IntellInvestor}/>
                 </div>
                 <div class="text">
                   <h2>Review 2</h2>
               </div>
+              </a>
             </div>
 
             <div class="boxsmall">
+            <a href="/resources/bookreviews/book-pages/review3">
                 <div class="img review">
                   <img src={RichDadPoorDad}/>
                 </div>
                 <div class="text">
                   <h2>Review 3</h2>
                 </div>
+                </a>
               </div>
               
               <div class="boxsmall">
+              <a href="/resources/bookreviews/book-pages/review4">
                 <div class="img review">
                   <img src={PsychOfMoney}/>
                 </div>
                 <div class="text">
                   <h2>Review 4</h2>
                 </div>
+                </a>
               </div>
 
               <div class="boxsmall">

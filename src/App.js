@@ -22,6 +22,10 @@ import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Team from "./Team/Team";
 import Contact from "./ContactUs/Contact";
+import Review1 from "./Resources/BookReviews/book-pages/Review1";
+import Review2 from "./Resources/BookReviews/book-pages/Review2";
+import Review3 from "./Resources/BookReviews/book-pages/Review3";
+import Review4 from "./Resources/BookReviews/book-pages/Review4";
 
 function App() {
   return (
@@ -46,7 +50,12 @@ function App() {
               <Route path="/resources/blogs/financial-literacy" element={<Financialliteracy/>}/>
               <Route path="/resources/blogs/bidding" element={<Bidding/>}/>
               
+              {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
+            <Route path="/resources/bookreviews/book-pages/review1" element={<Review1/>}/>
+            <Route path="/resources/bookreviews/book-pages/review2" element={<Review2/>}/>
+            <Route path="/resources/bookreviews/book-pages/review3" element={<Review3/>}/>
+            <Route path="/resources/bookreviews/book-pages/review4" element={<Review4/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
