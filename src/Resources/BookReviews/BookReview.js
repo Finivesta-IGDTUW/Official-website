@@ -24,7 +24,7 @@ const BookReview = () => {
               <a href="/resources/bookreviews/book-pages/review1">
                   <div class="img review">
             
-                    <img src={Doglapan} />
+            
                     <img src={Doglapan} alt="Doglapan Book Cover" />
                   </div>
                   <div class="text">
