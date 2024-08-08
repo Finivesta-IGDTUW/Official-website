@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.book-page-box{
+    border-radius: 10px;
+    height: max-content;
+    width: 80%;
+    background: rgb(40, 39, 39);
+    /* padding: 0.5rem; */
+    margin: auto;
+    margin-top: 2rem;
+    padding: 10px;
+}
+.book-header{
+    padding: 20px;
+    width: 100%; /* Full width of the parent */
+    height: 600px; /* Set the height to accommodate the image */
+   /* Center the image vertically */
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center;  */
+   align-items: center !important;
+ 
+    /* position: relative; */
+    border-radius: 10px; /* Optional: rounded corners */
+    color: #fff;
+    /* background-color: #f0f0f0 */
+}
+
+.book-header img{
+
+    width: 400px; /* Set the width of the image */
+    height: 400px; /* Set the height of the image */
+    object-fit: contain; /* Ensure the image is fully visible */
+    display: block; 
+ 
+
+}
+ .book-title{
+    /* display: flex;
+    /* justify-content: center; Center the image horizontally */
+ 
+/* Add margin to the top, adjust as needed */
+font-size: 1.5rem; /* Adjust font size as needed */
+color: #fff; /* Adjust text color as needed */
+text-align: center !important; 
+display: flex;
+flex-direction: column;
+/* position: relative; */
+align-items: center !important;
+
+
+
+
+ }
+/* .book-img{
+
+    width: 400px;
+    height: 400px;
+    /* Hides any overflowed content */
+  
+    /* background-image: url('../../Images/books/Doglapan.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+  
+    
+
+.book-header h1{
+    font-size: 1.4rem;
+    /* position: absolute; */
+    /* display: flex; */
+}
+.book-header p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* position: absolute; */
+}
+.book-para{
+    font-size: 1.2rem;
+    color: white;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+.author{
+  margin-bottom:30px;
+}
+ /* .doglapan {
+
+    /* aspect-ratio: 16 / 9;  */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */ 
+
+/* .fintech {
+    background-image: url('./blog-images/fintech-img.png');
+}
+
+.bid {
+    background-image: url('./blog-images/bid-img.jpeg');
+}
+
+.finlit {
+    background-image: url('./blog-images/finlit-img.png');
+}
+
+.liqui {
+    background-image: url('./blog-images/liq-img.jpeg');
+}
+
+.compound {
+    background-image: url('./blog-images/bid-img.jpeg');
+} */
