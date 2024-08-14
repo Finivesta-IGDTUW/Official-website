@@ -7,7 +7,7 @@ import I3 from '../Images/bg1.jpg';
 import I4 from '../Images/bg1.jpg';
 import I5 from '../Images/bg1.jpg';
 import I6 from '../Images/bg1.jpg';
-import I7 from '../Images/bg1.jpg';
+
 
 
 const Stocks = () => {
@@ -18,7 +18,7 @@ const Stocks = () => {
     </div>
 
     <div className="box">
-        <a href="https://fortune.com/recommends/investing/how-to-start-investing/" class="box-link">
+        <a href="https://fortune.com/recommends/investing/how-to-start-investing/">
             <div className="box1">
             
                 <div className="img">
@@ -33,10 +33,10 @@ const Stocks = () => {
         </a>
         
         
-        <a href="https://www.reddit.com/r/IndiaInvestments/comments/9ltgni/for_someone_who_is_absolutely_at_level_zero_in/" class="box-link">
+        <a href="https://www.reddit.com/r/IndiaInvestments/comments/9ltgni/for_someone_who_is_absolutely_at_level_zero_in/">
             <div className="box1">
                 <div className="img">
-                  <img src={I1} alt="Cover"/>
+                  <img src={I2} alt="Cover"/>
                 </div>
                 <div className="text">
                   <h2>Investing for someone who is at level zero</h2>
@@ -46,10 +46,10 @@ const Stocks = () => {
 
         </a>
 
-        <a href="https://www.fool.com/investing/stock-market/types-of-stocks/" class="box-link">
+        <a href="https://www.fool.com/investing/stock-market/types-of-stocks/">
             <div className="box1">
                 <div className="img">
-                  <img src={I1} alt="Cover"/>
+                  <img src={I3} alt="Cover"/>
                 </div>
                 <div className="text">
                   <h2>Types of Stocks</h2>
@@ -64,10 +64,10 @@ const Stocks = () => {
     </div>
 
     <div className="box">
-        <a href="https://www.forbes.com/advisor/investing/what-are-stocks/" class="box-link">
+        <a href="https://www.forbes.com/advisor/investing/what-are-stocks/">
             <div className="box1">
                 <div className="img">
-                  <img src={I1} alt="Cover"/>
+                  <img src={I4} alt="Cover"/>
                 </div>
                 <div className="text">
                   <h2>What are stocks?</h2>
@@ -77,10 +77,10 @@ const Stocks = () => {
 
         </a>
         
-        <a href="https://www.reddit.com/r/IndiaInvestments/comments/k7v0dg/a_beginners_guide_to_investing_in_the_stock/" class="box-link">
+        <a href="https://www.reddit.com/r/IndiaInvestments/comments/k7v0dg/a_beginners_guide_to_investing_in_the_stock/">
             <div className="box1">
                 <div className="img">
-                  <img src={I1} alt="Cover"/>
+                  <img src={I5} alt="Cover"/>
                 </div>
                 <div className="text">
                   <h2>Beginners guide to investing</h2>
@@ -89,10 +89,10 @@ const Stocks = () => {
 
         </a>
         
-        <a href="https://www.investopedia.com/terms/s/stock.asp" class="box-link">
+        <a href="https://www.investopedia.com/terms/s/stock.asp">
             <div className="box1">
                 <div className="img">
-                  <img src={I1} alt="Cover"/>
+                  <img src={I6} alt="Cover"/>
                 </div>
                 <div className="text">
                   <h2>Stocks VS Bonds</h2>
