@@ -1,17 +1,18 @@
 import React from "react";
 import "../Resources.css";
 
-import I1 from '../Images/Stock1.jpg';
-import I2 from '../Images/Stock2.jpg';
-import I3 from '../Images/Stock3.jpg';
+import I1 from '../Images/Stock1 .jpeg';
+import I2 from '../Images/Stock2.jpeg';
+import I3 from '../Images/Stock3.jpeg';
 import I4 from '../Images/Stock4.jpg';
-import I5 from '../Images/Stock5.jpg';
+import I5 from '../Images/Stock5.jpeg';
 import I6 from '../Images/Stock6.jpg';
 
 
 
 const Stocks = () => {
   return (
+    <div>
     <div className="header">
         <h1>Stock Market</h1>
         <p>Access the wealth of knowledge and tools in our <br />resource library.</p>
@@ -104,7 +105,7 @@ const Stocks = () => {
     </div>
     
 
-        
+    </div>  
   );
 };
 

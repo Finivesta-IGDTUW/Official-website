@@ -28,7 +28,7 @@ const BookReview = () => {
                     <img src={Doglapan} alt="Doglapan Book Cover" />
                   </div>
                   <div class="text">
-                    <h2>Review 1</h2>
+                    <h2>Doglapan</h2>
                   </div>
                   </a>
               </div>
@@ -39,7 +39,7 @@ const BookReview = () => {
                   <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 2</h2>
+                  <h2>Intelligent Investor</h2>
               </div>
               </a>
             </div>
@@ -50,7 +50,7 @@ const BookReview = () => {
                   <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 3</h2>
+                  <h2> Rich Dad Poor Dad</h2>
                 </div>
                 </a>
               </div>
@@ -61,7 +61,7 @@ const BookReview = () => {
                   <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 4</h2>
+                  <h2>The Psychology Of Money</h2>
                 </div>
                 </a>
               </div>
@@ -71,7 +71,7 @@ const BookReview = () => {
                   <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 5</h2>
+                  <h2>The Millionaire Next Door</h2>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const BookReview = () => {
                   <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 6</h2>
+                  <h2>The Richest Man In Babylon</h2>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@ const BookReview = () => {
                   <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
                 </div>
                 <div class="text">
-                  <h2>Review 7</h2>
+                  <h2>Your Money Or Your Life </h2>
                 </div>
             </div>
 

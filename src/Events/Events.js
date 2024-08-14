@@ -12,8 +12,9 @@ import Speaker from './Images/Speaker.png';
 const Events = () => {
   return (
     <div className="Events">
- 
+ <div className="events-header">
     <h1 className="Heading">Events</h1>
+    </div>
 
    
    
@@ -75,6 +76,8 @@ const Events = () => {
        </div>
        
        </div>
+       < hr className='green-line' />
+      
      </div>
 
 
@@ -149,6 +152,7 @@ const Events = () => {
        </div>
        
        </div>
+       {/* < hr className='green-line' /> */}
      </div>
 
      </div>
