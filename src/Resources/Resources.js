@@ -59,7 +59,7 @@ const Resources = () => {
                     </div>
                 </Link>
     
-                <Link to="/resources/share-market" className="boxsmall">
+                <Link to="/resources/stocks" className="boxsmall">
                     <div className="img">
                         <img src={ShareMarketImage} alt="Stock Market & Trading" />
                     </div>
