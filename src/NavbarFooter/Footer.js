@@ -10,6 +10,7 @@ const Footer = () => {
         <footer className="footer">
 
             <div className="socialdiv">
+                <div className="vertical-line"></div>
                 <p>Socials</p>
                 <div className="social-icon">
                     <a href="https://www.instagram.com/finivesta_igdtuw/">
@@ -32,9 +33,11 @@ const Footer = () => {
                 <a className="fbut" href="/team">Team</a>
                 <a className="fbut" href="/contact">Contact Us</a>
             </div>
+
             <p className="text-footer"> 
                 Copyright &copy; 2023 Finivesta IGDTUW - All Rights Reserved.
             </p> 
+
         </footer> 
         
   );

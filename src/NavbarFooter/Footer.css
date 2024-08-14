@@ -1,6 +1,14 @@
 .footer { 
-    background-color: #222222; 
+    background-color: #222222;
 } 
+
+.vertical-line {
+    position: relative;
+    height: 0.1px;
+    width: 80vw;
+    background-color: #5f8e33;
+    margin: 5vh 10vw;
+}
 
 .socialdiv {
     display: grid;
@@ -19,6 +27,8 @@
     padding: 5px 0;
     margin-block-start: 0;
     margin-block-end: 0;
+    color: #5f8e33;
+    font-weight: bold;
 }
 
 .social-icon {

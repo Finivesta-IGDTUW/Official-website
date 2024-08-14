@@ -215,22 +215,3 @@ since unable to use fontawesome stylesheet in head of html*/
         font-size: 15px;
     }
 }
-
-
-
-
-::-webkit-scrollbar{
-    width: 5px;
-}
-
-::-webkit-scrollbar-track{
-    background: #222222;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #333;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background: #555;
-}
