@@ -11,7 +11,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh;
 }
 
 .logoheader a {
@@ -24,9 +23,10 @@ nav {
     color: #8739fa;
 }
 
-.logoheader img {
-    height: max-content;
-    width: auto;
+.logoheader img{
+    height: calc(4vh + 5px);
+    margin-left: 50px;
+    margin-top: 7px;
 }
   
 .menu {
@@ -49,6 +49,7 @@ nav {
 
 .menu li {
     list-style-type: none;
+    padding: 2vh;
 }
 
 .menu {
@@ -67,6 +68,7 @@ nav {
 
 .menu-icon {
     display: none;
+    padding: 2vh;
 }
 
 #menu-toggle {
@@ -76,11 +78,6 @@ nav {
 #menu-toggle:checked ~ .menu {
     transform: scale(1, 1);
 }
-
-.logoheader img{
-    width:4rem;
-}
-
 
 @media only screen and (max-width: 950px) {
     .menu {

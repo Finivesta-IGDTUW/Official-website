@@ -117,8 +117,9 @@ since unable to use fontawesome stylesheet in head of html*/
     align-items: center;
 }
 
-.overlay img {
-    height: 2.2vw;
+.overlay i {
+    height: 80%;
+    color: #ababab;
 }
 
 .photo:hover .image{
@@ -160,7 +161,7 @@ since unable to use fontawesome stylesheet in head of html*/
         height: 5.6vw;
     }
   
-    .overlay img {
+    .overlay i {
         height: 2.5vw;
     }
 }
@@ -178,17 +179,13 @@ since unable to use fontawesome stylesheet in head of html*/
         height: 11.5vw;
     }
   
-    .overlay img {
+    .overlay i {
         height: 5vw;
     }
   
 }
 
-@media (max-width: 510px) {
-    .Team a {
-        font-size: 10px;
-    }
-  
+@media (max-width: 510px) {  
     .text-big {
         padding-top: 12vw;
     }
@@ -200,17 +197,9 @@ since unable to use fontawesome stylesheet in head of html*/
     .Team p {
         font-size: 3vw;
     }
-  
-    .Team a {
-        font-size: 10px;
-    }
 }
 
 @media (max-width: 360px) {
-    .Team a {
-        font-size: 5px;
-    }
-  
     .text-big {
         font-size: 15px;
     }

@@ -14,10 +14,10 @@ const Footer = () => {
                         <i className="fab fa-instagram"/>
                     </a>
                     <a href="https://x.com/finivesta" className="icon-circle">
-                        <i className="fab fa-x-twitter"></i>
+                        <i className="fab fa-x-twitter"/>
                     </a>
                     <a href="https://www.linkedin.com/company/finivesta-igdtuw/" className="icon-circle">
-                        <i className="fab fa-linkedin-in"></i>
+                        <i className="fab fa-linkedin-in"/>
                     </a>
                 </div>
             </div>
