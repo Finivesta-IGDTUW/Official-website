@@ -41,37 +41,56 @@ While physicist Sir Isaac Newton is widely viewed as the leading authority on gr
                     </div>
 
                   
-
+                    <ul className="custom-list">
                     <div className="book-para">
                     <h2>      KEY TAKEAWAYS FROM THE BOOK</h2>
-                    <p>  Economist Benjamin Graham, best known for his book The Intelligent Investor, is lauded as a top guru of finance and investment.
-
+                    
+       </div>
+    
+     
+       <div className="book-para">
+      <li>  <p>  Economist Benjamin Graham, best known for his book The Intelligent Investor, is lauded as a top guru of finance and investment.
                     </p>
+                    </li>
                     </div>
  
+
                     <div className="book-para">
+                    <li>
                     <p>    Known as the father of value investing, The Intelligent Investor: The Definitive Book on Value Investing is considered one of the most important books on the topic
                     Graham's method advises investors to concentrate on the real-life performance of their companies and the dividends they receive, rather than paying attention to the changing sentiments of the market.
 
                     </p>
+                    </li>
                         </div>
+                        
  
                     <div className="book-para">
+                    <li>
                     <p>          Graham also advocated for an investing approach that provides a margin of safety—or room for human error—for the investor.
                     Most importantly, investors should look for price-value discrepancies—when the market price of a stock is less than its intrinsic value.
 
                     </p>
+                    </li>
                         </div>
                     <div className="book-para">
+                    <li>
                     <p>        This article will examine Graham's early career work, some key concepts related to value investing from The Intelligent Investor, and how Graham's ideas helped inform the successful investing principles of later investors, namely Warren Buffett.
 
                     </p>
+                    </li>
                         </div>
+                        </ul>
+
+                        <div className="book-para">
+                            </div>
+                       
 
                        
        
           </div>
-         </div>
+          </div>
+        
 
 
 

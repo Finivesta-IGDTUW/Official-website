@@ -9,7 +9,18 @@
   
   }
   
-  
+ .events-header{
+  background-image: url('./Images/Eventsbg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px; 
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center;
+  /* margin: auto;   */
+  overflow: hidden;
+ }
   
   /* My code */
   .Heading{
@@ -39,6 +50,17 @@
    /* left:115px; */
   
   }
+  
+  .green-line {
+    border: none; /* Remove the border */
+    height: 0.1px; /* Set a very thin height */
+    width: 80vw;
+    margin: 10vh auto;
+    background-color: #71B139; /* Use background color to simulate the line */
+    position: relative;
+  }
+ 
+
   /* overflow-x: hidden; */
   
   .flex1{
@@ -87,6 +109,8 @@
   /* left: 10px; */
   /* top: 10px; */
   }
+  /* .element:hover{
+    /* transform: translatey(20px); */
   
   .element1{
     background-color: #32D1B542;

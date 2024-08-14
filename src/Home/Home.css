@@ -255,18 +255,29 @@
   height: 100%;
   width: 100%;
   background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  
+  /* aspect-ratio: 16 / 9;  */
 }
 
 .carousel{
-  padding: 2rem;
+  /* aspect-ratio: 16 / 9;  */
+  flex: 1;
+  padding: 3rem;
   background-color: #222222;
   color: #fff;
-  height: 100vh;
+  /* height: 130vh; */
   width: 98.7vw;
   text-align: center;
-  /* margin: 0 10px; */
+  margin: 30px 0px;
   /* overflow-x: hidden !important; */
 }
+/* @media (max-width: 768px) {
+  .carousel {
+    height: 80vh; /* Adjust height for smaller screens */
+
 .carousel h2{
   text-align: center;
   font-size: 50px;

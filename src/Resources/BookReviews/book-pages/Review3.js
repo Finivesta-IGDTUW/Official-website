@@ -47,7 +47,9 @@ const  Review3 = () => {
                     </p>
                         </div>
                     <div className="book-para">
-                    <h2>The key pointers which are highlighted in this book are as follows-</h2>
+                    <h2>      KEY TAKEAWAYS FROM THE BOOK</h2>
+                   </div>
+                   <div className="book-para">
                     <p>        <ul>
                                  <li>One of the most important keys to becoming rich is financial literacy, in other words, learning how to handle money.</li>
                                  <li>An important distinction is that rich people buy luxuries last, while poor and middle class tend to buy the luxuries first.”</li>
@@ -66,7 +68,8 @@ const  Review3 = () => {
 
                        
        
-       
+                        <div className="book-para">
+                        </div>
 
 
                          </div>
