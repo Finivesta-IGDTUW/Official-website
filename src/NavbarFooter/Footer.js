@@ -1,9 +1,6 @@
 import React from "react";
 import "./Footer.css";
-
-import X from './Media/X.png';
-import Insta from './Media/Insta.png';
-import LinkedIn from './Media/LinkedIn.png';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
@@ -13,14 +10,14 @@ const Footer = () => {
                 <div className="vertical-line"></div>
                 <p>Socials</p>
                 <div className="social-icon">
-                    <a href="https://www.instagram.com/finivesta_igdtuw/">
-                    <img src={Insta} alt="Insta" height="23"/>
+                    <a href="https://www.instagram.com/finivesta_igdtuw/" className="icon-circle">
+                        <i className="fab fa-instagram"/>
                     </a>
-                    <a href="https://x.com/finivesta">
-                    <img src={X} alt="X" height="29"/>
+                    <a href="https://x.com/finivesta" className="icon-circle">
+                        <i className="fab fa-x-twitter"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/finivesta-igdtuw/">
-                    <img src={LinkedIn} alt="LinkedIn" height="23"/>
+                    <a href="https://www.linkedin.com/company/finivesta-igdtuw/" className="icon-circle">
+                        <i className="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>

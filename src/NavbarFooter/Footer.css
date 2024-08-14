@@ -20,6 +20,8 @@
     justify-content: center;
     padding-top: 2em;
     padding-bottom: 2em;
+    position: relative;
+    justify-items: center;
 }
 
 .socialdiv p {
@@ -40,10 +42,24 @@
     justify-self: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    height: 39px;
-    filter: invert(58%) sepia(0%) saturate(1779%) hue-rotate(92deg) brightness(93%) contrast(82%);
+    justify-items: center;
 }
 
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    color: #222222;
+    text-decoration: none;
+}
+
+.icon-circle i {
+    font-size: 20px;
+}
 
 .text-footer { 
     text-align: center; 
@@ -59,10 +75,9 @@
 
 .fbut {
     color: #5f8e33;
-    align-items: center;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 2px;
     font-size: 17px;
 }
 
@@ -73,13 +88,12 @@
 
 
 .footer-content {
-    display: grid;
+    display: flex;
     text-align: center;
-    gap: 2px;
+    gap: 30px;
     padding: 5px; 
     box-sizing: border-box;
-    grid-template-columns: repeat(6, 1fr) ;
-    align-items: center;
+    justify-content: center;
 }
 
 .footer-content a {
@@ -96,6 +110,7 @@
 
 @media (max-width: 590px) {
     .footer-content {
-      grid-template-columns: repeat(1, 1fr);
+      flex-direction: column;
+      gap: 0px;
     }
 }
