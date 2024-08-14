@@ -1,12 +1,12 @@
 import React from "react";
 import "../Resources.css";
 
-import I1 from '../Images/bg1.jpg';
-import I2 from '../Images/bg1.jpg';
-import I3 from '../Images/bg1.jpg';
-import I4 from '../Images/bg1.jpg';
-import I5 from '../Images/bg1.jpg';
-import I6 from '../Images/bg1.jpg';
+import I1 from '../Images/Stock1.jpg';
+import I2 from '../Images/Stock2.jpg';
+import I3 from '../Images/Stock3.jpg';
+import I4 from '../Images/Stock4.jpg';
+import I5 from '../Images/Stock5.jpg';
+import I6 from '../Images/Stock6.jpg';
 
 
 
