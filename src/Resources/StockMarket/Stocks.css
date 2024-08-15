@@ -84,7 +84,7 @@ body {
     display: block;
 }
 
-.box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover  {
+.box1:hover  {
     transform: scale(0.98);
 }
 
@@ -97,7 +97,7 @@ body {
       justify-content: center;
       padding: 4vw;
     }
-  }
+}
   
 @media only screen and (max-width: 700px) {
     .box1 {
