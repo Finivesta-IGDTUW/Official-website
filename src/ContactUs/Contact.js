@@ -8,13 +8,14 @@ const Contact = () => {
     const [formStatus, setFormStatus] = useState('');
 
     useEffect(() => {
-        emailjs.init("N0ZOryOZ7puY8yViV"); 
+        emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID); 
 
         const handleSubmit = (e) => {
             e.preventDefault();
             setFormStatus('Sending...');
 
-            emailjs.sendForm('service_0sgre76', 'template_w7vhl4r', e.target)
+            emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target)
                 .then((response) => {
                     console.log('SUCCESS!', response);
                     alert('Your message has been sent successfully. We will get back to you soon.');
