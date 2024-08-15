@@ -47,7 +47,7 @@ const Stocks = () => {
         
 
         
-              <div className="box1">
+              <div className="boxsmall stock">
                   <a href="https://www.fool.com/investing/stock-market/types-of-stocks/">
                   <div className="img">
                       <img src={I3} alt="Cover"/>
@@ -60,8 +60,8 @@ const Stocks = () => {
 
           </div>
 
-          <div className="container">
-              <div className="box1">
+          <div className="resourcesbox">
+              <div className="boxsmall stock">
                   <a href="https://www.forbes.com/advisor/investing/what-are-stocks/"> 
                   <div className="img">
                       <img src={I4} alt="Cover"/>
@@ -74,7 +74,7 @@ const Stocks = () => {
 
         
         
-              <div className="box1">
+              <div className="boxsmall stock">
                   <a href="https://www.reddit.com/r/IndiaInvestments/comments/k7v0dg/a_beginners_guide_to_investing_in_the_stock/">
                   <div className="img">
                       <img src={I5} alt="Cover"/>
@@ -88,7 +88,7 @@ const Stocks = () => {
        
         
         
-              <div className="box1">
+              <div className="boxsmall stock">
                   <a href="https://www.investopedia.com/terms/s/stock.asp">
                   <div className="img">
                       <img src={I6} alt="Cover"/>
