@@ -1,6 +1,6 @@
 import React from "react";
 import './book-page.css';
-import RichDadPoorDad from '../../Images/books/RichDadPoorDad.jpg';
+import MillNextDoor from '../../Images/books/MillNextDoor.jpg';
 
 
 
@@ -10,7 +10,7 @@ const  Review6 = () => {
             <div className="book-page-box">
                 <div class="book-header ">
                    <div className="book-img">
-                   <img src={RichDadPoorDad} alt="RichDadPoorDad"/>
+                   <img src={MillNextDoor} alt="MillionaireNextDoor"/>
                   
                   
                    </div>
