@@ -40,6 +40,15 @@ body {
    
   
 }
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; 
+    flex-wrap: wrap;
+    padding: 2vw;
+   
+  
+}
   
 .box1{
     padding: 2vw;
