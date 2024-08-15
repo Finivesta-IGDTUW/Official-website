@@ -8,7 +8,7 @@ const Contact = () => {
     const [formStatus, setFormStatus] = useState('');
 
     useEffect(() => {
-        emailjs.init("N0ZOryOZ7puY8yViV"); // Replace with your actual EmailJS User ID
+        emailjs.init("N0ZOryOZ7puY8yViV"); 
 
         const handleSubmit = (e) => {
             e.preventDefault();
