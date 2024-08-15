@@ -1,5 +1,5 @@
 import React from "react";
-import "../Stock.css";
+import "../Stocks.css";
 
 import I1 from '../Images/Stock1.jpeg';
 import I2 from '../Images/Stock2.jpeg';
