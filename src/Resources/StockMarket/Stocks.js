@@ -2,12 +2,12 @@ import React from "react";
 import "./Stocks.css";
 
 
-import I1 from '../Images/Stock1.jpeg';
-import I2 from '../Images/Stock2.jpeg';
-import I3 from '../Images/Stock3.jpeg';
-import I4 from '../Images/Stock4.jpg';
-import I5 from '../Images/Stock5.jpeg';
-import I6 from '../Images/Stock6.jpg';
+import I1 from '../Images/Stock/Stock1.jpeg';
+import I2 from '../Images/Stock/Stock2.jpeg';
+import I3 from '../Images/Stock/Stock3.jpeg';
+import I4 from '../Images/Stock/Stock4.jpg';
+import I5 from '../Images/Stock/Stock5.jpeg';
+import I6 from '../Images/Stock/Stock6.jpg';
 
 
 
