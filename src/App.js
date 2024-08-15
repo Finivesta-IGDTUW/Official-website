@@ -29,6 +29,9 @@ import Review1 from "./Resources/BookReviews/book-pages/Review1";
 import Review2 from "./Resources/BookReviews/book-pages/Review2";
 import Review3 from "./Resources/BookReviews/book-pages/Review3";
 import Review4 from "./Resources/BookReviews/book-pages/Review4";
+import Review5 from "./Resources/BookReviews/book-pages/Review5";
+import Review6 from "./Resources/BookReviews/book-pages/Review6";
+import Review7 from "./Resources/BookReviews/book-pages/Review7";
 
 function App() {
   return (
@@ -59,6 +62,9 @@ function App() {
             <Route path="/resources/bookreviews/book-pages/intelligentinvestor" element={<Review2/>}/>
             <Route path="/resources/bookreviews/book-pages/richdadpoordad" element={<Review3/>}/>
             <Route path="/resources/bookreviews/book-pages/psychologyofmoney" element={<Review4/>}/>
+            <Route path="/resources/bookreviews/book-pages/RichestManInBabylon" element={<Review5/>}/>
+            <Route path="/resources/bookreviews/book-pages/MillNextDoor" element={<Review6/>}/>
+            <Route path="/resources/bookreviews/book-pages/MoneyorLife" element={<Review7/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
