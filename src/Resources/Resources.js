@@ -7,6 +7,7 @@ import BooksImage from './Images/book_reviews_img.png';
 import PodcastImages from './Images/podcasts.jpg';
 import VideosImage from './Images/Videos.jpg';
 import ShareMarketImage from './Images/sharemarket_img2.png';
+import TradingAppImage from './Images/tradingapps.png'
 
 const Resources = () => {
 
@@ -14,7 +15,7 @@ const Resources = () => {
         <div className="resources">
             <div className="header">
             <h1>Resources</h1>
-            <p>Access the wealth of knowledge and tools in our resource library.<br/>Having trouble here with media queries in boxsmall container on width and margin</p>
+            <p>Access the wealth of knowledge and tools in our resource library.</p>
             </div>
     
             <div className="resourcesbox">
@@ -68,6 +69,17 @@ const Resources = () => {
                         <p>Diverse collection of trading resources, encompassing day trading, forex, cryptocurrency, to equip you with tools for succeeding in trading.</p>
                     </div>
                 </Link>
+
+                <Link to="/resources/trading" className="boxsmall">
+                    <div className="img">
+                        <img src={TradingAppImage} alt="Trading Applications" />
+                    </div>
+                    <div className="text">
+                        <h2>Trading Applications</h2>
+                        <p>Explore cutting-edge tools and platforms designed to enhance your trading experience, from real-time market data to advanced charting features and automated trading systems.</p>
+                    </div>
+                </Link>
+ 
 
             </div>
         
