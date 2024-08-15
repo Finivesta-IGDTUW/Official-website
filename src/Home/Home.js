@@ -59,8 +59,8 @@ const Home = () => {
              Creating a vibrant women community of finance and economics enthusiasts
             </p>
             <div className="button-container">
-              <button className="button1" data-inline="true" >IGDTUW</button>
-              <button className="button2" data-inline="true" >View More</button>
+              <button className="button1" data-inline="true" onClick={() => window.location.href = 'https://www.igdtuw.ac.in/'} >IGDTUW</button>
+              <button className="button2" data-inline="true" onClick={() => window.location.href = 'https://www.instagram.com/finivesta_igdtuw/'}>View More</button>
             </div>
           </div>
           </section>
