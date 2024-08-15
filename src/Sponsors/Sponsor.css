@@ -1,19 +1,39 @@
-.our_sponsors{
-    /* title text */
-    text-align:center;
-    font-family: 'Poppins', sans-serif;
-    color:white;
-    font-size: 60px; 
-    margin-top: 4rem;
+.sponsors-header {
+    background-image: url('/src/Images/spo.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: auto;  
+    overflow: hidden;
 }
+  
+.sponsors-header h1 {
+    font-weight: 900;
+    font-size: 2.2em; /* Large font size for the main header title */
+} 
+.sponsors-header p {
+    /* margin-top: 20px; */
+    font-size: 1.2rem;  
+    text-align: center;
+}
+
   
 .our_partners{
     /* second heading */
     text-align:center;
     font-family: 'Poppins', sans-serif;
     color:white;
-    font-size: 60px; 
-    margin-top: 4rem;}
+    font-weight: 900;
+    font-size: 2.2em;
+    margin-top: 4rem;
+}
    
 body{background-color:black;}
 
@@ -44,6 +64,10 @@ body{background-color:black;}
 .logos img{
     height: 15rem;
     width: 15rem;
+    transition: 0.5s;
+}
+.logos img:hover{
+    transform: scale(1.04);
 }
 @media(max-width:600px){
     .our_sponsors{

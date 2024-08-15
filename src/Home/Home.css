@@ -105,8 +105,9 @@
   margin: 1.5%; /* Adjust margins between buttons */
   padding: 1% 2%; /* Adjust padding for buttons */
   border-radius: 10px;
-  margin-left: 0%;
+  margin-left: 0%; 
   ; /* Responsive font size */
+  transition: 0.4s;
 }
 
 .button1 {
@@ -114,6 +115,11 @@
   color: white;
   border: none;
   font-size: 2vw
+}
+.button1:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+  background-color:#86d145 ;
 }
 
 .button2 {
@@ -123,6 +129,10 @@
   font-size: 1.3vw;
 }
 
+.button2:hover{
+  color: black;
+  cursor: pointer;
+}
 
 
 /*Jhalak's code  */
