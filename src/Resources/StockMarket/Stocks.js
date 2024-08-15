@@ -1,5 +1,5 @@
 import React from "react";
-import "./Stocks.css";
+import "../Resources.css";
 
 
 import I1 from '../Images/Stock/Stock1.jpeg';
