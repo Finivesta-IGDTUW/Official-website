@@ -58,9 +58,9 @@ const Stocks = () => {
                   </a>
               </div>
 
-          </div>
+          
 
-          <div className="resourcesbox">
+         
               <div className="boxsmall stock">
                   <a href="https://www.forbes.com/advisor/investing/what-are-stocks/"> 
                   <div className="img">
