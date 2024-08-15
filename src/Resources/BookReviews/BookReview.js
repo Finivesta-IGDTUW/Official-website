@@ -21,7 +21,7 @@ const BookReview = () => {
 
               <div class="boxsmall">
            
-              <a href="/resources/bookreviews/book-pages/review1">
+              <a href="/resources/bookreviews/book-pages/doglapan">
                   <div class="img review">
             
             
@@ -34,7 +34,7 @@ const BookReview = () => {
               </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/review2">
+            <a href="/resources/bookreviews/book-pages/intelligentinvestor">
                 <div class="img review">
                   <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
                 </div>
@@ -45,7 +45,7 @@ const BookReview = () => {
             </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/review3">
+            <a href="/resources/bookreviews/book-pages/richdadpoordad">
                 <div class="img review">
                   <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
                 </div>
@@ -56,7 +56,7 @@ const BookReview = () => {
               </div>
               
               <div class="boxsmall">
-              <a href="/resources/bookreviews/book-pages/review4">
+              <a href="/resources/bookreviews/book-pages/psychologyofmoney">
                 <div class="img review">
                   <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
                 </div>

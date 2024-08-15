@@ -38,6 +38,10 @@
     padding: 1.5rem;
 }
 
+.blog-para p {
+    text-align: justify;
+}
+
 .ai-fin {
     background-image: url('./blog-images/aifin-img.png');
 }

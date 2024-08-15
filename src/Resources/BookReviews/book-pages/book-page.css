@@ -16,7 +16,6 @@
 .book-header{
     padding: 20px;
     width: 100%; /* Full width of the parent */
-    height: 600px; /* Set the height to accommodate the image */
    /* Center the image vertically */
    display: flex;
    flex-direction: column;
@@ -83,7 +82,11 @@ align-items: center !important;
     color: white;
     margin: auto;
     padding: 1rem;
-    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.book-para p {
+    text-align: justify;
 }
 
 .author{

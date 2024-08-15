@@ -55,10 +55,10 @@ function App() {
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
-            <Route path="/resources/bookreviews/book-pages/review1" element={<Review1/>}/>
-            <Route path="/resources/bookreviews/book-pages/review2" element={<Review2/>}/>
-            <Route path="/resources/bookreviews/book-pages/review3" element={<Review3/>}/>
-            <Route path="/resources/bookreviews/book-pages/review4" element={<Review4/>}/>
+            <Route path="/resources/bookreviews/book-pages/doglapan" element={<Review1/>}/>
+            <Route path="/resources/bookreviews/book-pages/intelligentinvestor" element={<Review2/>}/>
+            <Route path="/resources/bookreviews/book-pages/richdadpoordad" element={<Review3/>}/>
+            <Route path="/resources/bookreviews/book-pages/psychologyofmoney" element={<Review4/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
