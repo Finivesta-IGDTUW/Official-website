@@ -1,7 +1,7 @@
 import React from "react";
 import "../Resources.css";
 
-import SpotifyLogo from '../Images/podcasts/Spotifylogo.jpg'
+import SpotifyLogo from '../Images/podcasts/Spotifylogo.jpg';
 
 const Podcast = () => {
   return (
@@ -20,7 +20,7 @@ const Podcast = () => {
               <img src={SpotifyLogo} alt="Cover"/>
             </div>
             <div class="text">
-              <h2>Budgeting</h2>
+              <h2>Why Budgets Aren't Boring</h2>
             </div>
             </a>
           </div>
@@ -31,7 +31,7 @@ const Podcast = () => {
                 <img src={SpotifyLogo} alt="Cover"/>
               </div>
               <div class="text">
-                <h2>Investing</h2>
+                <h2>Intelligent Investor</h2>
             </div>
             </a>
           </div>

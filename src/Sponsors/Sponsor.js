@@ -3,7 +3,6 @@ import "./Sponsor.css";
 
 import Image from './SponsorImages/image.png';
 import Logo from './SponsorImages/logoo.png';
-import {Helmet} from 'react-helmet';
 
 const Sponsor = () => {
     return (
