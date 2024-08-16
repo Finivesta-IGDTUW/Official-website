@@ -8,18 +8,14 @@ const  Review2 = () => {
             <div className="book-page-box">
                 <div class="book-header ">
                    <div className="book-img">
-                   <img src={IntellInvestor} alt="IntellInvestor"/>
-                  
-                  
+                   <img src={IntellInvestor} alt="IntellInvestor"/>                                 
                    </div>
                    
                    <div class="book-title">
-                   <h1>Intelligent Investor</h1>
-                   <p class="author">by <i>Benjamin Graham</i></p>
-
-                   <p>Book review by <i>Simer Khurmi</i></p>
-           
-                </div>
+                    <h1>Intelligent Investor</h1>
+                    <p class="author">by <i>Benjamin Graham</i></p>
+                    <p>Book review by <i>Simer Khurmi</i></p>           
+                   </div>
                 </div>
                
 

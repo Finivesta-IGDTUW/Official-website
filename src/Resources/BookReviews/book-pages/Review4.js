@@ -10,19 +10,14 @@ const  Review4 = () => {
             <div className="book-page-box">
                 <div class="book-header ">
                    <div className="book-img">
-                   <img src={PsychOfMoney} alt="PsychOfMoney"/>
-                  
-                  
+                   <img src={PsychOfMoney} alt="PsychOfMoney"/>                                  
                    </div>
                    
                    <div class="book-title">
-                 <h1>The Psychology of Money</h1> 
-       <p class="author">by <i>Morgan Housel</i></p>
-         
-       <p>  
-       Book review by <i>Saloni</i> and <i>Sakshi Singh</i></p>
-           
-                </div>
+                      <h1>The Psychology of Money</h1> 
+                      <p class="author">by <i>Morgan Housel</i></p>
+                      <p>Book review by <i>Saloni</i> and <i>Sakshi Singh</i></p>
+                   </div>
                 </div>
                
 
@@ -79,24 +74,9 @@ const  Review4 = () => {
                 deeper understanding of the psychology of money.
 
                     </p>
-                        </div>
-                       
-       
-       
-
-
-                         </div>
-                         </div>
-
-
-
-
-
-
- 
-
-                
-          
+             </div>
+           </div>
+        </div>      
   );
 };
 

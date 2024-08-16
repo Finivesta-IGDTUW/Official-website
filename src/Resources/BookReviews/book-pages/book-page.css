@@ -81,8 +81,9 @@ align-items: center !important;
     font-size: 1.2rem;
     color: white;
     margin: auto;
-    padding: 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
 }
 
 .book-para p {

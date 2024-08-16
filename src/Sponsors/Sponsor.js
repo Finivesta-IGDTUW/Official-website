@@ -4,6 +4,22 @@ import "./Sponsor.css";
 import Image from './SponsorImages/image.png';
 import Logo from './SponsorImages/logoo.png';
 
+import Finlatics from './SponsorImages/image8.png';
+import Csd from './SponsorImages/image1.png';
+import CodingNinjas from './SponsorImages/image2.png';
+import Adira from './SponsorImages/image4.png';
+import StoxHero from './SponsorImages/image5.png';
+import Onepercclub from './SponsorImages/image6.png';
+import TechnoLit from './SponsorImages/image7.png';
+import Bhav from './SponsorImages/image9.png';
+import Finshots from './SponsorImages/image10.png';
+import AssetsDtu from './SponsorImages/assets_dtu_logo.jpeg';
+import Markblend from './SponsorImages/image12.png';
+import Finwizz from './SponsorImages/image13.png';
+import Stockpe from './SponsorImages/image14.png';
+import Stockgro from './SponsorImages/image15.png';
+
+
 const Sponsor = () => {
     return (
         <>
@@ -15,53 +31,91 @@ const Sponsor = () => {
             <div class="sponsors_container">
                 {/* Added blank links to link logo to the page of the sponsors */}
                 <div class="logos" id="a1">
-                    <a href="#" target="_blank">
-                        <img src={Image} alt=""/>
+                    <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank"> 
+                        <img src={Finlatics} alt=""/>
                     </a>
                 </div> 
                 <div class="logos" id="a2">
-                    <a href="#" target="_blank">
-                        <img src={Image} alt=""/>
+                    <a href="https://www.linkedin.com/company/stoxhero/" target="_blank">
+                        <img src={StoxHero} alt=""/>
                     </a>
                 </div>
                 <div class="logos" id="a3">
                     <a href="#" target="_blank">
-                        <img src={Image} alt=""/>
+                        <img src={Onepercclub} alt=""/>
                     </a>
                 </div>
                 <div class="logos" id="a4">
-                    <a href="#" target="_blank">
-                        <img src={Image} alt=""/>
+                    <a href="https://www.linkedin.com/school/codingninjas/" target="_blank">
+                        <img src={CodingNinjas} alt=""/>
                     </a>
                 </div>
                 <div class="logos" id="a5">
+                    <a href="https://www.linkedin.com/company/stockpe/" target="_blank">
+                        <img src={Stockpe} alt=""/>
+                    </a>
+                </div>
+                {/* <div class="logos" id="a6">
                     <a href="#" target="_blank">
                         <img src={Image} alt=""/>
                     </a>
-                </div>
-                <div class="logos" id="a6">
-                    <a href="#" target="_blank">
-                        <img src={Image} alt=""/>
-                    </a>
-                </div>
+                </div> */}
             </div>
 
             <h1 class="our_partners">Our Partners</h1>
 
             <div class="partners_container">
                 <div class="logos" id="b1">
-                    <a href="#" target="_blank">
-                        <img src={Logo} alt=""/>
+                    <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank">
+                        <img src={Stockgro} alt=""/>
+                        {/* <div class="shade">
+                            <div className="sponsi-name">
+                                <p>Stock Grow</p>
+                            </div>
+                            <div className="sponsi-link">
+                                link    
+                            </div>
+                        </div> */}
                     </a>
                 </div> 
                 <div class="logos" id="b2">
-                    <a href="#" target="_blank">
-                        <img src={Logo} alt=""/>
+                    <a href="https://www.linkedin.com/showcase/finshots/" target="_blank">
+                        <img src={Finshots} alt=""/>
                     </a>
                 </div>
                 <div class="logos" id="b3">
-                    <a href="#" target="_blank">
-                        <img src={Logo} alt=""/>
+                    <a href="https://www.linkedin.com/in/adira-csd-280a71226/" target="_blank">
+                        <img src={Adira} alt=""/>
+                    </a>
+                </div>
+                <div class="logos" id="b4">
+                    <a href="https://www.linkedin.com/company/assets-dtu/" target="_blank">
+                        <img src={AssetsDtu} alt=""/>
+                    </a>
+                </div> 
+                <div class="logos" id="b5">
+                    <a href="https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all" target="_blank">
+                        <img src={Csd} alt=""/>
+                    </a>
+                </div>
+                <div class="logos" id="b6">
+                    <a href="https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/" target="_blank">
+                        <img src={Bhav} alt=""/>
+                    </a>
+                </div>
+                <div class="logos" id="b7">
+                    <a href="https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all" target="_blank">
+                        <img src={TechnoLit} alt=""/>
+                    </a>
+                </div> 
+                <div class="logos" id="b8">
+                    <a href="https://www.linkedin.com/company/markblend-social-media-agency/" target="_blank">
+                        <img src={Markblend} alt=""/>
+                    </a>
+                </div>
+                <div class="logos" id="b9">
+                    <a href="https://www.linkedin.com/company/beat-the-markets/" target="_blank">
+                        <img src={Finwizz} alt=""/>
                     </a>
                 </div>
             </div>

@@ -8,9 +8,7 @@ const  Review1 = () => {
             <div className="book-page-box">
                 <div class="book-header ">
                   <div className="book-img">
-                  <img src={Doglapan} alt="Doglapan"/>
-                  
-                  
+                  <img src={Doglapan} alt="Doglapan"/>                               
                   </div>
                    
                   <div class="book-title">

@@ -67,30 +67,36 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
+              <a href="/resources/bookreviews/book-pages/MillNextDoor">
                 <div class="img review">
                   <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>The Millionaire Next Door</h2>
                 </div>
+              </a>
               </div>
 
             <div class="boxsmall">
+            <a href="/resources/bookreviews/book-pages/RichestManInBabylon">
                 <div class="img review">
                   <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>The Richest Man In Babylon</h2>
                 </div>
+            </a>
             </div>
 
             <div class="boxsmall">
+            <a href="/resources/bookreviews/book-pages/MoneyorLife">
                 <div class="img review">
                   <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
                 </div>
                 <div class="text">
                   <h2>Your Money Or Your Life </h2>
                 </div>
+            </a>
             </div>
 
 

@@ -10,22 +10,16 @@ const  Review3 = () => {
             <div className="book-page-box">
                 <div class="book-header ">
                    <div className="book-img">
-                   <img src={RichDadPoorDad} alt="RichDadPoorDad"/>
-                  
-                  
+                   <img src={RichDadPoorDad} alt="RichDadPoorDad"/>               
                    </div>
                    
                    <div class="book-title">
-                 <h1> Rich Dad Poor Dad</h1> 
-       <p class="author">  by <i>Robert T. Kiyosaki</i></p>
-         
-       <p>  Book review by <i>Shreya Gupta</i></p>
-           
-                </div>
+                        <h1> Rich Dad Poor Dad</h1> 
+                        <p class="author">  by <i>Robert T. Kiyosaki</i></p>
+                        <p>  Book review by <i>Shreya Gupta</i></p>
+                    </div>
                 </div>
                
-
-
             <div className="book-para">
                 <p>
                     Rich Dad Poor Dad written by  Robert T. Kiyosaki is a New York
