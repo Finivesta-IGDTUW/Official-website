@@ -15,41 +15,27 @@ since unable to use fontawesome stylesheet in head of html*/
   
 .box-main { 
     display: flex;
+    text-align: center;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
     margin: auto; 
     height: 100%;
     width: 100%;
 } 
 
 .box-main h1 {
-    font-size: 7vw;
-}
-
-.box-main p {
-    font-size: 2vw;
-}
-
-.text-big {
+    font-size: 2.2em;
     font-weight: 500; 
     font-family: 'Poppins', sans-serif;
     color: rgb(195, 195, 195);
-    padding-top: 10vh;
-    padding-bottom: 10vh;
 }
 
-.text-small {
+.box-main p {
+    font-size: 1em;
     position: relative;
     color: rgb(170, 170, 170);
     font-family: 'Poppins', sans-serif;
     filter: drop-shadow(10px 5px 3px black);
-    font-size: 2vw;
-    bottom: 0;
-}
-
-.text-small p {
-    bottom: 0;
 }
 
 .main {
@@ -61,7 +47,7 @@ since unable to use fontawesome stylesheet in head of html*/
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    aspect-ratio: 2.439;
+    aspect-ratio: 3.360;
     background-color: rgba(0, 0, 0, 0.55);
     background-blend-mode: multiply;
 }
@@ -130,24 +116,6 @@ since unable to use fontawesome stylesheet in head of html*/
     opacity: 1;
 }
 
-@media (min-width: 1210px) {
-  
-    .Team p {
-      font-size: 3vw;
-    }
-}
-
-@media (min-width: 900px) {
-
-    .text-big {
-        padding-top: 15vh;
-    }
-  
-    .text-small {
-        padding-top: 5vw;
-    }
-}
-
 @media (max-width: 900px) {
     .cores-photo {
         grid-template-columns: repeat(2, 1fr);
@@ -185,22 +153,9 @@ since unable to use fontawesome stylesheet in head of html*/
   
 }
 
-@media (max-width: 510px) {  
-    .text-big {
-        padding-top: 12vw;
-    }
-  
-}
-
 @media (max-width: 430px) {
   
     .Team p {
         font-size: 3vw;
-    }
-}
-
-@media (max-width: 360px) {
-    .text-big {
-        font-size: 15px;
     }
 }

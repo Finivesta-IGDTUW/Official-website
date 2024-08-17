@@ -34,13 +34,8 @@ const Team = () => {
 
             <section className="main"> 
                 <div className="box-main"> 
-                    <h1 className="text-big"> 
-                        Team
-                    </h1> 
-                    <p className="text-small"> 
-                        Get to know the brilliant minds shaping our journey,
-                        each member of our team contributing their passion and expertise.
-                    </p>  
+                    <h1>Team</h1> 
+                    <p>Get to know the brilliant minds shaping our journey, each member of our team contributing their passion and expertise.</p>  
                 </div> 
             </section> 
 
