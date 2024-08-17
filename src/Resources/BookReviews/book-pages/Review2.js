@@ -46,7 +46,6 @@ const  Review2 = () => {
                             Intelligent Investor, is lauded as a top guru of finance and
                             investment.
                         </li>
-                        <br/>
                         <li>
                             Known as the father of value investing, The Intelligent
                             Investor: The Definitive Book on Value Investing is considered
@@ -55,7 +54,6 @@ const  Review2 = () => {
                             of their companies and the dividends they receive, rather than
                             paying attention to the changing sentiments of the market.
                         </li>
-                        <br/>
                         <li>
                             Graham also advocated for an investing approach that provides
                             a margin of safety—or room for human error—for the investor.
@@ -63,7 +61,6 @@ const  Review2 = () => {
                             discrepancies—when the market price of a stock is less than
                             its intrinsic value.
                         </li>
-                        <br/>
                         <li>
                             This article will examine Graham's early career work,
                             some key concepts related to value investing from The

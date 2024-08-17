@@ -10,7 +10,7 @@ import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import Blog from "./Resources/Blogs/Blog";
-import TradingApps from "./Resources/TradingApps/trading";
+import TradingApps from "./Resources/TradingApps/TradingApps";
 
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
@@ -69,6 +69,7 @@ function App() {
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
+            <Route path="/resources/trading" element={<TradingApps/>}/>
             {/* <Route path="/resources/trading" element={<TradingApps/>}/> */}
             
           <Route path="/team" element={<Team/>}/>

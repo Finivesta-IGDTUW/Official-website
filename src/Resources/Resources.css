@@ -116,6 +116,18 @@ body {
   text-decoration: underline;
 }
 
+.tradingapps p {
+  color: #c0c0c0;
+}
+.tradingapps i {
+  text-align: center;
+  justify-self: center;
+  color: #FFFFFF;
+}
+.boxsmall i {
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 1064px) {
   .boxsmall {
     width: 32vw;
