@@ -14,6 +14,7 @@ const Events = () => {
     <div className="Events">
  <div className="events-header">
     <h1 className="Heading">Events</h1>
+    
     </div>
 
    

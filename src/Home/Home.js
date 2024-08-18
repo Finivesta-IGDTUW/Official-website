@@ -24,7 +24,7 @@ const Home = () => {
         initialSlide: 0,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1124,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
@@ -33,7 +33,7 @@ const Home = () => {
             }
           },
           {
-            breakpoint: 1000,
+            breakpoint: 1100,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
