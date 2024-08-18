@@ -14,9 +14,11 @@ const  Review5 = () => {
                    </div>
                    
                    <div class="book-title">
-                        <h1>The Richest Man in Babylon </h1> 
-                        <p class="author"> by <i>George C. Clason </i></p>
-                        <p> Book review by <i>Sanskriti</i></p>
+                 <h1>The Richest Man in Babylon </h1> 
+       <p class="author"> by George C. Clason </p>
+         
+       <p>  Book review by <i>Sanskriti</i></p>
+           
                 </div>
                 </div>
                
@@ -55,6 +57,7 @@ const  Review5 = () => {
 
                          </div>
                          </div>
+                       
   );
 };
 

@@ -20,11 +20,12 @@ const  Review1 = () => {
                
 
              <div className="book-para">
-                <p>
+                
                   This is the unfettered story of Ashneer Grover - the favorite
                   and misunderstood poster boy of Start-up India. A raw,
                   gut-wrenching in its honesty, and completely from the heart,
                   this is storytelling at its finest.
+                  
                   <br/><br/>
                   A young boy with a 'refugee' tag growing up in Delhi's Malviya
                   Nagar outpaces his circumstances by becoming a rank-holder at
@@ -61,6 +62,7 @@ const  Review1 = () => {
                   two unicorns-Grofers, as CFO, and BharatPe, as co-founder. He
                   also talks about many controversies, telling his side of the story.
                   <br/><br/>
+             
                   He not only talked about his highs but also his lows i.e, he not
                   only covered his mistakes but also gave life advice from his
                   experience to help the reader learn from them. Throughout the book,
@@ -69,7 +71,7 @@ const  Review1 = () => {
                   investor is just another vendor”. Attribute it to Ashneer's writing
                   ability or his life journey, the book is very interesting and will
                   compel you to complete it in one sitting.
-                </p>
+              
                 </div>
                        
        
