@@ -16,7 +16,7 @@ const Stocks = () => {
     <div className="Stockspage">
           <div className="header">
               <h1>Stock Market</h1>
-              <p>Access the wealth of knowledge and tools in our <br />resource library.</p>
+              <p>All you need to know about stock market!</p>
           </div>
 
           <div className="resourcesbox">

@@ -14,7 +14,7 @@ const BookReview = () => {
         <div className="bookreview">
             <div class="header">
               <h1>Book Reviews</h1>
-              <p>Access the wealth of knowledge and tools in our <br/>resource library.</p> 
+              <p>Dive into in-depth book reviews and financial insights.</p> 
             </div>
 
             <div class="resourcesbox">

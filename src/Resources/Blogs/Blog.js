@@ -6,14 +6,14 @@ import I2 from '../Images/blogs/2.webp';
 import I3 from '../Images/blogs/3.jpg';
 import I4 from '../Images/blogs/4.jpg';
 import I5 from '../Images/blogs/5.jpg';
-import I6 from '../Images/blogs/6.jpg'; 
+import I6 from '../Images/blogs/6.jpg';
 
 const Blog = () => {
     return ( 
         <div className="blogpage">
             <div className="header">
                 <h1>Blogs</h1>
-                <p>Access the wealth of knowledge and tools in our <br/> resource library.</p>
+                <p>Explore insightful finance related articles and stories.</p>
             </div>
             
             <div className="resourcesbox">

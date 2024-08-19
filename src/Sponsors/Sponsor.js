@@ -15,6 +15,7 @@ import Markblend from './SponsorImages/image12.png';
 import Finwizz from './SponsorImages/image13.png';
 import Stockpe from './SponsorImages/image14.png';
 import Stockgro from './SponsorImages/image15.png';
+import Lwt from './SponsorImages/image.png'
 
 
 const Sponsor = () => {
@@ -30,33 +31,39 @@ const Sponsor = () => {
                 <div class="logos" id="a1">
                     <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank" rel="noreferrer"> 
                         <img src={Finlatics} alt=""/>
+                        <div class="shade">Finlatics</div>
                     </a>
                 </div> 
                 <div class="logos" id="a2">
                     <a href="https://www.linkedin.com/company/stoxhero/" target="_blank" rel="noreferrer">
                         <img src={StoxHero} alt=""/>
+                        <div class="shade">StoxHero</div>
                     </a>
                 </div>
                 <div class="logos" id="a3">
                     <a href="#" target="_blank" rel="noreferrer">
                         <img src={Onepercclub} alt=""/>
+                        <div class="shade">One Percent Club</div>
                     </a>
                 </div>
                 <div class="logos" id="a4">
                     <a href="https://www.linkedin.com/school/codingninjas/" target="_blank" rel="noreferrer">
                         <img src={CodingNinjas} alt=""/>
+                        <div class="shade">Coding Ninjas</div>
                     </a>
                 </div>
                 <div class="logos" id="a5">
                     <a href="https://www.linkedin.com/company/stockpe/" target="_blank" rel="noreferrer">
                         <img src={Stockpe} alt=""/>
+                        <div class="shade">Stock Pe</div>
                     </a>
                 </div>
-                {/* <div class="logos" id="a6">
-                    <a href="#" target="_blank" rel="noreferrer">
-                        <img src={Image} alt=""/>
+                <div class="logos" id="a6">
+                    <a href="https://www.linkedin.com/company/learningwhiletravelling/" target="_blank" rel="noreferrer">
+                        <img src={Lwt} alt=""/>
+                        <div class="shade">Learning While Travelling</div>
                     </a>
-                </div> */}
+                </div>
             </div>
 
             <h1 class="our_partners">Our Partners</h1>
@@ -65,54 +72,55 @@ const Sponsor = () => {
                 <div class="logos" id="b1">
                     <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank" rel="noreferrer">
                         <img src={Stockgro} alt=""/>
-                        {/*<div class="shade">
-                            <div className="sponsi-name">
-                                <p>Stock Grow</p>
-                            </div>
-                            <div className="sponsi-link">
-                                link    
-                            </div>
-                        </div>*/}
+                        <div class="shade">StockGro</div>
                     </a>
                 </div> 
                 <div class="logos" id="b2">
                     <a href="https://www.linkedin.com/showcase/finshots/" target="_blank" rel="noreferrer">
                         <img src={Finshots} alt=""/>
+                        <div class="shade">FinShots</div>
                     </a>
                 </div>
                 <div class="logos" id="b3">
                     <a href="https://www.linkedin.com/in/adira-csd-280a71226/" target="_blank" rel="noreferrer">
                         <img src={Adira} alt=""/>
+                        <div class="shade">Adira CSD</div>
                     </a>
                 </div>
                 <div class="logos" id="b4">
                     <a href="https://www.linkedin.com/company/assets-dtu/" target="_blank" rel="noreferrer">
                         <img src={AssetsDtu} alt=""/>
+                        <div class="shade">Assets DTU</div>
                     </a>
                 </div> 
                 <div class="logos" id="b5">
                     <a href="https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all" target="_blank" rel="noreferrer">
                         <img src={Csd} alt=""/>
+                        <div class="shade">Centre of Sustainable Development</div>
                     </a>
                 </div>
                 <div class="logos" id="b6">
                     <a href="https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/" target="_blank" rel="noreferrer">
                         <img src={Bhav} alt=""/>
+                        <div class="shade">BHAV</div>
                     </a>
                 </div>
                 <div class="logos" id="b7">
                     <a href="https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all" target="_blank" rel="noreferrer">
                         <img src={TechnoLit} alt=""/>
+                        <div class="shade">TechnoLiterati</div>
                     </a>
                 </div> 
                 <div class="logos" id="b8">
                     <a href="https://www.linkedin.com/company/markblend-social-media-agency/" target="_blank" rel="noreferrer">
                         <img src={Markblend} alt=""/>
+                        <div class="shade">MarkBlend</div>
                     </a>
                 </div>
                 <div class="logos" id="b9">
                     <a href="https://www.linkedin.com/company/beat-the-markets/" target="_blank" rel="noreferrer">
                         <img src={Finwizz} alt=""/>
+                        <div class="shade">FinWizz</div>
                     </a>
                 </div>
             </div>

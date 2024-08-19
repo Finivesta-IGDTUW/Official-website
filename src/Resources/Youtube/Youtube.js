@@ -13,7 +13,7 @@ const Youtube = () => {
 
         <div class="header">
           <h1>Online Videos</h1>
-          <p>Access the wealth of knowledge and tools in our <br/>resource library.</p>
+          <p>Find latest and most informative collection of videos and tutorials here</p>
         </div>
 
         <div class="resourcesbox">

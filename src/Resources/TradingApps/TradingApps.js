@@ -13,7 +13,7 @@ const TradingApps = () => {
         <div className="blogpage">
             <div className="header">
                 <h1>Trading Apps</h1>
-                <p>Unlock a world of financial insights and tools with our <br/>comprehensive library.</p>
+                <p>Discover top-rated trading apps that are <br /> user-friendly and feature-rich</p>
             </div>
             
             <div className="resourcesbox">

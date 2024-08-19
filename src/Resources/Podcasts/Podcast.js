@@ -9,7 +9,7 @@ const Podcast = () => {
 
         <div class="header">
           <h1>Podcast Episodes</h1>
-          <p>Access the wealth of knowledge and tools in our <br/>resource library.</p>
+          <p>Tune in to engaging podcasts to explore the world of finance</p>
         </div>
 
         <div class="resourcesbox">
