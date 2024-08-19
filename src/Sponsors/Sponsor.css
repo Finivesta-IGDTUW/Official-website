@@ -33,6 +33,7 @@
     font-weight: 900;
     font-size: 2.2em;
     margin-top: 4rem;
+    margin-bottom: 3rem;
 }
    
 body{background-color:black;}
@@ -124,7 +125,7 @@ body{background-color:black;}
     height: 0.1px;
     width: 80vw;
     background-color: #5f8e33;
-    margin: 5vh 10vw;
+    margin: 10vh 10vw;
 }
 
 /* For the fineletics image */
