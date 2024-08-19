@@ -119,7 +119,13 @@ body{background-color:black;}
     width: 100%;
 }
 
-
+.vertical-line {
+    position: relative;
+    height: 0.1px;
+    width: 80vw;
+    background-color: #5f8e33;
+    margin: 5vh 10vw;
+}
 
 /* For the fineletics image */
 #a1 img{
