@@ -21,7 +21,7 @@ const BookReview = () => {
 
               <div class="boxsmall">
            
-              <a href="/resources/bookreviews/book-pages/doglapan">
+              <a href="/resources/bookreviews/bookpages/doglapan">
                   <div class="img review">
             
             
@@ -34,7 +34,7 @@ const BookReview = () => {
               </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/intelligentinvestor">
+            <a href="/resources/bookreviews/bookpages/intelligentinvestor">
                 <div class="img review">
                   <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
                 </div>
@@ -45,7 +45,7 @@ const BookReview = () => {
             </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/richdadpoordad">
+            <a href="/resources/bookreviews/bookpages/richdadpoordad">
                 <div class="img review">
                   <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
                 </div>
@@ -56,7 +56,7 @@ const BookReview = () => {
               </div>
               
               <div class="boxsmall">
-              <a href="/resources/bookreviews/book-pages/psychologyofmoney">
+              <a href="/resources/bookreviews/bookpages/psychologyofmoney">
                 <div class="img review">
                   <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
                 </div>
@@ -67,7 +67,7 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/MillNextDoor">
+            <a href="/resources/bookreviews/bookpages/MillNextDoor">
                 <div class="img review">
                   <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
                 </div>
@@ -78,8 +78,8 @@ const BookReview = () => {
               </div>
 
             <div class="boxsmall">
-            {/* <Route path="/resources/bookreviews/book-pages/RichestManInBabylon" element={<Review5/>}/> */}
-            <a href="/resources/bookreviews/book-pages/RichestManInBabylon">
+            {/* <Route path="/resources/bookreviews/bookpages/RichestManInBabylon" element={<Review5/>}/> */}
+            <a href="/resources/bookreviews/bookpages/RichestManInBabylon">
                 <div class="img review">
                   <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
                 </div>
@@ -90,7 +90,7 @@ const BookReview = () => {
             </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/book-pages/MoneyorLife">
+            <a href="/resources/bookreviews/bookpages/MoneyorLife">
                 <div class="img review">
                   <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
                 </div>
