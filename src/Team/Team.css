@@ -62,8 +62,11 @@
 }
 
 .cores-photo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    row-gap: 5vw;
     padding: 2vw;
     text-align: center;
     position: relative;
@@ -74,7 +77,6 @@
     object-fit: cover;
     justify-self: center;
     position: relative;
-    margin-bottom: 5vw;
 }
 
 .image {
