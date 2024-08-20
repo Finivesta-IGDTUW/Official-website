@@ -98,13 +98,13 @@ const Sponsor = () => {
                 <div class="logos" id="b5">
                     <a href="https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all" target="_blank" rel="noreferrer">
                         <img src={Csd} alt=""/>
-                        <div class="shade">Centre of Sustainable Development</div>
+                        <div class="shade">CSD - IGDTUW</div>
                     </a>
                 </div>
                 <div class="logos" id="b6">
                     <a href="https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/" target="_blank" rel="noreferrer">
                         <img src={Bhav} alt=""/>
-                        <div class="shade">BHAV</div>
+                        <div class="shade">B. H. A. V.</div>
                     </a>
                 </div>
                 <div class="logos" id="b7">
