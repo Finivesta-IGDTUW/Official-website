@@ -22,13 +22,21 @@ import Meera from './Media/Treas_Meera.png';
 import Saachi from './Media/Tech_Saachi.png';
 
 const Team = () => {
+    document.addEventListener('DOMContentLoaded', function() {
+        var photos = document.querySelectorAll('.photo');
+    
+        photos.forEach(function(photo) {
+            photo.addEventListener('touchstart', function() {
+                photo.classList.add('touch');
+            });
+    
+            photo.addEventListener('touchend', function() {
+                photo.classList.remove('touch');
+            });
+        });
+    });
+
     return (
-      // Page is divided into 5 parts
-      // 1. Navbar
-      // 2. Head
-      // 3. Cores
-      // 4. Social
-      // 5. Footer
       
         <div className="Team"> 
 

@@ -106,11 +106,13 @@
     color: #ababab;
 }
 
-.photo:hover .image{
+.photo:hover .image,
+.photo.touch .image {
     opacity: 0.5;
 }
 
-.photo:hover .overlay{
+.photo:hover .overlay,
+.photo.touch .overlay {
     opacity: 1;
 }
 
