@@ -9,10 +9,10 @@
   }
   
  .events-header{
-  background-image: url('/src/Images/eve.png');
+  background-image: url('./Images/Eventsbg.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
     height: 200px; 
