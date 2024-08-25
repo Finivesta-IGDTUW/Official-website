@@ -1,8 +1,10 @@
-*{
-    margin: 0;
+/* .Reviews{
+    margin: 0px;
     padding: 0px;
+ overflow-x: hidden ;
     box-sizing: border-box;
-}
+} */
+
 .book-page-box{
     border-radius: 10px;
     height: max-content;

@@ -294,31 +294,47 @@
   color: #71B139;
   padding: 0px 0px 80px 0px;
 }
-.box img{
-  
-  height:300px;
-  width: 300px;
 
- 
-}
-@media screen and (min-width: 1280px){
-.box img{
-  height: 350px !important;
-  width: 350px !important;
-}
-.box{
-  /* margin: 1rem; */
-  width: 360px !important;
-  height: 360px !important;
-  margin: 10px;
-}
-}
-.box{
-  /* margin: 1rem; */
-  width: 310px !important;
-  height: 310px;
-  margin: 10px;
-}
+
+@media screen and (min-width: 1279px){
+  .box img{
+    height: 350px !important;
+    width: 350px !important;
+  }
+  .box{
+    /* margin: 1rem; */
+    width: 360px !important;
+    height: 360px !important;
+    margin: 10px ;
+  }
+  }
+  
+  @media screen and (min-width: 430px) and (max-width: 1279px){
+    .box img{
+      height: 290px !important;
+      width: 300px !important;
+    }
+    .box{
+      /* margin: 1rem; */
+       width: 350px !important;
+      height: 360px !important;
+      margin: 20px !important;
+    } 
+    }
+  @media screen and (min-width: 300px) and (max-width: 430px){
+    .box img{
+      height: 240px !important;
+      width: 230px !important;
+    }
+    .box{
+      /* margin: 1rem; */
+       width: 230px !important;
+      height: 240px !important;
+     margin: 10px;
+    } 
+    }
+
+
 
 button.slick-arrow.slick-prev{
 width: 30px;

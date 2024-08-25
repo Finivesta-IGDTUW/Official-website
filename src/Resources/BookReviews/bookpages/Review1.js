@@ -4,7 +4,7 @@ import Doglapan from "../../Images/books/Doglapan.jpg";
 
 const  Review1 = () => {
   return (
-        <div>
+        <div className="Reviews">
             <div className="book-page-box">
                 <div class="book-header ">
                   <div className="book-img">
