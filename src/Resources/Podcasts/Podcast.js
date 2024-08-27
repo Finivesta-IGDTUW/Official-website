@@ -7,7 +7,7 @@ const Podcast = () => {
   return (
     <div className="Youtube">
 
-        <div class="header podcasts">
+        <div class="header pc">
           <h1>Podcast Episodes</h1>
           <p>Tune in to engaging podcasts to explore the world of finance</p>
         </div>
