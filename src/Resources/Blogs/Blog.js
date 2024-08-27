@@ -11,7 +11,7 @@ import I6 from '../Images/blogs/6.jpg';
 const Blog = () => {
     return ( 
         <div className="blogpage">
-            <div className="header">
+            <div className="header blogs">
                 <h1>Blogs</h1>
                 <p>Explore insightful finance related articles and stories.</p>
             </div>
