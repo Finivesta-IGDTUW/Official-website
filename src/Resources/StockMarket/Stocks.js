@@ -14,7 +14,7 @@ import I6 from '../Images/Stock/Stock6.jpg';
 const Stocks = () => {
   return (
     <div className="Stockspage">
-          <div className="header">
+          <div className="header stockmarket">
               <h1>Stock Market</h1>
               <p>All you need to know about stock market!</p>
           </div>
