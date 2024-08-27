@@ -21,6 +21,22 @@ body {
 .blogs{
   background-image: url('./Images/blog_bg.jpg');
 }
+.brs{
+  background-image: url('./Images/book review_bg.jpg');
+}
+.yt{
+  background-image: url('./Images/video_bg.jpg');
+}
+.pc{
+  background-image: url('./Images/podcast_bg.jpg');
+}
+.sm{
+  background-image: url('./Images/stock market_bg.jpg');
+}
+.tap{
+  background-image: url('./Images/trading apps_bg.jpg');
+}
+
 
 .header h1 {
   /* margin-bottom: 30px; */
