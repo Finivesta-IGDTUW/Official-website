@@ -11,7 +11,7 @@ import FivePaisaLogo from './Logos/5paisa.png';
 const TradingApps = () => {
     return ( 
         <div className="blogpage">
-            <div className="header">
+            <div className="header tradingapps">
                 <h1>Trading Apps</h1>
                 <p>Discover top-rated trading apps that are <br /> user-friendly and feature-rich</p>
             </div>
