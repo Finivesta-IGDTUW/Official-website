@@ -12,7 +12,7 @@ import MoneyOrLife from '../Images/books/MoneyOrLife.jpg';
 const BookReview = () => {
   return (
         <div className="bookreview">
-            <div class="header bookreview">
+            <div class="header brs">
               <h1>Book Reviews</h1>
               <p>Dive into in-depth book reviews and financial insights.</p> 
             </div>
