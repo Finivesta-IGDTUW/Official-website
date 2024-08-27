@@ -11,7 +11,7 @@ const Youtube = () => {
   return (
     <div className="Youtube">
 
-        <div class="header youtube">
+        <div class="header yt">
           <h1>Online Videos</h1>
           <p>Find latest and most informative collection of videos and tutorials here</p>
         </div>
