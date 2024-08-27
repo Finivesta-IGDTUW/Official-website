@@ -18,6 +18,10 @@ body {
   overflow: hidden;
 }
 
+.header blogs{
+  background-image: url('./Images/blog_bg.jpg');
+}
+
 .header h1 {
   /* margin-bottom: 30px; */
   font-size: 2.2em; /* Large font size for the main header title */
