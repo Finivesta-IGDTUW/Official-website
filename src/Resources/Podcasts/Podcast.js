@@ -15,7 +15,7 @@ const Podcast = () => {
         <div class="resourcesbox">
 
           <div class="boxsmall">
-            <a href="https://open.spotify.com/episode/7vHHGxrlU890tlJXUasi9X?si=b5ebd680d07b46d7">
+            <a target="_blank" href="https://open.spotify.com/episode/7vHHGxrlU890tlJXUasi9X?si=b5ebd680d07b46d7">
             <div class="img podcast">
               <img src={SpotifyLogo} alt="Cover"/>
             </div>
@@ -26,7 +26,7 @@ const Podcast = () => {
           </div>
 
           <div class="boxsmall">
-            <a href="https://open.spotify.com/show/1ZpUmASkxeRmJsukPXWQT2?si=U8ebq-obRaCNzxnMTI3_zg">
+            <a target="_blank" href="https://open.spotify.com/show/1ZpUmASkxeRmJsukPXWQT2?si=U8ebq-obRaCNzxnMTI3_zg">
               <div class="img podcast">
                 <img src={SpotifyLogo} alt="Cover"/>
               </div>

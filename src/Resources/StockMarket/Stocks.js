@@ -21,7 +21,7 @@ const Stocks = () => {
 
           <div className="resourcesbox">
               <div className="boxsmall stock">
-                  <a href="https://fortune.com/recommends/investing/how-to-start-investing/">
+                  <a target="_blank" href="https://fortune.com/recommends/investing/how-to-start-investing/">
                   <div className="img">
                       <img src={I1} alt="Cover"/>
                   </div>
@@ -34,7 +34,7 @@ const Stocks = () => {
         
         
               <div className="boxsmall stock">
-                  <a href="https://www.reddit.com/r/IndiaInvestments/comments/9ltgni/for_someone_who_is_absolutely_at_level_zero_in/">
+                  <a target="_blank" href="https://www.reddit.com/r/IndiaInvestments/comments/9ltgni/for_someone_who_is_absolutely_at_level_zero_in/">
                   <div className="img">
                       <img src={I2} alt="Cover"/>
                   </div>
@@ -48,7 +48,7 @@ const Stocks = () => {
 
         
               <div className="boxsmall stock">
-                  <a href="https://www.fool.com/investing/stock-market/types-of-stocks/">
+                  <a target="_blank" href="https://www.fool.com/investing/stock-market/types-of-stocks/">
                   <div className="img">
                       <img src={I3} alt="Cover"/>
                   </div>
@@ -62,7 +62,7 @@ const Stocks = () => {
 
          
               <div className="boxsmall stock">
-                  <a href="https://www.forbes.com/advisor/investing/what-are-stocks/"> 
+                  <a target="_blank" href="https://www.forbes.com/advisor/investing/what-are-stocks/"> 
                   <div className="img">
                       <img src={I4} alt="Cover"/>
                   </div>
@@ -75,7 +75,7 @@ const Stocks = () => {
         
         
               <div className="boxsmall stock">
-                  <a href="https://www.reddit.com/r/IndiaInvestments/comments/k7v0dg/a_beginners_guide_to_investing_in_the_stock/">
+                  <a target="_blank" href="https://www.reddit.com/r/IndiaInvestments/comments/k7v0dg/a_beginners_guide_to_investing_in_the_stock/">
                   <div className="img">
                       <img src={I5} alt="Cover"/>
                   </div>
@@ -89,7 +89,7 @@ const Stocks = () => {
         
         
               <div className="boxsmall stock">
-                  <a href="https://www.investopedia.com/terms/s/stock.asp">
+                  <a target="_blank" href="https://www.investopedia.com/terms/s/stock.asp">
                   <div className="img">
                       <img src={I6} alt="Cover"/>
                   </div>
