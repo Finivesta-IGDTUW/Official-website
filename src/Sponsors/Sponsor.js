@@ -20,7 +20,7 @@ import Lwt from './SponsorImages/image.png'
 
 const Sponsor = () => {
     return (
-        <>
+        <div className="sponspage">
             <div className="sponsors-header">
             <h1>Our Sponsors</h1>
             <p>Empowering innovation and growth, <br /> thanks to the support of our valued sponsors.</p>
@@ -126,7 +126,7 @@ const Sponsor = () => {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
         
     );
 };
