@@ -13,7 +13,7 @@ const Navbar = () => {
         <label htmlFor="menu-toggle" className="menu-icon">
           &#9776;
         </label>
-        <ul className="menu">
+        <ul className="menu"> 
           <li>
             <a href="/">Home</a>
           </li>
