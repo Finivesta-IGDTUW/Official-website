@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sponsor.css";
 
-import Finlatics from './SponsorImages/image8.png';
+import Finlatics from './SponsorImages/image16.png';
 import Csd from './SponsorImages/image1.png';
 import CodingNinjas from './SponsorImages/image2.png';
 import Adira from './SponsorImages/image4.png';
@@ -23,7 +23,7 @@ const Sponsor = () => {
         <div className="sponspage">
             <div className="sponsors-header">
             <h1>Our Sponsors</h1>
-            <p>Empowering innovation and growth, <br /> thanks to the support of our valued sponsors.</p>
+            <p>Empowering innovation and growth, thanks to the support of our valued sponsors.</p>
             </div>
 
             <div class="sponsors_container">
