@@ -43,7 +43,7 @@ const Team = () => {
             <section className="main"> 
                 <div className="box-main"> 
                     <h1>Team</h1> 
-                    <p>Get to know the brilliant minds shaping our journey,<br/>each member of our team contributing their passion and expertise.</p>  
+                    <p>Get to know the brilliant minds shaping our journey, each member of our team contributing their passion and expertise.</p>  
                 </div> 
             </section> 
 
