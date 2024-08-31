@@ -150,6 +150,12 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .subtitle {
+    font-size: 10vw;
+  }
+}
+
 .rows{
   display: flex;
   justify-content: space-between;
@@ -177,9 +183,9 @@
   font-size: 1.7vw;
   text-align: justify;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
   .abc {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -229,17 +235,14 @@
       text-align: center;
   }
   .list div {
-    width: 42vw;
-  }
-}
-@media screen and (max-width: 600px){
-  .list div {
     width: 90vw;
   }
   .list div p {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
-
+  .list div h1 {
+    font-size: 6vw;
+  }
 }
 
   
