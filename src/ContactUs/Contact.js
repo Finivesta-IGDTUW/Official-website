@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from 'react-helmet';
 import emailjs from 'emailjs-com';
 
 import "./Contact.css";
@@ -41,24 +40,27 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className="ContactPage">
-            <Helmet>
-                <meta charSet="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Contact Us</title>
-            </Helmet>
+        <div className="contactPage">
 
-            <p className="Contact">Contact Us</p>
+            <div className="contact-header">
+                <h1>Contact Us</h1>
+                <p>We are here to assist you. Reach out to us for any queries or support :)</p>
+            </div>
 
             <div className="wrapper">
-                <div className="box1">
+                <div className="contactbox">
                     <p>
-                        <b>FINIVESTA<br />
-                            Financial and economics society - IGDTUW</b> <br />
-                        Address<br />
-                        James Church, New Church Rd, Opp. St,<br />
-                        Kashmere Gate, New Delhi, Delhi 110006<br />
-                        <b>Phone</b><br />
+                        <b>
+                            FINIVESTA
+                            <br/>
+                            The Finance and Economics Society of IGDTUW
+                            <br/>
+                        </b>
+                        <b>Address :</b> <br/>
+                            Madrasa Road, Opposite St. James Church, 
+                            Kashmere Gate, New Delhi - 110006<br />
+                        <b>Phone :</b>
+                        <br/>
                         011 2390 0220
                     </p>
                 </div>

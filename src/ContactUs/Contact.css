@@ -1,40 +1,57 @@
-.ContactPage {
+.contactPage {
     background-color: #000000;
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
   }
   
-  .Contact {
-    color: #fff; 
+.contact-header {
+    background-image: url('/src/Images/Header.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 20px;
     text-align: center;
-    font-size: 4vw;
-    margin-top: 50px;
-  }
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: auto;  
+    overflow: hidden;
+}
+  
+.contact-header h1 {
+    font-weight: 900;
+    font-size: 2.2em; /* Large font size for the main header title */
+} 
+.contact-header p {
+    /* width: 80%; */
+    font-size: 1.2rem;  
+    text-align: center;
+}  
   
   .wrapper {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap to next line if necessary */
-    justify-content: center; /* Center items horizontally */
-    gap: 20px; /* Add gap between items */
-    margin: 20px 20px; /* Add margin on sides */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 20px 20px; 
   }
   
-  .box1, .map {
-    flex: 1; /* Make both elements flexible */
-    max-width: calc(50% - 10px); /* Adjusted width for responsiveness with a gap of 20px */
+  .contactbox, .map {
+    flex: 1; 
     padding: 20px;
-  }
-  
-  .box1 {
     color: #fff;
     font-size: 2vw;
   }
-  
-  .map {
-    color: #fff;
-    font-size: 2vw;
-  }
+
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
   
   .message {
     color: #fff;
@@ -48,7 +65,7 @@
     background-color: #000000; /* Changed background color */
     padding: 20px;
     width: 90%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
@@ -58,21 +75,22 @@
     margin: 5px 0;
   }
   
-  .col-50 {
-    flex: 5%;
-    padding: 0 1px; /* Added padding for gap */
-  }
-  
-  .col-75 { 
-    flex: 15%;
-    padding: 0 1px; /* Added padding for gap */
-  
-  }
-  
-  .col-100 {
-    flex: 100%;
-    padding: 0 1px; /* Added padding for gap */
-  }
+  .col-50, .col-75, .col-100 {
+    padding: 0 10px; /* Added padding for gap */
+    box-sizing: border-box;
+}
+
+.col-50 {
+    flex: 1 1 45%; /* Adjusted flex basis for better spacing */
+}
+
+.col-75 {
+    flex: 1 1 55%; /* Adjusted flex basis for better spacing */
+}
+
+.col-100 {
+    flex: 1 1 100%;
+}
   
   
   input[type="text"],
@@ -80,33 +98,31 @@
   input[type="tel"],
   textarea {
     width: 100%;
-    height: 90%;
     padding: 10px;
     margin: 5px 0;
     box-sizing: border-box;
-    background-color:#303030; /* Changed background color of textboxes */
+    background-color: #303030; /* Changed background color of textboxes */
     border: none;
     border-radius: 5px;
-    font-family:  "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: medium;
+    color: #ffffff;
   }
-  
-  
   
   input[type="text"]::placeholder,
   input[type="email"]::placeholder,
   input[type="tel"]::placeholder,
   textarea::placeholder {
-      color: #bab7b7; /* Change placeholder font color to gray */
-      font-family:  "Poppins", sans-serif;
+    color: #bab7b7; /* Change placeholder font color to gray */
+    font-family:  "Poppins", sans-serif;
     font-size: medium;
-    padding-left: 5%;
+    padding-left: 1vw;
   }
   
   input[type="submit"] {
     background-color: #000000;
     color:#7AAE4A ;
-    padding: 2px 30px 2px 30px; /* Reduced padding for smaller button */
+    padding: 10px 40px; /* Reduced padding for smaller button */
     border-radius: 5px;
     cursor: pointer;
     width: auto; /* Auto width for smaller button */
@@ -120,4 +136,26 @@
     background-color: #45a049;
     color: #ffffff;
   }
-  
+
+  .form-status {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-50, .col-75, .col-100 {
+        flex: 1 1 100%;
+        padding: 0 5px; /* Adjust padding for mobile view */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Full width button for mobile view */
+        float: none;
+    }
+}
