@@ -26,11 +26,11 @@ const TradingApps = () => {
                         <p className="blog-byline-card">
                             Empowering Investments with Zero Hassles
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>
@@ -46,11 +46,11 @@ const TradingApps = () => {
                        <p className="blog-byline-card">
                             Your Trusted Partner in Financial Growth
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.indiainfoline">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.indiainfoline">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/iifl-stocks-demat-ipos/id955115541">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/iifl-stocks-demat-ipos/id955115541">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>       
@@ -66,11 +66,11 @@ const TradingApps = () => {
                         <p className="blog-byline-card">
                             Next-Gen Trading for the Smart Investor
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.msf.angelmobile">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.msf.angelmobile">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/angel-one-stocks-mutual-fund/id1060530981">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/angel-one-stocks-mutual-fund/id1060530981">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>
@@ -86,11 +86,11 @@ const TradingApps = () => {
                         <p className="blog-byline-card">
                             Simplifying Wealth Creation for Everyone
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.dhan.live">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.dhan.live">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/dhan-stock-market-trading-app/id1575318726">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/dhan-stock-market-trading-app/id1575318726">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>
@@ -106,11 +106,11 @@ const TradingApps = () => {
                         <p className="blog-byline-card">
                             Investing Made Easy and Accessible
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nextbillion.groww">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.nextbillion.groww">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>
@@ -126,11 +126,11 @@ const TradingApps = () => {
                         <p className="blog-byline-card">
                             Your Gateway to Affordable Trading
                             <br/><br/>
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.fivepaisa.trade">
+                            <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.fivepaisa.trade">
                                 <i class="fab fa-google-play"/>
                             </a>
                             &emsp;
-                            <a target="_blank" href="https://apps.apple.com/in/app/5paisa-share-market-mf-ipo/id1156366609">
+                            <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/5paisa-share-market-mf-ipo/id1156366609">
                                 <i class="fab fa-apple"/>
                             </a>
                         </p>
