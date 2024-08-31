@@ -66,13 +66,12 @@
   display: flex;
   flex-direction: column;
   max-width: 90%; /* Adjusted for responsiveness */
-  margin: 0 auto; /* Center horizontally */
+  margin: 5vw; /* Center horizontally */
   color: black;
   text-align: left;
   justify-content: left;
   align-items: left;
   margin-top: 10%; /*Adjusted for responsiveness*/
-  padding: 0 20px; /* Added padding for responsiveness */
 }
 
 .content h1 {
@@ -142,7 +141,7 @@
 }
 
 .subtitle{
-  font-size: 65px;
+  font-size: 5vw;
   font-weight: 600;
   /* font-family: 'Poppins',sans-serif; */
   margin-top: 20px;
@@ -155,9 +154,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-top: 20px;
+  margin: 5vw;
 }
 
 .col-1{
@@ -177,77 +174,53 @@
 .abc{
   color: white;
   /* font-family: 'Poppins',sans-serif; */
-  font-size: 28px;
+  font-size: 1.7vw;
   text-align: justify;
+}
+@media screen and (max-width: 600px){
+  .abc {
+    font-size: 3vw;
+  }
 }
 
 .list{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 70px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-gap: 4vw;
+  margin: 5vw;
+  justify-content: center;
 }
 
 .list div{
   background: #71B139;
-  padding: 40px;
+  padding: 3vw;
   font-size: 13px;
   font-weight: 200;
   border-radius: 25px;
+  width: 27vw;
 }
 
 .list div h1{
-  font-size: 40px;
+  font-size: 4vw;
   color: white;
   font-weight: bold;
   /* font-family: 'Poppins',sans-serif; */
-  margin-bottom: 10px;
-  margin-top: 15px;
+  margin: 1vw;
   text-align: center;
 }
 
 .list div p{
   color: white;
   /* font-family: 'Poppins',sans-serif; */
-  font-size: 22px;
+  font-size: 1.5vw;
   margin-top: 5px;
   margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
   text-align: justify;
 }
-
 @media screen and (max-width: 600px){
-    .abc{
-        font-size: 16px;
-    }
-    .list div p{
-        font-size: 12px;
-    } 
-    .list div h1{
-      font-size: 35px;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 1000px){
-  .abc{
-      font-size: 25px;
-  }
-  .list div p{
-      font-size: 17px;
-  } 
-}
-@media screen and (min-width: 1001px){
-  .abc{
-      font-size: 28px;
-  }
-  .list div p{
-      font-size: 22px;
-  } 
-}
-@media screen and (max-width: 1000px){
   .col-1{
       flex-basis: 100%;
   }
@@ -255,8 +228,19 @@
       flex-basis: 100%;
       text-align: center;
   }
+  .list div {
+    width: 42vw;
+  }
 }
+@media screen and (max-width: 600px){
+  .list div {
+    width: 90vw;
+  }
+  .list div p {
+    font-size: 2.5vw;
+  }
 
+}
 
   
 /* Dishas Code */

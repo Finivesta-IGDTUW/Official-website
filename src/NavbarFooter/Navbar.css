@@ -25,7 +25,7 @@ nav {
 
 .logoheader img{
     height: calc(4vh + 5px);
-    margin-left: 50px;
+    margin-left: 5vw;
     margin-top: 7px;
 }
   
@@ -111,11 +111,4 @@ nav {
         font-size: 28px;
         cursor: pointer;
     }
-}
-
-@media only screen and (max-width:600px) {
-    .logoheader img{
-        margin-left: 25px;
-    }
-          
 }
