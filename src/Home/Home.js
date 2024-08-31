@@ -96,7 +96,7 @@ const Home = () => {
         
         <div  className='Carousel'> <section className="section-carousel">
         <div className="carousel">
-          <h2>Recent events</h2>
+          <h2>Recent Events</h2>
     
           <Slider {...settings}>
           

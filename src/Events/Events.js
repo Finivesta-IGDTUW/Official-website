@@ -70,7 +70,7 @@ const Events = () => {
          </a>
        </div>
       
-       <h2 className="title">Kharche Pe Charcha</h2>
+       <h2 className="title">Kharche Pe Charche</h2>
        </div>
        
 
@@ -111,7 +111,7 @@ const Events = () => {
        </a>
        </div>
 
-       <h2 className="title">Speaker</h2>
+       <h2 className="title">Guide To Stock Market</h2>
 
        </div>
      
