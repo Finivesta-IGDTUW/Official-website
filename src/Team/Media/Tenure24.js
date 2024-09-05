@@ -1,23 +1,23 @@
 import '../Media/Tenure24.css';
 
-import Khushi from './Tenure23/Pres_Khushi.png';
-import Ritika from './Tenure23/CP_Ritika.png';
-import Tejasvi from './Tenure23/Pres_Tejasvi.png';
-import Akshika from './Tenure23/VP_Akshika.png';
-import Manasi from './Tenure23/VP_Manasi.png';
-import Anshika from './Tenure23/Content_Anshika.png';
-import Kashish from './Tenure23/Content_Kashish.png';
-import Anandita from './Tenure23/FR_Anandita.png';
-import Sanskriti from './Tenure23/FR_Sanskriti.png';
-import Aiman from './Tenure23/HR_Aiman.png';
-import Urja from './Tenure23/HR_Urja.png';
-import Gunjan from './Tenure23/Creative_Gunjan.png';
-import Mansi from './Tenure23/Creative_Mansi.png';
-import Aadya from './Tenure23/PR_Aadya.png';
-import Disha from './Tenure23/PR_Disha.png';
-import Gargi from './Tenure23/Treas_Gargi.png';
-import Meera from './Tenure23/Treas_Meera.png';
-import Saachi from './Tenure23/Tech_Saachi.png';
+import Aiman from './Tenure24/Pres_Aiman.png';
+import Sanskriti from './Tenure24/Pres_Sanskriti.png';
+import DishaTreas from './Tenure24/Treas_Disha.png';
+import Kashish from './Tenure24/Treas_Kashish.png';
+import Aanvi from './Tenure24/Cont_Aanvi.png';
+import Vedika from './Tenure24/Cont_Vedika.png';
+import Abhaya from './Tenure24/Crea_Abhaya.png';
+import Sanya from './Tenure24/Crea_Sanya.png';
+import Jasleen from './Tenure24/FC_Jasleen.png';
+import Mishthi from './Tenure24/FC_Mishthi.png';
+import Anshika from './Tenure24/FNR_Anshika.png';
+import Sneha from './Tenure24/FNR_Sneha.png';
+import Harshita from './Tenure24/HR_Harshita.png';
+import Manya from './Tenure24/HR_Manya.png';
+import Khushi from './Tenure24/PR_Khushi.png';
+import Saniya from './Tenure24/PR_Saniya.png';
+import DishaTech from './Tenure24/Tech_Disha.png';
+import Urvashi from './Tenure24/Tech_Urvashi.png';
 
 const Team24 = () => {
     document.addEventListener('DOMContentLoaded', function() {
@@ -43,107 +43,13 @@ const Team24 = () => {
                 <div className="cores-photo">
                     
                     <div className="photo">
-                    <img src={Ritika} alt="Avatar" className="image" />
+                    <img src={Aiman} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/ritikasinghgautam/" className="icons">
+                        <a href="" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/ikigairey?igsh=ODA1NTc5OTg5Nw==" className="icons">
+                        <a href="" className="icons">
                             <i className="fab fa-instagram"/>
-                        </a>
-                    </div>
-                    </div>
-                    
-                    <div className="photo">
-                    <img src={Khushi} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/khushi-sharma-17185021b/" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Tejasvi} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/tjv-sb/" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Akshika} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/akshika-dhankhar-8447b2223/" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-                    
-                    <div className="photo">
-                    <img src={Manasi} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/manasi-duggal" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                        <a href="https://www.instagram.com/manasiduggal/?hl=en" className="icons">
-                            <i className="fab fa-instagram"/>
-                        </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Gargi} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/gargi-goel9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                        <a href="https://www.instagram.com/goelgargi_9?igsh=ODA1NTc5OTg5Nw==" className="icons">
-                            <i className="fab fa-instagram"/>
-                        </a>
-                    </div>
-                    </div>
-                    
-                    <div className="photo">
-                    <img src={Meera} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/meera-parida-82b62a223" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-
-                </div>
-                <h2>Cores</h2>
-                <div className="cores-photo">
-
-                    <div className="photo">
-                    <img src={Anshika} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/anshika-aggarwal-704847249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-                    
-                    <div className="photo">
-                    <img src={Kashish} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/kashish-narwal-a45bab25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                        <a href="https://www.instagram.com/kashish_narwal7?igsh=MTl6czQ3dnk5aDVydg==" className="icons">
-                            <i className="fab fa-instagram"/>
-                        </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Anandita} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/anandita-mayer-9b5941261/" className="icons">
-                            <i className="fab fa-linkedin-in"/>
                         </a>
                     </div>
                     </div>
@@ -151,82 +57,200 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Sanskriti} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/sanskritividushi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                        <a href="https://www.linkedin.com/in/sanskritividushi/" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/sanskritividushi?igsh=MWNvY2F3OWJ2ZG51aA==" className="icons">
+                        <a href="https://www.instagram.com/sanskritividushi/" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div className='cores-photo'>
+
+                    <div className="photo">
+                    <img src={DishaTreas} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
                     </div>
 
                     <div className="photo">
-                    <img src={Gunjan} alt="Avatar" className="image" />
+                    <img src={Kashish} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/gunjanvaishnavijangra" className="icons">
+                        <a href="https://www.linkedin.com/in/kashish-narwal-a45bab25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
                             <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="https://www.instagram.com/kashish_narwal7/" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                </div>
+                <h2>Cores</h2>
+                <div className="cores-photo">
+                
+                    <div className="photo">
+                    <img src={Jasleen} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    <div className="photo">
+                    <img src={Mishthi} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/mishthi-kainthola-206854288/" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
                         </a>
                     </div>
                     </div>
 
                     <div className="photo">
-                    <img src={Mansi} alt="Avatar" className="image" />
+                    <img src={Aanvi} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/manasi-bhagat-498646251/" className="icons">
+                        <a href="https://www.linkedin.com/in/aanvig" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Aiman} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/aiman-zakir-358a2b257/" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                    </div>
-                    </div>
-
-                    <div className="photo">
-                    <img src={Urja} alt="Avatar" className="image" />
-                    <div className="overlay">
-                        <a href="https://www.linkedin.com/in/urja-kohli04" className="icons">
-                            <i className="fab fa-linkedin-in"/>
-                        </a>
-                        <a href=" https://www.instagram.com/urja_kohli?igsh=MXI1dzRwYmhzeHZqNg%3D%3D&utm_source=qr" className="icons">
+                        <a href="https://www.instagram.com/aanvig_/" className="icons">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
                     </div>
                     
                     <div className="photo">
-                    <img src={Aadya} alt="Avatar" className="image" />
+                    <img src={Vedika} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/aadya-kumar-a00718248/" className="icons">
+                        <a href="" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/aadya_kumar/" className="icons">
+                        <a href="" className="icons">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
                     </div>
 
                     <div className="photo">
-                    <img src={Disha} alt="Avatar" className="image" />
+                    <img src={Abhaya} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/dishabajaj12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                        <a href="" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/disha_bajaj12?igsh=dWRzc25na3VhOGNp" className="icons">
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    <div className="photo">
+                    <img src={Sanya} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/sanya-saxena-4b42b1239/" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="https://www.instagram.com/sanyasaxena_14/" className="icons">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
                     </div>
 
                     <div className="photo">
-                    <img src={Saachi} alt="Avatar" className="image" />
+                    <img src={Anshika} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/saachi-bansal/" className="icons">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={Sneha} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={Harshita} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/harshita-soni-414005286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="https://www.instagram.com/harshita_soni.15/" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={Manya} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/manya-kaur-sachdeva-b74069288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    <div className="photo">
+                    <img src={Khushi} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={Saniya} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={DishaTech} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/disha-sethi-068107220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andr" className="icons">
+                            <i className="fab fa-linkedin-in"/>
+                        </a>
+                        <a href="https://www.instagram.com/disha.sethi.5680/" className="icons">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div className="photo">
+                    <img src={Urvashi} alt="Avatar" className="image" />
+                    <div className="overlay">
+                        <a href="https://www.linkedin.com/in/urvashiyadav2004" className="icons">
                             <i className="fab fa-linkedin-in"/>
                         </a>
                     </div>
