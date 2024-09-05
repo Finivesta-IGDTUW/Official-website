@@ -60,7 +60,22 @@
    /* left:115px; */
   
   }
-  
+  @media screen and (max-width:500px){
+    .Year{ margin-top: 20px;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-decoration-color: #71B139;
+      font-size: 50px;
+      position: relative;
+      padding: 20px 130px;
+      margin: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+     top :85px;
+
+    }
+  }
   .green-line {
     border: none; /* Remove the border */
     height: 0.1px; /* Set a very thin height */
@@ -104,24 +119,67 @@
     /* margin: 0 auto; */
   margin: 100px auto;
   
-  transition: all 0.5s ease;
-    /* overflow-x: hidden; */
+  /* transition: all 0.5s ease; */
+position: relative;
   
+    /* overflow-x: hidden; */
+
   }
+/*   
   .element img{
   height: 400px;
   width: 400px;
    position:relative;
-  padding: 0px !important;
-   /* position: absolute; */
-  right: 75px;
-  top: 45px;
+  
+ 
+
+
+/* display: block; */
   /* left: 10px; */
   /* top: 10px; */
-  }
-  .element:hover{
-        transform: scale(1.04); }
   
+ 
+  .image-wrapper {
+    position: relative;
+    width: 400px; /* Set to the same size as the image */
+    height: 400px;
+    padding: 0px !important;
+    right: 75px; /* Keeps the image aligned to the right */
+    top: 45px; /* Keeps the image aligned to the top */
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+
+  /*.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    /* Center horizontally */
+  /* align-items: center; Center vertically */
+  /* transition: opacity 0.5s ease; */
+   
+
+
+  /* .image-wrapper:hover .overlay,
+  .image-wrapper.touch .overlay {
+    opacity: 1;
+  } */
+ 
+  /* .overlay i {
+ font-size: 30px;
+    color: #fff;
+    filter: brightness(150%); 
+}
+
+   */
   .element1{
     background-color: #32D1B542;
     
@@ -132,7 +190,7 @@
   }
   .element3{
   background-color:  #35550E;
-  
+
   }
   .element4{
     background-color:  #436b3f;
@@ -143,6 +201,7 @@
     top:50px;
     text-align: center;
     right: 65px;
+    margin-top: 20px;
     
   }
   
@@ -172,11 +231,12 @@
        left:30px !important; */
        /* justify-content: center !important; */
     }
-    .element img{
+    .image-wrapper {
       width: 250px !important;
       height: 250px !important;
   top:45px !important;
     }
+    
   }
   
   @media screen and (max-device-width: 900px) and (min-device-width:500px) {
@@ -198,11 +258,12 @@
     
       /* justify-content: center !important; */
     }
-    .element img{
+    .image-wrapper {
       width: 300px !important;
       height: 300px !important;
       top: 45px !important;
     }
+  
   }
   
   
@@ -227,7 +288,7 @@
   
      
     }
-    .element img{
+    .image-wrapper {
       width: 300px !important;
       height: 300px !important;
       top: 45px !important;

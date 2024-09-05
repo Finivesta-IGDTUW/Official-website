@@ -112,7 +112,7 @@ body{background-color:black;}
 .vertical-line {
     position: relative;
     height: 0.1px;
-    width: 70vw;
+    width: 80vw;
     background-color: #5f8e33;
     margin: 10vh 10vw;
 }
