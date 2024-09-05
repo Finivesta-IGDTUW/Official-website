@@ -44,7 +44,7 @@
     background-repeat: no-repeat;
     width: 100%;
     aspect-ratio: 3.360;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
 }
 /*https://stackoverflow.com/questions/12112746/how-can-i-tint-a-background-image-with-css*/
@@ -61,101 +61,17 @@
     height: auto;
 }
 
-.cores h2 {
-    font-size: 1.2em;
+.cores h1 {
+    font-size: 1.4em;
     font-weight: normal;
 }
 
-.cores-photo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5vw;
-    row-gap: 5vw;
-    padding: 2vw;
-    text-align: center;
+.after-core-line {
     position: relative;
-}
-
-.photo {
-    width: 25vw;
-    object-fit: cover;
-    justify-self: center;
-    position: relative;
-}
-
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-}
-
-.overlay {
-    position: absolute; 
-    height: 3.55vw;
-    display: flex;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: .5s ease;
-    opacity: 0;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.overlay i {
-    height: 80%;
-    color: #ababab;
-}
-
-.photo:hover .image,
-.photo.touch .image {
-    opacity: 0.5;
-}
-
-.photo:hover .overlay,
-.photo.touch .overlay {
-    opacity: 1;
-}
-
-@media (max-width: 900px) {
-    .cores-photo {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .photo {
-        width: 40vw;
-    }
-  
-    .overlay {
-        height: 5.6vw;
-    }
-  
-    .overlay i {
-        height: 2.5vw;
-    }
-}
-
-@media (max-width: 600px) {
-    .cores-photo {
-        grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .photo {
-        width: 80vw;
-    }
-  
-    .overlay {
-        height: 11.5vw;
-    }
-  
-    .overlay i {
-        height: 5vw;
-    }
-  
+    height: 0.1px;
+    width: 80vw;
+    background-color: #5f8e33;
+    margin: 10vh 10vw;
 }
 
 @media (max-width: 430px) {
