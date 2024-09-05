@@ -79,7 +79,7 @@ nav {
     transform: scale(1, 1);
 }
 
-@media only screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
     .menu {
         flex-direction: column;
         background-color: #333333;
