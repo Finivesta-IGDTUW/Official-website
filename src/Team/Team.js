@@ -22,12 +22,12 @@ const Team = () => {
 
             <section className="cores">
                 
-                <h1>Year 2024 - 2025</h1>
+                <h1>Year '24 - '25</h1>
                 <Team24/>
                 
                 <div className="after-core-line"></div>
 
-                <h1>Year 2023 - 2024</h1>
+                <h1>Year '23 - '24</h1>
                 <Team23/>
             </section>
 
