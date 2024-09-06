@@ -24,7 +24,7 @@
     transition: .5s ease;
 }
 
-.overlay {
+.overlay23 {
     position: absolute; 
     height: 3.55vw;
     display: flex;
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-.overlay i {
+.overlay23 i {
     height: 80%;
     color: #ababab;
 }
@@ -49,8 +49,8 @@
     opacity: 0.5;
 }
 
-.photo:hover .overlay,
-.photo.touch .overlay {
+.photo:hover .overlay23,
+.photo.touch .overlay23 {
     opacity: 1;
 }
 
@@ -81,11 +81,11 @@
         width: 40vw;
     }
   
-    .overlay {
+    .overlay23 {
         height: 5.6vw;
     }
   
-    .overlay i {
+    .overlay23 i {
         height: 2.5vw;
     }
 }
@@ -99,11 +99,11 @@
         width: 80vw;
     }
   
-    .overlay {
+    .overlay23 {
         height: 11.5vw;
     }
   
-    .overlay i {
+    .overlay23 i {
         height: 5vw;
     }
   
