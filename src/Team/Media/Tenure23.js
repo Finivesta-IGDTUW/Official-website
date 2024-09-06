@@ -72,6 +72,9 @@ const Team23 = () => {
                         <a href="https://www.linkedin.com/in/tjv-sb/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
+                        <a href="https://www.instagram.com/tjv_sb/" className="icons" target="_blank" rel="noreferrer">
+                            <i className="fab fa-instagram"/>
+                        </a>
                     </div>
                     </div>
 
