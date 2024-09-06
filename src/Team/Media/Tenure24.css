@@ -26,7 +26,7 @@
 
 .overlay {
     position: absolute; 
-    height: 3.55vw;
+    height: 3vw;
     display: flex;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
@@ -40,8 +40,12 @@
 }
 
 .overlay i {
-    height: 80%;
+    height: 50%;
     color: #ababab;
+}
+
+.icons {
+    font-size: 0.5em;
 }
 
 .photo:hover .image,
@@ -82,11 +86,15 @@
     }
   
     .overlay {
-        height: 5.6vw;
+        height: 4.9vw;
     }
   
     .overlay i {
         height: 2.5vw;
+    }
+
+    .icons {
+        font-size: 0.7em;
     }
 }
 
@@ -100,11 +108,15 @@
     }
   
     .overlay {
-        height: 11.5vw;
+        height: 9.77vw;
     }
   
     .overlay i {
         height: 5vw;
+    }
+
+    .icons {
+        font-size: 1em;
     }
   
 }
