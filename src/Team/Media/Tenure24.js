@@ -45,10 +45,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Aiman} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/aiman-zakir?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/_aimann.z_/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -57,10 +57,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Sanskriti} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/sanskritividushi/" className="icons">
+                        <a href="https://www.linkedin.com/in/sanskritividushi/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/sanskritividushi/" className="icons">
+                        <a href="https://www.instagram.com/sanskritividushi/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -72,10 +72,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={DishaTreas} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/dishabajaj12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/disha_bajaj12/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -84,10 +84,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Kashish} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/kashish-narwal-a45bab25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                        <a href="https://www.linkedin.com/in/kashish-narwal-a45bab25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/kashish_narwal7/" className="icons">
+                        <a href="https://www.instagram.com/kashish_narwal7/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -100,7 +100,7 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Jasleen} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/jasleen-kaur-a6b775280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
                     </div>
@@ -109,10 +109,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Mishthi} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/mishthi-kainthola-206854288/" className="icons">
+                        <a href="https://www.linkedin.com/in/mishthi-kainthola-206854288/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/mishthi.kainthola/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -121,10 +121,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Aanvi} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/aanvig" className="icons">
+                        <a href="https://www.linkedin.com/in/aanvig" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/aanvig_/" className="icons">
+                        <a href="https://www.instagram.com/aanvig_/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -133,10 +133,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Vedika} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/vedika-gupta22?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/vedi_idk/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -145,10 +145,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Abhaya} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/abhayatrivedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/abbhayaaa/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -157,10 +157,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Sanya} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/sanya-saxena-4b42b1239/" className="icons">
+                        <a href="https://www.linkedin.com/in/sanya-saxena-4b42b1239/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/sanyasaxena_14/" className="icons">
+                        <a href="https://www.instagram.com/sanyasaxena_14/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -169,10 +169,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Anshika} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/anshika-patra-b67a52291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/p._.anshika/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -181,10 +181,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Sneha} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/snehaaroychowdhury?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/snehaaaa.o_o/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -193,10 +193,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Harshita} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/harshita-soni-414005286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                        <a href="https://www.linkedin.com/in/harshita-soni-414005286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/harshita_soni.15/" className="icons">
+                        <a href="https://www.instagram.com/harshita_soni.15/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -205,7 +205,7 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Manya} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/manya-kaur-sachdeva-b74069288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons">
+                        <a href="https://www.linkedin.com/in/manya-kaur-sachdeva-b74069288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
                     </div>
@@ -214,10 +214,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Khushi} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/khushi-khorwal-4a956a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/khushikhorwal24/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -226,10 +226,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Saniya} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="" className="icons">
+                        <a href="https://www.linkedin.com/in/saniya-arora-322b88288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="" className="icons">
+                        <a href="https://www.instagram.com/saniyaa.aroraa/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -238,10 +238,10 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={DishaTech} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/disha-sethi-068107220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andr" className="icons">
+                        <a href="https://www.linkedin.com/in/disha-sethi-068107220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andr" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
-                        <a href="https://www.instagram.com/disha.sethi.5680/" className="icons">
+                        <a href="https://www.instagram.com/disha.sethi.5680/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-instagram"/>
                         </a>
                     </div>
@@ -250,7 +250,7 @@ const Team24 = () => {
                     <div className="photo">
                     <img src={Urvashi} alt="Avatar" className="image" />
                     <div className="overlay">
-                        <a href="https://www.linkedin.com/in/urvashiyadav2004" className="icons">
+                        <a href="https://www.linkedin.com/in/urvashiyadav2004" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
                         </a>
                     </div>
