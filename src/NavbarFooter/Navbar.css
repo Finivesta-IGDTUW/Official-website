@@ -39,7 +39,7 @@ nav {
 .menu a {
     font-family: 'Poppins', sans-serif;
     display: block;
-    padding: 1vw 2vw;
+    padding: 1vw;
     font-size: 1rem;
     font-weight: 500;
     transition: 0.2s all ease-in-out;
@@ -68,7 +68,7 @@ nav {
 
 .menu-icon {
     display: none;
-    padding: 2vh;
+    padding: 1vh 2vh;
 }
 
 #menu-toggle {
@@ -77,6 +77,13 @@ nav {
 
 #menu-toggle:checked ~ .menu {
     transform: scale(1, 1);
+}
+
+@media screen and (min-width: 1000px) {
+    .menu a {
+        margin-left: 0;
+        padding: 1vw 2vw;
+    }
 }
 
 @media screen and (max-width: 835px) {
