@@ -254,7 +254,7 @@
   background-color: #222222;
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  /*min-height: 90vh;*/
   
   /* aspect-ratio: 16 / 9;  */
 }
