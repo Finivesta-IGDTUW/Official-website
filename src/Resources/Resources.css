@@ -16,6 +16,8 @@ body {
   align-items: center;
   margin: auto;  
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
 }
 
 .blogs{
