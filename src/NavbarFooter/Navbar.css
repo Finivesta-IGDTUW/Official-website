@@ -39,7 +39,7 @@ nav {
 .menu a {
     font-family: 'Poppins', sans-serif;
     display: block;
-    padding: 1vw 1vw;
+    padding: 1vw 2vw;
     font-size: 1rem;
     font-weight: 500;
     transition: 0.2s all ease-in-out;
@@ -79,7 +79,7 @@ nav {
     transform: scale(1, 1);
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 835px) {
     .menu {
         flex-direction: column;
         background-color: #333333;
@@ -97,7 +97,7 @@ nav {
 
     .menu a {
         margin-left: 0;
-        padding: 2px 5px;
+        padding: 1vw 1vw;
     }
 
     .menu li {

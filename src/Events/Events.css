@@ -9,7 +9,7 @@
   }
   
  .events-header{
-  background-image: url('./Images/Eventsbg.jpg');
+  background-image: url('../Images/LightBG.jpg');
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
@@ -24,12 +24,15 @@
     overflow: hidden;
  }
  .events-header h1 {
-  font-weight: 900;
   font-size: 2.2em;
-} 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 .events-header p {
-  font-size: 1.2rem;  
+  margin-top: 10px; 
+  font-size: 1em; 
   text-align: center;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
   /* My code */
