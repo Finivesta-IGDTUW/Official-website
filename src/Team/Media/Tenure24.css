@@ -26,7 +26,7 @@
 
 .overlay24 {
     position: absolute; 
-    height: 3vw;
+    height: 3.2vw;
     display: flex;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
@@ -45,7 +45,7 @@
 }
 
 .icons {
-    font-size: 0.5em;
+    font-size: 2vw;
 }
 
 .photo:hover .image,
@@ -94,7 +94,7 @@
     }
 
     .icons {
-        font-size: 0.7em;
+        font-size: 3vw;
     }
 }
 
@@ -116,7 +116,7 @@
     }
 
     .icons {
-        font-size: 1em;
+        font-size: 5vw;
     }
   
 }
