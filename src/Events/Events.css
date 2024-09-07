@@ -10,19 +10,20 @@
   
  .events-header{
   background-image: url('../Images/LightBG.jpg');
-    background-size: cover;
-    background-position: center;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    text-align: center;
-    height: 200px; 
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin: auto;  
-    overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  height: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;  
+  overflow: hidden;
  }
+
  .events-header h1 {
   font-size: 2.2em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -33,26 +34,6 @@
   font-size: 1em; 
   text-align: center;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  margin: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-/* overflow-x: hidden; */
-background-color: black;
-color: white;
-
-}
-
-.events-header{
-background-image: url('./Images/Eventsbg.jpg');
-background-size: cover;
-background-position: center;
-height: 200px; 
-display: flex;
-flex-direction: column;
-/* justify-content: flex-end; */
-align-items: center;
-/* margin: auto;   */
-overflow: hidden;
 }
 
 /* My code */
