@@ -108,7 +108,7 @@ const Home = () => {
          
     
           <div className="box">
-          <a href='https://www.instagram.com/p/C2opSv9yFFC/' target='_blank' rel='noreferrer'>
+          <a href='https://www.instagram.com/p/C2CkzBTStUb/?igsh=MW5lNmZ6NmRxZTdqMA==' target='_blank' rel='noreferrer'>
             <img src={Melange} alt="Money Melange"/>
             </a>
           </div>
