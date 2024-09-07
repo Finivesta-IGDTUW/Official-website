@@ -8,32 +8,42 @@
   
   }
   
- .events-header{
-  background-image: url('../Images/LightBG.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  height: 200px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;  
-  overflow: hidden;
- }
-
+  .events-header{
+    background-image: url('./Images/Eventsbg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: rgb(255, 255, 255);
+      padding: 20px;
+      text-align: center;
+      height: 200px; 
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin: auto;  
+      overflow: hidden;
+   }
  .events-header h1 {
+  font-weight: 900;
   font-size: 2.2em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .events-header p {
-  margin-top: 10px; 
-  font-size: 1em; 
+  font-size: 1.2rem;  
   text-align: center;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.events-header{
+background-image: url('./Images/Eventsbg.jpg');
+background-size: cover;
+background-position: center;
+height: 200px; 
+display: flex;
+flex-direction: column;
+/* justify-content: flex-end; */
+align-items: center;
+/* margin: auto;   */
+overflow: hidden;
 }
 
 /* My code */
@@ -64,7 +74,22 @@
  /* left:115px; */
 
 }
+@media screen and (max-width:500px){
+  .Year{ margin-top: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #71B139;
+    font-size: 50px;
+    position: relative;
+    padding: 20px 130px;
+    margin: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+   top :85px;
 
+  }
+}
 .green-line {
   border: none; /* Remove the border */
   height: 0.1px; /* Set a very thin height */
@@ -92,7 +117,7 @@
 flex-wrap: wrap;
 position: relative;
 left: 30px;
-margin: 10px;
+margin: 30px;
 /* padding: 0px !impotant; */
 gap: 30px;
 
@@ -149,6 +174,7 @@ background-color:  #35550E;
   top:50px;
   text-align: center;
   right: 65px;
+  /* padding: 10px; */
   /* margin-bottom: 30px; */
 }
 
@@ -168,7 +194,7 @@ background-color:  #35550E;
   }
 
   .Year{
-    text-align: center;
+    text-align: center !important;
     /* left: 0px !important; */
   }
   .element{
