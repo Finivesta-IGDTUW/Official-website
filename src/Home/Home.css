@@ -254,8 +254,8 @@
   background-color: #222222;
   display: flex;
   flex-direction: column;
-  /*min-height: 90vh;*/
-  
+  /* min-height: 90vh; */
+  /* */
   /* aspect-ratio: 16 / 9;  */
 }
 
@@ -302,13 +302,15 @@
   
   @media screen and (min-width: 700px) and (max-width: 1100px){
     .box img{
-      height: 35vw !important;
-      width: 35vw !important;
+      height: 290px !important;
+      width: 300px !important;
+      /* display: flex; */
     }
     .box{
        width: 35vw !important;
       height: 35vw !important;
       margin: 20px !important;
+      /* padding: 10px !important; */
     } 
     }
   @media screen and (max-width: 700px){
@@ -318,9 +320,11 @@
     }
     .box{
       /* margin: 1rem; */
-      width: 60vw !important;
-      height: 60vw !important;
-     margin: 10px;
+       width: 230px !important;
+      height: 240px !important;
+     margin: 10px !important;
+     /* padding: 10px !important; */
+
     } 
     }
 
