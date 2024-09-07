@@ -10,13 +10,13 @@ const Footer = () => {
                 <div className="vertical-line"></div>
                 <p>Socials</p>
                 <div className="social-icon">
-                    <a href="https://www.instagram.com/finivesta_igdtuw/" className="icon-circle">
+                    <a href="https://www.instagram.com/finivesta_igdtuw/" target='_blank' className="icon-circle">
                         <i className="fab fa-instagram"/>
                     </a>
-                    <a href="https://x.com/finivesta" className="icon-circle">
+                    <a href="https://x.com/finivesta" target='_blank' className="icon-circle">
                         <i className="fab fa-x-twitter"/>
                     </a>
-                    <a href="https://www.linkedin.com/company/finivesta-igdtuw/" className="icon-circle">
+                    <a href="https://www.linkedin.com/company/finivesta-igdtuw/" target='_blank' className="icon-circle">
                         <i className="fab fa-linkedin-in"/>
                     </a>
                 </div>

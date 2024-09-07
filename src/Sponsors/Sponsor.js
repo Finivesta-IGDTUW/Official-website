@@ -41,10 +41,10 @@ const Sponsor = () => {
                     </a>
                 </div>
                 <div class="logos" id="a3">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    {/* <a href="" target="_blank" rel="noreferrer"> */}
                         <img src={Onepercclub} alt=""/>
                         <div class="shade">One Percent Club</div>
-                    </a>
+                    {/* </a> */}
                 </div>
                 <div class="logos" id="a4">
                     <a href="https://www.linkedin.com/school/codingninjas/" target="_blank" rel="noreferrer">
@@ -72,7 +72,7 @@ const Sponsor = () => {
 
             <div class="partners_container">
                 <div class="logos" id="b1">
-                    <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/company/stockgro/" target="_blank" rel="noreferrer">
                         <img src={Stockgro} alt=""/>
                         <div class="shade">StockGro</div>
                     </a>
