@@ -12,10 +12,10 @@ import Speaker from './Images/Speaker.png';
 const Events = () => {
   return (
     <div className="Events">
-      <div className="events-header">
-          <h1>Our Events</h1>
-          <p>Discover the latest happenings and <br />exciting upcoming events here</p>
-      </div>
+    <div className="events-header">
+            <h1>Our Events</h1>
+            <p>Discover the latest happenings and <br />exciting upcoming events here</p>
+            </div>
 
    
    
