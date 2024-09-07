@@ -9,13 +9,14 @@
   }
   
   .events-header{
-    background-image: url('./Images/Eventsbg.jpg');
+    background-image: url('../Images/bgfortabs.jpg');
       background-size: cover;
-      background-position: center;
-      color: rgb(255, 255, 255);
+      background-position:center;
+      background-repeat: no-repeat;
+      /* color: black !important; */
       padding: 20px;
       text-align: center;
-      height: 200px; 
+      height: 200px;
       display: flex;
       flex-direction: column;
       justify-content:center;
@@ -33,18 +34,7 @@
   text-align: center;
 }
 
-.events-header{
-background-image: url('./Images/Eventsbg.jpg');
-background-size: cover;
-background-position: center;
-height: 200px; 
-display: flex;
-flex-direction: column;
-/* justify-content: flex-end; */
-align-items: center;
-/* margin: auto;   */
-overflow: hidden;
-}
+
 
 /* My code */
 .Heading{
