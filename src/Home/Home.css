@@ -126,6 +126,7 @@
   color: white;
   border: 1px solid transparent; /* Added border for visibility */
   font-size: 1.3vw;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .button2:hover{
@@ -136,7 +137,6 @@
 
 /*Jhalak's code  */
 .course{
-  padding: 5vh 0;
   background-color: black;
 }
 
@@ -144,9 +144,8 @@
   font-size: 5vw;
   font-weight: 600;
   /* font-family: 'Poppins',sans-serif; */
-  margin-top: 20px;
+  margin-top: 5vw;
   color: #71b139;
-  margin-bottom: 0%;
   text-align: center;
 }
 
@@ -160,7 +159,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 5vw;
+  margin: 3vw 5vw;
 }
 
 .col-1{
@@ -183,9 +182,9 @@
   font-size: 1.7vw;
   text-align: justify;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .abc {
-    font-size: 4vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -193,18 +192,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  grid-gap: 4vw;
   margin: 5vw;
-  justify-content: center;
+  justify-content: space-between;
+  row-gap: 2vh;
 }
 
 .list div{
   background: #71B139;
-  padding: 3vw;
+  padding: 1.5vw;
   font-size: 13px;
   font-weight: 200;
   border-radius: 25px;
-  width: 27vw;
+  width: 28vw;
 }
 
 .list div h1{
@@ -224,7 +223,7 @@
   margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
-  text-align: center;
+  text-align: justify;
 }
 @media screen and (max-width: 600px){
   .col-1{
@@ -262,13 +261,13 @@
 .carousel{
   /* aspect-ratio: 16 / 9;  */
   flex: 1;
-  padding: 3rem;
+  padding: 0 3rem;
   background-color: #222222;
   color: #fff;
   /* height: 130vh; */
   width: 98.7vw;
   text-align: center;
-  margin: 30px 0px;
+  margin-bottom: 10vh;
   /* overflow-x: hidden !important; */
 }
 /* @media (max-width: 768px) {
@@ -279,7 +278,7 @@
   text-align: center;
   font-size: 5vw;
   color: #71B139;
-  padding: 0px 0px 80px 0px;
+  padding: 3vw 0px 5vw 0px;
 }
 
 @media only screen and (max-width: 500px) {

@@ -66,7 +66,7 @@ const Sponsor = () => {
                 </div>
             </div>
             
-            <div className="vertical-line"></div>
+            <div className="sponsi-vertical-line"></div>
 
             <h1 class="our_partners">Our Partners</h1>
 
