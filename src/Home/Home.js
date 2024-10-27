@@ -79,7 +79,7 @@ const Home = () => {
             <div className="list">
                 <div>
                     <h1>MISSION</h1>
-                    <p>Our Mission is to cultivate a dynamic and inclusive community of women passionate about finance. Our aim is to help the women understand the world of finance and thereby demonstrate superior knowledge and to spread awareness towards the area of finance. Through educational events, networking opportunities, and community outreach, we aim to foster financial literacy and empower our members to be leaders in the ever-changing world of finance.</p>
+                    <p>Our Mission is   to cultivate a dynamic and inclusive community of women passionate about finance. Our aim is to help the women understand the world of finance and thereby demonstrate superior knowledge and to spread awareness towards the area of finance. Through educational events, networking opportunities, and community outreach, we aim to foster financial literacy and empower our members to be leaders in the ever-changing world of finance.</p>
                 </div>
                 <div>
                     <h1>VISION</h1>
