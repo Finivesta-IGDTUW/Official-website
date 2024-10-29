@@ -12,7 +12,27 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #5f8e33;
+    padding: 0; 
+    padding-left: 2vw;
+    margin: 0;
+    height: 100%; 
+}  
  
+.logoheader {
+    display: flex;
+    align-items: center;
+}
+
 .logoheader a {
     font-size: 24px;
     font-weight: bold;

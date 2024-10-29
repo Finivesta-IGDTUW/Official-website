@@ -35,12 +35,12 @@ import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
       <Navbar/>
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
@@ -74,9 +74,10 @@ function App() {
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
-      </BrowserRouter>
       <Footer/>
     </div>
+    
+    </BrowserRouter>
   );
 }
 

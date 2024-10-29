@@ -1,12 +1,26 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import "./Navbar.css";
 import FiniLogo from "../Images/FiniLogo.png";
 
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const excludeBackArrowPaths = ["/", "/events", "/sponsors", "/resources", "/team", "/contact"];
+
+  const showBackArrow = !excludeBackArrowPaths.includes(location.pathname);
+
   return (
     <header className="navbar">
       <nav>
-        <div className="logoheader">
+      <div className="logoheader">
+          {showBackArrow && (
+            <button className="back-arrow" onClick={() => navigate(-1)}>
+              ←
+            </button>
+          )}
           <img src={FiniLogo} alt="Finivesta Logo"></img>
         </div>
         <input type="checkbox" id="menu-toggle" />
