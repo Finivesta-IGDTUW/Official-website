@@ -92,7 +92,6 @@ const Home = () => {
                   <h1>OBJECTIVE</h1>
                   <p>Our main objective is to develop an understanding of financial concepts among young girls. We intent to effectively communicate financial information and increase awareness of ethics and social responsibility in the context to finance. We solely want to make woman more comfortable with topics such as stock market, bonds and debentures so that this increases their confidence and helps them to extract their true potential.</p>
               </div>
-
             </div>
         </section>
      
