@@ -235,6 +235,7 @@
   margin: 0.5vw; /* making the texts slightly closer for neatness*/
   text-align: center;
   font-family: serif; /* the other font made it look montonous */
+}
 
 .list div:hover {
   background: #74c53a; /* Darker shade on hover */
