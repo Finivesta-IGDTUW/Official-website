@@ -187,23 +187,44 @@
     font-size: 3.2vw;
   }
 }
-
-.list{
+.list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 5vw;
-  justify-content: space-between;
-  row-gap: 2vh;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center items horizontally */
+  margin: 20px 0; /* Add margin for spacing */
+  text-align: center; /* Center text alignment */ 
+  border-radius: 15px; /* Add some border radius for aesthetics */
+  padding: 20px; /* Add padding for better spacing */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
-.list div{
-  background: #71B139;
+.list h1 {
+  font-family: 'Arial', sans-serif; /* Change to a clean, modern font */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold; /* Make it bold */
+  color: rgba(27, 6, 6, 0.51); /* Use a color that fits your theme */
+  margin-bottom: 10px; /* Space between title and content */
+}
+
+.list p {
+  font-family: 'Verdana', sans-serif; /* Use a different font for readability */
+  font-size: 1.2rem; /* Adjust font size for better readability */
+  line-height: 1.5; /* Improve line spacing */
+  color: #333; /* A darker color for better contrast */
+  max-width: 800px; /* Set a maximum width for paragraphs */
+  margin: 0 auto; /* Center paragraphs within their container */
+  padding: 0 20px; /* Add some padding for aesthetics */
+}
+
+.list div {
+  background: #5c922c; /* Green background */
   padding: 1.5vw;
   font-size: 13px;
   font-weight: 200;
   border-radius: 25px;
   width: 28vw;
+  margin: 0 10px; /* Add margin between items */
+  transition: background 0.3s ease; /* Smooth background transition */
 }
 
 .list div h1{
@@ -211,20 +232,17 @@
   color: white;
   font-weight: bold;
   /* font-family: 'Poppins',sans-serif; */
-  margin: 1vw;
+  margin: 0.5vw; /* making the texts slightly closer for neatness*/
   text-align: center;
+  font-family: serif; /* the other font made it look montonous */
 }
 
-.list div p{
-  color: white;
-  /* font-family: 'Poppins',sans-serif; */
-  font-size: 1.5vw;
-  margin-top: 5px;
-  margin-left: 8px;
-  margin-right: 8px;
-  display: inline-block;
-  text-align: justify;
+.list div:hover {
+  background: #74c53a; /* Darker shade on hover */
 }
+
+
+
 @media screen and (max-width: 600px){
   .col-1{
       flex-basis: 100%;
