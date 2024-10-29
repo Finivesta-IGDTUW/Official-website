@@ -110,7 +110,7 @@
     color: #fff;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 750px) {
     .footer-content {
       flex-direction: column;
       gap: 0px;
