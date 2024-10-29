@@ -12,7 +12,27 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #5f8e33;
+    padding: 0; 
+    padding-left: 2vw;
+    margin: 0;
+    height: 100%; 
+}  
  
+.logoheader {
+    display: flex;
+    align-items: center;
+}
+
 .logoheader a {
     font-size: 24px;
     font-weight: bold;
@@ -34,6 +54,8 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
 }
   
 .menu a {
@@ -50,11 +72,7 @@ nav {
 .menu li {
     list-style-type: none;
     padding: 1vh;
-}
-
-.menu {
-    margin-block-start: 0;
-    padding-inline-start: 0;
+    position: relative;
 }
 
 .menu:hover a {
@@ -79,10 +97,71 @@ nav {
     transform: scale(1, 1);
 }
 
+.nav-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-dropdown-arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-arrow {
+    transform: rotate(180deg);
+    color: #5f8e33; 
+}
+
+.nav-dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    z-index: 1000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block; /* Show the dropdown when hovering */
+}
+
+.nav-dropdown-menu li {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-dropdown-menu a:hover {
+    background-color: #5f8e33;
+    color: #fff;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
 @media screen and (min-width: 1000px) {
     .menu a {
         margin-left: 0;
         padding: 1vw 2vw;
+    }
+    .nav-dropdown-menu a {
+        padding: 1vw;
     }
 }
 
