@@ -33,6 +33,13 @@ import Review5 from "./Resources/BookReviews/bookpages/Review5";
 import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
+import Games from "./Games/Games";
+import HigherLower from "./Games/HigherLower/HigherLower";
+import MatchTiles from "./Games/MatchTheTiles/MatchTiles";
+import MoneyBingo from "./Games/MoneyBingo/MoneyBingo";
+import BudgetGuessing from "./Games/BudgetGuessing/BudgetGuessing";
+import JumbleWords from "./Games/JumbleWords/JumbleWords";
+
 function App() {
   return (
     <div className="App">
@@ -71,6 +78,13 @@ function App() {
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
             
+          <Route path="/games" element={<Games/>}/>
+          <Route path="/games/higherlower" element={<HigherLower/>}/>
+          <Route path="/games/matchthetiles" element={<MatchTiles/>}/>
+          <Route path="/games/moneybingo" element={<MoneyBingo/>}/>
+          <Route path="/games/budgetguessing" element={<BudgetGuessing/>}/>
+          <Route path="/games/jumblewords" element={<JumbleWords/>}/>
+
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
