@@ -7,7 +7,7 @@ import I3 from '../Images/blogs/3.jpg';
 import I4 from '../Images/blogs/4.jpg';
 import I5 from '../Images/blogs/5.jpg';
 import I6 from '../Images/blogs/6.jpg';
-
+import I7 from '../Images/blogs/gold.jpeg';
 const Blog = () => {
     return ( 
         <div className="blogpage">
@@ -17,7 +17,21 @@ const Blog = () => {
             </div>
             
             <div className="resourcesbox">
+
+            <div className="boxsmall blog" >
+                    <a href="/resources/blogs/digitalgold">
+                    <div className="img">
+                         <img src={I7} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>Digital Gold</h2>   
+                       <p className="blog-byline-card">Explore how digital gold works </p>       
+                    </div>
+                    </a>
+                </div>
                 <div className="boxsmall blog" >
+
+
                     <a href="/resources/blogs/AI-in-finance">
                     <div className="img">
                         <img src={I1} alt="Cover"/>
