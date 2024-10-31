@@ -44,7 +44,7 @@ const Events = () => {
        <div className="element">
        <div className="element2">
          {/* Money Melange */}
-   <a href='https://www.instagram.com/p/C2CkzBTStUb/?igsh=MW5lNmZ6NmRxZTdqMA==' target='_blank' rel='noreferrer'>
+         <a href='https://www.instagram.com/p/C2CkzBTStUb/?igsh=MW5lNmZ6NmRxZTdqMA==' target='_blank' rel='noreferrer'>
        <img src={Melange} alt="Money Melange"/>
        </a>
        </div>

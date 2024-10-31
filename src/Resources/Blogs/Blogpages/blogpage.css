@@ -63,7 +63,9 @@
 .compound {
     background-image: url('./blog-images/comp-img.png');
 }
-
+.gold{
+    background-image: url('./blog-images/gold.jpeg');
+}
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
