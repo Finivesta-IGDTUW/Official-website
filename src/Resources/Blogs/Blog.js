@@ -8,6 +8,7 @@ import I4 from '../Images/blogs/4.jpg';
 import I5 from '../Images/blogs/5.jpg';
 import I6 from '../Images/blogs/6.jpg';
 import I7 from '../Images/blogs/gold.jpeg';
+import I8 from '../Images/blogs/CarthageCoins.jpg';
 const Blog = () => {
     return ( 
         <div className="blogpage">
@@ -18,6 +19,19 @@ const Blog = () => {
             
             <div className="resourcesbox">
 
+            <div className="boxsmall blog" >
+                    <a href="/resources/blogs/goldhistory">
+                    <div className="img">
+                         <img src={I8} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2> Gold Through the Ages</h2>   
+                       <p className="blog-byline-card">Is It Still the Ultimate Asset
+in Today's World?
+ </p>       
+                    </div>
+                    </a>
+                </div>
             <div className="boxsmall blog" >
                     <a href="/resources/blogs/digitalgold">
                     <div className="img">

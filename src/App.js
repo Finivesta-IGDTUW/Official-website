@@ -19,6 +19,7 @@ import Liquidation from "./Resources/Blogs/Blogpages/liquidation";
 import Financialliteracy from "./Resources/Blogs/Blogpages/financial-literacy";
 import Bidding from "./Resources/Blogs/Blogpages/bidding";
 import DigitalGold from "./Resources/Blogs/Blogpages/digitalgold";
+import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -57,6 +58,7 @@ function App() {
               <Route path="/resources/blogs/financial-literacy" element={<Financialliteracy/>}/>
               <Route path="/resources/blogs/bidding" element={<Bidding/>}/>
               <Route path="/resources/blogs/digitalgold" element={<DigitalGold/>}/>
+              <Route path="/resources/blogs/goldhistory" element={<GoldHistory/>}/>
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
