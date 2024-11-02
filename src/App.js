@@ -20,6 +20,10 @@ import Financialliteracy from "./Resources/Blogs/Blogpages/financial-literacy";
 import Bidding from "./Resources/Blogs/Blogpages/bidding";
 import DigitalGold from "./Resources/Blogs/Blogpages/digitalgold";
 import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
+import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
+import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
+
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -51,14 +55,17 @@ function App() {
           {/* Under resources */}
             <Route path="/resources/blogs" element={<Blog/>}/>
               {/* Blog pages */}
-              <Route path="/resources/blogs/AI-in-finance" element={<AIinfinance/>}/>
-              <Route path="/resources/blogs/finance-and-technology" element={<Financeandtechnology/>}/>
-              <Route path="/resources/blogs/power-of-compounding" element={<Powerofcompounding/>}/>
-              <Route path="/resources/blogs/liquidation" element={<Liquidation/>}/>
-              <Route path="/resources/blogs/financial-literacy" element={<Financialliteracy/>}/>
-              <Route path="/resources/blogs/bidding" element={<Bidding/>}/>
-              <Route path="/resources/blogs/digitalgold" element={<DigitalGold/>}/>
-              <Route path="/resources/blogs/goldhistory" element={<GoldHistory/>}/>
+              <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
+              <Route path="/resources/blogs/02-finance-and-technology" element={<Financeandtechnology/>}/>
+              <Route path="/resources/blogs/03-power-of-compounding" element={<Powerofcompounding/>}/>
+              <Route path="/resources/blogs/04-liquidation" element={<Liquidation/>}/>
+              <Route path="/resources/blogs/05-financial-literacy" element={<Financialliteracy/>}/>
+              <Route path="/resources/blogs/06-bidding" element={<Bidding/>}/>
+              <Route path="/resources/blogs/07-digital-gold" element={<DigitalGold/>}/>
+              <Route path="/resources/blogs/08-gold-history" element={<GoldHistory/>}/>
+              <Route path="/resources/blogs/09-dhanteras-dynamics" element={<DhanterasDynamics/>}/>
+              <Route path="/resources/blogs/10-gold-on-dhanteras" element={<GoldOnDhanteras/>}/>
+
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>

@@ -20,14 +20,16 @@
     text-align: center;
     padding: 1rem;
     color: white;
-    height: 30vh;
+    height: auto;
 }
 .blog-header h1{
     font-size: 2.4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .blog-header p{
     font-size: 1.2rem;
     font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .blog-para{
     font-size: 1.2rem;
@@ -38,6 +40,15 @@
 
 .blog-para p {
     text-align: justify;
+}
+
+.image-in-blog {
+    width: 80vh;
+    max-width: 300px;
+    margin: 10px auto; 
+    display: block; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .ai-fin {
@@ -68,6 +79,12 @@
 }
 .goldhistory{
     background-image: url('./blog-images/goldy.jfif');
+}
+.dhanteras {
+    background-image: url('./blog-images/dhanteras-image.avif');
+}
+.gold-on-dhanteras {
+    background-image: url('./blog-images/dhanteras.webp');
 }
 @media screen and (max-width:650px) {
     .blog-page-box{
