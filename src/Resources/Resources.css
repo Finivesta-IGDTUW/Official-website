@@ -108,7 +108,7 @@ body {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   font-weight: 400;
   font-size: 1.2rem;
   margin: 0;
