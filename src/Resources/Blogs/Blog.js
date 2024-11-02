@@ -9,6 +9,9 @@ import I5 from '../Images/blogs/5.jpg';
 import I6 from '../Images/blogs/6.jpg';
 import I7 from '../Images/blogs/gold.jpeg';
 import I8 from '../Images/blogs/CarthageCoins.jpg';
+import I9 from '../Images/blogs/9.jpg';
+import I10 from '../Images/blogs/dhanteras.webp';
+
 const Blog = () => {
     return ( 
         <div className="blogpage">
@@ -19,21 +22,44 @@ const Blog = () => {
             
             <div className="resourcesbox">
 
-            <div className="boxsmall blog" >
-                    <a href="/resources/blogs/goldhistory">
+                <div className="boxsmall blog" >
+                    <a href="/resources/blogs/10-gold-on-dhanteras">
+                    <div className="img">
+                         <img src={I10} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>Auspiciousness of Buying gold on Dhanteras</h2>   
+                       <p className="blog-byline-card">Unvieling the story behind the festival</p>
+                    </div>
+                    </a>
+                </div>
+                
+                <div className="boxsmall blog" >
+                    <a href="/resources/blogs/09-dhanteras-dynamics">
+                    <div className="img">
+                         <img src={I9} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>Dhanteras Dynamics</h2>   
+                       <p className="blog-byline-card">Gold prices and Market Sentiments amidst Global Uncertainty</p>
+                    </div>
+                    </a>
+                </div>
+
+                <div className="boxsmall blog" >
+                    <a href="/resources/blogs/08-gold-history">
                     <div className="img">
                          <img src={I8} alt="Cover"/>
                     </div>
                     <div className="text">
                        <h2> Gold Through the Ages</h2>   
-                       <p className="blog-byline-card">Is It Still the Ultimate Asset
-in Today's World?
- </p>       
+                       <p className="blog-byline-card">Is It Still the Ultimate Asset in Today's World?</p>       
                     </div>
                     </a>
                 </div>
-            <div className="boxsmall blog" >
-                    <a href="/resources/blogs/digitalgold">
+
+                <div className="boxsmall blog" >
+                    <a href="/resources/blogs/07-digital-gold">
                     <div className="img">
                          <img src={I7} alt="Cover"/>
                     </div>
@@ -43,10 +69,9 @@ in Today's World?
                     </div>
                     </a>
                 </div>
+
                 <div className="boxsmall blog" >
-
-
-                    <a href="/resources/blogs/AI-in-finance">
+                    <a href="/resources/blogs/01-AI-in-finance">
                     <div className="img">
                         <img src={I1} alt="Cover"/>
                     </div>
@@ -58,7 +83,7 @@ in Today's World?
                 </div>
 
                 <div className="boxsmall blog" >
-                    <a href="/resources/blogs/finance-and-technology">
+                    <a href="/resources/blogs/02-finance-and-technology">
                     <div className="img">
                          <img src={I2} alt="Cover"/>
                     </div>
@@ -70,7 +95,7 @@ in Today's World?
                 </div>
 
                 <div className="boxsmall blog">
-                    <a href="/resources/blogs/power-of-compounding">
+                    <a href="/resources/blogs/03-power-of-compounding">
                     <div className="img">
                       <img src={I3} alt="Cover"/>
                     </div>
@@ -82,7 +107,7 @@ in Today's World?
                 </div>
             
                 <div className="boxsmall blog">
-                    <a href="/resources/blogs/liquidation">
+                    <a href="/resources/blogs/04-liquidation">
                     <div className="img">
                         <img src={I4} alt="Cover"/>
                     </div>
@@ -94,7 +119,7 @@ in Today's World?
                 </div>
 
                 <div className="boxsmall blog"> 
-                    <a href="/resources/blogs/financial-literacy">
+                    <a href="/resources/blogs/05-financial-literacy">
                     <div className="img">
                         <img src={I5} alt="Cover"/>
                     </div>
@@ -106,7 +131,7 @@ in Today's World?
                 </div>
 
                 <div className="boxsmall blog">
-                    <a href="/resources/blogs/bidding">
+                    <a href="/resources/blogs/06-bidding">
                     <div className="img">
                         <img src={I6} alt="Cover"/>
                     </div>
