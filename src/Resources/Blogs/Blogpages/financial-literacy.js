@@ -62,7 +62,7 @@ const Financialliteracy = () => {
                         <br/><br/>
                         Join the Finance club, Finivesta is eagerly waiting for you :)
                         <br/>
-                        Learning finance is like going to the gym for your mone; it's not
+                        Learning finance is like going to the gym for your money; it's not
                         always easy, but the results are worth it.
                     </p>
                 </div>
