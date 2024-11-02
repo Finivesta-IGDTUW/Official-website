@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
+import Layout from "./NavbarFooter/Layout";
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -47,6 +48,7 @@ function App() {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
       <Navbar/>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
@@ -86,6 +88,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
       <Footer/>
+      </Layout>
     </div>
     
     </BrowserRouter>
