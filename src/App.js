@@ -1,7 +1,9 @@
+import React, { useEffect, useLocation } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
+import { initGA, logPageView } from "./NavbarFooter/Analytics";
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -41,6 +43,16 @@ import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 
 function App() {
+    useEffect(() => {
+        initGA();
+    }, []);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        logPageView();
+    }, [location]);
+
   return (
     <BrowserRouter>
     <div className="App">
