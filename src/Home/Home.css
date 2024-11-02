@@ -195,16 +195,26 @@
   justify-content: space-between;
   row-gap: 2vh;
 }
-.list div{
+.list .mvo-box{
   background: #5c922c; /* Green background */
   padding: 1.5vw;
   font-size: 13px;
   font-weight: 200;
   border-radius: 25px;
   width: 28vw;
+  transition: opacity 0.3s ease, background-color 0.3s ease; 
 }
 
-.list div h1{
+.list:hover .mvo-box {
+  opacity: 0.5; 
+}
+
+.list .mvo-box:hover {
+  opacity: 1;
+  background-color: #5c922c;
+}
+
+.list .mvo-box h1{
   font-size: 4vw;
   color: white;
   font-weight: bold;
@@ -213,7 +223,7 @@
   text-align: center;
 }
 
-.list div p{
+.list .mvo-box p{
   color: white;
   /* font-family: 'Poppins',sans-serif; */
   font-size: 1.5vw;
@@ -232,13 +242,13 @@
       flex-basis: 100%;
       text-align: center;
   }
-  .list div {
+  .list .mvo-box {
     width: 90vw;
   }
-  .list div p {
+  .list .mvo-box p {
     font-size: 3vw;
   }
-  .list div h1 {
+  .list .mvo-box h1 {
     font-size: 6vw;
   }
 }
