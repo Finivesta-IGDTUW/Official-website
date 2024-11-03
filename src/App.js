@@ -1,9 +1,9 @@
-import React, { useEffect, useLocation } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
-import { initGA, logPageView } from "./NavbarFooter/Analytics";
+import { initGA, logPageView } from "./Analytics";
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -42,19 +42,14 @@ import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 
-function App() {
-    useEffect(() => {
-        initGA();
-    }, []);
+const AppContent = () => {
+  const location = useLocation();
 
-    const location = useLocation();
-
-    useEffect(() => {
-        logPageView();
-    }, [location]);
+  useEffect(() => {
+      logPageView();
+  }, [location]);
 
   return (
-    <BrowserRouter>
     <div className="App">
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
@@ -102,8 +97,18 @@ function App() {
       <Footer/>
       </Layout>
     </div>
-    
-    </BrowserRouter>
+  );
+}
+
+function App() {
+  useEffect(() => {
+      initGA();
+  }, []);
+
+  return (
+      <Router>
+          <AppContent />
+      </Router>
   );
 }
 
