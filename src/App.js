@@ -1,6 +1,9 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
+import Layout from "./NavbarFooter/Layout";
+import { initGA, logPageView } from "./Analytics";
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -39,14 +42,20 @@ import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 
-function App() {
+const AppContent = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+      logPageView();
+  }, [location]);
+
   return (
-    <BrowserRouter>
     <div className="App">
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
       <Navbar/>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
@@ -86,9 +95,20 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
       <Footer/>
+      </Layout>
     </div>
-    
-    </BrowserRouter>
+  );
+}
+
+function App() {
+  useEffect(() => {
+      initGA();
+  }, []);
+
+  return (
+      <Router>
+          <AppContent />
+      </Router>
   );
 }
 
