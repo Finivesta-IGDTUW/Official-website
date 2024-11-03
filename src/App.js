@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
-import { initGA, logPageView } from "./Analytics";
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -46,7 +45,6 @@ const AppContent = () => {
   const location = useLocation();
 
   useEffect(() => {
-      logPageView();
   }, [location]);
 
   return (
@@ -101,9 +99,6 @@ const AppContent = () => {
 }
 
 function App() {
-  useEffect(() => {
-      initGA();
-  }, []);
 
   return (
       <Router>
