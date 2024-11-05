@@ -85,7 +85,7 @@ const Events = () => {
             <div className="element">
               <div className="element5">
                 {/* Money Masterclass: Payroll System */}
-                <a //link to be changed
+                <a //sample link
                   href="https://www.finivesta.in/events"
                   target="_blank"
                   rel="noreferrer"
