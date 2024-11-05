@@ -1,6 +1,7 @@
 import React from "react";
 import "./Events.css";
 
+import PayrollSystem from "./Images/PayrollSystem.png";
 import BiddingBlitz from "./Images/BiddingBlitz.png";
 import CollegeTrading from "./Images/CollegeTrading.png";
 import Finlatics from "./Images/Finlatics.png";
