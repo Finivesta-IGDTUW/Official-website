@@ -20,7 +20,7 @@ const Podcast = () => {
               <img src={SpotifyLogo} alt="Cover"/>
             </div>
             <div class="text">
-              <h2>Why Budgets Aren't Boring</h2>
+              <h2>Why Budgets Aren't Boring?</h2>
             </div>
             </a>
           </div>
