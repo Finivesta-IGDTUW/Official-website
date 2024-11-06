@@ -1,7 +1,7 @@
 import React from "react";
 import "./Events.css";
 
-import PayrollSystem from "./Images/PayrollSystem.png";
+import MoneyMasterclass from "./Images/PayrollSystem.png";
 import BiddingBlitz from "./Images/BiddingBlitz.png";
 import CollegeTrading from "./Images/CollegeTrading.png";
 import Finlatics from "./Images/Finlatics.png";
@@ -26,6 +26,21 @@ const Events = () => {
 
         <div className="Images">
           <div className="flex1">
+            <div className="element">
+              <div className="element5">
+                {/* Money Masterclass: Payroll System */}
+                <a //sample link
+                  href="https://www.finivesta.in/events"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={MoneyMasterclass} alt="speaker" />
+                </a>
+              </div>
+
+              <h2 className="title">Money Masterclass</h2>
+            </div>
+
             <div className="element">
               <div className="element3">
                 {/*  Finlatics*/}
@@ -82,21 +97,6 @@ const Events = () => {
 
         <div className="Images">
           <div className="flex1">
-            <div className="element">
-              <div className="element5">
-                {/* Money Masterclass: Payroll System */}
-                <a //sample link
-                  href="https://www.finivesta.in/events"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={PayrollSystem} alt="speaker" />
-                </a>
-              </div>
-
-              <h2 className="title">Payroll System</h2>
-            </div>
-
             <div className="element">
               <div className="element1">
                 {/* bidding bitz */}

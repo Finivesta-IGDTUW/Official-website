@@ -168,7 +168,7 @@ const Home = () => {
                 >
                   {" "}
                   //sample link
-                  <img src={PayrollSystem} alt="Payroll System" />
+                  <img src={MoneyMasterclass} alt="Money Masterclass" />
                 </a>
               </div>
 
