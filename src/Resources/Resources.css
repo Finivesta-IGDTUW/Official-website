@@ -130,6 +130,11 @@ body {
   text-decoration: none;
   color: rgb(141, 141, 141);
 }
+
+.podcast-text {
+  justify-items: center;
+}
+
 .bookreview .boxsmall:hover,
 .Youtube .boxsmall:hover{
     transform: scale(0.98);
