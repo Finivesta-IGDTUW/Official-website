@@ -1,10 +1,10 @@
 import React from "react";
 import "../Resources.css";
 
-import BudgetPodcastCover from "../Images/podcasts/personal finance 1.jpeg";
-import InvestorPodcastCover from "../Images/podcasts/intelligent investor 2.jpeg";
-import FinshotsCover from "../Images/podcasts/finshots daily 3.jpeg";
-import EconomicsCover from "../Images/podcasts/economics explained 4.jpeg";
+import BudgetPodcastCover from "../Images/podcasts/personalfinance1.jpeg";
+import InvestorPodcastCover from "../Images/podcasts/intellligentinvestor2.jpeg";
+import FinshotsCover from "../Images/podcasts/finshotsdaily3.jpeg";
+import EconomicsCover from "../Images/podcasts/economicsexplained4.jpeg";
 
 
 const Podcast = () => {
@@ -25,8 +25,9 @@ const Podcast = () => {
             <div class="img podcast">
               <img src={BudgetPodcastCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Why Budgets Aren't Boring?</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -40,8 +41,9 @@ const Podcast = () => {
             <div class="img podcast">
               <img src={InvestorPodcastCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Intelligent Investor</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -55,8 +57,9 @@ const Podcast = () => {
             <div class="img podcast">
               <img src={FinshotsCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Finshots Daily</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -70,8 +73,9 @@ const Podcast = () => {
             <div class="img podcast">
               <img src={EconomicsCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Economics Explained</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
