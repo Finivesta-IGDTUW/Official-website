@@ -1,170 +1,157 @@
-.Events{
-    margin: 0;
+.Events {
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* overflow-x: hidden; */
   background-color: black;
   color: white;
+}
 
-  }
-  
-  .events-header{
-    background-image: url('../Images/bgfortabs.jpg');
-      background-size: cover;
-      background-position:center;
-      background-repeat: no-repeat;
-   
-      /* color: black !important; */
-      padding: 20px;
-      text-align: center;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content:center;
-      align-items: center;
-      margin: auto;  
-      overflow: hidden;
-   }
- .events-header h1 {
+.events-header {
+  background-image: url("../Images/bgfortabs.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* color: black !important; */
+  padding: 20px;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+}
+.events-header h1 {
   font-weight: 900;
   font-size: 2.2em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .events-header p {
-  margin-top: 10px; 
-  font-size: 1em; 
+  margin-top: 10px;
+  font-size: 1em;
   text-align: center;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-
 /* My code */
-.Heading{
+.Heading {
   text-align: center;
   font-size: 60px;
   position: relative;
   top: 42px;
   padding: 10px !important;
-
 }
 
-.Events div{
+.Events div {
   padding: 10px;
 }
 
-.Year{
- margin-top: 20px;
+.Year {
+  margin-top: 20px;
   text-decoration: underline;
   text-decoration-thickness: 3px;
-  text-decoration-color: #71B139;
+  text-decoration-color: #71b139;
   font-size: 50px;
   position: relative;
   padding: 20px 130px;
   margin: 10px;
 
- top :85px;
- /* left:115px; */
-
+  top: 85px;
+  /* left:115px; */
 }
-@media screen and (max-width:500px){
-  .Year{ margin-top: 20px;
+@media screen and (max-width: 500px) {
+  .Year {
+    margin-top: 20px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #71B139;
+    text-decoration-color: #71b139;
     font-size: 50px;
     position: relative;
     padding: 20px 130px;
     margin: 10px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-   top :85px;
-
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    top: 85px;
   }
 }
 .green-line {
   border: none; /* Remove the border */
   height: 0.1px; /* Set a very thin height */
   width: 80vw;
-  margin:10vh auto 0vh;
-  background-color: #71B139; /* Use background color to simulate the line */
+  margin: 10vh auto 0vh;
+  background-color: #71b139; /* Use background color to simulate the line */
   position: relative;
-
 }
-
 
 /* overflow-x: hidden; */
 
-.flex1{
+.flex1 {
   /* display: grid; */
   /* flex-wrap:; */
   /* overflow: hidden; */
- 
- /* display: inline-block; */
- /* grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+
+  /* display: inline-block; */
+  /* grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
  gap: 20px; */
- display: flex;
- justify-content: center;
- align-items: center;
-flex-wrap: wrap;
-position: relative;
-left: 30px;
-margin: 30px;
-/* padding: 0px !impotant; */
-gap: 30px;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 30px;
+  margin: 30px;
+  /* padding: 0px !impotant; */
+  gap: 30px;
 }
 
-
-
-
-.element{
- 
+.element {
   width: 400px;
   height: 400px;
   /* display: block; */
   /* margin: 0 auto; */
-margin: 100px auto;
+  margin: 100px auto;
 
-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   /* overflow-x: hidden; */
-
 }
-.element img{
-height: 400px;
-width: 400px;
- position:relative;
-padding: 0px !important;
- /* position: absolute; */
-right: 75px;
-top: 45px;
-/* left: 10px; */
-/* top: 10px; */
-}
-.element:hover{
-      transform: scale(1.04); }
-
-.element1{
-  background-color: #32D1B542;
-  
-}
-.element2{
-  background-color: #427B64;
-
-}
-.element3{
-background-color:  #35550E;
-
-}
-.element4{
-  background-color:  #436b3f;
-  
-  }
-.title{
+.element img {
+  height: 400px;
+  width: 400px;
   position: relative;
-  top:50px;
+  padding: 0px !important;
+  /* position: absolute; */
+  right: 75px;
+  top: 45px;
+  /* left: 10px; */
+  /* top: 10px; */
+}
+.element:hover {
+  transform: scale(1.04);
+}
+
+.element1 {
+  background-color: #32d1b542;
+}
+.element2 {
+  background-color: #427b64;
+}
+.element3 {
+  background-color: #35550e;
+}
+.element4 {
+  background-color: #436b3f;
+}
+.element5 {
+  background-color: #32d1b542;
+}
+.title {
+  position: relative;
+  top: 50px;
   text-align: center;
   right: 65px;
   /* padding: 10px; */
@@ -173,91 +160,85 @@ background-color:  #35550E;
 
 /* Responsiveness */
 
-@media screen and (max-device-width: 500px ) and (min-device-width: 100px){
+@media screen and (max-device-width: 500px) and (min-device-width: 100px) {
   /* .flex1{
     flex-direction: column;
   } */
-  .flex1{
+  .flex1 {
     /* flex-direction: column; */
     justify-content: center !important;
     align-items: center !important;
     /* padding: 20px !important; */
     gap: 40px !important;
-  
   }
 
-  .Year{
+  .Year {
     text-align: center !important;
     /* left: 0px !important; */
   }
-  .element{
+  .element {
     width: 250px !important;
     height: 250px !important;
-     margin: 80px 30px !important;
-     /* position: relative !important;
+    margin: 80px 30px !important;
+    /* position: relative !important;
      left:30px !important; */
-     /* justify-content: center !important; */
-
+    /* justify-content: center !important; */
   }
-  .element img{
+  .element img {
     width: 250px !important;
     height: 250px !important;
-top:45px !important;
+    top: 45px !important;
   }
-  .green-line{
+  .green-line {
     margin: 30vh auto 0vh !important;
   }
 }
 
-@media screen and (max-device-width: 900px) and (min-device-width:500px) {
-
-  .flex1{
+@media screen and (max-device-width: 900px) and (min-device-width: 500px) {
+  .flex1 {
     /* flex-direction: column; */
     justify-content: center !important;
     align-items: center !important;
   }
 
-  .Year{
+  .Year {
     text-align: center;
     /* left: 0px !important; */
   }
-  .element{
+  .element {
     width: 300px !important;
     height: 300px !important;
-    margin: 100px 80px!important;
-  
+    margin: 100px 80px !important;
+
     /* justify-content: center !important; */
   }
-  .element img{
+  .element img {
     width: 300px !important;
     height: 300px !important;
     top: 45px !important;
   }
 }
 
-
 @media screen and (max-device-width: 1300px) and (min-device-width: 900px) {
-  .flex1{
+  .flex1 {
     /* flex-direction: column; */
     /* display: flex !important; */
     justify-content: center !important;
     align-items: center !important;
-     position: relative !important;
-    left:30px !important;
+    position: relative !important;
+    left: 30px !important;
   }
 
   /* .Year{
     text-align: center;
   } */
-  .element{
+  .element {
     width: 300px !important;
     height: 300px !important;
     margin: 100px auto !important;
     /* justify-content: center !important; */
-
-   
   }
-  .element img{
+  .element img {
     width: 300px !important;
     height: 300px !important;
     top: 45px !important;
