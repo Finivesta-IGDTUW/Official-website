@@ -19,7 +19,7 @@ const Resources = () => {
       </div>
 
       <div className="resourcesbox">
-        <Link to="/resources/moneymasterclass" className="boxsmall">
+        <Link to="/resources/moneymasterclass/" className="boxsmall">
           <div className="img">
             <img src={MoneyMasterclassImage} alt="Money Masterclass" />
           </div>

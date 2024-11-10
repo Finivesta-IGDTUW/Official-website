@@ -1,7 +1,7 @@
 import React from "react";
 import "./Events.css";
 
-import MoneyMasterclass from "./Images/MoneyMasterclass.png";
+import MoneyMasterclass from "./Images/MoneyMasterclasscopy.png";
 import BiddingBlitz from "./Images/BiddingBlitz.png";
 import CollegeTrading from "./Images/CollegeTrading.png";
 import Finlatics from "./Images/Finlatics.png";
@@ -30,7 +30,7 @@ const Events = () => {
               <div className="element5">
                 {/* Money Masterclass: Payroll System */}
                 <a //sample link
-                  href="https://www.finivesta.in/"
+                  href="/resources/moneymasterclass" 
                   target="_blank"
                   rel="noreferrer"
                 >
