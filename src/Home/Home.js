@@ -167,7 +167,6 @@ const Home = () => {
                   rel="noreferrer"
                 >
                   {" "}
-                  //sample link
                   <img src={MoneyMasterclass} alt="Money Masterclass" />
                 </a>
               </div>

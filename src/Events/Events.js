@@ -55,7 +55,9 @@ const Events = () => {
 
               <h2 className="title">Finlatics</h2>
             </div>
+          </div>
 
+          <div className="flex1">
             <div className="element">
               <div className="element2">
                 {/* Money Melange */}
@@ -70,9 +72,7 @@ const Events = () => {
 
               <h2 className="title">Money Melange</h2>
             </div>
-          </div>
 
-          <div className="flex1">
             <div className="element">
               <div className="element1">
                 {/* Kharche pe Charcha */}
