@@ -23,6 +23,19 @@ const Blog = () => {
             <div className="resourcesbox">
 
                 <div className="boxsmall blog" >
+                    <a href="/resources/blogs/10-US-election2024">
+                    <div className="img">
+                         <img src={I10} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>The 2024 U.S. Election</h2>   
+                       <p className="blog-byline-card">What a Trump Return V/S Harris Victory Means for the Global Economy</p>
+                    </div>
+                    </a>
+                </div>
+
+                <div className="boxsmall blog" >
+                    
                     <a href="/resources/blogs/10-gold-on-dhanteras">
                     <div className="img">
                          <img src={I10} alt="Cover"/>
