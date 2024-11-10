@@ -1,7 +1,11 @@
 import React from "react";
 import "../Resources.css";
 
-import SpotifyLogo from "../Images/podcasts/Spotifylogo.jpg";
+import BudgetPodcastCover from "../Images/podcasts/personalfinance1.jpeg";
+import InvestorPodcastCover from "../Images/podcasts/intellligentinvestor2.jpeg";
+import FinshotsCover from "../Images/podcasts/finshotsdaily3.jpeg";
+import EconomicsCover from "../Images/podcasts/economicsexplained4.jpeg";
+
 
 const Podcast = () => {
   return (
@@ -19,10 +23,11 @@ const Podcast = () => {
             href="https://open.spotify.com/episode/7vHHGxrlU890tlJXUasi9X?si=b5ebd680d07b46d7"
           >
             <div class="img podcast">
-              <img src={SpotifyLogo} alt="Cover" />
+              <img src={BudgetPodcastCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Why Budgets Aren't Boring?</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -34,10 +39,11 @@ const Podcast = () => {
             href="https://open.spotify.com/show/1ZpUmASkxeRmJsukPXWQT2?si=U8ebq-obRaCNzxnMTI3_zg"
           >
             <div class="img podcast">
-              <img src={SpotifyLogo} alt="Cover" />
+              <img src={InvestorPodcastCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Intelligent Investor</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -49,10 +55,11 @@ const Podcast = () => {
             href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA"
           >
             <div class="img podcast">
-              <img src={SpotifyLogo} alt="Cover" />
+              <img src={FinshotsCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Finshots Daily</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>
@@ -64,10 +71,11 @@ const Podcast = () => {
             href="https://open.spotify.com/show/5TFVUEJnYLOCmmfaDNHaM2"
           >
             <div class="img podcast">
-              <img src={SpotifyLogo} alt="Cover" />
+              <img src={EconomicsCover} alt="Cover" />
             </div>
-            <div class="text">
+            <div class="podcast-text">
               <h2>Economics Explained</h2>
+              <i class="fab fa-spotify"/>
             </div>
           </a>
         </div>

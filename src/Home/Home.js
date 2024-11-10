@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import MoneyMasterclass from "../Events/Images/MoneyMasterclass.png";
+import MoneyMasterclass from "../Events/Images/MoneyMasterclasscopy.png";
 import BiddingBlitz from "../Events/Images/BiddingBlitz.png";
 import CollegeTrading from "../Events/Images/CollegeTrading.png";
 import Finlatics from "../Events/Images/Finlatics.png";
@@ -162,7 +162,7 @@ const Home = () => {
             <Slider {...settings}>
               <div className="box">
                 <a
-                  href="https://www.finivesta.in/"
+                  href="/resources/moneymasterclass"
                   target="_blank"
                   rel="noreferrer"
                 >
