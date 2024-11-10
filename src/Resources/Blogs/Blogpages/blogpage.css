@@ -86,6 +86,10 @@
 .gold-on-dhanteras {
     background-image: url('./blog-images/dhanteras.webp');
 }
+.uselection{
+    background-image: url('./blog-images/11_Uselection.jpg');
+}
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
