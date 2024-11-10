@@ -38,6 +38,10 @@ body {
 .tap{
   background-image: url('./Images/trading apps_bg.jpg');
 }
+.moneymc {
+  background-image: url('./Images/MoneyMasterclasscopy.png');
+  background-position: bottom;
+}
 
 
 .header h1 {
@@ -88,9 +92,10 @@ body {
   aspect-ratio: 0.622;
 }
 
-.video img {
+.landscape img {
   height: auto;
   aspect-ratio: 1.5;
+  margin-bottom: 0;
 }
 
 .podcast img {
