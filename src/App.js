@@ -11,6 +11,7 @@ import Home from "./Home/Home";
 import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
+import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
 
@@ -25,7 +26,6 @@ import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
-
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
@@ -61,6 +61,7 @@ const AppContent = () => {
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
           {/* Under resources */}
+            <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
             <Route path="/resources/blogs" element={<Blog/>}/>
               {/* Blog pages */}
               <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
