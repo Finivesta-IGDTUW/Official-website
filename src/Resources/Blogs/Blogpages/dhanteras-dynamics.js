@@ -7,7 +7,7 @@ const DhanterasDynamics = () => {
             <div className="blog-page-box">
                 <div className="blog-header dhanteras">
                 <h1>Dhanteras Dynamics</h1>
-                <p>Gold prices and Market Sentiments <br/> amidst Global Uncertainty</p>
+                <p>Gold prices and Market Sentiments amidst Global Uncertainty</p>
                 <p>Blog written by <i>Sakshi</i></p>
                 </div>
                 <div className="blog-para">

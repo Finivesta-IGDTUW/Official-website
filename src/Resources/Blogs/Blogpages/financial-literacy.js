@@ -7,7 +7,7 @@ const Financialliteracy = () => {
             <div className="blog-page-box">
                 <div className="blog-header finlit">
                     <h1>Financial Literacy</h1>
-                    <p> Empowering Education and <br/> Mastering Finance </p>
+                    <p> Empowering Education and Mastering Finance </p>
                 </div>
                 <div className="blog-para">
                     <p>
