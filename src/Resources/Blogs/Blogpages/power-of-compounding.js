@@ -7,7 +7,7 @@ const Powerofcompounding = () => {
             <div className="blog-page-box">
                 <div className="blog-header compound">
                     <h1>Power of Compounding</h1>
-                    <p> Wealth unlocks through <br/> Compounding Magic </p>
+                    <p> Wealth unlocks through Compounding Magic </p>
                 </div>
                 <div className="blog-para">                    
                     <p>

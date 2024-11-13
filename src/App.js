@@ -41,8 +41,6 @@ import Review5 from "./Resources/BookReviews/bookpages/Review5";
 import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
-import TileGames from './Game/tile game/TileGame';
-
 
 const AppContent = () => {
   const location = useLocation();
