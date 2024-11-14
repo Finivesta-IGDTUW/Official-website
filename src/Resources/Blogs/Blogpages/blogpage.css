@@ -51,6 +51,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+.image-in-blog2 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 80vh;
+    margin: 10px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
 .ai-fin {
     background-image: url('./blog-images/aifin-img.png');
 }
@@ -86,6 +98,10 @@
 .gold-on-dhanteras {
     background-image: url('./blog-images/dhanteras.webp');
 }
+.uselection{
+    background-image: url('./blog-images/11_Uselection.jpg');
+}
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;

@@ -1,0 +1,34 @@
+table {
+    border-collapse: collapse;
+    width: 100%; /* Ensures the table takes up the full width of its container */
+    border-radius: 10px;  /* Added border-radius for rounded corners */
+    border: 1.5px solid #6a6464; /* Set border color to match your theme */
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    table-layout: fixed; /* Ensures that table layout adapts properly */
+    overflow: hidden; /* Ensures that the border-radius is visible for table content */
+}
+
+/* General table cell styling */
+th, td {
+    padding: 5px; /* Adds padding inside the table cells */
+    border: 1.5px solid #222;  /* Grey border */
+    text-align: center;
+    word-wrap: break-word; /* Ensures long words break and don't overflow */
+    color: #333333; /* Sets the text color inside the table cells */
+}
+
+/* Header cell styling */
+th {
+    background-color: #71b139;  /* Green */
+    color: #000;  /* Black */
+    font-weight: bold;
+}
+
+/* Row styling */
+tr {
+    background-color: #fff;  /* White rows */
+}
+th:first-child, td:first-child {
+    font-weight: bold;
+}
