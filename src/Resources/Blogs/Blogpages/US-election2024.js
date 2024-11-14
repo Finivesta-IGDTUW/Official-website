@@ -41,7 +41,6 @@ const USelection = () => {
                 <div className="blog-header uselection">
                     <h1>The 2024 U.S. Election</h1>
                     <p>What a Trump Return V/S Harris Victory Means for the Global Economy </p>
-                    <p>Blog written by <i>the F&R Team</i></p>
                 </div>
 
                 <div className="blog-para">
