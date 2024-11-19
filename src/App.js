@@ -41,6 +41,8 @@ import Review5 from "./Resources/BookReviews/bookpages/Review5";
 import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
+import Games from './Games/Game';
+
 
 const AppContent = () => {
   const location = useLocation();
@@ -91,6 +93,8 @@ const AppContent = () => {
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
+
+          <Route path="/games" element={<Games/>}/>
 
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
