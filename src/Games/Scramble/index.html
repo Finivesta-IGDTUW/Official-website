@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Scramble Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="landing-page">
+        <div class="intro-container">
+            <h1>Welcome to Finivesta's Scramble Game!</h1>
+            <p>Can you unscramble the financial terms before time runs out? Let the game begin!</p>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="info">
+            <div>Time: <span id="timer">0s</span></div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        <div class="guess">GUESS!</div>
+        <div id="scrambled-word">N O L A</div>
+        <div class="hint">Hint: Often used for things like buying a car, home, or funding education</div>
+        <input type="text" id="answer" placeholder="Enter if you dare...">
+        <div class="buttons">
+            <button id="refresh">REFRESH</button>
+            <button id="check">CHECK</button>
+        </div>
+    </div>
+
+    <div id="correct-message" class="correct-message">
+        <span>Correct!</span> ✅
+    </div>
+
+    <div id="wrong-message" class="wrong-message">
+        <span>Wrong!</span>❌ 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
