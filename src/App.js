@@ -46,12 +46,16 @@ import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 const AppContent = () => {
   const location = useLocation();
-
   useEffect(() => {
   }, [location]);
+  
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);  // Set loaded to true once the component is mounted (after loader disappears)
+  }, []);
 
   return (
-    <div className="App">
+    <div className={`App app-content ${loaded ? 'loaded' : ''}`}>
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
