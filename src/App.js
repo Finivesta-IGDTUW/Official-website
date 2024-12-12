@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
+
+import Loader from './Loader/Loader';
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -102,11 +104,21 @@ const AppContent = () => {
 }
 
 function App() {
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 5000); // Loader duration (5 seconds)
+
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }, []);
 
   return (
-      <Router>
-          <AppContent />
-      </Router>
+    <Router>
+      {showLoader && <Loader />} {/* Show loader while the state is true */}
+      {!showLoader && <AppContent />} {/* Show content after loader is hidden */}
+    </Router>
   );
 }
 
