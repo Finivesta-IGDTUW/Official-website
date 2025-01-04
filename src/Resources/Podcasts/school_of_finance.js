@@ -18,7 +18,7 @@ const FinanceReview = () => {
         <div className="book-title">
           <h1>School of Finance by Karishma Shah</h1>
           <p className="author">Rating: ★★★★☆ (4.5/5)</p>
-          <p>Podcast review by <i>Anandi Sharma, HR Team</i></p>
+          <p>Podcast review by <i>Anandi Sharma</i></p>
         </div>
       </div>
       
