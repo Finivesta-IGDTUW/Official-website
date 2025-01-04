@@ -22,22 +22,36 @@ const Podcast = () => {
             <div className="img podcast">
               <img src={FinshotsCover} alt="Finshots Cover" />
             </div>
+          </Link>
             <div className="podcast-text">
               <h2>Finshots Daily</h2>
-              <i className="fab fa-spotify"/>
+              <a 
+                href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-spotify" />
+              </a>
             </div>
-          </Link>
+
         </div>
         <div className="boxsmall">
           <Link to="/resources/Images/podcasts/SchoolOfFinance">
             <div className="img podcast">
               <img src={FinanceCover} alt="Finance Cover" />
             </div>
+            </Link>
             <div className="podcast-text">
               <h2>School Of Finance</h2>
-              <i className="fab fa-spotify"/>
+              <a 
+                href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC"
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+                <i className="fab fa-spotify"/>
+              </a>
             </div>
-          </Link>
+          
         </div>
 
         <div className="boxsmall">
