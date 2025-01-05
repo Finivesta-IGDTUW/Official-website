@@ -38,20 +38,23 @@ const Podcast = () => {
         <div className="boxsmall">
           <Link to="/resources/Images/podcasts/SchoolOfFinance">
             <div className="img podcast">
-              <img src={FinanceCover} alt="Finance Cover" />
+              <img 
+                src={FinanceCover} 
+                alt="Finance Cover" 
+                style={{ padding: '10px', margin: '10px' }}
+              />
             </div>
-            </Link>
-            <div className="podcast-text">
-              <h2>School Of Finance</h2>
-              <a 
-                href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC"
-                target="_blank" 
-                rel="noopener noreferrer"
-                >
-                <i className="fab fa-spotify"/>
-              </a>
-            </div>
-          
+          </Link>
+          <div className="podcast-text">
+            <h2>School Of Finance</h2>
+            <a 
+              href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-spotify"/>
+            </a>
+          </div>
         </div>
 
         <div className="boxsmall">

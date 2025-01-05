@@ -8,12 +8,18 @@ const FinanceReview = () => {
   return (
     <div className="book-page-box">
       <div className="book-header">
-        <a href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC" target="_blank" rel="noopener noreferrer">
-          <img 
-            src={FinanceCover} 
-            alt="School of Finance Podcast Cover" 
-          />
-        </a>
+      <a href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC" target="_blank" rel="noopener noreferrer">
+        <img 
+          src={FinanceCover} 
+          alt="School of Finance Podcast Cover" 
+          style={{
+            
+            margin: '10px', 
+            border: '3px solid black' // Example color
+          }}
+        />
+      </a>
+
         
         <div className="book-title">
           <h1>School of Finance by Karishma Shah</h1>
