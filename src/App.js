@@ -26,7 +26,7 @@ import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
-
+import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
 import FinshotsReview from './Resources/Podcasts/finshot_review';
@@ -79,7 +79,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/09-dhanteras-dynamics" element={<DhanterasDynamics/>}/>
               <Route path="/resources/blogs/10-gold-on-dhanteras" element={<GoldOnDhanteras/>}/>
               <Route path="/resources/blogs/11-US-election-2024" element={<USelection/>}/>
-
+              <Route path="/resources/blogs/12-investment_guide" element={<InvestmentGuide/>}/>
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
