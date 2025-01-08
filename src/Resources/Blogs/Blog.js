@@ -12,7 +12,7 @@ import I8 from '../Images/blogs/CarthageCoins.jpg';
 import I9 from '../Images/blogs/9.jpg';
 import I10 from '../Images/blogs/dhanteras.webp';
 import I11 from '../Images/blogs/11.png';
-
+import I12 from '../Images/blogs/investment.png';
 const Blog = () => {
   return (
     <div className="blogpage">
@@ -22,7 +22,19 @@ const Blog = () => {
       </div>
 
       <div className="resourcesbox">
-
+      <div className="boxsmall blog">
+          <a href="/resources/blogs/12-investment_guide">
+            <div className="img">
+              <img src={I12} alt="Cover" />
+            </div>
+            <div className="text">
+              <h2>Introduction to Investing and Annual Returns</h2>
+              <p className="blog-byline-card">
+                A comprehensive guide to investment options and their potential returns{" "}
+              </p>
+            </div>
+          </a>
+        </div>
         <div className="boxsmall blog" >
             <a href="/resources/blogs/11-US-election-2024">
             <div className="img">
@@ -100,7 +112,7 @@ const Blog = () => {
               <h2>AI in Finance</h2>
               <p className="blog-byline-card">
                 {" "}
-                World of artificial intelligence overlaps with that of finance
+                World of artificial intelligence overlaps with that of finance{" "}
               </p>
             </div>
           </a>
@@ -114,7 +126,7 @@ const Blog = () => {
             <div className="text">
               <h2>Finance and Technology</h2>
               <p className="blog-byline-card">
-                Bridging Finance and Innovation
+                Bridging Finance and Innovation{" "}
               </p>
             </div>
           </a>
@@ -176,6 +188,7 @@ const Blog = () => {
             </div>
           </a>
         </div>
+        
       </div>
     </div>
   );

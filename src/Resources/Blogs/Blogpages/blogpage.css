@@ -101,7 +101,9 @@
 .uselection{
     background-image: url('./blog-images/11_Uselection.jpg');
 }
-
+.investment_guide{
+    background-image: url('./blog-images//investment.png');
+}
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
