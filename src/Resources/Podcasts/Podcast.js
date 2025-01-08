@@ -18,7 +18,7 @@ const Podcast = () => {
 
       <div className="resourcesbox">
         <div className="boxsmall">
-          <Link to="/resources/Images/podcasts/finshotsdaily3">
+          <Link to="/resources/podcasts/finshots">
             <div className="img podcast">
               <img src={FinshotsCover} alt="Finshots Cover" />
             </div>
@@ -36,7 +36,7 @@ const Podcast = () => {
 
         </div>
         <div className="boxsmall">
-          <Link to="/resources/Images/podcasts/SchoolOfFinance">
+          <Link to="/resources/podcasts/school-of-finance">
             <div className="img podcast">
               <img 
                 src={FinanceCover} 

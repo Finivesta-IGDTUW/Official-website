@@ -77,7 +77,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/09-dhanteras-dynamics" element={<DhanterasDynamics/>}/>
               <Route path="/resources/blogs/10-gold-on-dhanteras" element={<GoldOnDhanteras/>}/>
               <Route path="/resources/blogs/11-US-election-2024" element={<USelection/>}/>
-              <Route path="/resources/blogs/12-investment_guide" element={<InvestmentGuide/>}/>
+              <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
@@ -90,8 +90,8 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/bookpages/moneyorlife" element={<Review7/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
-            <Route path="/resources/Images/podcasts/finshotsdaily3" element={<FinshotsReview/>}/>
-            <Route path="/resources/Images/podcasts/SchoolOfFinance" element={<FinanceReview/>}/>
+            <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
+            <Route path="/resources/podcasts/school-of-finance" element={<FinanceReview/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>

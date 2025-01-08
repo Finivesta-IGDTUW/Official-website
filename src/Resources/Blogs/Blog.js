@@ -23,7 +23,7 @@ const Blog = () => {
 
       <div className="resourcesbox">
       <div className="boxsmall blog">
-          <a href="/resources/blogs/12-investment_guide">
+          <a href="/resources/blogs/12-investing-and-annual-returns">
             <div className="img">
               <img src={I12} alt="Cover" />
             </div>
