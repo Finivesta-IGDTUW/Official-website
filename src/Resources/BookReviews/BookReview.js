@@ -25,7 +25,7 @@ const BookReview = () => {
             <div class="resourcesbox">
 
               <div class="boxsmall">
-              <a href="/resources/bookreviews/bookpages/ZeroToOne">
+              <a href="/resources/bookreviews/ZeroToOne">
                   <div class="img review">
                     <img src={ZeroToOne} alt="Zero To One Book Cover"/>
                   </div>
@@ -36,7 +36,7 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
-              <a href="/resources/bookreviews/bookpages/TheBigShort">
+              <a href="/resources/bookreviews/TheBigShort">
                   <div class="img review">
                     <img src={TheBigShort} alt="The Big Short Book Cover"/>
                   </div>
@@ -46,85 +46,8 @@ const BookReview = () => {
                   </a>
               </div>
 
-              <div class="boxsmall">           
-              <a href="/resources/bookreviews/bookpages/doglapan">
-                  <div class="img review">
-                    <img src={Doglapan} alt="Doglapan Book Cover" />
-                  </div>
-                  <div class="text">
-                    <h2>Doglapan</h2>
-                  </div>
-                  </a>
-              </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/intelligentinvestor">
-                <div class="img review">
-                  <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>Intelligent Investor</h2>
-              </div>
-              </a>
-            </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/richdadpoordad">
-                <div class="img review">
-                  <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2> Rich Dad Poor Dad</h2>
-                </div>
-                </a>
-              </div>
-              
               <div class="boxsmall">
-              <a href="/resources/bookreviews/bookpages/psychologyofmoney">
-                <div class="img review">
-                  <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>The Psychology Of Money</h2>
-                </div>
-                </a>
-              </div>
-
-              <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/MillNextDoor">
-                <div class="img review">
-                  <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>The Millionaire Next Door</h2>
-                </div>
-                </a>
-              </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/RichestManInBabylon">
-                <div class="img review">
-                  <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>The Richest Man In Babylon</h2>
-                </div>
-                </a>
-            </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/MoneyorLife">
-                <div class="img review">
-                  <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>Your Money Or Your Life </h2>
-                </div>
-                </a>
-            </div>
-
-            <div class="boxsmall">
-              <a href="/resources/bookreviews/bookpages/from_the_ratrace">
+              <a href="/resources/bookreviews/fromtheratrace">
                 <div class="img review">
                   <img src={RatRace} alt="From the Rat Race to Financial Freedom Book Cover"/>
                 </div>
@@ -135,7 +58,7 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
-              <a href="/resources/bookreviews/bookpages/epicmoney">
+              <a href="/resources/bookreviews/epicmoney">
                 <div class="img review">
                   <img src={EpicMoney} alt="Make Epic Money Book Cover"/>
                 </div>
@@ -144,6 +67,83 @@ const BookReview = () => {
                 </div>
                 </a>
               </div>
+
+              <div class="boxsmall">           
+              <a href="/resources/bookreviews/doglapan">
+                  <div class="img review">
+                    <img src={Doglapan} alt="Doglapan Book Cover" />
+                  </div>
+                  <div class="text">
+                    <h2>Doglapan</h2>
+                  </div>
+                  </a>
+              </div>
+
+            <div class="boxsmall">
+            <a href="/resources/bookreviews/intelligentinvestor">
+                <div class="img review">
+                  <img src={IntellInvestor} alt="Intelligent Investor Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>Intelligent Investor</h2>
+              </div>
+              </a>
+            </div>
+
+            <div class="boxsmall">
+            <a href="/resources/bookreviews/richdadpoordad">
+                <div class="img review">
+                  <img src={RichDadPoorDad} alt="Rich dad Poor Dad Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2> Rich Dad Poor Dad</h2>
+                </div>
+                </a>
+              </div>
+              
+              <div class="boxsmall">
+              <a href="/resources/bookreviews/psychologyofmoney">
+                <div class="img review">
+                  <img src={PsychOfMoney} alt="Psychology Of Money Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>The Psychology Of Money</h2>
+                </div>
+                </a>
+              </div>
+
+              <div class="boxsmall">
+            <a href="/resources/bookreviews/MillNextDoor">
+                <div class="img review">
+                  <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>The Millionaire Next Door</h2>
+                </div>
+                </a>
+              </div>
+
+            <div class="boxsmall">
+            <a href="/resources/bookreviews/RichestManInBabylon">
+                <div class="img review">
+                  <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>The Richest Man In Babylon</h2>
+                </div>
+                </a>
+            </div>
+
+            <div class="boxsmall">
+            <a href="/resources/bookreviews/MoneyorLife">
+                <div class="img review">
+                  <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>Your Money Or Your Life </h2>
+                </div>
+                </a>
+            </div>
 
             </div>
 
