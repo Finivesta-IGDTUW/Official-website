@@ -25,7 +25,7 @@ const BookReview = () => {
             <div class="resourcesbox">
 
               <div class="boxsmall">
-              <a href="/resources/bookreviews/ZeroToOne">
+              <a href="/resources/bookreviews/zerotoone">
                   <div class="img review">
                     <img src={ZeroToOne} alt="Zero To One Book Cover"/>
                   </div>
@@ -36,7 +36,7 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
-              <a href="/resources/bookreviews/TheBigShort">
+              <a href="/resources/bookreviews/thebigshort">
                   <div class="img review">
                     <img src={TheBigShort} alt="The Big Short Book Cover"/>
                   </div>
@@ -113,7 +113,7 @@ const BookReview = () => {
               </div>
 
               <div class="boxsmall">
-            <a href="/resources/bookreviews/MillNextDoor">
+            <a href="/resources/bookreviews/millnextdoor">
                 <div class="img review">
                   <img src={MillNextDoor} alt="Millionaire Next Door Book Cover"/>
                 </div>
@@ -124,7 +124,7 @@ const BookReview = () => {
               </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/RichestManInBabylon">
+            <a href="/resources/bookreviews/richestmaninbabylon">
                 <div class="img review">
                   <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
                 </div>
@@ -135,7 +135,7 @@ const BookReview = () => {
             </div>
 
             <div class="boxsmall">
-            <a href="/resources/bookreviews/MoneyorLife">
+            <a href="/resources/bookreviews/moneyorlife">
                 <div class="img review">
                   <img src={MoneyOrLife} alt="Money Or Life Book Cover"/>
                 </div>

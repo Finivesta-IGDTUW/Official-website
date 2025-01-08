@@ -44,8 +44,8 @@ import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 import Review8 from "./Resources/BookReviews/bookpages/Review8";
 import Review9 from "./Resources/BookReviews/bookpages/Review9";
-import RatRace from "./Resources/BookReviews/bookpages/from_the_ratrace";
-import EpicMoney from "./Resources/BookReviews/bookpages/epicmoney";
+import Review10 from "./Resources/BookReviews/bookpages/Review10";
+import Review11 from "./Resources/BookReviews/bookpages/Review11";
 
 
 const AppContent = () => {
@@ -94,8 +94,9 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/moneyorlife" element={<Review7/>}/>
             <Route path="/resources/bookreviews/zerotoone" element={<Review8/>}/>
             <Route path="/resources/bookreviews/thebigshort" element={<Review9/>}/>
-            <Route path="/resources/bookreviews/fromtheratrace" element={<RatRace/>}/>
-            <Route path="/resources/bookreviews/epicmoney" element={<EpicMoney/>}/>
+            <Route path="/resources/bookreviews/fromtheratrace" element={<Review11/>}/>
+            <Route path="/resources/bookreviews/epicmoney" element={<Review10/>}/>
+
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
