@@ -77,17 +77,49 @@
 .drop-down-team {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 80vw;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-bottom: 3vh;
     cursor: pointer;
 }
 
 .drop-down-team img {
     max-width: 100%;
+    padding-bottom: 1vh;
     border-radius: 15px;
     border: rgba(0, 0, 0, 0.4);
+    transition: filter 0.3s ease;
+}
+
+.drop-down-team img:hover {
+    filter: brightness(0.7);
+}
+
+.team-drop-down-text {
+    font-size: 1.2rem; 
+    color: #5f8e33; 
+    margin-top: 10px;
+    text-align: center; 
+    position: relative; 
+}
+
+.team-drop-down-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 2px; 
+    left: 50%;
+    background-color: #5f8e33;
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.drop-down-team img:hover + .team-drop-down-text::after {
+    width: 100%; 
+    left: 0;
 }
 
 .team-arrow {
