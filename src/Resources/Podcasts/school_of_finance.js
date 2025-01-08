@@ -30,7 +30,7 @@ const FinanceReview = () => {
       
       <div className="book-para">
         <p>
-          Hosted and created by Karishma Shah in 2021, <br/>
+          Hosted and created by Karishma Shah in 2021,
           “School of Finance” is your go-to podcast for understanding investment opportunities that aren't usually talked about, 
           especially for individuals looking to explore new ways to grow their wealth beyond the usual stocks and mutual funds.
           <br/><br/>
