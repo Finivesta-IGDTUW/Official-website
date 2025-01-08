@@ -10,6 +10,8 @@ import RichestManInBabylon from '../Images/books/RichestManInBabylon.jpg';
 import MoneyOrLife from '../Images/books/MoneyOrLife.jpg';
 import ZeroToOne from '../Images/books/ZeroToOne.jpg';
 import TheBigShort from '../Images/books/TheBigShort.jpg';
+import RatRace from '../Images/books/from_the_ratrace.jpg';
+import EpicMoney from '../Images/books/makeepic.jpg';
 
 
 const BookReview = () => {
@@ -120,6 +122,28 @@ const BookReview = () => {
                 </div>
                 </a>
             </div>
+
+            <div class="boxsmall">
+              <a href="/resources/bookreviews/bookpages/from_the_ratrace">
+                <div class="img review">
+                  <img src={RatRace} alt="From the Rat Race to Financial Freedom Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>From the Rat Race to Financial Freedom </h2>
+                </div>
+                </a>
+              </div>
+
+              <div class="boxsmall">
+              <a href="/resources/bookreviews/bookpages/epicmoney">
+                <div class="img review">
+                  <img src={EpicMoney} alt="Make Epic Money Book Cover"/>
+                </div>
+                <div class="text">
+                  <h2>Make Epic Money</h2>
+                </div>
+                </a>
+              </div>
 
             </div>
 
