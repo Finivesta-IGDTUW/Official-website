@@ -94,7 +94,7 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/moneyorlife" element={<Review7/>}/>
             <Route path="/resources/bookreviews/zerotoone" element={<Review8/>}/>
             <Route path="/resources/bookreviews/thebigshort" element={<Review9/>}/>
-            <Route path="/resources/bookreviews/fromtheratrace" element={<RatRaceatrace/>}/>
+            <Route path="/resources/bookreviews/fromtheratrace" element={<RatRace/>}/>
             <Route path="/resources/bookreviews/epicmoney" element={<EpicMoney/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
