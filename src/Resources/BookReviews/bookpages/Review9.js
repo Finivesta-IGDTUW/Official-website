@@ -64,10 +64,8 @@ const  Review9 = () => {
                         </li>
 
                     </ul>
-                    </div>
 
-
-                    <div className="blog-para">
+                    <br/>
                     
                     <h3>Final Thoughts  </h3> 
                     What makes The Big Short stand out is its mix of technical details and human stories. It’s not just a book about finance, it’s about understanding human behaviour, ambition, and the price of ignoring reality.  <br></br>

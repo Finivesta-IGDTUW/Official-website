@@ -23,11 +23,30 @@ const BookReview = () => {
             <div class="resourcesbox">
 
               <div class="boxsmall">
-           
+              <a href="/resources/bookreviews/bookpages/ZeroToOne">
+                  <div class="img review">
+                    <img src={ZeroToOne} alt="Zero To One Book Cover"/>
+                  </div>
+                  <div class="text">
+                    <h2>Zero To One </h2>
+                  </div>
+                  </a>
+              </div>
+
+              <div class="boxsmall">
+              <a href="/resources/bookreviews/bookpages/TheBigShort">
+                  <div class="img review">
+                    <img src={TheBigShort} alt="The Big Short Book Cover"/>
+                  </div>
+                  <div class="text">
+                    <h2>The Big Short </h2>
+                  </div>
+                  </a>
+              </div>
+
+              <div class="boxsmall">           
               <a href="/resources/bookreviews/bookpages/doglapan">
                   <div class="img review">
-            
-            
                     <img src={Doglapan} alt="Doglapan Book Cover" />
                   </div>
                   <div class="text">
@@ -81,7 +100,6 @@ const BookReview = () => {
               </div>
 
             <div class="boxsmall">
-            {/* <Route path="/resources/bookreviews/bookpages/RichestManInBabylon" element={<Review5/>}/> */}
             <a href="/resources/bookreviews/bookpages/RichestManInBabylon">
                 <div class="img review">
                   <img src={RichestManInBabylon} alt="Richest Man In Babylon Book Cover"/>
@@ -102,31 +120,6 @@ const BookReview = () => {
                 </div>
                 </a>
             </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/ZeroToOne">
-                <div class="img review">
-                  <img src={ZeroToOne} alt="Zero To One Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>Zero To One </h2>
-                </div>
-                </a>
-            </div>
-
-            <div class="boxsmall">
-            <a href="/resources/bookreviews/bookpages/TheBigShort">
-                <div class="img review">
-                  <img src={TheBigShort} alt="The Big Short Book Cover"/>
-                </div>
-                <div class="text">
-                  <h2>The Big Short </h2>
-                </div>
-                </a>
-            </div>
-
-
-
 
             </div>
 
