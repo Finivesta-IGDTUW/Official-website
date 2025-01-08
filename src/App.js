@@ -84,25 +84,25 @@ const AppContent = () => {
               <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
               
               {/*Book pages*/}
-            <Route path="/resources/bookreviews" element={<bookreview/>}/>
-            <Route path="/resources/bookreviews/doglapan" element={<review1/>}/>
-            <Route path="/resources/bookreviews/intelligentinvestor" element={<review2/>}/>
-            <Route path="/resources/bookreviews/richdadpoordad" element={<review3/>}/>
-            <Route path="/resources/bookreviews/psychologyofmoney" element={<review4/>}/>
-            <Route path="/resources/bookreviews/richestmaninbabylon" element={<review5/>}/>
-            <Route path="/resources/bookreviews/millnextdoor" element={<review6/>}/>
-            <Route path="/resources/bookreviews/moneyorlife" element={<review7/>}/>
-            <Route path="/resources/bookreviews/zerotoone" element={<review8/>}/>
-            <Route path="/resources/bookreviews/thebigshort" element={<review9/>}/>
-            <Route path="/resources/bookreviews/fromtheratrace" element={<ratrace/>}/>
-            <Route path="/resources/bookreviews/epicmoney" element={<epicmoney/>}/>
-            <Route path="/resources/youtube" element={<youtube/>}/>
-            <Route path="/resources/podcasts" element={<podcast/>}/>
-            <Route path="/resources/podcasts/finshots" element={<finshotsreview/>}/>
-            <Route path="/resources/podcasts/school-of-finance" element={<financereview/>}/>
-            <Route path="/resources/stocks" element={<stocks/>}/>
-            <Route path="/resources/videos" element={<youtube/>}/>
-            <Route path="/resources/trading" element={<tradingapps/>}/>
+            <Route path="/resources/bookreviews" element={<BookReview/>}/>
+            <Route path="/resources/bookreviews/doglapan" element={<Review1/>}/>
+            <Route path="/resources/bookreviews/intelligentinvestor" element={<Review2/>}/>
+            <Route path="/resources/bookreviews/richdadpoordad" element={<Review3/>}/>
+            <Route path="/resources/bookreviews/psychologyofmoney" element={<Review4/>}/>
+            <Route path="/resources/bookreviews/richestmaninbabylon" element={<Review5/>}/>
+            <Route path="/resources/bookreviews/millnextdoor" element={<Review6/>}/>
+            <Route path="/resources/bookreviews/moneyorlife" element={<Review7/>}/>
+            <Route path="/resources/bookreviews/zerotoone" element={<Review8/>}/>
+            <Route path="/resources/bookreviews/thebigshort" element={<Review9/>}/>
+            <Route path="/resources/bookreviews/fromtheratrace" element={<RatRaceatrace/>}/>
+            <Route path="/resources/bookreviews/epicmoney" element={<EpicMoney/>}/>
+            <Route path="/resources/youtube" element={<Youtube/>}/>
+            <Route path="/resources/podcasts" element={<Podcast/>}/>
+            <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
+            <Route path="/resources/podcasts/school-of-finance" element={<FinanceReview/>}/>
+            <Route path="/resources/stocks" element={<Stocks/>}/>
+            <Route path="/resources/videos" element={<Youtube/>}/>
+            <Route path="/resources/trading" element={<TradingApps/>}/>
 
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
