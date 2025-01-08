@@ -39,11 +39,11 @@
     text-align: center;
     align-items: justify; 
     justify-content: space-between; 
-    background-image: url('./Media/TeamPic24Cropped.jpg');
+    background-image: url('./Media/TeamPic.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    aspect-ratio: 3.022;
+    aspect-ratio: 3.360;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
 }
@@ -72,34 +72,6 @@
     width: 80vw;
     background-color: #5f8e33;
     margin: 10vh 10vw;
-}
-
-.drop-down-team {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-.drop-down-team img {
-    max-width: 100%;
-    border-radius: 15px;
-    border: rgba(0, 0, 0, 0.4);
-}
-
-.team-arrow {
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #5f8e33;
-    transition: transform 0.3s ease; 
-    margin-top: 20px;
-}
-
-.team-arrow-rotate {
-    transform: rotate(180deg); 
 }
 
 @media (max-width: 430px) {

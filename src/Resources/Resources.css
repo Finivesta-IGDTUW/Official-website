@@ -9,26 +9,40 @@ body {
   color: white;
   padding: 20px;
   text-align: center;
-  height: 200px;
+  height: 200px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: auto;  
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
-  animation: fadeIn 2s ease-out; /* Add fade-in animation */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.blogs{
+  background-image: url('./Images/blog_bg.jpg');
 }
+.brs{
+  background-image: url('./Images/book review_bg.jpg');
+}
+.yt{
+  background-image: url('./Images/video_bg.jpg');
+}
+.pc{
+  background-image: url('./Images/podcast_bg.jpg');
+}
+.sm{
+  background-image: url('./Images/stock market_bg.jpg');
+}
+.tap{
+  background-image: url('./Images/trading apps_bg.jpg');
+}
+.moneymc {
+  background-image: url('./Images/MoneyMasterclasscopy.png');
+  background-position: bottom;
+}
+
 
 .header h1 {
   font-size: 2.2em;
@@ -36,14 +50,15 @@ body {
 }
 
 .header p {
-  margin-top: 10px;
-  font-size: 1em;
+  margin-top: 10px; 
+  font-size: 1em; 
   text-align: center;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-.resourcesbox {
+.resourcesbox{
   display: flex;
+  /* margin: auto; */
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 2vw;
@@ -54,23 +69,33 @@ body {
   box-sizing: border-box;
   width: 26vw;
   height: auto;
-  border-radius: 5px;
+  border-radius:5px;
   background-color: rgb(31, 30, 30);
   margin: 1vw;
   text-decoration: none;
   transition: 0.3s ease-out;
 }
 
-.boxsmall img {
+.boxsmall img{
   height: 15rem;
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(9, 11, 10, 0.7);
 }
-
-.boxsmall:hover {
+.boxsmall:hover{
   transform: translatey(-10px);
+}
+
+.review img {
+  height: auto;
+  aspect-ratio: 0.622;
+}
+
+.landscape img {
+  height: auto;
+  aspect-ratio: 1.5;
+  margin-bottom: 0;
 }
 
 .podcast img {
@@ -78,7 +103,11 @@ body {
   aspect-ratio: 1;
 }
 
-.boxsmall h2 {
+.blog :hover {
+  cursor: pointer;
+}
+
+.boxsmall h2{
   color: white;
   text-align: center;
   flex-wrap: wrap;
@@ -89,24 +118,46 @@ body {
   font-size: 1.2rem;
   margin: 0;
   text-decoration: none;
-  min-height: 2.8rem;
+  min-height: 2.8rem; 
   height: auto;
 }
 
-.boxsmall p {
+.boxsmall p{
   color: white;
   text-align: center;
   font-weight: 400;
   font-size: 0.9rem;
+  /* padding-top: 1rem; */
   text-decoration: none;
+}
+
+.boxsmall a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
 }
 
 .podcast-text {
   justify-items: center;
 }
 
-.boxsmall:hover {
-  transform: scale(0.98);
+.bookreview .boxsmall:hover,
+.Youtube .boxsmall:hover{
+    transform: scale(0.98);
+}
+.Youtube .links:hover{
+  text-decoration: underline;
+}
+
+.tradingapps p {
+  color: #c0c0c0;
+}
+.tradingapps i {
+  text-align: center;
+  justify-self: center;
+  color: #FFFFFF;
+}
+.boxsmall i {
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1064px) {
@@ -114,7 +165,7 @@ body {
     width: 32vw;
     margin: 2vw;
   }
-  .resourcesbox {
+  .resourcesbox{
     justify-content: center;
     padding: 4vw;
   }
@@ -125,7 +176,7 @@ body {
     width: 38vw;
     margin: 2vw;
   }
-  .resourcesbox {
+  .resourcesbox{
     justify-content: center;
     padding: 4vw;
   }

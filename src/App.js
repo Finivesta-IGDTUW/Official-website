@@ -26,11 +26,9 @@ import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
-import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
-import FinshotsReview from './Resources/Podcasts/finshot_review';
-import FinanceReview from './Resources/Podcasts/school_of_finance';
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
 import Team from "./Team/Team";
@@ -42,8 +40,6 @@ import Review4 from "./Resources/BookReviews/bookpages/Review4";
 import Review5 from "./Resources/BookReviews/bookpages/Review5";
 import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
-
-import Games from './Games/Game';
 
 
 const AppContent = () => {
@@ -79,7 +75,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/09-dhanteras-dynamics" element={<DhanterasDynamics/>}/>
               <Route path="/resources/blogs/10-gold-on-dhanteras" element={<GoldOnDhanteras/>}/>
               <Route path="/resources/blogs/11-US-election-2024" element={<USelection/>}/>
-              <Route path="/resources/blogs/12-investment_guide" element={<InvestmentGuide/>}/>
+
               
               {/*Book pages*/}
             <Route path="/resources/books" element={<BookReview/>}/>
@@ -91,15 +87,10 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/bookpages/millnextdoor" element={<Review6/>}/>
             <Route path="/resources/bookreviews/bookpages/moneyorlife" element={<Review7/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
-            {/*Podcast*/}
             <Route path="/resources/podcasts" element={<Podcast/>}/>
-            <Route path="/resources/Images/podcasts/finshotsdaily3" element={<FinshotsReview/>}/>
-            <Route path="/resources/Images/podcasts/SchoolOfFinance" element={<FinanceReview/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
-
-          <Route path="/games" element={<Games/>}/>
 
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>

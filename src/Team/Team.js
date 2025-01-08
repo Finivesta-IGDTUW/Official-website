@@ -1,21 +1,12 @@
 import React from "react";
 import "./Team.css";
-import { useState } from "react";
 
 import Team23 from './Media/Tenure23';
 import Team24 from './Media/Tenure24';
 
-import TeamPic23 from './Media/TeamPic23.jpeg';
-
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Team = () => {
-
-    const [showTeam23, setShowTeam23] = useState(false);
-
-    const toggleTeam23 = () => {
-        setShowTeam23(prevShowTeam23 => !prevShowTeam23);
-    };
 
     return (
       
@@ -37,11 +28,7 @@ const Team = () => {
                 <div className="after-core-line"></div>
 
                 <h1>Year '23 - '24</h1>
-                <div className="drop-down-team" onClick={toggleTeam23}>
-                    <img src={TeamPic23} alt="Team 23" />
-                    <div className={`team-arrow ${showTeam23 ? 'team-arrow-rotate' : ''}`}></div>
-                </div>
-                {showTeam23 && <Team23 />}
+                <Team23/>
             </section>
 
         </div> 
