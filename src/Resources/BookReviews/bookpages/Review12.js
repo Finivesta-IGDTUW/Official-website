@@ -17,7 +17,7 @@ const Review12 = () => {
               by <i>Ramit Sethi</i>
             </p>
             <p>
-              Book review by <i>Aiman</i>, <i>Urja Kohli</i> and <i>Kritika</i>{" "}
+              Book review by <i>Pavneet Kaur</i>{" "}
             </p>
           </div>
         </div>
