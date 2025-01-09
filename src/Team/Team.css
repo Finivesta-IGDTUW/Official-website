@@ -39,11 +39,11 @@
     text-align: center;
     align-items: justify; 
     justify-content: space-between; 
-    background-image: url('./Media/TeamPic.jpeg');
+    background-image: url('./Media/TeamPic24Cropped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    aspect-ratio: 3.360;
+    aspect-ratio: 3.022;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
 }
