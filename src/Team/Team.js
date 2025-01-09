@@ -7,8 +7,6 @@ import "aos/dist/aos.css";
 import Team23 from './Media/Tenure23';
 import Team24 from './Media/Tenure24';
 
-import TeamPic23 from './Media/TeamPic23.jpeg';
-
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Team = () => {

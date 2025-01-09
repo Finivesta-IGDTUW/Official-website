@@ -17,13 +17,13 @@ const MoneyMasterclass = () => {
       <div className="resourcesbox">
 
         <div className="boxsmall">
-          <a href="https://www.canva.com/design/DAGUqH5oZgY/0zHssdS1PHB0uE9wd8IgoA/view?utm_content=DAGUqH5oZgY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noreferrer">
+          <a href="https://www.canva.com/design/DAGWeo9-4g0/uSv8Z_0SZZgEtRdJR7dczQ/view?utm_content=DAGWeo9-4g0&utm_campaign=designshare&utm_medium=link&utm_source=editor"  target="_blank" rel="noreferrer">
             <div className="landscape">
-              <img src={Session1} alt="Cover" />
+              <img src={Session3} alt="Cover" />
             </div>
             <div className="text">
-              <h2>Session 1</h2>
-              <p>Payroll System</p>
+              <h2>Session 3</h2>
+              <p>Investment Knowledge for Beginners</p>
             </div>
           </a>
         </div>
@@ -41,13 +41,13 @@ const MoneyMasterclass = () => {
         </div>
 
         <div className="boxsmall">
-          <a href="https://www.canva.com/design/DAGWeo9-4g0/uSv8Z_0SZZgEtRdJR7dczQ/view?utm_content=DAGWeo9-4g0&utm_campaign=designshare&utm_medium=link&utm_source=editor"  target="_blank" rel="noreferrer">
+          <a href="https://www.canva.com/design/DAGUqH5oZgY/0zHssdS1PHB0uE9wd8IgoA/view?utm_content=DAGUqH5oZgY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" rel="noreferrer">
             <div className="landscape">
-              <img src={Session3} alt="Cover" />
+              <img src={Session1} alt="Cover" />
             </div>
             <div className="text">
-              <h2>Session 3</h2>
-              <p>Investment Knowledge for Beginners</p>
+              <h2>Session 1</h2>
+              <p>Payroll System</p>
             </div>
           </a>
         </div>
