@@ -44,6 +44,8 @@ import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 import Review8 from "./Resources/BookReviews/bookpages/Review8";
 import Review9 from "./Resources/BookReviews/bookpages/Review9";
+import Review10 from "./Resources/BookReviews/bookpages/Review10";
+import Review11 from "./Resources/BookReviews/bookpages/Review11";
 
 
 const AppContent = () => {
@@ -82,16 +84,19 @@ const AppContent = () => {
               <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
               
               {/*Book pages*/}
-            <Route path="/resources/books" element={<BookReview/>}/>
-            <Route path="/resources/bookreviews/bookpages/doglapan" element={<Review1/>}/>
-            <Route path="/resources/bookreviews/bookpages/intelligentinvestor" element={<Review2/>}/>
-            <Route path="/resources/bookreviews/bookpages/richdadpoordad" element={<Review3/>}/>
-            <Route path="/resources/bookreviews/bookpages/psychologyofmoney" element={<Review4/>}/>
-            <Route path="/resources/bookreviews/bookpages/richestmaninbabylon" element={<Review5/>}/>
-            <Route path="/resources/bookreviews/bookpages/millnextdoor" element={<Review6/>}/>
-            <Route path="/resources/bookreviews/bookpages/moneyorlife" element={<Review7/>}/>
-            <Route path="/resources/bookreviews/bookpages/zerotoone" element={<Review8/>}/>
-            <Route path="/resources/bookreviews/bookpages/thebigshort" element={<Review9/>}/>
+            <Route path="/resources/bookreviews" element={<BookReview/>}/>
+            <Route path="/resources/bookreviews/doglapan" element={<Review1/>}/>
+            <Route path="/resources/bookreviews/intelligentinvestor" element={<Review2/>}/>
+            <Route path="/resources/bookreviews/richdadpoordad" element={<Review3/>}/>
+            <Route path="/resources/bookreviews/psychologyofmoney" element={<Review4/>}/>
+            <Route path="/resources/bookreviews/richestmaninbabylon" element={<Review5/>}/>
+            <Route path="/resources/bookreviews/millnextdoor" element={<Review6/>}/>
+            <Route path="/resources/bookreviews/moneyorlife" element={<Review7/>}/>
+            <Route path="/resources/bookreviews/zerotoone" element={<Review8/>}/>
+            <Route path="/resources/bookreviews/thebigshort" element={<Review9/>}/>
+            <Route path="/resources/bookreviews/fromtheratrace" element={<Review11/>}/>
+            <Route path="/resources/bookreviews/epicmoney" element={<Review10/>}/>
+
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
