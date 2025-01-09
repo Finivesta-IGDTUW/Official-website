@@ -144,6 +144,16 @@ const BookReview = () => {
                 </div>
                 </a>
             </div>
+    <div class="boxsmall">
+              <a href="/resources/bookreviews/iwillteachyoutoberich">
+                <div class="img review">
+                  <img src={IWillTeachYoutobeRich} alt="I Will Teach You to be Rich"/>
+                </div>
+                <div class="text">
+                  <h2>I Will Teach You to be Rich</h2>
+                </div>
+                </a>
+              </div>
 
             </div>
 
