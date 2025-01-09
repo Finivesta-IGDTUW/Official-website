@@ -39,11 +39,11 @@
     text-align: center;
     align-items: justify; 
     justify-content: space-between; 
-    background-image: url('./Media/TeamPic.jpeg');
+    background-image: url('./Media/TeamPic24Cropped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    aspect-ratio: 3.360;
+    aspect-ratio: 3.022;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
 }
@@ -72,6 +72,66 @@
     width: 80vw;
     background-color: #5f8e33;
     margin: 10vh 10vw;
+}
+
+.drop-down-team {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+.drop-down-team img {
+    max-width: 100%;
+    padding-bottom: 1vh;
+    border-radius: 15px;
+    border: rgba(0, 0, 0, 0.4);
+    transition: filter 0.3s ease;
+}
+
+.drop-down-team img:hover {
+    filter: brightness(0.7);
+}
+
+.team-drop-down-text {
+    font-size: 1.2rem; 
+    color: #5f8e33; 
+    margin-top: 10px;
+    text-align: center; 
+    position: relative; 
+}
+
+.team-drop-down-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 2px; 
+    left: 50%;
+    background-color: #5f8e33;
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.drop-down-team img:hover + .team-drop-down-text::after {
+    width: 100%; 
+    left: 0;
+}
+
+.team-arrow {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #5f8e33;
+    transition: transform 0.3s ease; 
+    margin-top: 20px;
+}
+
+.team-arrow-rotate {
+    transform: rotate(180deg); 
 }
 
 @media (max-width: 430px) {
