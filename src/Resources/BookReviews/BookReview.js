@@ -12,6 +12,7 @@ import ZeroToOne from '../Images/books/ZeroToOne.jpg';
 import TheBigShort from '../Images/books/TheBigShort.jpg';
 import RatRace from '../Images/books/from_the_ratrace.jpg';
 import EpicMoney from '../Images/books/makeepic.jpg';
+import IWillTeachYoutobeRich from '../Images/books/IWillTeachYouToBeRich.webp';
 
 
 const BookReview = () => {
