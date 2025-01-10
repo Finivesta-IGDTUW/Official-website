@@ -5,7 +5,7 @@ import TheBarefootInvestor from 'src/Resources/Images/books/TheBarefootInvestor.
 
 
 
-const  Review11 = () => {
+const  Review13 = () => {
   return (
         <div>
             <div className="book-page-box">
