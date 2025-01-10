@@ -13,6 +13,7 @@ import TheBigShort from '../Images/books/TheBigShort.jpg';
 import RatRace from '../Images/books/from_the_ratrace.jpg';
 import EpicMoney from '../Images/books/makeepic.jpg';
 import IWillTeachYoutobeRich from '../Images/books/IWillTeachYouToBeRich.webp';
+import IBarefootInvestor from '../Images/books/TheBarefootInvestor.png';
 
 
 const BookReview = () => {
@@ -67,6 +68,17 @@ const BookReview = () => {
                   <h2>Make Epic Money</h2>
                 </div>
                 </a>
+              </div>
+    
+              <div class="boxsmall">
+              <a href="/resources/bookreviews/TheBarefootInvestor">
+                  <div class="img review">
+                    <img src={TheBarefootInvestor} alt="The Barefoot Investor"/>
+                  </div>
+                  <div class="text">
+                    <h2>The Barefoot Investor </h2>
+                  </div>
+                  </a>
               </div>
 
               <div class="boxsmall">           
