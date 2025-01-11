@@ -10,26 +10,47 @@
     position: relative;
 }
 
-.photo {
+.team24-photo {
     width: 25vw;
     object-fit: cover;
     justify-self: center;
     position: relative;
+    transition: transform 0.3s ease; 
 }
 
-.image {
+.team24-photo:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+}
+
+.team24-image {
     display: block;
     width: 100%;
     height: auto;
     transition: .5s ease;
+    z-index: 1;
+}
+
+.team24-image-anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+    z-index: 2;
+}
+
+.team24-photo:hover .team24-image-anim {
+    opacity: 1;
 }
 
 .overlay24 {
     position: absolute; 
-    height: 3.2vw;
+    height: 3.1vw;
     display: flex;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    background: rgba(0, 0, 0, 0.7); 
     color: #f1f1f1; 
     width: 100%;
     transition: .5s ease;
@@ -37,6 +58,11 @@
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 3;
+}
+
+.team24-photo:hover .overlay24 {
+    opacity: 1; 
 }
 
 .overlay24 i {
@@ -44,17 +70,38 @@
     color: #dbdbdb;
 }
 
-.icons {
-    font-size: 2vw;
+.team24-icons-line {
+    height: 3vh;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.photo:hover .image,
-.photo.touch .image {
+.team24-icons {
+    font-size: 2vw;
+    z-index: 4;
+    transition: transform 0.3s ease;
+}
+
+.team24-photo:hover .team24-icons {
+    animation: bob 0.8s ease-in-out 2; /* Apply bobbing animation */
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the bobbing distance */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+} 
+
+.team24-photo:hover .team24-image {
     opacity: 0.5;
 }
 
-.photo:hover .overlay24,
-.photo.touch .overlay24 {
+.team24-photo:hover .overlay24 {
     opacity: 1;
 }
 
@@ -81,7 +128,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
   
-    .photo {
+    .team24-photo {
         width: 40vw;
     }
   
@@ -93,7 +140,7 @@
         height: 2.5vw;
     }
 
-    .icons {
+    .team24-icons {
         font-size: 3vw;
     }
 }
@@ -103,7 +150,7 @@
         grid-template-columns: repeat(1, 1fr);
     }
   
-    .photo {
+    .team24-photo {
         width: 80vw;
     }
   
@@ -115,7 +162,7 @@
         height: 5vw;
     }
 
-    .icons {
+    .team24-icons {
         font-size: 5vw;
     }
   
