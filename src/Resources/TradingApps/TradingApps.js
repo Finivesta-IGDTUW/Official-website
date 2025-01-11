@@ -7,6 +7,10 @@ import AngelOneLogo from './Logos/AngelOne.jpeg';
 import DhanLogo from './Logos/Dhan.png';
 import GrowwLogo from './Logos/Groww.png';
 import FivePaisaLogo from './Logos/5paisa.png';
+import Investopedia from './Logos/Investopedia.jpg';
+import Stockedge from './Logos/Stockedge.png';
+import TradingView from './Logos/TradingView.png';
+import FrontPage from './Logos/FrontPage.jpg';
 
 const TradingApps = () => {
     return ( 
@@ -17,6 +21,86 @@ const TradingApps = () => {
             </div>
             
             <div className="resourcesbox">
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={FrontPage} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Front Page</h2>
+                        <p className="blog-byline-card">
+                            The Front Page Of India's Stock Market
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=in.crowdware.one&hl=en-US">
+                            <i class="fab fa-google-play"/>
+                        </a>
+                        &emsp;
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/frontpage/id1401247335">
+                            <i class="fab fa-apple"/>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={TradingView} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Trading View</h2>
+                        <p className="blog-byline-card">
+                            Where The World Does Markets
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.tradingview.tradingviewapp&hl=en-US">
+                            <i class="fab fa-google-play"/>
+                        </a>
+                        &emsp;
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/tradingview-track-all-markets/id1205990992">
+                            <i class="fab fa-apple"/>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={Stockedge} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Stockedge</h2>
+                        <p className="blog-byline-card">
+                            Your Edge Just Got Sharper
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=in.stockedge.app&hl=en-US">
+                            <i class="fab fa-google-play"/>
+                        </a>
+                        &emsp;
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/stockedge-stock-market-india/id1066284206">
+                            <i class="fab fa-apple"/>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={Investopedia} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Investopedia</h2>
+                        <p className="blog-byline-card">
+                            Website Focused On Finance And Investing
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
+                            <i class="fab fa-google-play"/>
+                        </a>
+                        &emsp;
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
+                            <i class="fab fa-apple"/>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
                 <div className="boxsmall tradingapps" >
                     <div className="img">
                         <img src={ZerodhaLogo} alt="Cover"/>
