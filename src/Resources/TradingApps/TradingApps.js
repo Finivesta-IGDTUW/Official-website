@@ -221,7 +221,136 @@ const TradingApps = () => {
                     </div>
                 </div>
             </div>
-        </div>         
+            <div className="header tap">
+                <h1>Trading Websites</h1>
+                <p>Discover top-rated trading websites that are <br /> user-friendly and feature-rich</p>
+            </div>
+            
+            <div className="resourcesbox">
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={FrontPage} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>NSE India</h2>
+                        <p className="blog-byline-card">
+                            Find everything about the leading Stock Exchange of India
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://www.nseindia.com/">
+                            <i class="fas fa-globe"/>
+                        </a>
+                        
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={TradingView} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>BSE India</h2>
+                        <p className="blog-byline-card">
+                            Emerge as the premier Indian stock exchange with best-in-class global practice in technology, products innovation and customer service
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://www.bseindia.com/">
+                            <i class="fas fa-globe"/>
+                        </a>
+                    
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={Stockedge} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>TradingQ&A (by Zerodha)</h2>
+                        <p className="blog-byline-card">
+                             Question and Answer site for all things related to trading and stock markets
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://tradingqna.com/">
+                            <i class="fas fa-globe"/>
+                        </a>
+                        
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={Investopedia} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Groww - Learn</h2>
+                        <p className="blog-byline-card">
+                            All things finance, right here.
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://groww.in/">
+                            <i class="fas fa-globe"/>
+                        </a>
+                       
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={ZerodhaLogo} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Moneycontrol</h2>
+                        <p className="blog-byline-card">
+                            India's No 1 Financial and Business portal
+                            <br/><br/>
+                            <a target="_blank" rel="noreferrer" href="https://www.moneycontrol.com/">
+                                <i class="fas fa-globe"/>
+                            </a>
+                           
+                          
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={IIFLLogo} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>Trade Brains</h2>   
+                       <p className="blog-byline-card">
+                            Trade brains aims to make DIY investing mainstream in India
+                            <br/><br/>
+                            <a target="_blank" rel="noreferrer" href="https://tradebrains.in/">
+                                <i class="fas fa-globe"/>
+                            </a>
+                           
+                        </p>       
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps">
+                    <div className="img">
+                        <img src={AngelOneLogo} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Finology</h2>
+                        <p className="blog-byline-card">
+                            To learn, research and create wealth
+                            <br/><br/>
+                            <a target="_blank" rel="noreferrer" href="https://www.finology.in/">
+                                <i class="fas fa-globe"/>
+                            </a>
+                            
+                        </p>
+                    </div>
+                </div>
+            
+                
+            </div>
+        </div> 
+        
     );
   };
 
