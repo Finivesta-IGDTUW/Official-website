@@ -1,7 +1,7 @@
 
 import React from "react";
 import './book-page.css';
-import TheBarefootInvestor from '../Images/books/TheBarefootInvestor.png';
+import TheBarefootInvestor from '../../Images/books/TheBarefootInvestor.png';
 
 
 
