@@ -39,6 +39,7 @@ const Events = () => {
           </div>
         </div>
       </div>
+      <hr className="green-line" />
       <div>
         <h1 className="Year">2024</h1>
 
