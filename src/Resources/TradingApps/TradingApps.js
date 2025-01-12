@@ -90,6 +90,28 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
+
+                        <img src={Investopedia} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                        <h2>Investopedia</h2>
+                        <p className="blog-byline-card">
+                            Website Focused On Finance And Investing
+                        <br/><br/>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
+                            <i class="fab fa-google-play"/>
+                        </a>
+                        &emsp;
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
+                            <i class="fab fa-apple"/>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+
                         <img src={ZerodhaLogo} alt="Cover"/>
                     </div>
                     <div className="text">
