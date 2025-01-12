@@ -23,9 +23,14 @@ const TradingApps = () => {
     return ( 
         <div className="blogpage">
             <div className="header tap">
-                <h1>Trading Apps</h1>
-                <p>Discover top-rated trading apps that are <br /> user-friendly and feature-rich</p>
+                <h1>Trading Applications and Websites</h1>
+                <p>Discover top-rated trading apps and websites that are <br /> user-friendly and feature-rich</p>
             </div>
+
+            <div className="box-main">
+                    <br></br> 
+                    <h1>Apps</h1> 
+                </div>
             
             <div className="resourcesbox">
                 <div className="boxsmall tradingapps" >
@@ -82,27 +87,6 @@ const TradingApps = () => {
                         </a>
                         &emsp;
                         <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/stockedge-stock-market-india/id1066284206">
-                            <i class="fab fa-apple"/>
-                        </a>
-                        </p>
-                    </div>
-                </div>
-
-                <div className="boxsmall tradingapps" >
-                    <div className="img">
-
-                        <img src={Investopedia} alt="Cover"/>
-                    </div>
-                    <div className="text">
-                        <h2>Investopedia</h2>
-                        <p className="blog-byline-card">
-                            Website Focused On Finance And Investing
-                        <br/><br/>
-                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
-                            <i class="fab fa-google-play"/>
-                        </a>
-                        &emsp;
-                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
                             <i class="fab fa-apple"/>
                         </a>
                         </p>
@@ -230,10 +214,11 @@ const TradingApps = () => {
                     </div>
                 </div>
             </div>
-            <div className="header tap">
-                <h1>Trading Websites</h1>
-                <p>Discover top-rated trading websites that are <br /> user-friendly and feature-rich</p>
-            </div>
+
+            <div className="box-main">
+                    <br></br> 
+                    <h1>Websites</h1> 
+                </div>
             
             <div className="resourcesbox">
                 <div className="boxsmall tradingapps" >
