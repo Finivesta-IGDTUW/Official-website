@@ -108,7 +108,7 @@ const Resources = () => {
             <img src={TradingAppImage} alt="Trading Applications" />
           </div>
           <div className="text">
-            <h2>Trading Applications</h2>
+            <h2>Trading Applications and Websites</h2>
             <p>
               Explore cutting-edge tools and platforms designed to enhance your
               trading experience, from real-time market data to advanced
