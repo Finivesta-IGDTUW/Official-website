@@ -11,6 +11,14 @@ import Investopedia from './Logos/Investopedia.jpg';
 import Stockedge from './Logos/Stockedge.png';
 import TradingView from './Logos/TradingView.png';
 import FrontPage from './Logos/FrontPage.jpg';
+import NSE from './Logos/nseindia.jpg';
+import BSE from './Logos/bseindia.jpg';
+import TradingQA from './Logos/tradingqanda.png';
+import GROWW from './Logos/groww.png';
+import MoneyControl from './Logos/moneycontrol.jpg';
+import TradeBrains from './Logos/TradeBrains.png';
+import Finology from './Logos/Finology.jpg';
+
 
 const TradingApps = () => {
     return ( 
@@ -75,26 +83,6 @@ const TradingApps = () => {
                         </a>
                         &emsp;
                         <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/stockedge-stock-market-india/id1066284206">
-                            <i class="fab fa-apple"/>
-                        </a>
-                        </p>
-                    </div>
-                </div>
-
-                <div className="boxsmall tradingapps" >
-                    <div className="img">
-                        <img src={Investopedia} alt="Cover"/>
-                    </div>
-                    <div className="text">
-                        <h2>Investopedia</h2>
-                        <p className="blog-byline-card">
-                            Website Focused On Finance And Investing
-                        <br/><br/>
-                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.zerodha.kite3">
-                            <i class="fab fa-google-play"/>
-                        </a>
-                        &emsp;
-                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/in/app/zerodha-kite-trade-invest/id1449453802">
                             <i class="fab fa-apple"/>
                         </a>
                         </p>
@@ -229,7 +217,7 @@ const TradingApps = () => {
             <div className="resourcesbox">
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={FrontPage} alt="Cover"/>
+                        <img src={NSE} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>NSE India</h2>
@@ -246,7 +234,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={TradingView} alt="Cover"/>
+                        <img src={BSE} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>BSE India</h2>
@@ -263,7 +251,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={Stockedge} alt="Cover"/>
+                        <img src={TradingQA} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>TradingQ&A (by Zerodha)</h2>
@@ -280,7 +268,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={Investopedia} alt="Cover"/>
+                        <img src={GROWW} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>Groww - Learn</h2>
@@ -297,7 +285,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={ZerodhaLogo} alt="Cover"/>
+                        <img src={MoneyControl} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>Moneycontrol</h2>
@@ -315,7 +303,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={IIFLLogo} alt="Cover"/>
+                        <img src={TradeBrains} alt="Cover"/>
                     </div>
                     <div className="text">
                        <h2>Trade Brains</h2>   
@@ -330,9 +318,27 @@ const TradingApps = () => {
                     </div>
                 </div>
 
+                
+                <div className="boxsmall tradingapps" >
+                    <div className="img">
+                        <img src={Investopedia} alt="Cover"/>
+                    </div>
+                    <div className="text">
+                       <h2>Investopedia</h2>   
+                       <p className="blog-byline-card">
+                            Website Focused On Finance And Investing
+                            <br/><br/>
+                            <a target="_blank" rel="noreferrer" href="https://www.investopedia.com/">
+                                <i class="fas fa-globe"/>
+                            </a>
+                           
+                        </p>       
+                    </div>
+                </div>
+
                 <div className="boxsmall tradingapps">
                     <div className="img">
-                        <img src={AngelOneLogo} alt="Cover"/>
+                        <img src={Finology} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>Finology</h2>
