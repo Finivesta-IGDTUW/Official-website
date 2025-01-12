@@ -11,10 +11,9 @@ import Investopedia from './Logos/Investopedia.jpg';
 import Stockedge from './Logos/Stockedge.png';
 import TradingView from './Logos/TradingView.png';
 import FrontPage from './Logos/FrontPage.jpg';
-import NSE from './Logos/nseindia.jpg';
-import BSE from './Logos/bseindia.jpg';
+import Nse from './Logos/nseindia.jpg';
+import Bse from './Logos/bseindia.jpg';
 import TradingQA from './Logos/tradingqanda.png';
-import GROWW from './Logos/groww.png';
 import MoneyControl from './Logos/moneycontrol.jpg';
 import TradeBrains from './Logos/TradeBrains.png';
 import Finology from './Logos/Finology.jpg';
@@ -217,7 +216,7 @@ const TradingApps = () => {
             <div className="resourcesbox">
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={NSE} alt="Cover"/>
+                        <img src={Nse} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>NSE India</h2>
@@ -234,7 +233,7 @@ const TradingApps = () => {
 
                 <div className="boxsmall tradingapps" >
                     <div className="img">
-                        <img src={BSE} alt="Cover"/>
+                        <img src={Bse} alt="Cover"/>
                     </div>
                     <div className="text">
                         <h2>BSE India</h2>
@@ -262,23 +261,6 @@ const TradingApps = () => {
                             <i class="fas fa-globe"/>
                         </a>
                         
-                        </p>
-                    </div>
-                </div>
-
-                <div className="boxsmall tradingapps" >
-                    <div className="img">
-                        <img src={GROWW} alt="Cover"/>
-                    </div>
-                    <div className="text">
-                        <h2>Groww - Learn</h2>
-                        <p className="blog-byline-card">
-                            All things finance, right here.
-                        <br/><br/>
-                        <a target="_blank" rel="noreferrer" href="https://groww.in/">
-                            <i class="fas fa-globe"/>
-                        </a>
-                       
                         </p>
                     </div>
                 </div>
