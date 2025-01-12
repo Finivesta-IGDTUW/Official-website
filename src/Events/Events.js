@@ -1,7 +1,7 @@
 import React from "react";
 import "./Events.css";
 
-import MoneyMasterclass from "./Images/MoneyMasterclasscopy.png";
+import MoneyMasterclass from "./Images/Unveiling_IPO.jpg";
 import BiddingBlitz from "./Images/BiddingBlitz.png";
 import CollegeTrading from "./Images/CollegeTrading.png";
 import Finlatics from "./Images/Finlatics.png";
@@ -38,7 +38,7 @@ const Events = () => {
                 </a>
               </div>
 
-              <h2 className="title">Money Masterclass</h2>
+              <h2 className="title">Unveiling IPOs</h2>
             </div>
 
             <div className="element">
