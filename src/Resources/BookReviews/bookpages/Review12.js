@@ -1,6 +1,6 @@
 import React from "react";
 import "./book-page.css";
-import IWillTeachYouToBeRich from "../Images/books/IWillTeachYouToBeRich.png";
+import IWillTeachYouToBeRich from "../../Images/books/IWillTeachYouToBeRich.png";
 
 const Review12 = () => {
   return (
