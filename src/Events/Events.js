@@ -1,6 +1,6 @@
 import React from "react";
 import "./Events.css";
-
+import Unveiling_IPO from "./Images/Unveiling_IPO.jpg";
 import MoneyMasterclass from "./Images/MoneyMasterclasscopy.png";
 import BiddingBlitz from "./Images/BiddingBlitz.png";
 import CollegeTrading from "./Images/CollegeTrading.png";
@@ -20,7 +20,26 @@ const Events = () => {
           exciting upcoming events here
         </p>
       </div>
+      <h1 className="Year">2025</h1>
 
+      <div className="Images">
+        <div className="flex1">
+          <div className="element">
+            <div className="element3">
+              {/* Unveiling IPOs */}
+              <a
+                href="https://www.canva.com/design/DAGbu4uhDfU/AVRFjLBax5A2e-bE1gvttw/view?utm_content=DAGbu4uhDfU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1e6d44f9b"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Unveiling_IPO} alt="speaker" />
+              </a>
+            </div>
+            <h2 className="title">Unveiling IPOs</h2>
+          </div>
+        </div>
+      </div>
+      <hr className="green-line" />
       <div>
         <h1 className="Year">2024</h1>
 
