@@ -99,8 +99,9 @@
   /* grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
  gap: 20px; */
   display: flex;
+  /* justify-content: center; */
   justify-content: center;
-  align-items: center;
+  align-items:center;
   flex-wrap: wrap;
   position: relative;
   left: 30px;

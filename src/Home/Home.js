@@ -11,6 +11,7 @@ import CollegeTrading from "../Events/Images/CollegeTrading.png";
 import Finlatics from "../Events/Images/Finlatics.png";
 import KharchePeCharche from "../Events/Images/KharchePeCharche.png";
 import Melange from "../Events/Images/Melange.png";
+import Unveiling_IPOs from "../Events/Images/Unveiling_IPO.jpg";
 import Orientation from "../Events/Images/Orientation.png";
 import Speaker from "../Events/Images/Speaker.png";
 import F1 from "./Images/F1.jpg";
@@ -160,6 +161,19 @@ const Home = () => {
             <h2 className="subtitle">Recent Events</h2>
 
             <Slider {...settings}>
+
+            <div className="box">
+                <a
+                  href="https://www.canva.com/design/DAGbu4uhDfU/AVRFjLBax5A2e-bE1gvttw/view?utm_content=DAGbu4uhDfU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1e6d44f9b"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  <img src={Unveiling_IPOs} alt="Unveiling IPOs" />
+                </a>
+              </div>
+
+
               <div className="box">
                 <a
                   href="/resources/moneymasterclass"
