@@ -13,6 +13,7 @@ import I9 from '../Images/blogs/9.jpg';
 import I10 from '../Images/blogs/dhanteras.webp';
 import I11 from '../Images/blogs/11.png';
 import I12 from '../Images/blogs/investment.png';
+import I13 from '../Images/blogs/BNPLBlog.png';
 const Blog = () => {
   return (
     <div className="blogpage">
@@ -188,6 +189,20 @@ const Blog = () => {
             </div>
           </a>
         </div>
+        <div className="boxsmall blog">
+  <a href="/resources/blogs/13-buy-now-pay-later">
+    <div className="img">
+      <img src={I13} alt="Buy Now Pay Later Blog Cover" />
+    </div>
+    <div className="text">
+      <h2>Buy Now, Pay Later</h2>
+      <p className="blog-byline-card">
+        The Future of Smart Shopping
+      </p>
+    </div>
+  </a>
+</div>
+
         
       </div>
     </div>
