@@ -23,6 +23,19 @@ const Blog = () => {
       </div>
 
       <div className="resourcesbox">
+    <div className="boxsmall blog">
+  <a href="/resources/blogs/13-buy-now-pay-later">
+    <div className="img">
+      <img src={I13} alt="Buy Now Pay Later Blog Cover" />
+    </div>
+    <div className="text">
+      <h2>Buy Now, Pay Later</h2>
+      <p className="blog-byline-card">
+        The Future of Smart Shopping
+      </p>
+    </div>
+  </a>
+</div>
       <div className="boxsmall blog">
           <a href="/resources/blogs/12-investing-and-annual-returns">
             <div className="img">
@@ -189,19 +202,7 @@ const Blog = () => {
             </div>
           </a>
         </div>
-        <div className="boxsmall blog">
-  <a href="/resources/blogs/13-buy-now-pay-later">
-    <div className="img">
-      <img src={I13} alt="Buy Now Pay Later Blog Cover" />
-    </div>
-    <div className="text">
-      <h2>Buy Now, Pay Later</h2>
-      <p className="blog-byline-card">
-        The Future of Smart Shopping
-      </p>
-    </div>
-  </a>
-</div>
+        
 
         
       </div>
