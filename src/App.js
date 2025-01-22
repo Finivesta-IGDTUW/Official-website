@@ -26,6 +26,7 @@ import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import BNPLBlog from "./Resources/Blogs/Blogpages/BNPLBlog.js";
+
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import BookReview from "./Resources/BookReviews/BookReview";
@@ -73,6 +74,7 @@ const AppContent = () => {
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
             <Route path="/resources/blogs" element={<Blog/>}/>
               {/* Blog pages */}
+               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
               <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
               <Route path="/resources/blogs/02-finance-and-technology" element={<Financeandtechnology/>}/>
               <Route path="/resources/blogs/03-power-of-compounding" element={<Powerofcompounding/>}/>
@@ -85,7 +87,8 @@ const AppContent = () => {
               <Route path="/resources/blogs/10-gold-on-dhanteras" element={<GoldOnDhanteras/>}/>
               <Route path="/resources/blogs/11-US-election-2024" element={<USelection/>}/>
               <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
-              <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPL/>}/>
+
+              
               
               {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
