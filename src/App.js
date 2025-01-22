@@ -14,7 +14,7 @@ import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
-
+import BNPL from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
 import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
@@ -72,6 +72,7 @@ const AppContent = () => {
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
             <Route path="/resources/blogs" element={<Blog/>}/>
               {/* Blog pages */}
+              <Route path="/resources/blogs/13-buy-now-pay-later" element={<BuyNowPayLater/>}/>
               <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
               <Route path="/resources/blogs/02-finance-and-technology" element={<Financeandtechnology/>}/>
               <Route path="/resources/blogs/03-power-of-compounding" element={<Powerofcompounding/>}/>
