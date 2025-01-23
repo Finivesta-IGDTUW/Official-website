@@ -73,6 +73,7 @@ const Home = () => {
               }
             >
               IGDTUW
+              <span className="tooltip-text">Go to IGDTUW website</span>
             </button>
             <button
               className="button2"
@@ -99,7 +100,7 @@ const Home = () => {
               opportunities that helps them to enhance their financial
               knowledge, gain practical insights through workshops, seminars,
               events and competitions with the aim of encapsulating financial
-              principles, patience, risk management in bright young minds.We
+              principles, patience, risk management in bright young minds. We
               strive for excellence in every financial domain and connect
               students to various shareholders of the same and nurture young
               minds with the values of passion and self investment.
@@ -113,41 +114,42 @@ const Home = () => {
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
-              Our Mission is to cultivate a dynamic and inclusive community of
-              women passionate about finance. Our aim is to help the women
-              understand the world of finance and thereby demonstrate superior
-              knowledge and to spread awareness towards the area of finance.
-              Through educational events, networking opportunities, and
-              community outreach, we aim to foster financial literacy and
-              empower our members to be leaders in the ever-changing world of
+              Our mission is to cultivate a dynamic and inclusive community of
+              women passionate about finance, empowering them to build confidence, leadership
+              skills, and a deeper undertsanding of the financial world.
+              Through engaging educational events, impactful networking opportunities, and
+              community outreach, we aim to promote financial literacy, inspire excellence, and create a 
+              supportive space where women can thrive in the ever-changing world of
               finance.
             </p>
           </div>
-          <div className="mvo-box">
-            <h1>VISION</h1>
-            <p>
-              If you do not manage your money, your money will manage you. Our
-              vision is to be a premier student-run organization that empowers
-              women to become financially literate and make informed financial
-              decisions. This vision is based on the belief that financial
-              literacy is essential for women to achieve their full potential.
-              Finivesta aims to achieve its vision by providing a platform for
-              women to learn about economics through workshops, seminars, and
-              other events.
-            </p>
-          </div>
+
           <div className="mvo-box">
             <h1>OBJECTIVE</h1>
             <p>
-              Our main objective is to develop an understanding of financial
-              concepts among young girls. We intent to effectively communicate
-              financial information and increase awareness of ethics and social
-              responsibility in the context to finance. We solely want to make
-              woman more comfortable with topics such as stock market, bonds and
-              debentures so that this increases their confidence and helps them
-              to extract their true potential.
+              Our primary objective is to empower young girls with a strong understanding
+              of financial concepts and the confidence to navigate them easily. We
+              aim to communicate key financial knowledge while fostering awareness of ethics and social
+              responsibility in finance. By making topics like the stock market, bonds and
+              debentures more approachable, we strive to unlock their true potential 
+              and inspire them to take charge of their financial futures with assurance and skill.
             </p>
           </div>
+
+          <div className="mvo-box">
+            <h1>VISION</h1>
+            <p>
+              <i>If you do not manage your money, your money will manage you.</i> Our
+              vision is to empower
+              women to become financially literate and make informed
+              decisions,rooted in the belief that financial
+              literacy is essential for unlocking their full potential.
+              Finivesta strives to achieve this vision by providing a platform where
+              women can engage with economics economics through workshops, seminars, and
+              dynamic events, fostering both knowledge and confidence.
+            </p>
+          </div>
+          
         </div>
       </section>
 

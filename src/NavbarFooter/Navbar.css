@@ -79,9 +79,19 @@ nav {
     opacity: 0.4;
 }
 
-.menu a:hover {
+.menu:hover .nav-dropdown-arrow {
+    opacity: 0.4;
+}
+
+.menu a:hover, .menu .nav-dropdown-arrow:hover {
     opacity: 1;
     color: #fff;
+}
+
+.nav-dropdown:hover a,
+.nav-dropdown:hover .nav-dropdown-arrow {
+    color: #fff;
+    opacity: 1;
 }
 
 .menu-icon {
@@ -115,14 +125,14 @@ nav {
 
 .nav-dropdown:hover .nav-dropdown-arrow {
     transform: rotate(180deg);
-    color: #5f8e33; 
+    color: #71b139; 
 }
 
 .nav-dropdown-menu {
     display: none; 
     position: absolute;
     top: 100%; 
-    left: 0;
+    left: -2vw;
     background-color: #333;
     min-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -140,6 +150,7 @@ nav {
 }
 
 .nav-dropdown-menu a {
+    text-align: center;
     display: block;
     padding: 5px;
     color: #fff;

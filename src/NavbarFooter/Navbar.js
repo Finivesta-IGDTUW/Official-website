@@ -57,7 +57,7 @@ const Navbar = () => {
                   <li><a href="/resources/moneymasterclass">Money Masterclass</a></li>
                   <li><a href="/resources/blogs">Blogs</a></li>
                   <li><a href="/resources/bookreviews">Book Reviews</a></li>
-                  <li><a href="/resources/videos">Online Videos</a></li>
+                  <li><a href="/resources/videos">Related Videos</a></li>
                   <li><a href="/resources/podcasts">Podcasts</a></li>
                   <li><a href="/resources/stocks">Stock Market and Trading</a></li>
                   <li><a href="/resources/trading">Trading Applications and Websites</a></li>
