@@ -1,6 +1,6 @@
 import React from "react";
 import "./blogpage.css";
-
+import bnpl from '../Blogpages/blog-images/BNPLBlog.png';
 const BNPLBlog = () => {
   return (
     <div>
@@ -56,6 +56,7 @@ const BNPLBlog = () => {
             </ul>
           </p>
           <h3>FINAL THOUGHTS</h3>
+          <img src={bnpl} className="image-in-blog2" alt="Blog content"/>
           <p>
             Buy Now, Pay Later (BNPL) services have gained significant popularity among consumers in recent years due to several key advantages. The global BNPL market was valued at around $125 billion in 2021 and is projected to grow at a 27% annual growth rate to reach approximately $3.98 trillion by 2030 (according to a report by Grand View Research). It’s especially popular in markets like the U.S., Australia, and Europe, with major players like Afterpay, Zip, and Klarna leading the way.
             <br /><br />
