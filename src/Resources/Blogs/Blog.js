@@ -19,7 +19,7 @@ const Blog = () => {
     <div className="blogpage">
       <div className="header blogs">
         <h1>Blogs</h1>
-        <p>Explore insightful finance related articles and stories.</p>
+        <p>Explore Captivating Finance Stories and Smart Money Insights!</p>
       </div>
 
       <div className="resourcesbox">

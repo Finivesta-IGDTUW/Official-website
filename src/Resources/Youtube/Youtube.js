@@ -15,8 +15,8 @@ const Youtube = () => {
     <div className="Youtube">
 
         <div className="header yt">
-          <h1>Online Videos</h1>
-          <p>Find latest and most informative collection of videos and tutorials here</p>
+          <h1>Related Videos</h1>
+          <p>Dive into the Best Collection of Videos and Tutorials - Learn, Explore and Level Up!</p>
         </div>
 
         <div className="resourcesbox">

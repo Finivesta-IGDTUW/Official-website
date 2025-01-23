@@ -94,6 +94,7 @@
 }
 
 .button-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   justify-content: flex-start; /* Adjust as needed */
@@ -110,15 +111,37 @@
 }
 
 .button1 {
+  position: relative;
   background-color: #71B139;
   color: white;
   border: none;
   font-size: 2vw
 }
-.button1:hover{
+
+.tooltip-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 1vw;
+}
+
+.button1:hover .tooltip-text{
   transform: scale(1.04);
   cursor: pointer;
-  background-color:#86d145 ;
+  background-color:#797b77 ;
+  visibility: visible;
+  opacity: 1;
 }
 
 .button2 {

@@ -21,7 +21,7 @@ const BookReview = () => {
         <div className="bookreview">
             <div class="header brs">
               <h1>Book Reviews</h1>
-              <p>Dive into in-depth book reviews and financial insights.</p> 
+              <p>Unlock Powerful Financial Insights and Must-Read Book Reviews!</p> 
             </div>
 
             <div class="resourcesbox">
