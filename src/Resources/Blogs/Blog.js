@@ -13,7 +13,7 @@ import I9 from '../Images/blogs/9.jpg';
 import I10 from '../Images/blogs/dhanteras.webp';
 import I11 from '../Images/blogs/11.png';
 import I12 from '../Images/blogs/investment.png';
-import I13 from '../Images/blogs/BNPLBlog.png';
+import I13 from '../Images/blogs/bnplcover.jpg';
 const Blog = () => {
   return (
     <div className="blogpage">
