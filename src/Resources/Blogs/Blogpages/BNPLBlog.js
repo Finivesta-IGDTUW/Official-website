@@ -13,12 +13,13 @@ const BNPLBlog = () => {
           <p>
             <b>BNPL</b>, a term familiar to some and unfamiliar to others, stands for Buy Now Pay Later. It is a payment option that allows consumers to purchase items immediately and pay for them over time, typically in installments over a short period of time. BNPL is also commonly known as a point-of-sale (POS) installment loan that doesn't charge interest.
           </p>
+          <br/>
           <h3>HOW IT WORKS?</h3>
           <p>
             Buy now, pay later programs have different terms and conditions. They generally offer short-term loans with fixed payments, no interest, and no additional charges.
-            <br /><br />
+            <br />
             With BNPL, you can make a purchase at a participating retailer and opt for buy now, pay later at checkout. If approved, you make a small down payment, such as 25% of the overall purchase amount. You then pay off the remaining amount in a series of interest-free installments, usually over a few weeks or months. Payments can be deducted automatically from your debit card, bank account, or credit card. In some cases, you may also be able to pay via check or bank transfer.
-            <br /><br />
+            <br />
             Here’s an example:
             <ul>
               <li><b>Day 1:</b> You purchase a smartphone for ₹20,000 using BNPL.</li>
@@ -28,6 +29,7 @@ const BNPLBlog = () => {
               <li><b>Day 45:</b> Final payment of ₹5,000 is deducted. By Day 45, your smartphone is fully paid off!</li>
             </ul>
           </p>
+          <br/>
           <h3>WHY BNPL FEELS LIKE A CONVENIENCE?</h3>
           <ul>
             <li><b>Instant Gratification:</b> BNPL allows you to enjoy your purchases immediately without waiting for your next paycheck.</li>
@@ -38,6 +40,7 @@ const BNPLBlog = () => {
             <li><b>Wider Accessibility:</b> Available for a range of products, from everyday essentials to luxury items, with seamless integration into online platforms.</li>
             <li><b>Lower Psychological Barrier to Purchase:</b> Smaller installment amounts reduce hesitation associated with big purchases.</li>
           </ul>
+          <br/>
           <h3>WHY BNPL COULD BE A TRAP?</h3>
           <ul>
             <li><b>Impulse Buying:</b> The ease of deferring payments can lead to overspending on items you don’t really need.</li>
@@ -46,7 +49,7 @@ const BNPLBlog = () => {
             <li><b>Credit Impact:</b> While many BNPL providers don’t require a credit check, failing to make payments can negatively impact your credit score if the debt is sent to collections.</li>
             <li><b>Financial Planning:</b> Over-reliance on BNPL can distort your view of financial health, making it harder to save and budget effectively.</li>
           </ul>
-          <p>
+          <p><br/>
             To use BNPL responsibly:
             <ul>
               <li>Only buy what you can afford to pay off.</li>
@@ -55,6 +58,7 @@ const BNPLBlog = () => {
               <li>Avoid multiple BNPL plans simultaneously.</li>
             </ul>
           </p>
+          <br/>
           <h3>FINAL THOUGHTS</h3>
           <img src={bnpl} className="image-in-blog2" alt="Blog content"/>
           <p>

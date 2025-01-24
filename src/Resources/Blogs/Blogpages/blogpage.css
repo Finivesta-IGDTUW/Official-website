@@ -105,7 +105,7 @@
     background-image: url('./blog-images//investment.png');
 }
 .bnpl{
-    background-image: url('./blog-images/BNPL_bg.png');
+    background-image: url('./blog-images/comp-img.png');
 }
 @media screen and (max-width:650px) {
     .blog-page-box{

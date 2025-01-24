@@ -16,7 +16,7 @@ const Events = () => {
               style={{ backgroundColor: event.backgroundColor }}
             ></div>
             <div className={`event-image-box event-element${index % 5 + 1}`}>
-              <a divef={event.link} target="_blank" rel="noreferrer">
+              <a href={event.link} target="_blank" rel="noreferrer">
                 <img src={event.photo} alt={event.name} />
               </a>
             </div>

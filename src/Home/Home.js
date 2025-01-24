@@ -1,18 +1,11 @@
 import React from "react";
 import "./Home.css";
+import events from './../Events/EventsList';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Unveiling_IPOs from "../Events/Images/Unveiling_IPO.jpg";
-import MoneyMasterclass from "../Events/Images/MoneyMasterclasscopy.png";
-import BiddingBlitz from "../Events/Images/BiddingBlitz.png";
-import CollegeTrading from "../Events/Images/CollegeTrading.png";
-import Finlatics from "../Events/Images/Finlatics.png";
-import KharchePeCharche from "../Events/Images/KharchePeCharche.png";
-import Melange from "../Events/Images/Melange.png";
-import Orientation from "../Events/Images/Orientation.png";
-import Speaker from "../Events/Images/Speaker.png";
+
 import F1 from "./Images/F1.jpg";
 
 const Home = () => {
@@ -73,7 +66,7 @@ const Home = () => {
               }
             >
               IGDTUW
-              <span className="tooltip-text">Go to IGDTUW website</span>
+              <span className="tooltip-text">Visit site</span>
             </button>
             <button
               className="button2"
@@ -160,101 +153,19 @@ const Home = () => {
         <section className="section-carousel">
           <div className="carousel">
             <h2 className="subtitle">Recent Events</h2>
-
             <Slider {...settings}>
-            <div className="box">
-                <a
-                  href="https://www.canva.com/design/DAGbu4uhDfU/AVRFjLBax5A2e-bE1gvttw/view?utm_content=DAGbu4uhDfU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1e6d44f9b"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <img src={Unveiling_IPOs} alt="Unveiling IPOs" />
-                </a>
-              </div>
-              <div className="box">
-                <a
-                  href="/resources/moneymasterclass"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <img src={MoneyMasterclass} alt="Money Masterclass" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.linkedin.com/feed/update/urn:li:activity:7160561756463853568/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Finlatics} alt="Finlatics" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/C2CkzBTStUb/?igsh=MW5lNmZ6NmRxZTdqMA=="
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Melange} alt="Money Melange" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/C2AVhH4SE0P/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={KharchePeCharche} alt="kharche pr charcha" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CzqYKwRLp24/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={BiddingBlitz} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CzbC7cLPrex/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Speaker} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CxXRs1Pywdn/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={CollegeTrading} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CxAA9weLEea/?img_index=1"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Orientation} alt="speaker" />
-                </a>
-              </div>
+              {events.slice(0, 6).map((event, index) => (
+                <div key={index} className="box">
+                  <a href={event.link} target="_blank" rel="noreferrer">
+                    <img src={event.photo} alt={event.name} />
+                  </a>
+                  <div className="shade-home">{event.byline}</div>
+            </div>
+              ))}
             </Slider>
           </div>
-        </section>{" "}
+        </section>
+    {" "}
       </div>
     </div>
   );
