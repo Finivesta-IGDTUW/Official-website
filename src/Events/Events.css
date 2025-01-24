@@ -148,4 +148,8 @@
       width: 25vw; /* Match the width of the event-element */
       height: 25vw; /* Match the height of the event-element */
   }
+  
+  .event-Year {
+    margin: 20px 12vw;
+  }
 }
