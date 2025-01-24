@@ -3,22 +3,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-/* font: 'Poppins'; */
-/* outline: 1px solid red; */
 
   
 } 
 
-
-
-
-/*Aakriti's code*/
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} */
 
 .hero {
   display: flex;
@@ -311,6 +299,27 @@
   font-size: 5vw;
   color: #71B139;
   padding: 3vw 0px 5vw 0px;
+}
+
+.shade {
+  text-align: center;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: #71b139f1;
+  color: white;
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 0.3s ease;
+  z-index: 20;
+}
+
+.logos:hover .shade {
+  bottom: 0;
 }
 
 @media only screen and (max-width: 500px) {
