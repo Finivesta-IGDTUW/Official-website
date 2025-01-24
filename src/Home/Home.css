@@ -3,22 +3,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-/* font: 'Poppins'; */
-/* outline: 1px solid red; */
 
   
 } 
 
-
-
-
-/*Aakriti's code*/
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} */
 
 .hero {
   display: flex;
@@ -94,6 +82,7 @@
 }
 
 .button-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   justify-content: flex-start; /* Adjust as needed */
@@ -110,15 +99,49 @@
 }
 
 .button1 {
+  position: relative;
   background-color: #71B139;
   color: white;
   border: none;
   font-size: 2vw
 }
-.button1:hover{
+
+.tooltip-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;  
+  transform: translateX(-50%);
+  font-size: 1vw;
+}
+
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.button1:hover .tooltip-text{
   transform: scale(1.04);
   cursor: pointer;
-  background-color:#86d145 ;
+  background-color:#797b77 ;
+  visibility: visible;
+  opacity: 1;
 }
 
 .button2 {
@@ -288,6 +311,39 @@
   font-size: 5vw;
   color: #71B139;
   padding: 3vw 0px 5vw 0px;
+}
+
+.carousel .box {
+  position: relative; /* Ensure the shade-home is positioned relative to this element */
+  overflow: hidden;
+}
+
+.carousel .box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel .shade-home {
+  text-align: center;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: #222222;
+  color: white;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 0.2s ease;
+  z-index: 20;
+  opacity: 0.9;
+}
+
+.carousel .box:hover .shade-home {
+  bottom: 0;
 }
 
 @media only screen and (max-width: 500px) {

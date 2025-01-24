@@ -63,10 +63,10 @@ const Resources = () => {
 
         <Link to="/resources/videos" className="boxsmall">
           <div className="img">
-            <img src={VideosImage} alt="Online Videos" />
+            <img src={VideosImage} alt="Related Videos" />
           </div>
           <div className="text">
-            <h2>Online Videos</h2>
+            <h2>Related Videos</h2>
             <p>
               Top videos and channels on finance, bringing you expert insights,
               investment strategies, personal finance advice all in one
