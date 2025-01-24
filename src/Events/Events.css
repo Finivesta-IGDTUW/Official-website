@@ -135,17 +135,17 @@
 @media (min-width: 1000px) {
 
   .event-element {
-    width: 35vw;
-    height: 35vw;
+    width: 30vw;
+    height: 30vw;
   }
 
   .event-element img {
-    width: 30vw; /* Set the box size to 75vw */
-    height: 30vw; /* Set the box size to 75vw */
+    width: 25vw; /* Set the box size to 75vw */
+    height: 25vw; /* Set the box size to 75vw */
 }
 
   .event-background-box {
-      width: 30vw; /* Match the width of the event-element */
-      height: 30vw; /* Match the height of the event-element */
+      width: 25vw; /* Match the width of the event-element */
+      height: 25vw; /* Match the height of the event-element */
   }
 }
