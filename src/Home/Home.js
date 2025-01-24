@@ -162,6 +162,7 @@ const Home = () => {
                   <div className="shade-home">{event.byline}</div>
             </div>
               ))}
+
             </Slider>
           </div>
         </section>
