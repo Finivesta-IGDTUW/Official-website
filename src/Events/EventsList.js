@@ -14,7 +14,7 @@ const events = [
     name: 'Bidding Blitz 2.0',
     photo: BiddingBlitz2,
     link: 'https://www.instagram.com/p/DFAbfXuyk7u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-    byline: 'Ultimate Live Bidding Event',
+    byline: 'Gear up for Bidding Blitz 2.0 – the ultimate mock bidding showdown! Test your strategy, outbid rivals, and win big!',
     year: 2025,
     backgroundColor: '#BEB19C'
   },
