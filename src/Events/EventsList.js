@@ -7,8 +7,17 @@ import KharchePeCharche from "./Images/KharchePeCharche.png";
 import Melange from "./Images/Melange.png";
 import Orientation from "./Images/Orientation.png";
 import Speaker from "./Images/Speaker.png";
+import BiddingBlitz2 from "./Images/BiddingBlitz2.jpg";
 
 const events = [
+  {
+    name: 'Bidding Blitz 2.0',
+    photo: BiddingBlitz2,
+    link: 'https://www.instagram.com/p/DFAbfXuyk7u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    byline: 'Ultimate Live Bidding Event',
+    year: 2025,
+    backgroundColor: '#BEB19C'
+  },
   {
     name: 'Unveiling IPOs',
     photo: Unveiling_IPO,
