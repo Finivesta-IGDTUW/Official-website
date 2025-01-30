@@ -100,7 +100,20 @@ const Home = () => {
       {/* Jhalak's code */}
       <section className="course">
         <h2 className="subtitle">About Us</h2>
+        
         <div className="rows">
+        <p className="abc">
+              Finivesta, the Finance and Economics society of IGDTUW, is a
+              women-led organization that provides students with various
+              opportunities that helps them to enhance their financial
+              knowledge, gain practical insights through workshops, seminars,
+              events and competitions with the aim of encapsulating financial
+              principles, patience, risk management in bright young minds. We
+              strive for excellence in every financial domain and connect
+              students to various shareholders of the same and nurture young
+              minds with the values of passion and self investment.
+            </p>
+          {/*
           <div className="col-2">
             <p className="abc">
               Finivesta, the Finance and Economics society of IGDTUW, is a
@@ -114,7 +127,6 @@ const Home = () => {
               minds with the values of passion and self investment.
             </p>
           </div>
-          {/*
           <div className="col-1">
             <img src={F1} alt="F1" />
           </div>
