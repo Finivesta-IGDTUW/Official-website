@@ -1,0 +1,315 @@
+.finweek25 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 2.5;
+  overflow: hidden;
+  background-image: url('./FINWEEK.png');
+  background-size: cover;
+  align-content: end;
+}
+
+.arrow-buttons {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  position: relative;
+}
+
+.arrow-buttons .arrows-pulse i.animated {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.arrow-buttons .arrows-pulse:hover i.animated {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+.arrows-pulse.delay-1 i.animated {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.arrows-pulse.delay-2 i.animated {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.arrows-pulse {
+  border-radius: 60px;
+  font-size: 1.2rem;
+  color: #d3d957;
+  -webkit-transition: background .4s ease-in-out;
+  -moz-transition: background .4s ease-in-out;
+  transition: background .4s ease-in-out;
+}
+
+.arrows-pulse.delay-1 {
+  font-size: 1.6rem;
+}
+
+.arrows-pulse.delay-2 {
+  font-size: 2rem;
+}
+
+.arrows-pulse:hover, .arrows-pulse:focus {
+  outline: 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+  
+  .timeline-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+
+  
+  .timeline-landmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ludo-piece {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .oval-base {
+    width: 60px;
+    height: 30px;
+    background-color: #d3d957;
+    border-radius: 25%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .frustum {
+    width: 30px;
+    height: 50px;
+    background-color: #d3d957;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: 30px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #d3d957;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 80px;
+}
+
+.timeline-line {
+  width: 1vw;
+  height: 5vh;
+  background-color: #d3d957;
+  margin-top: 5px;
+}
+  
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-line-full {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1vw;
+  height: 100%;
+  background-color: #d3d957;
+  z-index: -1;
+}
+  
+  .timeline-box {
+    width: 40%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .timeline-box.left {
+    border-left: 1vw solid #d3d957;
+    border-top: 1vw solid #d3d957;    
+    border-bottom: 1vw solid #d3d957;
+    border-radius: 10px 0 0 10px;
+    padding-left: 20px;
+    right: 20.5%;
+  }
+  
+  .timeline-box.right {
+    border-right: 1vw solid #d3d957;
+    border-top: 1vw solid #d3d957;    
+    border-bottom: 1vw solid #d3d957;
+    border-radius: 0 10px 10px 0;
+    padding-right: 20px;
+    left: 20.5%;
+  }
+
+  .timeline-box p {
+    margin: 0 2vw;
+  }
+
+
+  .event-date-day {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-venue,
+  .event-participation {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .event-form,
+  .event-link {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .event-form:hover,
+.event-link:hover {
+  text-decoration: underline;
+}
+
+  .golf-hole {
+    width: 50px;
+    height: 25px;
+    background-color: #d3d957;
+    border-radius: 50% / 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+@media screen and (max-width: 768px) {
+  .arrows-pulse {
+    font-size: 0.4rem;
+  }
+
+  .arrows-pulse.delay-1 {
+    font-size: 0.8rem;
+  }
+
+  .arrows-pulse.delay-2 {
+    font-size: 1.2rem;
+  }
+  
+}
+
+@media screen and (min-width: 1208px) {
+  .arrows-pulse {
+    font-size: 2rem;
+  }
+
+  .arrows-pulse.delay-1 {
+    font-size: 2.4rem;
+  }
+
+  .arrows-pulse.delay-2 {
+    font-size: 2.8rem;
+  }
+  
+}

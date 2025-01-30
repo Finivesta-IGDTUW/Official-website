@@ -14,7 +14,6 @@ import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
-import BNPL from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
 import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
@@ -51,6 +50,8 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
 
+import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
+
 
 const AppContent = () => {
   const location = useLocation();
@@ -68,6 +69,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
+          <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
           {/* Under resources */}
