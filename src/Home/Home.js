@@ -114,9 +114,11 @@ const Home = () => {
               minds with the values of passion and self investment.
             </p>
           </div>
+          {/*
           <div className="col-1">
             <img src={F1} alt="F1" />
           </div>
+          */}
         </div>
         <div className="list">
           <div className="mvo-box">
