@@ -42,7 +42,7 @@ import Review6 from "./Resources/BookReviews/bookpages/Review6";
 import Review7 from "./Resources/BookReviews/bookpages/Review7";
 
 import Games from './Games/Game';
-
+import Scramble from './Games/Scramble/scramble';
 
 const AppContent = () => {
   const location = useLocation();
@@ -95,6 +95,7 @@ const AppContent = () => {
             <Route path="/resources/trading" element={<TradingApps/>}/>
 
           <Route path="/games" element={<Games/>}/>
+          <Route path='/games/scramble' element={<Scramble/>}/>
 
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 
+
 const Game = () => {
   React.useEffect(() => {
     const words = [
