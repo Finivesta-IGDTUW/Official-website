@@ -31,15 +31,17 @@ const Game = () => {
 
       currentWord = words[Math.floor(Math.random() * words.length)];
       document.getElementById("scrambled-word").textContent = shuffleWord(currentWord.word);
-      document.querySelector(".hint").textContent = Hint: ${currentWord.hint};
+      document.querySelector(".hint").textContent = `Hint: ${currentWord.hint}`;
+
       document.getElementById("answer").value = "";
       timeElapsed = 0;
-      document.getElementById("timer").textContent = ${timeElapsed}s;
+      document.getElementById("timer").textContent = `${timeElapsed}s`;
+
 
       clearInterval(timer);
       timer = setInterval(() => {
         timeElapsed++;
-        document.getElementById("timer").textContent = ${timeElapsed}s;
+        document.getElementById("timer").textContent = `${timeElapsed}s`;
       }, 1000);
     };
 
