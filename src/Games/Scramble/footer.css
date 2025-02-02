@@ -33,7 +33,7 @@ body {
 
 /* Landing Page Header */
 .landing-page h1 {
-    font-size: 3.5vw;
+    font-size: 2.5rem; /* Use rem units */
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 2rem;
@@ -41,7 +41,7 @@ body {
 
 /* Landing Page Paragraph */
 .landing-page p {
-    font-size: 2vw;
+    font-size: 1.5rem; /* Use rem units */
     color: #aaaaaa;
     margin-bottom: 3rem;
 }
@@ -69,11 +69,11 @@ body {
 @media (min-width: 768px) {
     /* Adjust font size for larger screens */
     .landing-page h1 {
-        font-size: 2.5vw;
+        font-size: 2.5rem;
     }
 
     .landing-page p {
-        font-size: 1.5vw;
+        font-size: 1.5rem;
     }
 
     .game-container {
@@ -82,7 +82,7 @@ body {
     }
 
     .info, .guess, #scrambled-word, .hint, input[type="text"], button, .correct-message, .wrong-message {
-        font-size: 1.5vw;
+        font-size: 1.5rem;
     }
 
     /* Adjust button for medium to large screens */
@@ -99,11 +99,11 @@ body {
     }
 
     .landing-page h1 {
-        font-size: 5vw; /* Adjust header size */
+        font-size: 2rem; /* Adjust header size */
     }
 
     .landing-page p {
-        font-size: 4vw; /* Adjust paragraph size */
+        font-size: 1.2rem; /* Adjust paragraph size */
     }
 
     .game-container {
@@ -112,27 +112,27 @@ body {
     }
 
     .info {
-        font-size: 4vw;
+        font-size: 1.2rem;
     }
 
     .guess {
-        font-size: 5vw;
+        font-size: 1.5rem;
     }
 
     #scrambled-word {
-        font-size: 6vw;
+        font-size: 1.8rem;
     }
 
     .hint {
-        font-size: 4vw;
+        font-size: 1.2rem;
     }
 
     input[type="text"] {
-        font-size: 4.5vw;
+        font-size: 1.2rem;
     }
 
     button {
-        font-size: 4vw; /* Adjust button text for small screens */
+        font-size: 1.2rem; /* Adjust button text for small screens */
         padding: 1rem 2rem; /* Moderate padding for smaller screens */
     }
 }
@@ -157,28 +157,28 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;
-    font-size: 3vw;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
 }
 
 /* Guess Section */
 .guess {
-    font-size: 4vw;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #71b139; /* Updated green color */
     margin-bottom: 3%;
 }
 
 #scrambled-word {
-    font-size: 5vw;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 3%;
     letter-spacing: 4px;
 }
 
 .hint {
-    font-size: 3vw;
+    font-size: 1.2rem;
     color: #aaaaaa;
     margin-bottom: 5%;
     padding: 0 2%;
@@ -188,7 +188,7 @@ body {
 input[type="text"] {
     width: 100%;
     padding: 2%;
-    font-size: 3.5vw;
+    font-size: 1.2rem;
     margin-bottom: 5%;
     border-radius: 5px;
     border: 1px solid #444444;
@@ -205,7 +205,7 @@ input[type="text"] {
 
 button {
     padding: 2% 5%;
-    font-size: 3.5vw;
+    font-size: 1.2rem;
     background-color: #71b139; /* Updated green color */
     color: #ffffff;
     border: none;
@@ -226,7 +226,7 @@ button:hover {
     transform: translateX(-50%);
     display: none;
     align-items: center;
-    font-size: 4vw;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 

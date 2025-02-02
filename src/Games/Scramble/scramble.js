@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.css";
 
-
 const Game = () => {
   React.useEffect(() => {
     const words = [
@@ -38,7 +37,6 @@ const Game = () => {
       timeElapsed = 0;
       document.getElementById("timer").textContent = `${timeElapsed}s`;
 
-
       clearInterval(timer);
       timer = setInterval(() => {
         timeElapsed++;
@@ -63,8 +61,13 @@ const Game = () => {
     };
 
     document.getElementById("check").addEventListener("click", function () {
-      const answer = document.getElementById("answer").value.toUpperCase();
-      if (answer === currentWord.word) {
+      const answer = document.getElementById("answer").value.trim().toUpperCase(); // Trim and convert to uppercase
+      const correctWord = currentWord.word.toUpperCase(); // Get the correct word in uppercase
+
+      console.log("User Input:", answer); // Debug: Log user input
+      console.log("Correct Word:", correctWord); // Debug: Log correct word
+
+      if (answer === correctWord) { // Compare user input with the correct word
         score++;
         document.getElementById("score").textContent = score;
         showCorrectMessage();
