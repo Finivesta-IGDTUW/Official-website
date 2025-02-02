@@ -61,18 +61,22 @@ const Game = () => {
     };
 
     document.getElementById("check").addEventListener("click", function () {
-      const answer = document.getElementById("answer").value.toUpperCase(); // Trim and convert to uppercase
-      
-      if (answer === currentWord.word) {
+      const answer = document.getElementById("answer").value.trim().toUpperCase(); // Trim and convert to uppercase
+      const correctWord = currentWord.word.toUpperCase(); // Get the correct word in uppercase
+
+      console.log("User Input:", answer); // Debug: Log user input
+      console.log("Correct Word:", correctWord); // Debug: Log correct word
+
+      if (answer === correctWord) { // Compare user input with the correct word
         score++;
         document.getElementById("score").textContent = score;
         showCorrectMessage();
         startGame();
-    } else {
+      } else {
         document.getElementById("score").textContent = score;
         showWrongMessage();
         startGame();
-    }
+      }
     });
 
     document.getElementById("refresh").addEventListener("click", function () {
@@ -86,6 +90,9 @@ const Game = () => {
     document.querySelector('.landing-page').style.display = 'block';
     document.querySelector('.game-container').style.display = 'none';
     document.querySelector("footer").classList.add("hidden");
+
+    // Initialize the first word when the component mounts
+    startGame();
   }, []);
 
   return (
