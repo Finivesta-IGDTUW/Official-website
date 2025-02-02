@@ -86,6 +86,7 @@ const Game = () => {
 
     document.querySelector('.landing-page').style.display = 'block';
     document.querySelector('.game-container').style.display = 'none';
+    document.querySelector("footer").classList.add("hidden");
   }, []);
 
   return (

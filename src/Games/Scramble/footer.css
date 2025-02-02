@@ -14,6 +14,7 @@ body {
     height: 100vh;
     background-color: #333333;
     color: #ffffff;
+    flex-direction: column; /* Ensure everything is vertically aligned */
 }
 
 /* Landing Page Styling */
@@ -47,17 +48,17 @@ body {
 
 /* Start Game Button Styling */
 .landing-page button {
-    padding: 1rem 2rem;  /* Adjust padding for better responsiveness */
-    font-size: 1.5rem;  /* Use rem units for better control */
+    padding: 1rem 2rem; /* Adjust padding for better responsiveness */
+    font-size: 1.5rem; /* Use rem units for better control */
     background-color: #71b139; /* Same green as the game */
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    max-width: 80%;  /* Limit the maximum width */
-    width: auto;     /* Allow it to scale based on content */
-    margin: 0 auto;  /* Center the button horizontally */
+    max-width: 80%; /* Limit the maximum width */
+    width: auto; /* Allow it to scale based on content */
+    margin: 0 auto; /* Center the button horizontally */
 }
 
 .landing-page button:hover {
@@ -86,8 +87,8 @@ body {
 
     /* Adjust button for medium to large screens */
     .landing-page button {
-        padding: 1.5rem 3rem;  /* More comfortable padding for larger screens */
-        font-size: 1.8rem;      /* Slightly larger font size on larger screens */
+        padding: 1.5rem 3rem; /* More comfortable padding for larger screens */
+        font-size: 1.8rem; /* Slightly larger font size on larger screens */
     }
 }
 
@@ -131,8 +132,8 @@ body {
     }
 
     button {
-        font-size: 4vw;  /* Adjust button text for small screens */
-        padding: 1rem 2rem;  /* Moderate padding for smaller screens */
+        font-size: 4vw; /* Adjust button text for small screens */
+        padding: 1rem 2rem; /* Moderate padding for smaller screens */
     }
 }
 
@@ -145,6 +146,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
+    margin: 0 auto; /* Center the game container */
+    position: relative; /* Ensure it's aligned correctly */
+    top: 0; /* Reset position */
+    transform: translateY(0); /* Reset transform */
 }
 
 /* Info Panel */
@@ -233,15 +238,13 @@ button:hover {
     color: #FF0000;
 }
 
-/* Responsive Styles for Larger Screens */
-@media (min-width: 768px) {
-    .info, .guess, #scrambled-word, .hint, input[type="text"], button, .correct-message, .wrong-message {
-        font-size: 1.5vw;
-    }
-
-    .game-container {
-        width: 60%;
-        max-width: 500px;
-    }
+/* Footer (Social Section) */
+footer {
+    margin-top: 20px; /* Add space between game and footer */
+    text-align: center;
 }
 
+/* Hide footer if necessary */
+footer.hidden {
+    display: none;
+}
