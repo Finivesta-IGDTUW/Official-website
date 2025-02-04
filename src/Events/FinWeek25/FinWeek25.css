@@ -11,14 +11,14 @@
   align-content: end;
 }
 
-.arrow-buttons {
+.arrow-container {
   display: flex;
   flex-direction: column;
   bottom: 0;
   position: relative;
 }
 
-.arrow-buttons .arrows-pulse i.animated {
+.arrow-container .arrows-pulse i.animated {
   -webkit-transition-property: -webkit-transform;
   transition-property: all;
   -webkit-transition-duration: 1s;
@@ -39,7 +39,7 @@
   -moz-animation-timing-function: linear;
 }
 
-.arrow-buttons .arrows-pulse:hover i.animated {
+.arrow-container .arrows-pulse:hover i.animated {
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -moz-animation-name: pulse;
@@ -136,6 +136,13 @@
   background: rgba(255, 255, 255, 0.1);
 }
   
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+}
   .timeline-title {
     text-align: center;
     font-size: 2.5rem;
@@ -161,8 +168,8 @@
     height: 30px;
     background-color: #d3d957;
     border-radius: 25%;
-    position: absolute;
     bottom: 0;
+    position: relative;
   }
   
   .frustum {
@@ -186,8 +193,9 @@
 .timeline-line {
   width: 1vw;
   height: 5vh;
-  background-color: #d3d957;
+  background-color: #5f8e33;
   margin-top: 5px;
+  margin-bottom: -1vw;
 }
   
 .timeline {
@@ -197,91 +205,151 @@
   align-items: center;
 }
 
-.timeline-line-full {
+.timeline-line-top {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 1vw;
-  height: 100%;
-  background-color: #d3d957;
+  height: 1vw;
+  background-color: #5f8e33;
   z-index: -1;
+}
+
+
+.timeline-box-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -0.98vw;
 }
   
   .timeline-box {
-    width: 40%;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    width: 40vw;
     position: relative;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     align-items: center;
     justify-items: center;
   }
   
-  .timeline-box.left {
-    border-left: 1vw solid #d3d957;
-    border-top: 1vw solid #d3d957;    
-    border-bottom: 1vw solid #d3d957;
-    border-radius: 10px 0 0 10px;
-    padding-left: 20px;
-    right: 20.5%;
+  .timeline-box.left.left-line {
+    border-left: 1vw solid #5f8e33;
+    border-top: 1vw solid #5f8e33;
+    border-bottom: 1vw solid #5f8e33;
+    border-right: none; 
+    margin-top: 0.02vw;
+    border-radius: 1vw 0 0 1vw;
+    background-color: rgba(1, 1, 1, 0.8); 
+  }
+
+  .timeline-box.right.right-line {
+    border-right: 1vw solid #5f8e33;
+    border-top: 1vw solid #5f8e33;
+    border-bottom: 1vw solid #5f8e33;
+    border-left: none; 
+    background-color: transparent;
+    border-radius: 0 1vw 1vw 0;
+  }
+
+  
+  .timeline-box.right.event4 {
+    margin-top: 0.04vw;
   }
   
-  .timeline-box.right {
-    border-right: 1vw solid #d3d957;
-    border-top: 1vw solid #d3d957;    
-    border-bottom: 1vw solid #d3d957;
-    border-radius: 0 10px 10px 0;
-    padding-right: 20px;
-    left: 20.5%;
+  .circle {
+    width: 3vw;
+    height: 3vw;
+    background-color: #d3d957;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-box.left .circle {
+    left: -0.5vw;
+  }
+
+  .timeline-box.right .circle {
+    left: 39.5vw;
+  }
+
+  .empty-box {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  
+  .timeline-image {
+    height: 30vh;
+    object-fit: cover;
   }
 
   .timeline-box p {
     margin: 0 2vw;
+    text-align: center;
+    font-size: 1.15rem;
   }
 
 
   .event-date-day {
-    display: flex;
+    display: block;
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    color: #83976d;
   }
   
   .event-name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #f4fceb;
+    text-align: center;
   }
   
   .event-venue,
   .event-participation {
     font-size: 0.9rem;
     margin-bottom: 5px;
+    color: #f6edd9;
+    text-align: center;
   }
   
-  .event-form,
+  .event-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5f8e33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  
+  .event-button:hover {
+    background-color: #83976d;
+  }
+
   .event-link {
     display: block;
     margin-bottom: 5px;
-    color: #007bff;
+    color: #5f8e33;
     text-decoration: none;
+    text-align: center;
   }
 
-  .event-form:hover,
 .event-link:hover {
   text-decoration: underline;
 }
 
-  .golf-hole {
-    width: 50px;
-    height: 25px;
-    background-color: #d3d957;
-    border-radius: 50% / 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.last-box {
+  margin-bottom: -0.7vw;
+}
 
   
 @media screen and (max-width: 768px) {
