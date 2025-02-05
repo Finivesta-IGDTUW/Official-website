@@ -51,17 +51,23 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 
 
 const AppContent = () => {
+
   const location = useLocation();
   useEffect(() => {
   }, [location]);
   
   const [loaded, setLoaded] = useState(false);
+
+  // Trigger animation once the loader disappears
   useEffect(() => {
-    setLoaded(true);  // Set loaded to true once the component is mounted (after loader disappears)
+    setTimeout(() => {
+      setLoaded(true);  // Trigger animation after loader disappears
+    }, 50);  // Small delay to ensure smooth animation
   }, []);
 
   return (
     <div className={`App app-content ${loaded ? 'loaded' : ''}`}>
+
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
@@ -121,20 +127,28 @@ const AppContent = () => {
 }
 
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(() => {
+    return sessionStorage.getItem("loaderShown") ? false : true;
+  });
+  
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoader(false);
-    }, 5000); // Loader duration (5 seconds)
-
-    return () => clearTimeout(timer); // Cleanup timeout on component unmount
-  }, []);
+    if (showLoader) {
+      const timer = setTimeout(() => {
+        setShowLoader(false);
+        sessionStorage.setItem("loaderShown", "true"); // Mark loader as shown for this session
+      }, 5000); // Loader duration (5 seconds)
+  
+      return () => clearTimeout(timer); // Cleanup timeout on component unmount
+    }
+  }, [showLoader]);
+  
 
   return (
     <Router>
-      {showLoader && <Loader />} {/* Show loader while the state is true */}
-      {!showLoader && <AppContent />} {/* Show content after loader is hidden */}
+      {showLoader && <Loader />}
+      {!showLoader && <AppContent />}
+
     </Router>
   );
 }

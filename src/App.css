@@ -2,6 +2,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -9,12 +13,16 @@
 
 /* AppContent.css */
 .app-content {
-  opacity: 0;
-  transform: translateY(100vh); /* Start below the viewport */
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 1;
 }
 
 .app-content.loaded {
   opacity: 1;
-  transform: translateY(0); /* Moves up to its normal position */
+  transform: scale(1); /* End with normal scale */
+}
+
+.app-content.no-animation {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
