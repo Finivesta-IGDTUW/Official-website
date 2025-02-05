@@ -6,8 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import F1 from "./Images/F1.jpg";
-
 const Home = () => {
   var settings = {
     dots: true,

@@ -143,10 +143,12 @@
   width: 100%;
   align-items: center;
 }
+
   .timeline-title {
     text-align: center;
     font-size: 2.5rem;
     margin: 20px 0;
+    color: #d3d957
   }
 
   
@@ -154,6 +156,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15vh;
   }
   
   .ludo-piece {
@@ -170,6 +173,7 @@
     border-radius: 25%;
     bottom: 0;
     position: relative;
+    z-index: 2;
   }
   
   .frustum {
@@ -191,11 +195,11 @@
 }
 
 .timeline-line {
-  width: 1vw;
+  width: 2vh;
   height: 5vh;
   background-color: #5f8e33;
   margin-top: 5px;
-  margin-bottom: -1vw;
+  margin-bottom: -2vh;
 }
   
 .timeline {
@@ -209,8 +213,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 1vw;
-  height: 1vw;
+  width: 2vh;
+  height: 2vh;
   background-color: #5f8e33;
   z-index: -1;
 }
@@ -219,7 +223,7 @@
 .timeline-box-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -0.98vw;
+  margin-bottom: -1.95vh;
 }
   
   .timeline-box {
@@ -227,15 +231,14 @@
     padding: 0;
     width: 40vw;
     position: relative;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     align-items: center;
     justify-items: center;
   }
   
   .timeline-box.left.left-line {
-    border-left: 1vw solid #5f8e33;
-    border-top: 1vw solid #5f8e33;
-    border-bottom: 1vw solid #5f8e33;
+    border-left: 2vh solid #5f8e33;
+    border-top: 2vh solid #5f8e33;
+    border-bottom: 2vh solid #5f8e33;
     border-right: none; 
     margin-top: 0.02vw;
     border-radius: 1vw 0 0 1vw;
@@ -243,9 +246,9 @@
   }
 
   .timeline-box.right.right-line {
-    border-right: 1vw solid #5f8e33;
-    border-top: 1vw solid #5f8e33;
-    border-bottom: 1vw solid #5f8e33;
+    border-right: 2vh solid #5f8e33;
+    border-top: 2vh solid #5f8e33;
+    border-bottom: 2vh solid #5f8e33;
     border-left: none; 
     background-color: transparent;
     border-radius: 0 1vw 1vw 0;
@@ -257,21 +260,22 @@
   }
   
   .circle {
-    width: 3vw;
-    height: 3vw;
+    width: 3vh;
+    height: 3vh;
     background-color: #d3d957;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
     transform: translate(-50%, -50%);
   }
 
   .timeline-box.left .circle {
-    left: -0.5vw;
+    left: -0.8vh;
+    top: 50%;
   }
 
   .timeline-box.right .circle {
-    left: 39.5vw;
+    right: -4vh;
+    top: 50%;
   }
 
   .empty-box {
@@ -328,7 +332,7 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   
   .event-button:hover {
@@ -364,7 +368,78 @@
   .arrows-pulse.delay-2 {
     font-size: 1.2rem;
   }
+
+  .timeline-box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-box {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-box.left.left-line {
+    border: none;
+  }
+
+  .timeline-box-container.cont-left {
+    border-left: 2vh solid #5f8e33;
+    border-top: 2vh solid #5f8e33;
+    border-bottom: 2vh solid #5f8e33;
+  }
+
+  .timeline-box-container.cont-left.finweek-first {
+    position: relative;
+    border-top: none;
+  }
+
+  .timeline-box-container.cont-left.finweek-first::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 2vh;
+    border-radius: 0 0 2vh 0;
+    background-color: #5f8e33;
+    z-index: 1;
+  }
+
+  .timeline-box-container.cont-left.finweek-last {
+    position: relative;
+    border-bottom: none;
+  }
   
+  .timeline-box-container.cont-left.finweek-last::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2vh;
+    background-color: #5f8e33;
+    z-index: 1;
+  }
+
+  .timeline-box.right.right-line {
+    border: none;
+  }
+
+  .timeline-box-container.cont-right {
+    border-right: 2vh solid #5f8e33;
+    border-bottom: 2vh solid #5f8e33;
+    flex-direction: column-reverse;
+  }
+
+  .timeline-box-container.cont-right .circle {
+    top: 100%;
+  }
+
+  .timeline-box-container.cont-left .circle {
+    top: 100%;
+  }
 }
 
 @media screen and (min-width: 1208px) {
