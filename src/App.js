@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
+
+import Loader from './Loader/Loader';
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -54,13 +56,23 @@ import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
 
 const AppContent = () => {
-  const location = useLocation();
 
+  const location = useLocation();
   useEffect(() => {
   }, [location]);
+  
+  const [loaded, setLoaded] = useState(false);
+
+  // Trigger animation once the loader disappears
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);  // Trigger animation after loader disappears
+    }, 50);  // Small delay to ensure smooth animation
+  }, []);
 
   return (
-    <div className="App">
+    <div className={`App app-content ${loaded ? 'loaded' : ''}`}>
+
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
@@ -127,11 +139,29 @@ const AppContent = () => {
 }
 
 function App() {
+  const [showLoader, setShowLoader] = useState(() => {
+    return sessionStorage.getItem("loaderShown") ? false : true;
+  });
+  
+
+  useEffect(() => {
+    if (showLoader) {
+      const timer = setTimeout(() => {
+        setShowLoader(false);
+        sessionStorage.setItem("loaderShown", "true"); // Mark loader as shown for this session
+      }, 5000); // Loader duration (5 seconds)
+  
+      return () => clearTimeout(timer); // Cleanup timeout on component unmount
+    }
+  }, [showLoader]);
+  
 
   return (
-      <Router>
-          <AppContent />
-      </Router>
+    <Router>
+      {showLoader && <Loader />}
+      {!showLoader && <AppContent />}
+
+    </Router>
   );
 }
 
