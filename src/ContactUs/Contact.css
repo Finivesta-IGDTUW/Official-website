@@ -6,13 +6,13 @@
   }
   
 .contact-header {
-  background-image: url('../Images/bgfortabs.jpg');
+    /* background-image: url('../Images/bgfortabs.jpg');
+    height: 200px; */
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
-    height: 200px; 
     display: flex;
     flex-direction: column;
     justify-content:center;

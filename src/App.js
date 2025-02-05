@@ -67,7 +67,7 @@ const AppContent = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);  // Trigger animation after loader disappears
-    }, 50);  // Small delay to ensure smooth animation
+    }, );  // Small delay to ensure smooth animation
   }, []);
 
   return (

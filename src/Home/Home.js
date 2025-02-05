@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+import { Tween } from 'react-gsap';
+
 const Home = () => {
   var settings = {
     dots: true,
@@ -131,6 +133,20 @@ const Home = () => {
           */}
         </div>
         <div className="list">
+
+        <Tween
+          from={{ x: '90vw', opacity: 0 }}
+          to={{ x: '0vw', opacity: 1 }}
+          duration={5}
+          ease="none"
+          scrollTrigger={{
+            trigger: '.mvo-box',
+            start: 'top 90%',
+            end: '+=100%',
+            scrub: true,
+            toggleActions: 'play none none reverse',
+          }}
+        >
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
@@ -143,7 +159,21 @@ const Home = () => {
               finance.
             </p>
           </div>
+          </Tween>
 
+          <Tween
+          from={{ x: '90vw', opacity: 0 }}
+          to={{ x: '0vw', opacity: 1 }}
+          duration={5}
+          ease="none"
+          scrollTrigger={{
+            trigger: '.mvo-box',
+            start: 'top 90%',
+            end: '+=100%',
+            scrub: true,
+            toggleActions: 'play none none reverse',
+          }}
+        >
           <div className="mvo-box">
             <h1>OBJECTIVE</h1>
             <p>
@@ -155,7 +185,21 @@ const Home = () => {
               and inspire them to take charge of their financial futures with assurance and skill.
             </p>
           </div>
+          </Tween>
 
+          <Tween
+          from={{ x: '90vw', opacity: 0 }}
+          to={{ x: '0vw', opacity: 1 }}
+          duration={5}
+          ease="none"
+          scrollTrigger={{
+            trigger: '.mvo-box',
+            start: 'top 90%',
+            end: '+=100%',
+            scrub: true,
+            toggleActions: 'play none none reverse',
+          }}
+        >
           <div className="mvo-box">
             <h1>VISION</h1>
             <p>
@@ -169,6 +213,7 @@ const Home = () => {
               dynamic events, fostering both knowledge and confidence.
             </p>
           </div>
+          </Tween>
           
         </div>
       </section>

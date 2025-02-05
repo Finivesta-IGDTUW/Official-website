@@ -130,7 +130,7 @@ const FinWeek25 = () => {
           <div className="timeline-box right">
             <div className="timeline-content" data-aos="fade-left">
             <div className="event-date-day">
-                <p className="event-date">Feb 15th, 2025</p>
+                <p className="event-date">Feb 14th, 2025</p>
                 <p className="event-day">Friday</p>
                 <p className="event-venue"><b>Venue: </b> IIIT-D</p>
                 
