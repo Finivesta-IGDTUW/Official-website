@@ -142,7 +142,7 @@ const Home = () => {
           scrollTrigger={{
             trigger: '.mvo-box',
             start: 'top 90%',
-            end: '+=100%',
+            end: '+=70%',
             scrub: true,
             toggleActions: 'play none none reverse',
           }}
@@ -159,21 +159,7 @@ const Home = () => {
               finance.
             </p>
           </div>
-          </Tween>
-
-          <Tween
-          from={{ x: '90vw', opacity: 0 }}
-          to={{ x: '0vw', opacity: 1 }}
-          duration={5}
-          ease="none"
-          scrollTrigger={{
-            trigger: '.mvo-box',
-            start: 'top 90%',
-            end: '+=100%',
-            scrub: true,
-            toggleActions: 'play none none reverse',
-          }}
-        >
+          
           <div className="mvo-box">
             <h1>OBJECTIVE</h1>
             <p>
@@ -185,28 +171,14 @@ const Home = () => {
               and inspire them to take charge of their financial futures with assurance and skill.
             </p>
           </div>
-          </Tween>
-
-          <Tween
-          from={{ x: '90vw', opacity: 0 }}
-          to={{ x: '0vw', opacity: 1 }}
-          duration={5}
-          ease="none"
-          scrollTrigger={{
-            trigger: '.mvo-box',
-            start: 'top 90%',
-            end: '+=100%',
-            scrub: true,
-            toggleActions: 'play none none reverse',
-          }}
-        >
+          
           <div className="mvo-box">
             <h1>VISION</h1>
             <p>
               <i>If you do not manage your money, your money will manage you.</i> Our
               vision is to empower
               women to become financially literate and make informed
-              decisions,rooted in the belief that financial
+              decisions, rooted in the belief that financial
               literacy is essential for unlocking their full potential.
               Finivesta strives to achieve this vision by providing a platform where
               women can engage with economics economics through workshops, seminars, and
