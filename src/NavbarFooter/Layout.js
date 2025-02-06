@@ -8,11 +8,6 @@ const Layout = ({ children }) => {
             var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrollPercentage = (scrollTop / scrollHeight) * 100;
             document.getElementById('progress-bar').style.width = scrollPercentage + '%';
-            console.log('Scroll Percentage:', scrollPercentage); // Debugging log
-            const progressBar = document.getElementById('progress-bar');
-            if (progressBar) {
-                progressBar.style.width = scrollPercentage + '%';
-            }
         };
 
         window.addEventListener('scroll', handleScroll);
