@@ -134,7 +134,7 @@ const Home = () => {
         </div>
         <div className="list">
 
-        <Tween
+        {/* <Tween
           from={{ x: '90vw', opacity: 0 }}
           to={{ x: '0vw', opacity: 1 }}
           duration={5}
@@ -145,7 +145,7 @@ const Home = () => {
             end: '+=70%',
             scrub: true,
             toggleActions: 'play none none reverse',
-          }}
+          }} */}
         >
           <div className="mvo-box">
             <h1>MISSION</h1>
@@ -185,7 +185,7 @@ const Home = () => {
               dynamic events, fostering both knowledge and confidence.
             </p>
           </div>
-          </Tween>
+          {/* </Tween> */}
           
         </div>
       </section>
