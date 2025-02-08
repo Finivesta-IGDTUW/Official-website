@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import F1 from "./Images/F1.jpg";
+import { Tween } from 'react-gsap';
 
 const Home = () => {
   var settings = {
@@ -47,7 +47,8 @@ const Home = () => {
 
   return (
     <div className="Home">
-      {/* Akhriti's code */}
+      {/*
+
       <section className="hero">
         <div className="content">
           <h1>
@@ -82,10 +83,37 @@ const Home = () => {
         </div>
       </section>
 
+      */}
+
+      {/* Banner Section */}
+      <section className="banner">
+        <div className="banner-content">
+          <button
+            className="banner-button"
+            onClick={() => (window.location.href = "/finweek25")}
+          >
+            Learn More
+          </button>
+        </div>
+      </section>
+
       {/* Jhalak's code */}
       <section className="course">
         <h2 className="subtitle">About Us</h2>
+        
         <div className="rows">
+        <p className="abc">
+              Finivesta, the Finance and Economics society of IGDTUW, is a
+              women-led organization that provides students with various
+              opportunities that helps them to enhance their financial
+              knowledge, gain practical insights through workshops, seminars,
+              events and competitions with the aim of encapsulating financial
+              principles, patience, risk management in bright young minds. We
+              strive for excellence in every financial domain and connect
+              students to various shareholders of the same and nurture young
+              minds with the values of passion and self investment.
+            </p>
+          {/*
           <div className="col-2">
             <p className="abc">
               Finivesta, the Finance and Economics society of IGDTUW, is a
@@ -102,8 +130,23 @@ const Home = () => {
           <div className="col-1">
             <img src={F1} alt="F1" />
           </div>
+          */}
         </div>
         <div className="list">
+
+        <Tween
+          from={{ x: '90vw', opacity: 0 }}
+          to={{ x: '0vw', opacity: 1 }}
+          duration={5}
+          ease="none"
+          scrollTrigger={{
+            trigger: '.mvo-box',
+            start: 'top 90%',
+            end: '+=70%',
+            scrub: true,
+            toggleActions: 'play none none reverse',
+          }}
+        >
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
@@ -116,7 +159,7 @@ const Home = () => {
               finance.
             </p>
           </div>
-
+          
           <div className="mvo-box">
             <h1>OBJECTIVE</h1>
             <p>
@@ -128,20 +171,21 @@ const Home = () => {
               and inspire them to take charge of their financial futures with assurance and skill.
             </p>
           </div>
-
+          
           <div className="mvo-box">
             <h1>VISION</h1>
             <p>
               <i>If you do not manage your money, your money will manage you.</i> Our
               vision is to empower
               women to become financially literate and make informed
-              decisions,rooted in the belief that financial
+              decisions, rooted in the belief that financial
               literacy is essential for unlocking their full potential.
               Finivesta strives to achieve this vision by providing a platform where
               women can engage with economics economics through workshops, seminars, and
               dynamic events, fostering both knowledge and confidence.
             </p>
           </div>
+          </Tween>
           
         </div>
       </section>

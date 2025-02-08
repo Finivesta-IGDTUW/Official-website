@@ -30,8 +30,8 @@ const Footer = () => {
                 <a className="fbut" href="/events">Events</a>
                 <a className="fbut" href="/sponsors">Sponsors</a>
                 <a className="fbut" href="/resources">Resources</a>
-                <a className="fbut" href="/team">Team</a>
-                <a className="fbut" href="/contact">Contact Us</a>
+                <a className="fbut" href="/team">Our Team</a>
+                {/* <a className="fbut" href="/contact">Contact Us</a> */}
             </div>
 
             <p className="text-footer"> 

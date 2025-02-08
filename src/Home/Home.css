@@ -7,7 +7,6 @@
   
 } 
 
-
 .hero {
   display: flex;
   height:auto;
@@ -334,7 +333,7 @@
   background-color: #222222;
   color: white;
   display: flex;
-  font-size: 1rem;
+  font-size: 0.9rem;
   justify-content: center;
   align-items: center;
   transition: bottom 0.2s ease;
@@ -426,3 +425,59 @@ button.slick-arrow.slick-prev::before{
         color: #fff !important;
         opacity: .25 !important;
       } 
+
+
+
+
+.banner {
+  background-image: url('../Events/FinWeek25/FINWEEK.png'); /* Replace with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  aspect-ratio: 2.5;
+  position: relative; /* Ensure the button can be positioned absolutely within the banner */
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; /* Ensure the content takes the full height of the banner */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-button {
+  background-color: #d3d957; /* Set the button color */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 15px 30px; /* Increase padding for a larger button */
+  font-size: 1.5rem; /* Increase font size */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 20px; /* Position the button near the bottom of the banner */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-button:hover {
+  background-color: #b5c44a; /* Slightly darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+
+  .banner-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-button {
+    font-size: 0.7rem;
+    padding: 8px 16px;
+  }
+}

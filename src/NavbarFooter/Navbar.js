@@ -63,8 +63,8 @@ const Navbar = () => {
                   <li><a href="/resources/trading">Trading Applications and Websites</a></li>
               </ul>
           </li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/team">Our Team</a></li>
+          {/* <li><a href="/contact">Contact Us</a></li> */}
         </ul>
       </nav>
     </header>

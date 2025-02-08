@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
+
+import Loader from './Loader/Loader';
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -14,7 +16,6 @@ import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
-import BNPL from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
 import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
@@ -51,15 +52,27 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
 
+import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
+
 
 const AppContent = () => {
-  const location = useLocation();
 
+  const location = useLocation();
   useEffect(() => {
   }, [location]);
+  
+  const [loaded, setLoaded] = useState(false);
+
+  // Trigger animation once the loader disappears
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);  // Trigger animation after loader disappears
+    }, );  // Small delay to ensure smooth animation
+  }, []);
 
   return (
-    <div className="App">
+    <div className={`App app-content ${loaded ? 'loaded' : ''}`}>
+
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
@@ -68,6 +81,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
+          <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
           {/* Under resources */}
@@ -125,11 +139,29 @@ const AppContent = () => {
 }
 
 function App() {
+  const [showLoader, setShowLoader] = useState(() => {
+    return sessionStorage.getItem("loaderShown") ? false : true;
+  });
+  
+
+  useEffect(() => {
+    if (showLoader) {
+      const timer = setTimeout(() => {
+        setShowLoader(false);
+        sessionStorage.setItem("loaderShown", "true"); // Mark loader as shown for this session
+      }, 5000); // Loader duration (5 seconds)
+  
+      return () => clearTimeout(timer); // Cleanup timeout on component unmount
+    }
+  }, [showLoader]);
+  
 
   return (
-      <Router>
-          <AppContent />
-      </Router>
+    <Router>
+      {showLoader && <Loader />}
+      {!showLoader && <AppContent />}
+
+    </Router>
   );
 }
 
