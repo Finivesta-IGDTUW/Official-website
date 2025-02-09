@@ -81,7 +81,7 @@ const FinWeek25 = () => {
           <div className="timeline-box left left-line">
             <div className="timeline-content" data-aos="fade-right">
             <h3 className="event-name">Game Night</h3>
-              <button className="event-button" onClick={() => window.location.href = '#'}>Registrations Open Soon</button>
+              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0'}>Join Us Here</button>
             </div>
             
           <div className="circle"></div>
@@ -113,7 +113,7 @@ const FinWeek25 = () => {
           <div className="timeline-box right right-line">
             <div className="timeline-content" data-aos="fade-left">
             <h3 className="event-name">Speaker Session 02</h3>
-              <button className="event-button" onClick={() => window.location.href = '#'}>Registrations Open Soon</button>
+              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0'}>Join Us Here</button>
             </div>
           <div className="circle"></div>
           </div>
