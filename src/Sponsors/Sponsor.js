@@ -16,6 +16,8 @@ import Finwizz from './SponsorImages/image13.png';
 import Stockpe from './SponsorImages/image14.png';
 import Stockgro from './SponsorImages/image15.png';
 import Lwt from './SponsorImages/image.png'
+import StockEdge from './SponsorImages/StockEdge.png';
+import Unstop from './SponsorImages/Unstop11.png';
 
 
 const Sponsor = () => {
@@ -28,12 +30,25 @@ const Sponsor = () => {
 
             <div class="sponsors_container">
                 {/* Added blank links to link logo to the page of the sponsors */}
+
+                <div class="logos" id="a7">
+                    <a href="https://www.linkedin.com/company/stockedge/" target="_blank" rel="noreferrer"> 
+                        <img src={StockEdge} alt=""/>
+                        <div class="shade">StockEdge</div>
+                    </a>
+                </div> 
+                <div class="logos" id="a8">
+                    <a href="https://www.linkedin.com/company/unstop/" target="_blank" rel="noreferrer"> 
+                        <img src={Unstop} alt=""/>
+                        <div class="shade">Unstop</div>
+                    </a>
+                </div> 
                 <div class="logos" id="a1">
                     <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank" rel="noreferrer"> 
                         <img src={Finlatics} alt=""/>
                         <div class="shade">Finlatics</div>
                     </a>
-                </div> 
+                </div>
                 <div class="logos" id="a2">
                     <a href="https://www.linkedin.com/company/stoxhero/" target="_blank" rel="noreferrer">
                         <img src={StoxHero} alt=""/>
