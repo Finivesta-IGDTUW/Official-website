@@ -40,7 +40,8 @@ const FinWeek25 = () => {
           <div className="timeline-box left left-line">
             <div className="timeline-content" data-aos="fade-right">
               <h3 className="event-name">Speaker Session 01</h3>
-              <button className="event-button" onClick={() => window.location.href = '#'}>Registrations Open Soon</button>
+              <p> <b> Of Paradoxes and Crises </b> by Prof. Surajit Mazumdar </p>
+              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0'}>Join Us Here</button>
             </div>
             <div className="circle"></div>
           </div>
@@ -50,7 +51,7 @@ const FinWeek25 = () => {
                 <p className="event-date">Feb 10th, 2025</p>
                 <p className="event-day">Monday</p>
                 <p className="event-venue"><b>Venue: </b> TBA</p>
-              <p className="event-participation"><b>Participation: </b> Only IGDTUW</p>
+              <p className="event-participation"><b>Participation: </b>Open For All</p>
               </div>
               </div>
           </div>
