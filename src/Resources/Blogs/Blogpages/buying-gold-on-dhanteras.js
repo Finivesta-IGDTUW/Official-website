@@ -36,7 +36,7 @@ const GoldOnDhanteras = () => {
                             of Goddess Lakshmi.
                         </h3>
                         <ol>
-                            <img src={Dhanvantari} className="image-in-blog"/>
+                            <img src={Dhanvantari} className="image-in-blog" alt="Finivesta blog Dhanteras"/>
                             <li>
                                 <b>Lord Dhanvantari's Appearance: </b><br/>
                                 The day marks the appearance of Lord Dhanvantari, who is considered the
@@ -45,7 +45,7 @@ const GoldOnDhanteras = () => {
                                 of immortality (amrit), Lord Dhanvantari emerged holding a pot of this
                                 nectar along with various treasures, including gold.
                             </li>
-                            <img src={Lakshmi} className="image-in-blog"/>
+                            <img src={Lakshmi} className="image-in-blog" alt="Finivesta blog Dhanteras"/>
                             <li>
                                 <b>Goddess Lakshmi: </b><br/>
                                 The day is also associated with Goddess Lakshmi, who is worshipped for
@@ -53,7 +53,7 @@ const GoldOnDhanteras = () => {
                                 to bless them with wealth. It is also believed that Goddess Lakshmi,
                                 surfaced from the ocean of milk on the day of Dhanteras. 
                             </li>
-                            <img src={Yama} className="image-in-blog"/>
+                            <img src={Yama} className="image-in-blog" alt="Finivesta blog Dhanteras"/>
                             <li>
                                 <b>King Hima's Son:</b><br/>
                                 Another popular story involves a king named Hima, whose son was predicted to 

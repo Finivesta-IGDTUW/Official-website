@@ -6,8 +6,6 @@ import CustomTable from "../../../Components/CustomTable";
 import Image1 from '../Blogpages/blog-images/us-election1.jpeg';
 import Image2 from '../Blogpages/blog-images/US-election2.jpg';
 import Image3 from '../Blogpages/blog-images/US-election3.jpg';
-import Image4 from '../Blogpages/blog-images/US-election4.jpg';
-import Image5 from '../Blogpages/blog-images/US-election5.jpg';
 import Image6 from '../Blogpages/blog-images/US-election6.jpg';
 
 const USelection = () => {

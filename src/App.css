@@ -2,7 +2,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* AppContent.css */
+.app-content {
+  opacity: 1;
+}
+
+.app-content.loaded {
+  opacity: 1;
+  transform: scale(1); /* End with normal scale */
+}
+
+.app-content.no-animation {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }

@@ -1,19 +1,12 @@
 import React from "react";
 import "./Home.css";
+import events from './../Events/EventsList';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import MoneyMasterclass from "../Events/Images/MoneyMasterclasscopy.png";
-import BiddingBlitz from "../Events/Images/BiddingBlitz.png";
-import CollegeTrading from "../Events/Images/CollegeTrading.png";
-import Finlatics from "../Events/Images/Finlatics.png";
-import KharchePeCharche from "../Events/Images/KharchePeCharche.png";
-import Melange from "../Events/Images/Melange.png";
-import Orientation from "../Events/Images/Orientation.png";
-import Speaker from "../Events/Images/Speaker.png";
-import F1 from "./Images/F1.jpg";
+import { Tween } from 'react-gsap';
 
 const Home = () => {
   var settings = {
@@ -54,7 +47,8 @@ const Home = () => {
 
   return (
     <div className="Home">
-      {/* Akhriti's code */}
+      {/*
+
       <section className="hero">
         <div className="content">
           <h1>
@@ -73,6 +67,7 @@ const Home = () => {
               }
             >
               IGDTUW
+              <span className="tooltip-text">Visit site</span>
             </button>
             <button
               className="button2"
@@ -88,10 +83,37 @@ const Home = () => {
         </div>
       </section>
 
+      */}
+
+      {/* Banner Section */}
+      <section className="banner">
+        <div className="banner-content">
+          <button
+            className="banner-button"
+            onClick={() => (window.location.href = "/finweek25")}
+          >
+            Learn More
+          </button>
+        </div>
+      </section>
+
       {/* Jhalak's code */}
       <section className="course">
         <h2 className="subtitle">About Us</h2>
+        
         <div className="rows">
+        <p className="abc">
+              Finivesta, the Finance and Economics society of IGDTUW, is a
+              women-led organization that provides students with various
+              opportunities that helps them to enhance their financial
+              knowledge, gain practical insights through workshops, seminars,
+              events and competitions with the aim of encapsulating financial
+              principles, patience, risk management in bright young minds. We
+              strive for excellence in every financial domain and connect
+              students to various shareholders of the same and nurture young
+              minds with the values of passion and self investment.
+            </p>
+          {/*
           <div className="col-2">
             <p className="abc">
               Finivesta, the Finance and Economics society of IGDTUW, is a
@@ -99,7 +121,7 @@ const Home = () => {
               opportunities that helps them to enhance their financial
               knowledge, gain practical insights through workshops, seminars,
               events and competitions with the aim of encapsulating financial
-              principles, patience, risk management in bright young minds.We
+              principles, patience, risk management in bright young minds. We
               strive for excellence in every financial domain and connect
               students to various shareholders of the same and nurture young
               minds with the values of passion and self investment.
@@ -108,46 +130,63 @@ const Home = () => {
           <div className="col-1">
             <img src={F1} alt="F1" />
           </div>
+          */}
         </div>
         <div className="list">
+
+        {/* <Tween
+          from={{ x: '90vw', opacity: 0 }}
+          to={{ x: '0vw', opacity: 1 }}
+          duration={5}
+          ease="none"
+          scrollTrigger={{
+            trigger: '.mvo-box',
+            start: 'top 90%',
+            end: '+=70%',
+            scrub: true,
+            toggleActions: 'play none none reverse',
+          }} */}
+        >
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
-              Our Mission is to cultivate a dynamic and inclusive community of
-              women passionate about finance. Our aim is to help the women
-              understand the world of finance and thereby demonstrate superior
-              knowledge and to spread awareness towards the area of finance.
-              Through educational events, networking opportunities, and
-              community outreach, we aim to foster financial literacy and
-              empower our members to be leaders in the ever-changing world of
+              Our mission is to cultivate a dynamic and inclusive community of
+              women passionate about finance, empowering them to build confidence, leadership
+              skills, and a deeper undertsanding of the financial world.
+              Through engaging educational events, impactful networking opportunities, and
+              community outreach, we aim to promote financial literacy, inspire excellence, and create a 
+              supportive space where women can thrive in the ever-changing world of
               finance.
             </p>
           </div>
-          <div className="mvo-box">
-            <h1>VISION</h1>
-            <p>
-              If you do not manage your money, your money will manage you. Our
-              vision is to be a premier student-run organization that empowers
-              women to become financially literate and make informed financial
-              decisions. This vision is based on the belief that financial
-              literacy is essential for women to achieve their full potential.
-              Finivesta aims to achieve its vision by providing a platform for
-              women to learn about economics through workshops, seminars, and
-              other events.
-            </p>
-          </div>
+          
           <div className="mvo-box">
             <h1>OBJECTIVE</h1>
             <p>
-              Our main objective is to develop an understanding of financial
-              concepts among young girls. We intent to effectively communicate
-              financial information and increase awareness of ethics and social
-              responsibility in the context to finance. We solely want to make
-              woman more comfortable with topics such as stock market, bonds and
-              debentures so that this increases their confidence and helps them
-              to extract their true potential.
+              Our primary objective is to empower young girls with a strong understanding
+              of financial concepts and the confidence to navigate them easily. We
+              aim to communicate key financial knowledge while fostering awareness of ethics and social
+              responsibility in finance. By making topics like the stock market, bonds and
+              debentures more approachable, we strive to unlock their true potential 
+              and inspire them to take charge of their financial futures with assurance and skill.
             </p>
           </div>
+          
+          <div className="mvo-box">
+            <h1>VISION</h1>
+            <p>
+              <i>If you do not manage your money, your money will manage you.</i> Our
+              vision is to empower
+              women to become financially literate and make informed
+              decisions, rooted in the belief that financial
+              literacy is essential for unlocking their full potential.
+              Finivesta strives to achieve this vision by providing a platform where
+              women can engage with economics economics through workshops, seminars, and
+              dynamic events, fostering both knowledge and confidence.
+            </p>
+          </div>
+          {/* </Tween> */}
+          
         </div>
       </section>
 
@@ -158,91 +197,20 @@ const Home = () => {
         <section className="section-carousel">
           <div className="carousel">
             <h2 className="subtitle">Recent Events</h2>
-
             <Slider {...settings}>
-              <div className="box">
-                <a
-                  href="/resources/moneymasterclass"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  <img src={MoneyMasterclass} alt="Money Masterclass" />
-                </a>
-              </div>
+              {events.slice(0, 6).map((event, index) => (
+                <div key={index} className="box">
+                  <a href={event.link} target="_blank" rel="noreferrer">
+                    <img src={event.photo} alt={event.name} />
+                  </a>
+                  <div className="shade-home">{event.byline}</div>
+            </div>
+              ))}
 
-              <div className="box">
-                <a
-                  href="https://www.linkedin.com/feed/update/urn:li:activity:7160561756463853568/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Finlatics} alt="Finlatics" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/C2CkzBTStUb/?igsh=MW5lNmZ6NmRxZTdqMA=="
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Melange} alt="Money Melange" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/C2AVhH4SE0P/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={KharchePeCharche} alt="kharche pr charcha" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CzqYKwRLp24/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={BiddingBlitz} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CzbC7cLPrex/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Speaker} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CxXRs1Pywdn/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={CollegeTrading} alt="speaker" />
-                </a>
-              </div>
-
-              <div className="box">
-                <a
-                  href="https://www.instagram.com/p/CxAA9weLEea/?img_index=1"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Orientation} alt="speaker" />
-                </a>
-              </div>
             </Slider>
           </div>
-        </section>{" "}
+        </section>
+    {" "}
       </div>
     </div>
   );

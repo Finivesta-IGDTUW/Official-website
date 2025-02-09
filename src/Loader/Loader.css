@@ -1,0 +1,32 @@
+/* Loader.css */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .logo {
+    width: 0;
+    height: auto;
+    animation: enlargeAndSwipeUp 5s ease-in-out forwards;
+  }
+  
+  @keyframes enlargeAndSwipeUp {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1) translateY(-70vh); /* Moves logo up */
+      width: 50vw; /* Scales logo */
+    }
+  }  

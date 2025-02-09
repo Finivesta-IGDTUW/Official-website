@@ -56,16 +56,15 @@ const Navbar = () => {
               <ul className={`nav-dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
                   <li><a href="/resources/moneymasterclass">Money Masterclass</a></li>
                   <li><a href="/resources/blogs">Blogs</a></li>
-                  <li><a href="/resources/books">Book Reviews</a></li>
-                  <li><a href="/resources/videos">Online Videos</a></li>
+                  <li><a href="/resources/bookreviews">Book Reviews</a></li>
+                  <li><a href="/resources/videos">Related Videos</a></li>
                   <li><a href="/resources/podcasts">Podcasts</a></li>
                   <li><a href="/resources/stocks">Stock Market and Trading</a></li>
-                  <li><a href="/resources/trading">Trading Applications</a></li>
+                  <li><a href="/resources/trading">Trading Applications and Websites</a></li>
               </ul>
           </li>
-          <li><a href="/games">Games</a></li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/team">Our Team</a></li>
+          {/* <li><a href="/contact">Contact Us</a></li> */}
         </ul>
       </nav>
     </header>

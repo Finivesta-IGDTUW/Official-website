@@ -39,7 +39,7 @@ const Team23 = () => {
         <div>
 
             <section className="cores">
-                <h2>Heads</h2>
+                <h2>Leads</h2>
                 <div className="cores-photo">
                     
                     <div className="photo">
@@ -127,7 +127,7 @@ const Team23 = () => {
                     </div>
 
                 </div>
-                <h2>Cores</h2>
+                <h2>Heads</h2>
                 <div className="cores-photo">
 
                     <div className="photo">
