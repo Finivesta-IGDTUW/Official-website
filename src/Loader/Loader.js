@@ -13,7 +13,6 @@ const Loader = () => {
   return (
     <div className="loader-container" style={{ backgroundColor: '#222222' }}>
       <img src={Logo} alt="Logo" className="logo " />
-      {showSpinner && <div className="spinner" style={{ borderTopColor: '#71B139' }}></div>}
     </div>
   );
 };
