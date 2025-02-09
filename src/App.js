@@ -149,7 +149,7 @@ function App() {
       const timer = setTimeout(() => {
         setShowLoader(false);
         sessionStorage.setItem("loaderShown", "true"); // Mark loader as shown for this session
-      }, 5000); // Loader duration (5 seconds)
+      }, 3000); // Loader duration (3 seconds)
   
       return () => clearTimeout(timer); // Cleanup timeout on component unmount
     }
