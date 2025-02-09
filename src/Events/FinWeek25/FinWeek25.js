@@ -40,7 +40,7 @@ const FinWeek25 = () => {
           <div className="timeline-box left left-line">
             <div className="timeline-content" data-aos="fade-right">
               <h3 className="event-name">Speaker Session 01</h3>
-              <p className="event-name"> <b> Of Paradoxes and Crises </b> by Prof. Surajit Mazumdar </p>
+              <p className="event-name"> <b> Of Paradoxes and Crises </b> <br/> by Prof. Surajit Mazumdar </p>
               <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0'}>Join Us Here</button>
             </div>
             <div className="circle"></div>
