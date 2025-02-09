@@ -312,6 +312,10 @@
     color: #f4fceb;
     text-align: center;
   }
+
+  .event-name p {
+    color: #83976d
+  }
   
   .event-venue,
   .event-participation {
