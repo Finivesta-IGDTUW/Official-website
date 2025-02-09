@@ -7,7 +7,7 @@
 }
 
 /* Body Styling */
-body {
+.scramble-game {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +94,7 @@ body {
 
 /* Additional Responsive Styling for Small Screens */
 @media (max-width: 480px) {
-    body {
+    .scramble-game {
         font-size: 14px; /* Adjust font size for small screens */
     }
 

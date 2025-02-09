@@ -96,7 +96,7 @@ const Game = () => {
   }, []);
 
   return (
-    <div>
+    <div className= "scramble-game">
       <div className="landing-page">
         <div className="intro-container">
           <h1>Welcome to Finivesta's Scramble Game!</h1>
