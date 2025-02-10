@@ -1,21 +1,18 @@
 /* General Reset */
-* {
+.scramble-game{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-/* Body Styling */
-.scramble-game {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #333333;
     color: #ffffff;
-    flex-direction: column; /* Ensure everything is vertically aligned */
+    flex-direction: column;
 }
+
 
 /* Landing Page Styling */
 .landing-page {

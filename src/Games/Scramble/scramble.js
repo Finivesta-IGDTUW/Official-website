@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+import "./scramble.css";
 
 const Game = () => {
   React.useEffect(() => {
@@ -89,7 +89,7 @@ const Game = () => {
 
     document.querySelector('.landing-page').style.display = 'block';
     document.querySelector('.game-container').style.display = 'none';
-    document.querySelector("footer").classList.add("hidden");
+   
 
     // Initialize the first word when the component mounts
     startGame();
