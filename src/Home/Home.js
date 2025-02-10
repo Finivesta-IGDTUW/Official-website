@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import { Tween } from 'react-gsap';
+// import { Tween } from 'react-gsap';
 
 const Home = () => {
   var settings = {
@@ -146,7 +146,7 @@ const Home = () => {
             scrub: true,
             toggleActions: 'play none none reverse',
           }} */}
-        >
+        
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
