@@ -146,7 +146,7 @@ const Home = () => {
             scrub: true,
             toggleActions: 'play none none reverse',
           }} */}
-        >
+        
           <div className="mvo-box">
             <h1>MISSION</h1>
             <p>
