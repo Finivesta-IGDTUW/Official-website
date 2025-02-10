@@ -44,6 +44,8 @@ const Navbar = () => {
           <li><a href="/">Home</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/sponsors">Sponsors</a></li>
+          <li><a href="/games">Games</a></li>
+
           <li className="nav-dropdown">
               <a href="/resources">Resources</a>
               <button 
