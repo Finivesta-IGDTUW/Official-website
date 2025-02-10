@@ -27,6 +27,7 @@ import GoldHistory from "./Resources/Blogs/Blogpages/goldhistory";
 import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import BNPLBlog from "./Resources/Blogs/Blogpages/BNPLBlog.js";
+import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
 
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
@@ -52,7 +53,9 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
 
+
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
+import Game from './Games/Scramble/scramble';
 
 
 const AppContent = () => {
@@ -83,6 +86,7 @@ const AppContent = () => {
           <Route path="/events" element={<Events/>}/>
           <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
+          <Route path="/games" element={<Game/>}/>
           <Route path="/resources" element={<Resources/>}/>
           {/* Under resources */}
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
@@ -102,6 +106,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/11-US-election-2024" element={<USelection/>}/>
               <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
+              <Route path="/resources/blogs/14-Cryptocurrency" element={<Cryptocurrency/>}/>
 
               
               
@@ -149,7 +154,7 @@ function App() {
       const timer = setTimeout(() => {
         setShowLoader(false);
         sessionStorage.setItem("loaderShown", "true"); // Mark loader as shown for this session
-      }, 5000); // Loader duration (5 seconds)
+      }, 3000); // Loader duration (3 seconds)
   
       return () => clearTimeout(timer); // Cleanup timeout on component unmount
     }
