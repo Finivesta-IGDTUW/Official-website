@@ -14,6 +14,8 @@ import I10 from '../Images/blogs/dhanteras.webp';
 import I11 from '../Images/blogs/11.png';
 import I12 from '../Images/blogs/investment.png';
 import I13 from '../Images/blogs/bnplcover.jpg';
+import I14 from '../Images/blogs/10.jpg';
+
 const Blog = () => {
   return (
     <div className="blogpage">
@@ -23,7 +25,22 @@ const Blog = () => {
       </div>
 
       <div className="resourcesbox">
-    <div className="boxsmall blog">
+    
+      <div className="boxsmall blog">
+          <a href="/resources/blogs/14-cryptocurrency">
+            <div className="img">
+              <img src={I14} alt="Cover" />
+            </div>
+            <div className="text">
+              <h2>Cryptocurrency Investing: Risks and Rewards</h2>
+              <p className="blog-byline-card">
+              What if the money in your wallet wasn’t made of paper but powered by code?{" "}
+              </p>
+            </div>
+          </a>
+        </div>
+        
+        <div className="boxsmall blog">
   <a href="/resources/blogs/13-buy-now-pay-later">
     <div className="img">
       <img src={I13} alt="Buy Now Pay Later Blog Cover" />
@@ -36,6 +53,8 @@ const Blog = () => {
     </div>
   </a>
 </div>
+
+
       <div className="boxsmall blog">
           <a href="/resources/blogs/12-investing-and-annual-returns">
             <div className="img">
