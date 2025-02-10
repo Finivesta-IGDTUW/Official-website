@@ -142,6 +142,8 @@
   padding: 20px;
   width: 100%;
   align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 
   .timeline-title {
@@ -311,6 +313,11 @@
     margin-bottom: 10px;
     color: #f4fceb;
     text-align: center;
+  }
+
+  p.event-name {
+    color: #83976d;
+    font-size: 0.9rem;
   }
   
   .event-venue,

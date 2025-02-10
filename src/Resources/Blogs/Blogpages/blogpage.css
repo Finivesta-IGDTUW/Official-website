@@ -107,6 +107,11 @@
 .bnpl{
     background-image: url('./blog-images/comp-img.png');
 }
+
+.crypto{
+    background-image: url('./blog-images/crypto.jpg');
+}
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
