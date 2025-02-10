@@ -1,5 +1,5 @@
 import React from "react";
-import "./scramble.css";
+import "./Scramble.css";
 
 const Game = () => {
   React.useEffect(() => {
@@ -90,9 +90,6 @@ const Game = () => {
     document.querySelector('.landing-page').style.display = 'block';
     document.querySelector('.game-container').style.display = 'none';
    
-
-    // Initialize the first word when the component mounts
-    startGame();
   }, []);
 
   return (

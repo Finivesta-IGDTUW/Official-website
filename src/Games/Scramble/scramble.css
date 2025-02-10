@@ -5,9 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-color: #333333;
     color: #ffffff;
     flex-direction: column;
@@ -24,8 +24,7 @@
     padding: 10%;
     background-color: #222222;
     width: 100%;
-    height: 100vh;
-    position: absolute;
+    position: relative;
 }
 
 /* Landing Page Header */
@@ -143,7 +142,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
-    margin: 0 auto; /* Center the game container */
+    margin: 10%; /* Center the game container */
     position: relative; /* Ensure it's aligned correctly */
     top: 0; /* Reset position */
     transform: translateY(0); /* Reset transform */
@@ -217,14 +216,13 @@ button:hover {
 
 /* Correct and Wrong Messages */
 .correct-message, .wrong-message {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     display: none;
-    align-items: center;
+    align-self: center;
+    justify-items: center;
     font-size: 1.5rem;
     font-weight: 600;
+    margin: 1vw;
 }
 
 .correct-message {
