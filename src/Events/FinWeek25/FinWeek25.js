@@ -12,13 +12,13 @@ const FinWeek25 = () => {
     <div className="finweek25">
       <div className="banner">
         <div className="arrow-container">
-          <a href="#top" className="arrows-pulse">
+          <a href="#" className="arrows-pulse">
             <i className="fa fa-angle-down fa-2x animated"></i>
           </a>
-          <a href="#top" className="arrows-pulse delay-1">
+          <a href="#" className="arrows-pulse delay-1">
             <i className="fa fa-angle-down fa-2x animated"></i>
           </a>
-          <a href="#top" className="arrows-pulse delay-2">
+          <a href="#" className="arrows-pulse delay-2">
             <i className="fa fa-angle-down fa-2x animated"></i>
           </a>
         </div>
@@ -50,7 +50,7 @@ const FinWeek25 = () => {
               <div className="event-date-day">
                 <p className="event-date">Feb 10th, 2025</p>
                 <p className="event-day">Monday</p>
-                <p className="event-venue"><b>Venue: </b> TBA</p>
+                <p className="event-venue"><b>Venue: </b> Google Meet</p>
               <p className="event-participation"><b>Participation: </b>Open For All</p>
               </div>
               </div>
