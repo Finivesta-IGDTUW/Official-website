@@ -41,7 +41,7 @@ const FinWeek25 = () => {
             <div className="timeline-content" data-aos="fade-right">
               <h3 className="event-name">Speaker Session 01</h3>
               <p className="event-name"> <b> Of Paradoxes and Crises </b> <br/> by Prof. Surajit Mazumdar </p>
-              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer'}>Join Us Here</button>
+              <button className="event-button" onClick={() => window.open('https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer')}>Join Us Here</button>
             </div>
             <div className="circle"></div>
           </div>
@@ -71,7 +71,7 @@ const FinWeek25 = () => {
           <div className="timeline-box right right-line">
             <div className="timeline-content" data-aos="fade-left">
             <h3 className="event-name">Finopoly</h3>
-            <button className="event-button" onClick={() => window.location.href = 'https://forms.gle/1YarFHmgLMUB1nkc7', '_blank', 'noopener,noreferrer'}>Register Here</button>
+            <button className="event-button" onClick={() => window.open('https://forms.gle/1YarFHmgLMUB1nkc7', '_blank', 'noopener,noreferrer')}>Register Here</button>
           </div>
           <div className="circle"></div>
           </div>
@@ -81,7 +81,7 @@ const FinWeek25 = () => {
           <div className="timeline-box left left-line">
             <div className="timeline-content" data-aos="fade-right">
             <h3 className="event-name">Game Night</h3>
-              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer'}>Join Us Here</button>
+              <button className="event-button" onClick={() => window.open('https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer')}>Join Us Here</button>
             </div>
             
           <div className="circle"></div>
@@ -114,7 +114,7 @@ const FinWeek25 = () => {
             <div className="timeline-content" data-aos="fade-left">
             <h3 className="event-name">Speaker Session 02</h3>
               <p className="event-name"> <b> Starting A Startup </b> <br/> by Priyanka Chelani </p>
-              <button className="event-button" onClick={() => window.location.href = 'https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer'}>Join Us Here</button>
+              <button className="event-button" onClick={() => window.open('https://chat.whatsapp.com/Em9DxMnf7BO9oAYT7XJrm0', '_blank', 'noopener,noreferrer')}>Join Us Here</button>
             </div>
           <div className="circle"></div>
           </div>
