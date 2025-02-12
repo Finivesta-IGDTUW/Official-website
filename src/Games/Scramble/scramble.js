@@ -18,7 +18,7 @@ const Game = () => {
 
     let currentWord = {};
     let score = 0;
-    let timeElapsed = 0;
+    let timeLeft = 30; // Start from 30 seconds
     let timer;
 
     const shuffleWord = (word) => {
@@ -34,13 +34,19 @@ const Game = () => {
       document.querySelector(".hint").textContent = `Hint: ${currentWord.hint}`;
 
       document.getElementById("answer").value = "";
-      timeElapsed = 0;
-      document.getElementById("timer").textContent = `${timeElapsed}s`;
+      timeLeft = 30;
+      document.getElementById("timer").textContent = `${timeLeft}s`;
 
       clearInterval(timer);
       timer = setInterval(() => {
-        timeElapsed++;
-        document.getElementById("timer").textContent = `${timeElapsed}s`;
+        timeLeft--;
+        document.getElementById("timer").textContent = `${timeLeft}s`;
+
+        if (timeLeft === 0) {
+          clearInterval(timer);
+          showTimeUpMessage();
+          setTimeout(startGame, 2000); // Refresh after 2 seconds
+        }
       }, 1000);
     };
 
@@ -60,26 +66,35 @@ const Game = () => {
       }, 2000);
     };
 
+    const showTimeUpMessage = () => {
+      const wrongMessage = document.getElementById("wrong-message");
+      wrongMessage.innerHTML = "<span>Time's up! Refreshing...</span> ⏳";
+      wrongMessage.style.display = "flex";
+      setTimeout(() => {
+        wrongMessage.style.display = "none";
+      }, 2000);
+    };
+
     document.getElementById("check").addEventListener("click", function () {
-      const answer = document.getElementById("answer").value.trim().toUpperCase(); // Trim and convert to uppercase
-      const correctWord = currentWord.word.toUpperCase(); // Get the correct word in uppercase
+      const answer = document.getElementById("answer").value.trim().toUpperCase();
+      const correctWord = currentWord.word.toUpperCase();
 
-      console.log("User Input:", answer); // Debug: Log user input
-      console.log("Correct Word:", correctWord); // Debug: Log correct word
-
-      if (answer === correctWord) { // Compare user input with the correct word
+      if (answer === correctWord) {
         score++;
         document.getElementById("score").textContent = score;
+        clearInterval(timer);
         showCorrectMessage();
         startGame();
       } else {
         document.getElementById("score").textContent = score;
+        clearInterval(timer);
         showWrongMessage();
         startGame();
       }
     });
 
     document.getElementById("refresh").addEventListener("click", function () {
+      clearInterval(timer);
       startGame();
     });
 
@@ -103,7 +118,7 @@ const Game = () => {
       </div>
       <div className="game-container">
         <div className="info">
-          <div>Time: <span id="timer">0s</span></div>
+          <div>Time: <span id="timer">30s</span></div>
           <div>Score: <span id="score">0</span></div>
         </div>
         <div className="guess">GUESS!</div>
