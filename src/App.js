@@ -55,7 +55,7 @@ import Review13 from "./Resources/BookReviews/bookpages/Review13";
 
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25';
-import Game from './Games/Scramble/Scramble';
+import Game from './Games/Scramble/Scramble.js';
 
 
 const AppContent = () => {

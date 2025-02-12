@@ -216,14 +216,19 @@ button:hover {
 
 /* Correct and Wrong Messages */
 .correct-message, .wrong-message {
-    position: relative;
-    display: none;
-    align-self: center;
-    justify-items: center;
+    position: absolute; /* Position relative to parent */
+    top: 100%; /* Place it just below the game box */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    display: none; 
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 1vw;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .correct-message {
     color: #71b139;
