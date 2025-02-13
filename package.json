@@ -12,6 +12,7 @@
     "emailjs-com": "^3.2.0",
     "gsap": "^3.12.7",
     "helmet": "^7.1.0",
+    "howler": "^2.2.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-ga": "^3.3.1",
