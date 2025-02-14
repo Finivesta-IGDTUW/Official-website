@@ -1,0 +1,376 @@
+.BudgetingGame{
+    background-color: #222;
+    padding:0%;
+    margin:0%;
+    color:white;
+    font-family: poppins;  
+}
+
+
+.upper{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding-top: 1vh;
+    margin-left:3vh;
+    margin-right:3vh;
+    position: relative;
+}
+
+
+hr{
+    position: relative;
+    height: 0.1vh;
+    width: 80vw;
+    margin: 5vh 10vw;
+    background-color: #6EBF5B;
+    border-color: #6EBF5B;
+}
+
+
+#heading{  
+    color:#86D145;
+    font-family:Poppins;
+    width:100vw;
+    margin:0 auto;
+    white-space: nowrap;
+    font-size: 320%;
+    text-align: center;
+    margin: 0;
+}
+
+
+.main1{   
+    font-size: 0.3rem;
+    font-family:Poppins;
+    text-align: center;
+    padding: 1%;   
+    height: 100%;   
+    align-items: center;
+}
+
+#balance{
+    margin-left:0%;
+    text-align: center;
+    align-items: center;
+    margin:0 auto;
+    display: flex;             
+    justify-content:center; 
+}
+
+.my-button{
+    height:8vh;
+    width:22vh;
+    background-color:#6EBF5B;
+    color:white;
+    text-decoration: solid;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top:4vh;
+    padding-bottom: 4vh;
+    align-items: center;
+    margin-left: 20vh;
+    font-size:4vh;
+    border-radius: 10%;
+    font-weight: 550;
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    margin-left:106vh;
+    margin:0 auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      
+}
+
+.my-button:hover {
+    background-color: #feffff;
+    color:#6EBF5B;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+#rangeInput{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right:20%;
+    background-color: #222
+
+}
+
+.extreme{
+    text-align: center;
+    font-size: 3vh;
+}
+#zero{
+    
+    
+    padding-right:25%;
+
+}
+#max{
+    padding-left:25%;
+}
+
+#Value{
+    text-align: center;
+    margin-left:0vh;
+    font-size:6vh;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 2vh;
+    background: #F2BA6D; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.rangeInput{
+    -webkit-appearance: none;
+}
+
+.rangeInput::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height: 60px;
+    width: 60px;    
+    background-color:#eda23a;
+    background-size: cover;
+    cursor:pointer;
+    position:relative;
+    top:-67px;
+    line-height: 55px;
+    z-index: 2;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-width: 0.5vh;
+    border-color: #f7f7f7;
+    border-style: solid; 
+    transform: rotate(45deg);
+}
+
+.line {
+    opacity: 0; 
+    transform: translateY(20px);  
+    animation: fadeIn 0.5s forwards;  
+    font-size: 550%;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.line:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.line:nth-child(2) {
+    animation-delay: 1.5s;  
+}
+
+.line:nth-child(3) {
+    animation-delay: 3s;  
+}
+
+.line:nth-child(4){
+    animation-delay:4s;
+}
+
+.line:nth-child(5){
+    animation-delay:5s;
+}
+
+#final{
+    text-align: center;    
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+}
+   
+.bottom{
+    display: flex;
+    justify-content:space-between;
+}
+
+@media only screen and (max-width: 950px) {
+    .upper {
+        justify-content: center; 
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #heading {
+        
+        color:#86D145;        
+        margin:0 auto;
+        white-space: nowrap;
+        font-size:3rem;
+        text-align: center;
+        margin: 0;
+        justify-content: center;
+         
+    }
+    .line{
+        font-size: 1.5rem;
+    }
+    .extreme{
+        
+        font-size: 2vh;
+    }
+
+    .my-button{
+        width: 15vh;
+        height: 1vh;
+    }
+   
+}
+
+@media only screen and (max-width: 830px) {
+    .upper {
+        flex-direction:row;  
+        align-items: center;  
+    }
+
+    #heading {
+        font-size: 2.5rem; 
+        height:8vh;
+        text-align: center;
+        margin-bottom: 1.25vhvh;
+    }
+
+    .line{
+
+       font-size: 1rem;
+    }
+    .extreme{
+       
+        font-size: 1.5vh;
+    }
+    .my-button{
+        height:5vh;
+        width:15vh;
+        font-size: 3.5vh;
+    }  
+
+    #line{
+        font-size: 1vh;
+    }
+    #Value{
+        font-size: 5vh;
+    }
+
+    .my-button{
+        width: 12vh;
+        height: 0.vh;
+    }
+   
+}
+@media only screen and (max-width:605px){
+    #heading{
+        font-size: 2.1rem;
+        margin:1px;
+    }
+    .logo {
+        width: 8vh;  
+        height:4vh;
+        margin-bottom: 0.5%;  
+    }
+    #Value{
+        font-size: 4vh;
+    }
+
+}
+
+@media only screen and (max-width:585px){
+    #heading{
+        font-size: 1.8rem;
+    }
+    .logo {
+        width: 7vh;  
+        height:3vh;
+        margin-bottom: 0.5%;  
+        margin-top: 0.5px;
+    }
+    #Value{
+        font-size: 4vh;
+    }
+
+}
+@media only screen and (max-width:500px){
+    #heading{
+        font-size: 1.8rem;
+        margin:0.5px;
+      
+    }
+    .logo {
+        width: 0vh;  
+        height:0vh;
+        
+        margin-top: 0.5px;
+    }
+    #Value{
+        font-size: 3vh;
+    }
+    .logo {
+        width: 5vh;  
+        height:3vh;
+        margin-bottom: 0%;  
+        padding-bottom: 1px;
+        margin-top: 0px;
+    }
+
+}
+@media only screen and (max-width:450px){
+    .logo{
+        width:0;
+        height:0
+    }
+}    
+
+@media only screen and (max-width:400px){
+    #heading{
+        font-size: 1.5rem;
+        margin:0.5px;
+        margin-bottom: 0vh;  
+        padding-bottom: 1px;
+        border-width:1vh ;
+    }
+    .logo {
+        width: 0vh;  
+        height:0vh;
+        margin-bottom: 0%;  
+        padding-bottom: 1px;
+        margin-top: 0.5px;
+    }
+    
+    .start{
+        
+        padding:1vh;
+        position: absolute; 
+        left: 0.1%;
+        font-size: 1.75vh ;
+        transition: background-color 0.3s ease;
+        box-shadow: none;
+        position: left; 
+        size: 100vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    #Value{
+        font-size: 2vh;
+    }
+}

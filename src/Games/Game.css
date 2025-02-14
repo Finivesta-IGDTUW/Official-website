@@ -1,0 +1,139 @@
+body {
+    background-color: black;
+  }
+  
+  .header-games {
+    background-image: url('../Images/bgfortabs.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;  
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+  }
+  
+  .header-games {
+    background-image: url('./Images/Videos.jpg');
+  }
+  
+  
+  .header-games h1 {
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .header-games p {
+    margin-top: 10px; 
+    font-size: 1em; 
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gamesbox{
+    display: flex;
+    /* margin: auto; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2vw;
+  }
+  
+  .gamesboxsmall {
+    padding: 2vw;
+    box-sizing: border-box;
+    width: 26vw;
+    height: auto;
+    border-radius:5px;
+    background-color: rgb(31, 30, 30);
+    margin: 1vw;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+  }
+  
+  .gamesboxsmall img{
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(9, 11, 10, 0.7);
+  }
+  .gamesboxsmall:hover{
+    transform: translatey(-10px);
+  }
+  
+  .gamesboxsmall h2{
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    min-height: 2.8rem; 
+    height: auto;
+  }
+  
+  .gamesboxsmall p{
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    /* padding-top: 1rem; */
+    text-decoration: none;
+  }
+  
+  .gamesboxsmall a {
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+  }
+  
+  .gamesboxsmall i {
+    font-size: 1.2rem;
+  }
+  
+  @media only screen and (max-width: 1064px) {
+    .gamesboxsmall {
+      width: 32vw;
+      margin: 2vw;
+    }
+    .gamesbox{
+      justify-content: center;
+      padding: 4vw;
+    }
+  }
+  
+  @media only screen and (max-width: 844px) {
+    .gamesboxsmall {
+      width: 38vw;
+      margin: 2vw;
+    }
+    .gamesbox{
+      justify-content: center;
+      padding: 4vw;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .gamesboxsmall {
+      width: 50vw;
+      margin: 5vw;
+    }
+  }
+  
+  @media only screen and (max-width: 570px) {
+    .gamesboxsmall {
+      width: 80vw;
+      margin: 5vw;
+    }
+  }
+  
