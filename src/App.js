@@ -16,6 +16,8 @@ import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
+import Games from "./Resources/Games/Game.js";
+import HigherLower from "./Resources/Games/HigherLower/Home.js";
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
 import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
@@ -141,7 +143,7 @@ const AppContent = () => {
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
-
+            
             <Route path="/games" element={<Games/>}/>
           <Route path="/games/budgetinggame" element={<One/>}/>
           <Route path="/games/Budgetingame/two.js" element={<Two/>}/>
@@ -153,7 +155,10 @@ const AppContent = () => {
           <Route path="/games/Budgetinggame/eight.js" element={<Eight/>}/>
           <Route path="/games/Budgetinggame/nine.js" element={<Nine/>}/>
           
-          
+         
+            <Route path="/games" element={<Games/>}/>
+            <Route path="/games/HigherLower/Home" element={<HigherLower/>}/>
+            
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
