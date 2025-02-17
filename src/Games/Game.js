@@ -1,4 +1,3 @@
-import React from "react";
 import "../Resources/Resources.css";
 
 import HL from './Images/higherlower.png'; 
@@ -43,10 +42,23 @@ const Game = () => {
           </a>
         </div>
 
+        <div className="boxsmall game">
+          <a href="/games/scramble">
+            <div className="img">
+              <img src={balance} alt="Scramble Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Scramble</h2>
+              <p className="game-byline-card">
+              Unscramble the words before the time runs out
+              </p>
+            </div>
+          </a>
+        </div>
+
 
 
       </div>
-
 
     </div>
   );
