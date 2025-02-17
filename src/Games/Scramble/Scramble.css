@@ -216,7 +216,8 @@ button:hover {
 
 /* Correct and Wrong Messages */
 .correct-message, .wrong-message {
-    position: relative;
+    position: absolute;
+    top:130px;
     display: none;
     align-self: center;
     justify-items: center;
