@@ -1,35 +1,67 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import "../Resources/Resources.css";
 
-import VideosImage from "./Images/Videos.jpg";
+import HL from './Images/higherlower.png'; 
+import balance from './Images/G.jpg';
 
-const Games = () => {
+const Game = () => {
   return (
-    <div className="games">
-      <div className="header-games">
+    <div className="gamepage">
+      <div className="header games">
         <h1>Games</h1>
-        <p>Access the wealth of knowledge and tools in our resource library.</p>
+        <p>Play Engaging Games and Test Your Skills!</p>
       </div>
 
-      <div className="gamesbox">
+      <div className="resourcesbox">
 
 
-        <Link to="/games/scramble" className="gamesboxsmall">
-          <div className="img">
-            <img src={VideosImage} alt="Scramble" />
-          </div>
-          <div className="text">
-            <h2>Scramble</h2>
-            <p>
+        <div className="boxsmall game">
+          <a href="/games/HigherLower/Home">
+            <div className="img">
+              <img src={HL} alt="Higher or Lower Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Higher or Lower</h2>
+              <p className="game-byline-card">
+                Can you guess if the next value is higher or lower?
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div className="boxsmall game">
+          <a href="/games/budgetinggame/">
+            <div className="img">
+              <img src={balance} alt="Budgeting Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Budgeting Game</h2>
+              <p className="game-byline-card">
+              Guess the Price, Master Your Finances!
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div className="boxsmall game">
+          <a href="/games/scramble">
+            <div className="img">
+              <img src={balance} alt="Scramble Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Scramble</h2>
+              <p className="game-byline-card">
               Unscramble the words before the time runs out
-            </p>
-          </div>
-        </Link>
+              </p>
+            </div>
+          </a>
+        </div>
+
 
 
       </div>
+
     </div>
   );
 };
 
-export default Games;
+export default Game;
