@@ -8,8 +8,53 @@ import Melange from "./Images/Melange.png";
 import Orientation from "./Images/Orientation.png";
 import Speaker from "./Images/Speaker.png";
 import BiddingBlitz2 from "./Images/BiddingBlitz2.jpg";
+import FinWeek1 from "./Images/FinWeek1.png";
+import FinWeek2 from "./Images/FinWeek2.png";
+import FinWeek3 from "./Images/FinWeek3.png";
+import FinWeek4 from "./Images/FinWeek4.png";
+import FinWeek5 from "./Images/FinWeek5.png";
 
 const events = [
+  {
+    name: 'FinWeek - Day 5: Pitch Desk - B Plan',
+    photo: FinWeek5,
+    link: 'https://www.instagram.com/p/DFdGAt4Tak2/?img_index=1',
+    byline: 'Finivesta IGDTUW in collaboration with ECell IIITD invites you to Pitch Desk: Business Plan Competition',
+    year: 2025,
+    backgroundColor: '#301D24'
+  },
+  {
+    name: 'FinWeek - Day 4: Starting a Startup',
+    photo: FinWeek4,
+    link: 'https://www.instagram.com/p/DFx4cOxzkdU/',
+    byline: 'Finivesta IGDTUW in collaboration with Enactus IGDTUW presents an exclusive session on “Starting a Startup” ',
+    year: 2025,
+    backgroundColor: '#C9A235'
+  },
+  {
+    name: 'FinWeek - Day 3: Game Night',
+    photo: FinWeek3,
+    link: 'https://www.instagram.com/p/DF3AT4JzDCr/?img_index=1',
+    byline: 'Game Night featuring Scribble & Pictionary—a night of chaotic drawings and wild guesses',
+    year: 2025,
+    backgroundColor: '#100E11' 
+  },
+  {
+    name: 'FinWeek - Day 2: Finopoly',
+    photo: FinWeek2,
+    link: 'https://www.instagram.com/p/DFcP10GT9qe/',
+    byline: 'In our version of Monopoly, you’ll buy, sell and trade stocks instead of cities, putting your financial strategies and market knowledge to test. ',
+    year: 2025,
+    backgroundColor: '#2B333B'
+  },
+  {
+    name: 'FinWeek – Day 3: Of Paradoxes and Crisis',
+    photo: FinWeek1,
+    link: 'https://www.instagram.com/p/DFxz8BjzXGy/',
+    byline: 'Kickstarting FinWeek with an insightful session on "Of Paradoxes and Crises: The Anatomy and the Physiology of Indian Growth"',
+    year: 2025,
+    backgroundColor: '#E1D2D2'
+  },
   {
     name: 'Bidding Blitz 2.0',
     photo: BiddingBlitz2,
