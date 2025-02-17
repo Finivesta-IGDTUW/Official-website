@@ -9,7 +9,7 @@ import VideosImage from "./Images/Videos.jpg";
 import ShareMarketImage from "./Images/sharemarket_img2.png";
 import TradingAppImage from "./Images/tradingapps.png";
 import MoneyMasterclassImage from "./Images/moneymasterclass/MoneyMasterclass.png";
-import Games from "./Images/Games/G.jpg";
+
 const Resources = () => {
   return (
     <div className="resources">
@@ -116,17 +116,7 @@ const Resources = () => {
             </p>
           </div>
         </Link>
-        <Link to="/resources/games" className="boxsmall">
-          <div className="img">
-            <img src={Games} alt="Higher Lower Game" />
-          </div>
-          <div className="text">
-            <h2>Step into the world where money meets excitement!</h2>
-            <p>
-            Unleash your inner finance whiz with our high-stakes games that blend strategy, risk, and reward.
-            </p>
-          </div>
-        </Link>
+        
       </div>
     </div>
   );

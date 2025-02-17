@@ -16,8 +16,7 @@ import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
-import Games from "./Resources/Games/Game.js";
-import HigherLower from "./Resources/Games/HigherLower/Home.js";
+
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
 import Financeandtechnology from "./Resources/Blogs/Blogpages/finance-and-technology";
 import Powerofcompounding from "./Resources/Blogs/Blogpages/power-of-compounding";
@@ -30,9 +29,9 @@ import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import BNPLBlog from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
-
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
 import FinshotsReview from './Resources/Podcasts/finshot_review';
@@ -58,6 +57,9 @@ import Review13 from "./Resources/BookReviews/bookpages/Review13";
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
 import Games from './Games/Game';
+
+import HigherLower from "./Games/HigherLower/Home.js";
+
 import One from './Games/BudgetingGame/one.js';
 import Two from './Games/BudgetingGame/two.js';
 import Three from './Games/BudgetingGame/three.js';
@@ -155,9 +157,7 @@ const AppContent = () => {
           <Route path="/games/Budgetinggame/eight.js" element={<Eight/>}/>
           <Route path="/games/Budgetinggame/nine.js" element={<Nine/>}/>
           
-         
-            <Route path="/games" element={<Games/>}/>
-            <Route path="/games/HigherLower/Home" element={<HigherLower/>}/>
+          <Route path="/games/HigherLower/Home" element={<HigherLower/>}/>
             
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>

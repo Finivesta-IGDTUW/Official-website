@@ -18,7 +18,7 @@ const Nine = () => {
 
     const goToHomePage = () => {
         playExitClickSound(); 
-        navigate('/');
+        navigate('/games');
     };
 
     useEffect(() => {

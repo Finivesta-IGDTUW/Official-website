@@ -1,36 +1,55 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Game.css";
+import "../Resources/Resources.css";
 
-import VideosImage from "./Images/Videos.jpg";
+import HL from './Images/higherlower.png'; 
+import balance from './Images/G.jpg';
 
-const Games = () => {
+const Game = () => {
   return (
-    <div className="games">
-      <div className="header-games">
+    <div className="gamepage">
+      <div className="header games">
         <h1>Games</h1>
-        <p>Access the wealth of knowledge and tools in our resource library.</p>
+        <p>Play Engaging Games and Test Your Skills!</p>
       </div>
 
-      <div className="gamesbox">
+      <div className="resourcesbox">
 
 
-        <Link to="/games/budgetinggame/" className="gamesboxsmall">
-          <div className="img">
-            <img src={VideosImage} alt="Money Masterclass" />
-          </div>
-          <div className="text">
-            <h2>Budgeting Game</h2>
-            <p>
-            Guess the Price, Master Your Finances!
-            </p>
-          </div>
-        </Link>
+        <div className="boxsmall game">
+          <a href="/games/HigherLower/Home">
+            <div className="img">
+              <img src={HL} alt="Higher or Lower Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Higher or Lower</h2>
+              <p className="game-byline-card">
+                Can you guess if the next value is higher or lower?
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div className="boxsmall game">
+          <a href="/games/budgetinggame/">
+            <div className="img">
+              <img src={balance} alt="Budgeting Game Cover" />
+            </div>
+            <div className="text">
+              <h2>Budgeting Game</h2>
+              <p className="game-byline-card">
+              Guess the Price, Master Your Finances!
+              </p>
+            </div>
+          </a>
+        </div>
+
 
 
       </div>
+
+
     </div>
   );
 };
 
-export default Games;
+export default Game;
