@@ -56,7 +56,7 @@ import Review13 from "./Resources/BookReviews/bookpages/Review13";
 
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25';
-import Game from './Games/Scramble/Scramble.js';
+import Scramble from './Games/Scramble/Scramble.js';
 
 import Games from './Games/Game';
 
@@ -101,7 +101,7 @@ const AppContent = () => {
           <Route path="/events" element={<Events/>}/>
           <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
-          <Route path="/games" element={<Game/>}/>
+          <Route path="/games" element={<Games/>}/>
           <Route path="/resources" element={<Resources/>}/>
           {/* Under resources */}
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
@@ -161,6 +161,7 @@ const AppContent = () => {
           <Route path="/games/Budgetinggame/nine.js" element={<Nine/>}/>
           
           <Route path="/games/HigherLower/Home" element={<HigherLower/>}/>
+          <Route path="/games/Scramble" element={<Scramble/>}/>
             
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
