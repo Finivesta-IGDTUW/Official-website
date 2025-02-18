@@ -63,10 +63,6 @@ const Navbar = () => {
                   <li><a href="/resources/podcasts">Podcasts</a></li>
                   <li><a href="/resources/stocks">Stock Market and Trading</a></li>
                   <li><a href="/resources/trading">Trading Applications and Websites</a></li>
-                  <li><a href="/resources/games">Games</a></li>
-                  
-
-
               </ul>
           </li>
           <li><a href="/team">Our Team</a></li>
