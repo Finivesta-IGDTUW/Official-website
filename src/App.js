@@ -61,6 +61,7 @@ import Scramble from './Games/Scramble/Scramble.js';
 import Games from './Games/Game';
 
 import HigherLower from "./Games/HigherLower/Home.js";
+import FinanceBingo from "./Games/FinanceBingo/FinanceBingo/FinanceBingo.js"
 
 import One from './Games/BudgetingGame/one.js';
 import Two from './Games/BudgetingGame/two.js';
@@ -159,9 +160,11 @@ const AppContent = () => {
           <Route path="/games/Budgetinggame/seven.js" element={<Seven/>}/>
           <Route path="/games/Budgetinggame/eight.js" element={<Eight/>}/>
           <Route path="/games/Budgetinggame/nine.js" element={<Nine/>}/>
+
           
           <Route path="/games/HigherLower/Home" element={<HigherLower/>}/>
           <Route path="/games/Scramble" element={<Scramble/>}/>
+          <Route path="/games/FinanceBingo" element={<FinanceBingo/>}/>
             
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>

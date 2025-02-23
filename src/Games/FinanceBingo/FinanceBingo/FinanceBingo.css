@@ -1,0 +1,219 @@
+/* Base styling */
+.finance-bingo {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #71b139; /* Green text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Add this to your bingo.css file */
+
+#question-display {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#question-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #71b139;
+    text-align: center;
+}
+
+#question-text {
+    font-size: 1.2em;
+    color: #71b139;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.answer-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #71b139;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #71b139;
+}
+/* Timer styling */
+.timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px; /* Slightly smaller font size */
+    font-weight: bold;
+    color: #71b139;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 0.5rem 0; /* Reduced padding */
+    background-color: #000000; /* Black background */
+    margin: 0;
+}
+
+.header h1 {
+    color: #71b139; /* Green text */
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Main container for Bingo table */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Bingo table styling */
+#tblBingo {
+    border-collapse: collapse;
+    height: 20rem; /* Reduced height */
+    width: 20rem; /* Reduced width */
+    text-align: center;
+    font-size: 18pt; /* Reduced font size */
+    cursor: pointer;
+    color: #222; /* Grey text inside bingo table */
+}
+
+#tblBingo td {
+    padding: 0.2rem; /* Reduced padding */
+}
+
+/* Cell styling */
+.cell-format {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%; /* Slightly rounded corners */
+    border: 0.5px solid #cccece;
+    background-color: #71b139; /* Green background for cells */
+    color: #fff; /* White text inside cells */
+    
+}
+
+.cell-format:hover {
+    background-color: #86d145; /* Hover green */
+}
+
+/* Bingo letters at the bottom */
+.letter-div {
+    height: 15vh; /* Reduced height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222; /* Grey color for the letters */
+    margin-top: 0.5rem; /* Reduced margin */
+}
+
+.letters-bingo {
+    padding: 0 1rem; /* Reduced spacing */
+    font-size: 30pt; /* Reduced font size */
+    display: none;
+    color: #86d145; /* Hover green color for bingo letters */
+    border: #cccece;
+}
+
+/* Strikethrough style */
+/* Strikethrough style */
+/* Table cell styling for struck-out state */
+.strickout {
+    text-decoration: line-through;
+    background-color: #006400; /* Dark green for the entire cell */
+    color: #ffffff; /* White text for visibility */
+    border-radius: 10%; /* Slightly rounded corners */
+    border: none;
+    
+    padding: 0; /* Ensure no padding within the cell */
+    margin: 0; /* Ensure no margin */
+
+
+
+
+}
+
+/* Inner div (if present) should not interfere */
+
+
+
+.show-bingo {
+    display: inline;
+}
+
+/* Styling for the question display */
+.question-container {
+    text-align: center;
+    margin: 0.5rem 0; 
+    color: #71b139;
+    font-size: 20px; 
+    text-align: center;
+}
+
+/* Answer buttons styling */
+.answer-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #71b139;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem; 
+    font-size: 18px; 
+    cursor: pointer;
+    margin: 0.3rem; 
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #86d145; 
+}
+
+/* Action buttons styling */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem; 
+}
+
+.action-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #71b139;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem; 
+    font-size: 18px; 
+    cursor: pointer;
+    margin: 0.5rem; 
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #86d145;
+}
