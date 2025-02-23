@@ -55,6 +55,19 @@ const Game = () => {
             </div>
           </a>
         </div>
+        <div className="boxsmall game">
+          <a href="/games/FinanceBingo">
+            <div className="img">
+              <img src={balance} alt="Finance Bingo" />
+            </div>
+            <div className="text">
+              <h2>Finance Bingo</h2>
+              <p className="game-byline-card">
+              Unleash the magic with Finance Bingo
+              </p>
+            </div>
+          </a>
+        </div>
 
 
 
