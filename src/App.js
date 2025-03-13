@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
 
-import Loader from './Loader/Loader';
+// import Loader from './Loader/Loader';
 
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
@@ -72,8 +72,9 @@ const AppContent = () => {
   }, []);
 
   return (
-    <div className={`App app-content ${loaded ? 'loaded' : ''}`}>
+    /* <div className={`App app-content ${loaded ? 'loaded' : ''}`}> */
 
+    <div className="App">
       <Helmet>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
       </Helmet>
@@ -140,6 +141,7 @@ const AppContent = () => {
   );
 }
 
+/*
 function App() {
   const [showLoader, setShowLoader] = useState(() => {
     return sessionStorage.getItem("loaderShown") ? false : true;
@@ -163,6 +165,15 @@ function App() {
       {showLoader && <Loader />}
       {!showLoader && <AppContent />}
 
+    </Router>
+  );
+}
+*/
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
