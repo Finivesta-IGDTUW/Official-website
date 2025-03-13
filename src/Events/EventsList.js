@@ -48,7 +48,7 @@ const events = [
     backgroundColor: '#2B333B'
   },
   {
-    name: 'FinWeek – Day 1: Of Paradoxes and Crisis',
+    name: 'FinWeek - Day 1: Of Paradoxes and Crisis',
     photo: FinWeek1,
     link: 'https://www.instagram.com/p/DFxz8BjzXGy/',
     byline: 'Kickstarting FinWeek with an insightful session on "Of Paradoxes and Crises: The Anatomy and the Physiology of Indian Growth"',
