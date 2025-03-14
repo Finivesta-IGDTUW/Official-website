@@ -5,7 +5,7 @@ import FinshotsCover from "../Images/podcasts/finshotsdaily3.jpeg";
 import FinanceCover from "../Images/podcasts/SchoolOfFinance.png";
 import BudgetPodcastCover from "../Images/podcasts/personalfinance1.jpeg";
 import InvestorPodcastCover from "../Images/podcasts/intellligentinvestor2.jpeg";
-
+import Westudy from "../Images/podcasts/westudy.jpg";
 import EconomicsCover from "../Images/podcasts/economicsexplained4.jpeg";
 
 const Podcast = () => {
@@ -17,6 +17,26 @@ const Podcast = () => {
       </div>
 
       <div className="resourcesbox">
+
+      <div className="boxsmall">
+          <Link to="/resources/podcasts/we_study_billionaires">
+            <div className="img podcast">
+              <img src={Westudy} alt="Finshots Cover" />
+            </div>
+          </Link>
+            <div className="podcast-text">
+              <h2>We Study Billionaires</h2>
+              <a 
+                href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-spotify" />
+              </a>
+            </div>
+
+        </div>
+
         <div className="boxsmall">
           <Link to="/resources/podcasts/finshots">
             <div className="img podcast">

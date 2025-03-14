@@ -33,6 +33,7 @@ import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
+import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
 import FinshotsReview from './Resources/Podcasts/finshot_review';
 import FinanceReview from './Resources/Podcasts/school_of_finance';
 import Youtube from "./Resources/Youtube/Youtube";
@@ -52,6 +53,7 @@ import Review10 from "./Resources/BookReviews/bookpages/Review10";
 import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
+import Review14 from './Resources/BookReviews/bookpages/Review14';
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
@@ -123,9 +125,11 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/epicmoney" element={<Review10/>}/>
               <Route path="/resources/bookreviews/IWillTeachYouToBeRich" element={<Review12/>}/>
               <Route path="/resources/bookreviews/TheBarefootInvestor" element={<Review13/>}/>
+              <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
 
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
+            <Route path="/resources/podcasts/we_study_billionaires" element={<WeStudyBillionaires/>}/>
             <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
             <Route path="/resources/podcasts/school-of-finance" element={<FinanceReview/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>

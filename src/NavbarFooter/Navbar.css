@@ -176,7 +176,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 732px) {
+@media screen and (max-width: 790px) {
     .menu {
         flex-direction: column;
         background-color: #333333;
