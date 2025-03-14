@@ -52,6 +52,7 @@ import Review10 from "./Resources/BookReviews/bookpages/Review10";
 import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
+import Review14 from './Resources/BookReviews/bookpages/Review14';
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
@@ -123,6 +124,7 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/epicmoney" element={<Review10/>}/>
               <Route path="/resources/bookreviews/IWillTeachYouToBeRich" element={<Review12/>}/>
               <Route path="/resources/bookreviews/TheBarefootInvestor" element={<Review13/>}/>
+              <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
 
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>

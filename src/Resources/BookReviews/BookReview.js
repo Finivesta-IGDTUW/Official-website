@@ -14,6 +14,7 @@ import RatRace from '../Images/books/from_the_ratrace.jpg';
 import EpicMoney from '../Images/books/makeepic.jpg';
 import IWillTeachYoutobeRich from '../Images/books/IWillTeachYouToBeRich.png';
 import TheBarefootInvestor from '../Images/books/TheBarefootInvestor.png';
+import TheSimplestPathToWealth from '../Images/books/thesimplestpathtowealth.jpg';
 
 
 const BookReview = () => {
@@ -25,6 +26,17 @@ const BookReview = () => {
             </div>
 
             <div class="resourcesbox">
+
+            <div class="boxsmall">
+                <a href="/resources/bookreviews/thesimplestpathtowealth">
+                <div class="img review">
+                  <img src={TheSimplestPathToWealth} alt="The Simplest Path to Wealth Cover"/>
+                </div>
+                <div class="text">
+                  <h2>The Simplest Path to Wealth</h2>
+                </div>
+                </a>
+            </div>
 
               <div class="boxsmall">
               <a href="/resources/bookreviews/zerotoone">
@@ -167,6 +179,7 @@ const BookReview = () => {
                 </div>
                 </a>
               </div>
+              
 
             </div>
 
