@@ -33,6 +33,7 @@ import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import BookReview from "./Resources/BookReviews/BookReview";
 import Podcast from "./Resources/Podcasts/Podcast";
+import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
 import FinshotsReview from './Resources/Podcasts/finshot_review';
 import FinanceReview from './Resources/Podcasts/school_of_finance';
 import Youtube from "./Resources/Youtube/Youtube";
@@ -126,6 +127,7 @@ const AppContent = () => {
 
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
+            <Route path="/resources/podcasts/we_study_billionaires" element={<WeStudyBillionaires/>}/>
             <Route path="/resources/podcasts/finshots" element={<FinshotsReview/>}/>
             <Route path="/resources/podcasts/school-of-finance" element={<FinanceReview/>}/>
             <Route path="/resources/stocks" element={<Stocks/>}/>
