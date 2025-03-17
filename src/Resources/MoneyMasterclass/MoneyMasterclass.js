@@ -5,6 +5,8 @@ import Session1 from "../Images/moneymasterclass/Session1.png";
 import Session2 from "../Images/moneymasterclass/Session2.jpg";
 import Session3 from "../Images/moneymasterclass/Session3.png"
 import Session4 from "../Images/moneymasterclass/Session4.png"
+import Session5 from "../Images/moneymasterclass/Session5.jpg";
+
 const MoneyMasterclass = () => {
   return (
     <div className="MoneyMasterclass">
@@ -15,6 +17,18 @@ const MoneyMasterclass = () => {
       </div>
 
       <div className="resourcesbox">
+      <div className="boxsmall">
+          <a href="https://www.canva.com/design/DAGhU35Zb9o/QVLd5Al3aeLWg5QVXJ4qOg/view?utm_content=DAGhU35Zb9o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4ad7aec673" target="_blank" rel="noreferrer">
+            <div className="landscape">
+              <img src={Session5} alt="Cover" />
+            </div>
+            <div className="text">
+              <h2>Session 5</h2>
+              <p>Understanding the Stock Market</p>
+            </div>
+          </a>
+        </div>
+
         <div className="boxsmall">
           <a href="https://www.canva.com/design/DAGbu4uhDfU/AVRFjLBax5A2e-bE1gvttw/view?utm_content=DAGbu4uhDfU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1e6d44f9b" target="_blank" rel="noreferrer">
             <div className="landscape">
