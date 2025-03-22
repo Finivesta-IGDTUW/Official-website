@@ -60,6 +60,8 @@ import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
 import FinshotsReview from './Resources/Podcasts/finshot_review';
 import FinanceReview from './Resources/Podcasts/school_of_finance';
 import Indicator from './Resources/Podcasts/indicator';
+import PersonalFinance from './Resources/Podcasts/PersonalFinance';
+import MoneyExplained from './Resources/Podcasts/MoneyExplained';
 
 const AppContent = () => {
   const [loaded, setLoaded] = useState(false);
@@ -121,7 +123,9 @@ const AppContent = () => {
 
           <Route path="/resources/youtube" element={<Youtube/>}/>
           <Route path="/resources/podcasts" element={<Podcast/>}/>
+          <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
           <Route path="/resources/podcasts/indicator" element={<Indicator/>}/>
+          
           <Route path="/team" element={<Team/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
