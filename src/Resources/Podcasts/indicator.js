@@ -53,14 +53,13 @@ const indicator = () => {
             
           <br/><br/>
           <h2>Hosts and Contributors</h2>
-          <br/>
           <strong>•Main Hosts:</strong> Adrian Ma serves as the primary host, bringing a conversational
           and engaging tone to the episodes.<br/>
           <strong>•Guest List:</strong> The podcast often features diverse guest speakers, even Simon
           Rabinovitch offers insights on the sustainability and resilience of the U.S.
           economy.<br/>
           <br/>
-          <h2>#Podcast’s Beginner-Friendliness</h2>
+          <h2>Podcast’s Beginner-Friendliness</h2>
           <strong>•Is the Podcast Beginner-Friendly?:</strong> <br/>
           Yes, the podcast is highly beginner-friendly. The hosts break down complex
           topics into simple, digestible points, making it easy for new listeners.
@@ -69,7 +68,6 @@ const indicator = () => {
           The language is simple and avoids heavy jargon.
           <br/><br/>
           <h2>Conclusion</h2>
-          <br/>
           “The Indicator from Planet Money” is a highly recommended podcast that
           makes economics engaging and accessible. It simplifies complex topics and
           entertains while educating listeners. Including more practical applications of
