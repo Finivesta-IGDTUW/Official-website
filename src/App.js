@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
 
@@ -14,6 +14,8 @@ import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
+
+// blogs
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
 import AIinfinance from "./Resources/Blogs/Blogpages/AI-in-finance";
@@ -28,18 +30,15 @@ import DhanterasDynamics from "./Resources/Blogs/Blogpages/dhanteras-dynamics";
 import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhanteras";
 import BNPLBlog from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
-
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
+
 import BookReview from "./Resources/BookReviews/BookReview";
-import Podcast from "./Resources/Podcasts/Podcast";
-import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
-import FinshotsReview from './Resources/Podcasts/finshot_review';
-import FinanceReview from './Resources/Podcasts/school_of_finance';
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
 import Team from "./Team/Team";
-import Contact from "./ContactUs/Contact";
+
+// Book Reviews
 import Review1 from "./Resources/BookReviews/bookpages/Review1";
 import Review2 from "./Resources/BookReviews/bookpages/Review2";
 import Review3 from "./Resources/BookReviews/bookpages/Review3";
@@ -54,6 +53,17 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
 import Review14 from './Resources/BookReviews/bookpages/Review14';
+
+// Podcasts
+
+import Podcast from "./Resources/Podcasts/Podcast";
+import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
+import FinshotsReview from './Resources/Podcasts/finshot_review';
+import FinanceReview from './Resources/Podcasts/school_of_finance';
+import Panchratna from './Resources/Podcasts/panchratna';
+import Indicator from './Resources/Podcasts/indicator';
+import PersonalFinance from './Resources/Podcasts/PersonalFinance';
+import MoneyExplained from './Resources/Podcasts/MoneyExplained';
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
@@ -88,11 +98,12 @@ const AppContent = () => {
           <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
+  
           {/* Under resources */}
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
             <Route path="/resources/blogs" element={<Blog/>}/>
+              
               {/* Blog pages */}
-
               <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
               <Route path="/resources/blogs/02-finance-and-technology" element={<Financeandtechnology/>}/>
               <Route path="/resources/blogs/03-power-of-compounding" element={<Powerofcompounding/>}/>
@@ -107,10 +118,8 @@ const AppContent = () => {
               <Route path="/resources/blogs/12-investing-and-annual-returns" element={<InvestmentGuide/>}/>
               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
               <Route path="/resources/blogs/14-Cryptocurrency" element={<Cryptocurrency/>}/>
-
-              
-              
-              {/*Book pages*/}
+  
+            {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
             <Route path="/resources/bookreviews/doglapan" element={<Review1/>}/>
             <Route path="/resources/bookreviews/intelligentinvestor" element={<Review2/>}/>
@@ -123,9 +132,9 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/thebigshort" element={<Review9/>}/>
             <Route path="/resources/bookreviews/fromtheratrace" element={<Review11/>}/>
             <Route path="/resources/bookreviews/epicmoney" element={<Review10/>}/>
-              <Route path="/resources/bookreviews/IWillTeachYouToBeRich" element={<Review12/>}/>
-              <Route path="/resources/bookreviews/TheBarefootInvestor" element={<Review13/>}/>
-              <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
+            <Route path="/resources/bookreviews/IWillTeachYouToBeRich" element={<Review12/>}/>
+            <Route path="/resources/bookreviews/TheBarefootInvestor" element={<Review13/>}/>
+            <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
 
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
@@ -135,9 +144,14 @@ const AppContent = () => {
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
+            <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
+            <Route path="/resources/podcasts/indicator" element={<Indicator/>}/>
+            <Route path="/resources/podcasts/PersonalFinance" element={<PersonalFinance/>}/>
+            <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
+            <Route path="/resources/podcasts/Panchratna" element={<Panchratna/>}/>
 
           <Route path="/team" element={<Team/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          { /* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
       <Footer/>
       </Layout>
