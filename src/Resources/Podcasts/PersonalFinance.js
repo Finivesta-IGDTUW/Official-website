@@ -53,7 +53,7 @@ paycheck, you should save some money right away before spending on anything else
 like a must-do expense. This way, you can grow your savings without even having to think
 about it.
         <br/><br/>
-        <p>In conclusion, Andrew's approach to personal finance combines practical advice, expert insights
+        In conclusion, Andrew's approach to personal finance combines practical advice, expert insights
         and relatable examples, making it easier for anyone to take control of their financial future.
         </p>
       </div>
