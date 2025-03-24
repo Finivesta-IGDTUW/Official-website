@@ -24,7 +24,7 @@ const indicator = () => {
       
       <div className="book-para">
         <p>
-            <h2>OVERVIEW</h2>
+            <h2>Overview</h2>
         “The Indicator from Planet Money” is a podcast that makes economics, finance,
             and business concepts engaging and informative. With a conversational yet
             educational tone, it appeals to a wide audience, from beginners to experts.
