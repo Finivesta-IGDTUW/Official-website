@@ -7,6 +7,10 @@ import BudgetPodcastCover from "../Images/podcasts/personalfinance1.jpeg";
 import InvestorPodcastCover from "../Images/podcasts/intellligentinvestor2.jpeg";
 import Westudy from "../Images/podcasts/westudy.jpg";
 import EconomicsCover from "../Images/podcasts/economicsexplained4.jpeg";
+import panchratnaimg from "../Images/podcasts/panchratna.png";
+import indicatorimg from "../Images/podcasts/indicatorimg.png";
+import personalfinanceimg from "../Images/podcasts/personalfinanceimg.png";
+import MoneyExplained from "../Images/podcasts/moneyExplained.png";
 
 const Podcast = () => {
   return (
@@ -28,6 +32,79 @@ const Podcast = () => {
               <h2>We Study Billionaires</h2>
               <a 
                 href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-spotify" />
+              </a>
+            </div>
+
+        </div>
+        <div className="boxsmall">
+          <Link to="/resources/podcasts/panchratna">
+            <div className="img podcast">
+              <img src={panchratnaimg} alt="Panchratna of Indian Stock Market" />
+            </div>
+          </Link>
+            <div className="podcast-text">
+              <h2>Panchratna of Indian Stock Market</h2>
+              <a 
+                href="https://open.spotify.com/show/5TegBItXiqv7Zte5GjfeXC" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-spotify" />
+              </a>
+            </div>
+
+        </div>
+        <div className="boxsmall">
+          <Link to="/resources/podcasts/indicator">
+            <div className="img podcast">
+              <img src={indicatorimg} alt="The Indicator from Planet Money" />
+            </div>
+          </Link>
+            <div className="podcast-text">
+              <h2>The Indicator from Planet Money</h2>
+              <a 
+                href="https://open.spotify.com/show/4X3yDKgVTWRjSd6r0vhgo4#login" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-spotify" />
+              </a>
+            </div>
+
+        </div>
+        <div className="boxsmall">
+          <Link to="/resources/podcasts/MoneyExplained">
+            <div className="img podcast">
+              <img src={MoneyExplained} alt="Money Explained" />
+            </div>
+          </Link>
+            <div className="podcast-text">
+              <h2>Money, Explained - A Netflix Documentary Series</h2>
+              <a 
+                href="https://www.netflix.com/in/title/81345769" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              <i className="fab fa-netflix" />
+
+              </a>
+            </div>
+
+        </div>
+        <div className="boxsmall">
+          <Link to="/resources/podcasts/PersonalFinance">
+            <div className="img podcast">
+              <img src={personalfinanceimg} alt="The Indicator from Planet Money" />
+            </div>
+          </Link>
+            <div className="podcast-text">
+              <h2>The Personal Finance</h2>
+              <a 
+                href="https://open.spotify.com/show/1zVBTDKimC3UoOQy59KDrR" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
