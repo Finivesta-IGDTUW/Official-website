@@ -14,7 +14,7 @@ const Panchratna = () => {
         </a>
         
         <div className="book-title">
-          <h1>PANCHRATNA OF INDIAN STOCK MARKET</h1>
+          <h1>Panchratna Of Indian Stock Market</h1>
           <p>-by CapitalVia</p>
           <p className="author">Rating: ★★★★☆ (4.5/5)</p>
           <p>Podcast review by <i>Nishtha</i></p>
