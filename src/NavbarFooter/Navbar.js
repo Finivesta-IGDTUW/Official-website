@@ -64,6 +64,7 @@ const Navbar = () => {
               </ul>
           </li>
           <li><a href="/team">Our Team</a></li>
+          <li><a href="/hackathon">Hackathon</a></li>
           {/* <li><a href="/contact">Contact Us</a></li> */}
         </ul>
       </nav>
