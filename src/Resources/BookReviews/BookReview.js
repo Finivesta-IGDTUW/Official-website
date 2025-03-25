@@ -15,8 +15,7 @@ import EpicMoney from '../Images/books/makeepic.jpg';
 import IWillTeachYoutobeRich from '../Images/books/IWillTeachYouToBeRich.png';
 import TheBarefootInvestor from '../Images/books/TheBarefootInvestor.png';
 import TheSimplestPathToWealth from '../Images/books/thesimplestpathtowealth.jpg';
-
-
+import TheLeanStartup from '../Images/books/lean_startup.jpeg';
 const BookReview = () => {
   return (
         <div className="bookreview">
@@ -26,7 +25,16 @@ const BookReview = () => {
             </div>
 
             <div class="resourcesbox">
-
+            <div class="boxsmall">
+                <a href="/resources/bookreviews/theleanstartup">
+                <div class="img review">
+                  <img src={TheLeanStartup} alt="The Lean Startup"/>
+                </div>
+                <div class="text">
+                  <h2>The Lean Startup</h2>
+                </div>
+                </a>
+            </div>
             <div class="boxsmall">
                 <a href="/resources/bookreviews/thesimplestpathtowealth">
                 <div class="img review">
