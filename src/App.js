@@ -9,6 +9,7 @@ import Layout from "./NavbarFooter/Layout";
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
 
+import Hackathon from './Hackathon/Hackathon.js';
 import Home from "./Home/Home";
 import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
@@ -151,6 +152,7 @@ const AppContent = () => {
             <Route path="/resources/podcasts/Panchratna" element={<Panchratna/>}/>
 
           <Route path="/team" element={<Team/>}/>
+          <Route path="/hackathon" element={<Hackathon/>}/>
           { /* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
       <Footer/>
