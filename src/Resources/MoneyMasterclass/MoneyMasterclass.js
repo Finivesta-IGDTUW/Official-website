@@ -3,9 +3,10 @@ import "../Resources.css";
 
 import Session1 from "../Images/moneymasterclass/Session1.png";
 import Session2 from "../Images/moneymasterclass/Session2.jpg";
-import Session3 from "../Images/moneymasterclass/Session3.png"
+import Session3 from "../Images/moneymasterclass/Session03.jpg"
 import Session4 from "../Images/moneymasterclass/Session4.png"
 import Session5 from "../Images/moneymasterclass/Session5.jpg";
+import Session6 from "../Images/moneymasterclass/Session6.png";
 
 const MoneyMasterclass = () => {
   return (
@@ -17,6 +18,19 @@ const MoneyMasterclass = () => {
       </div>
 
       <div className="resourcesbox">
+
+      <div className="boxsmall">
+          <a href="https://www.canva.com/design/DAGiPgD5qmY/LzZPm4HCW2GxAPOV3qLrPA/view?utm_content=DAGiPgD5qmY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd91282f82f" target="_blank" rel="noreferrer">
+            <div className="landscape">
+              <img src={Session6} alt="Cover" />
+            </div>
+            <div className="text">
+              <h2>Session 6</h2>
+              <p>Digital Banking and FinTech</p>
+            </div>
+          </a>
+        </div>
+
       <div className="boxsmall">
           <a href="https://www.canva.com/design/DAGhU35Zb9o/QVLd5Al3aeLWg5QVXJ4qOg/view?utm_content=DAGhU35Zb9o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4ad7aec673" target="_blank" rel="noreferrer">
             <div className="landscape">
