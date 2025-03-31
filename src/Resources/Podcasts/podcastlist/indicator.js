@@ -1,6 +1,6 @@
 import React from 'react';
-import indicatorimg from '../Images/podcasts/indicatorimg.png';
-import '../BookReviews/bookpages/book-page.css';
+import indicatorimg from '../../Images/podcasts/indicatorimg.png';
+import '../../BookReviews/bookpages/book-page.css';
 
 const indicator = () => {
   

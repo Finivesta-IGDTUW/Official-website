@@ -1,6 +1,6 @@
 import React from 'react';
-import Westudy from '../Images/podcasts/westudy.jpg';
-import '../BookReviews/bookpages/book-page.css';
+import Westudy from '../../Images/podcasts/westudy.jpg';
+import '../../BookReviews/bookpages/book-page.css';
 
 const WeStudyBillionaires = () => {
   

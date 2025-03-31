@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Resources.css";
+
 import FinshotsCover from "../Images/podcasts/finshotsdaily3.jpeg";
 import FinanceCover from "../Images/podcasts/SchoolOfFinance.png";
 import BudgetPodcastCover from "../Images/podcasts/personalfinance1.jpeg";
@@ -12,6 +13,86 @@ import indicatorimg from "../Images/podcasts/indicatorimg.png";
 import personalfinanceimg from "../Images/podcasts/personalfinanceimg.png";
 import MoneyExplained from "../Images/podcasts/moneyExplained.png";
 
+const podcasts = [
+  {
+    id: 10,
+    title: "We Study Billionaires",
+    image: Westudy,
+    link: "/resources/podcasts/we_study_billionaires",
+    externalLink: "https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 9,
+    title: "Panchratna of Indian Stock Market",
+    image: panchratnaimg,
+    link: "/resources/podcasts/panchratna",
+    externalLink: "https://open.spotify.com/show/5TegBItXiqv7Zte5GjfeXC",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 8,
+    title: "The Indicator from Planet Money",
+    image: indicatorimg,
+    link: "/resources/podcasts/indicator",
+    externalLink: "https://open.spotify.com/show/4X3yDKgVTWRjSd6r0vhgo4#login",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 7,
+    title: "Money, Explained - A Netflix Documentary Series",
+    image: MoneyExplained,
+    link: "/resources/podcasts/MoneyExplained",
+    externalLink: "https://www.netflix.com/in/title/81345769",
+    iconClass: "fab fa-netflix",
+  },
+  {
+    id: 6,
+    title: "The Personal Finance",
+    image: personalfinanceimg,
+    link: "/resources/podcasts/PersonalFinance",
+    externalLink: "https://open.spotify.com/show/1zVBTDKimC3UoOQy59KDrR",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 5,
+    title: "Finshots Daily",
+    image: FinshotsCover,
+    link: "/resources/podcasts/finshots",
+    externalLink: "https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 4,
+    title: "School Of Finance",
+    image: FinanceCover,
+    link: "/resources/podcasts/school-of-finance",
+    externalLink: "https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 3,
+    title: "Why Budgets Aren't Boring?",
+    image: BudgetPodcastCover,
+    externalLink: "https://open.spotify.com/episode/7vHHGxrlU890tlJXUasi9X?si=b5ebd680d07b46d7",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 2,
+    title: "Intelligent Investor",
+    image: InvestorPodcastCover,
+    externalLink: "https://open.spotify.com/show/1ZpUmASkxeRmJsukPXWQT2?si=U8ebq-obRaCNzxnMTI3_zg",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    id: 1,
+    title: "Economics Explained",
+    image: EconomicsCover,
+    externalLink: "https://open.spotify.com/show/5TFVUEJnYLOCmmfaDNHaM2",
+    iconClass: "fab fa-spotify",
+  },
+];
+
 const Podcast = () => {
   return (
     <div className="Youtube">
@@ -21,187 +102,39 @@ const Podcast = () => {
       </div>
 
       <div className="resourcesbox">
-
-      <div className="boxsmall">
-          <Link to="/resources/podcasts/we_study_billionaires">
-            <div className="img podcast">
-              <img src={Westudy} alt="Finshots Cover" />
-            </div>
-          </Link>
-            <div className="podcast-text">
-              <h2>We Study Billionaires</h2>
-              <a 
-                href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA" 
-                target="_blank" 
+        {podcasts.map((podcast) => (
+          <div key={podcast.id} className="boxsmall">
+            {podcast.link ? (
+              <Link to={podcast.link}>
+                <div className="img podcast">
+                  <img src={podcast.image} alt={podcast.title} />
+                </div>
+              </Link>
+            ) : (
+              <a
+                href={podcast.externalLink}
+                target="_blank"
                 rel="noopener noreferrer"
               >
-              <i className="fab fa-spotify" />
+                <div className="img podcast">
+                  <img src={podcast.image} alt={podcast.title} />
+                </div>
               </a>
-            </div>
-
-        </div>
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/panchratna">
-            <div className="img podcast">
-              <img src={panchratnaimg} alt="Panchratna of Indian Stock Market" />
-            </div>
-          </Link>
+            )}
             <div className="podcast-text">
-              <h2>Panchratna of Indian Stock Market</h2>
-              <a 
-                href="https://open.spotify.com/show/5TegBItXiqv7Zte5GjfeXC" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-              <i className="fab fa-spotify" />
-              </a>
+              <h2>{podcast.title}</h2>
+              {podcast.externalLink && (
+                <a
+                  href={podcast.externalLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className={podcast.iconClass} />
+                </a>
+              )}
             </div>
-
-        </div>
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/indicator">
-            <div className="img podcast">
-              <img src={indicatorimg} alt="The Indicator from Planet Money" />
-            </div>
-          </Link>
-            <div className="podcast-text">
-              <h2>The Indicator from Planet Money</h2>
-              <a 
-                href="https://open.spotify.com/show/4X3yDKgVTWRjSd6r0vhgo4#login" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-              <i className="fab fa-spotify" />
-              </a>
-            </div>
-
-        </div>
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/MoneyExplained">
-            <div className="img podcast">
-              <img src={MoneyExplained} alt="Money Explained" />
-            </div>
-          </Link>
-            <div className="podcast-text">
-              <h2>Money, Explained - A Netflix Documentary Series</h2>
-              <a 
-                href="https://www.netflix.com/in/title/81345769" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-              <i className="fab fa-netflix" />
-
-              </a>
-            </div>
-
-        </div>
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/PersonalFinance">
-            <div className="img podcast">
-              <img src={personalfinanceimg} alt="The Indicator from Planet Money" />
-            </div>
-          </Link>
-            <div className="podcast-text">
-              <h2>The Personal Finance</h2>
-              <a 
-                href="https://open.spotify.com/show/1zVBTDKimC3UoOQy59KDrR" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-              <i className="fab fa-spotify" />
-              </a>
-            </div>
-
-        </div>
-
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/finshots">
-            <div className="img podcast">
-              <img src={FinshotsCover} alt="Finshots Cover" />
-            </div>
-          </Link>
-            <div className="podcast-text">
-              <h2>Finshots Daily</h2>
-              <a 
-                href="https://open.spotify.com/show/12jUp5Aa63c5BYx3wVZeMA" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-              <i className="fab fa-spotify" />
-              </a>
-            </div>
-
-        </div>
-        <div className="boxsmall">
-          <Link to="/resources/podcasts/school-of-finance">
-            <div className="img podcast">
-              <img 
-                src={FinanceCover} 
-                alt="Finance Cover" 
-                style={{ padding: '10px', margin: '10px' }}
-              />
-            </div>
-          </Link>
-          <div className="podcast-text">
-            <h2>School Of Finance</h2>
-            <a 
-              href="https://open.spotify.com/show/7yznWrbzGF6x5amXXTWRNC"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-spotify"/>
-            </a>
           </div>
-        </div>
-
-        <div className="boxsmall">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://open.spotify.com/episode/7vHHGxrlU890tlJXUasi9X?si=b5ebd680d07b46d7"
-          >
-            <div className="img podcast">
-              <img src={BudgetPodcastCover} alt="Cover" />
-            </div>
-            <div className="podcast-text">
-              <h2>Why Budgets Aren't Boring?</h2>
-              <i className="fab fa-spotify"/>
-            </div>
-          </a>
-        </div>
-
-        <div className="boxsmall">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://open.spotify.com/show/1ZpUmASkxeRmJsukPXWQT2?si=U8ebq-obRaCNzxnMTI3_zg"
-          >
-            <div className="img podcast">
-              <img src={InvestorPodcastCover} alt="Cover" />
-            </div>
-            <div className="podcast-text">
-              <h2>Intelligent Investor</h2>
-              <i className="fab fa-spotify"/>
-            </div>
-          </a>
-        </div>
-
-        
-        <div className="boxsmall">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://open.spotify.com/show/5TFVUEJnYLOCmmfaDNHaM2"
-          >
-            <div className="img podcast">
-              <img src={EconomicsCover} alt="Cover" />
-            </div>
-            <div className="podcast-text">
-              <h2>Economics Explained</h2>
-              <i className="fab fa-spotify"/>
-            </div>
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   );
