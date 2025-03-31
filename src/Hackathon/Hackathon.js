@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 // import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { SiLitecoin, SiCardano, SiRipple } from "react-icons/si";
 import "./Hackathon.css";
-import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen } from "react-icons/fa";
+import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen, FaHome, FaInfoCircle, FaListAlt, FaQuestionCircle, FaRocket, FaStar } from "react-icons/fa";
 
 // Data for Timeline, Tracks, FAQs
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 const timelineEvents = [
   { date: "March 25", title: "Registrations Open", desc: "Start forming your team and register for the event." },
@@ -53,13 +54,14 @@ const problemStatements = {
     { title: "Carbon Footprint Reducer", desc: "Create a platform to encourage users to reduce their carbon footprint." },
   ],
 };
-const words = ["Innovation ", "FinTech ", "AI Revolution ", "Blockchain "];
+const words = ["You", "Innovation ", "FinTech ", "AI Revolution ", "Blockchain "];
 
 
 const Hackathon = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
   const [selectedTrack, setSelectedTrack] = useState(null);
   const [openProblem, setOpenProblem] = useState(null);
+
   useEffect(() => {
     // Crypto Icons Animation
     
@@ -166,28 +168,61 @@ const Hackathon = () => {
           container.appendChild(star);
         }
       });
-      let tl = gsap.timeline({ repeat: -1 });
 
+      let tl = gsap.timeline({ repeat: -1 });
       words.forEach((word, i) => {
-        tl.to(".hackathonhero-title", {
+        tl.to(".dynamic-word", {
           duration: 1,
           text: word, // Changes text dynamically
           ease: "power2.out",
         }).to(".hackathonhero-title", { opacity: 0, duration: 0.5, delay: 0.5 }) // Fade out
-        .to(".hackathonhero-title", { opacity: 1, duration: 0.5 }); // Fade in with new word
+          .to(".hackathonhero-title", { opacity: 1, duration: 0.5 }); // Fade in with new word
       });
+
+      // Cursor trail logic
+      let lastX = 0;
+      let lastY = 0;
+      const createTrail = (e) => {
+        const trail = document.createElement("div");
+        trail.className = "cursor-trail";
+        trail.style.left = `${e.clientX}px`;
+        trail.style.top = `${e.clientY}px`;
+        document.body.appendChild(trail);
+
+        // Animate the trail
+        gsap.to(trail, {
+          opacity: 0,
+          scale: 1.5,
+          duration: 1.5,
+          onComplete: () => trail.remove(), // Remove the trail element after animation
+        });
+      };
+
+      const handleMouseMove = (e) => {
+        const distance = Math.sqrt(
+          Math.pow(e.clientX - lastX, 2) + Math.pow(e.clientY - lastY, 2)
+        );
     
-    
-    }, []);
-    const handleTrackClick = (trackId) => {
-      setSelectedTrack(selectedTrack === trackId ? null : trackId);
-    };
-  
+        // Only create a trail if the cursor has moved a significant distance
+        if (distance > 5) {
+          lastX = e.clientX;
+          lastY = e.clientY;
+          createTrail(e);
+        }
+      };
 
-    // Generate stars for all sections
-  
+      // Add mousemove event listener
+      window.addEventListener("mousemove", handleMouseMove);
 
+      // Cleanup event listener on component unmount
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+  }, []);
 
+  const handleTrackClick = (trackId) => {
+    setSelectedTrack(selectedTrack === trackId ? null : trackId);
+  };
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -198,8 +233,32 @@ const Hackathon = () => {
 
   return (
     <div className="hackathon-container">
+
+      {/* Sidebar */}
+      <div className="sidebar">
+        <a href="#" className="sidebar-icon" title="Hero Section">   
+          <FaHome />
+        </a>
+        <a href="#about" className="sidebar-icon" title="About Section">
+          <FaInfoCircle />
+        </a>
+        <a href="#features" className="sidebar-icon" title="Features Section">
+          <FaStar />
+        </a>
+        <a href="#timeline" className="sidebar-icon" title="Timeline Section">
+          <FaRocket />
+        </a>
+        <a href="#tracks" className="sidebar-icon" title="Tracks Section">
+          <FaListAlt />
+        </a>
+        <a href="#faqs" className="sidebar-icon" title="FAQs Section">
+          <FaQuestionCircle />
+        </a>
+      </div>
+
+
       {/* Hero Section */}
-      <section className="hackathonhero">
+      <section id="" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div>
@@ -210,14 +269,15 @@ const Hackathon = () => {
        
           <div className="crypto-icon ripple"><SiRipple size={38} /></div>
         </div>
-        <h1 className="hackathonhero-title">The Future of Innovation 🚀</h1>
+        <h1 className="hackathonhero-title">The Future of <span className="dynamic-word">You</span> 🚀</h1>
         <p className="hackathonhero-subtitle">
           Build the next-gen Fin-Tech solutions in this thrilling hackathon!
         </p>
         <button className="hackathonhero-button">Get Started</button>
       </section>
-        {/* About Section */}
-        <section className="about">
+
+      {/* About Section */}
+      <section id="about" className="about">
         <div className="star-container"></div>
         <div className="about-container">
           <h2 className="about-title">About the Hackathon</h2>
@@ -227,28 +287,28 @@ const Hackathon = () => {
         </div>
       </section>
 
-   {/* Features Section */}
-   <section className="features">
-  <div className="star-container"></div>
-  <h2 className="features-title">Why Join?</h2>
-  <div className="features-grid">
-    {[
-      { text: "Networking", icon: <FaUsers className="feature-icon" /> },
-      { text: "Innovation", icon: <FaLightbulb className="feature-icon" /> },
-      { text: "Prizes", icon: <FaTrophy className="feature-icon" /> },
-      { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
-    ].map((feature, index) => (
-      <div className="feature-card" key={index}>
-        {feature.icon} {/* Renders the respective icon */}
-        <h3 className="feature-text">{feature.text}</h3>
+    {/* Features Section */}
+    <section id="features" className="features">
+      <div className="star-container"></div>
+      <h2 className="features-title">Why Join?</h2>
+      <div className="features-grid">
+        {[
+          { text: "Networking", icon: <FaUsers className="feature-icon" /> },
+          { text: "Innovation", icon: <FaLightbulb className="feature-icon" /> },
+          { text: "Prizes", icon: <FaTrophy className="feature-icon" /> },
+          { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
+        ].map((feature, index) => (
+          <div className="feature-card" key={index}>
+            {feature.icon} {/* Renders the respective icon */}
+            <h3 className="feature-text">{feature.text}</h3>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
 
 
       {/* Timeline Section */}
-      <section className="timeline">
+      <section id="timeline" className="timeline">
         <div className="star-container"></div>
         <h2 className="timeline-title">Hackathon Timeline</h2>
         <div className="timeline-container">
@@ -263,57 +323,52 @@ const Hackathon = () => {
       </section>
 
       {/* Tracks Section */}
-      {/* Tracks Section */}
-{/* Tracks Section */}
-<section className="tracks">
-  <div className="star-container"></div>
-  <h2 className="tracks-title">Hackathon Tracks</h2>
-  <div className="tracks-grid">
-    {tracks.map((track) => (
-      <div
-        key={track.id}
-        className={`track-card ${selectedTrack === track.id ? "active" : ""}`}
-        onClick={() => handleTrackClick(track.id)}
-      >
-        <h3 className="track-title">{track.title}</h3>
-        <p className="track-desc">{track.desc}</p>
-        <button className="view-details-btn">
-          {selectedTrack === track.id ? "Hide Details" : "View Details"}
-        </button>
-      </div>
-    ))}
-  </div>
-  </section>
-
-{/* Themes Section (Appears on Track Click) */}
-{selectedTrack && (
-  <section className="problems">
-    <h2 className="problems-title">
-      {tracks.find((t) => t.id === selectedTrack)?.title} - Problem Statements
-    </h2>
-    <div className="problems-grid">
-      {problemStatements[selectedTrack].map((problem, index) => (
-        <div
-          key={index}
-          className={`problem-card ${openProblem === index ? "expanded" : ""}`}
-          onClick={() => toggleProblem(index)}
-        >
-          <h3 className="problem-title">{problem.title}</h3>
-          {openProblem === index && <p className="problem-desc">{problem.desc}</p>}
-          <button className="view-details-btn">
-            {openProblem === index ? "Hide Details" : "View Details"}
-          </button>
+      <section id="tracks" className="tracks">
+        <div className="star-container"></div>
+        <h2 className="tracks-title">Hackathon Tracks</h2>
+        <div className="tracks-grid">
+          {tracks.map((track) => (
+            <div
+              key={track.id}
+              className={`track-card ${selectedTrack === track.id ? "active" : ""}`}
+              onClick={() => handleTrackClick(track.id)}
+            >
+              <h3 className="track-title">{track.title}</h3>
+              <p className="track-desc">{track.desc}</p>
+              <button className="view-details-btn">
+                {selectedTrack === track.id ? "Hide Details" : "View Details"}
+              </button>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
-)}
+      </section>
 
-        {/* Themes Section (Appears on Track Click) */}
-      
+      {/* Themes Section (Appears on Track Click) */}
+      {selectedTrack && (
+        <section className="problems">
+          <h2 className="problems-title">
+            {tracks.find((t) => t.id === selectedTrack)?.title} - Problem Statements
+          </h2>
+          <div className="problems-grid">
+            {problemStatements[selectedTrack].map((problem, index) => (
+              <div
+                key={index}
+                className={`problem-card ${openProblem === index ? "expanded" : ""}`}
+                onClick={() => toggleProblem(index)}
+              >
+                <h3 className="problem-title">{problem.title}</h3>
+                {openProblem === index && <p className="problem-desc">{problem.desc}</p>}
+                <button className="view-details-btn">
+                  {openProblem === index ? "Hide Details" : "View Details"}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
   
       {/* FAQs Section */}
-      <section className="faqs">
+      <section id="faqs" className="faqs">
         <div className="star-container"></div>
         <h2 className="faqs-title">Frequently Asked Questions</h2>
         <div className="faqs-container">
