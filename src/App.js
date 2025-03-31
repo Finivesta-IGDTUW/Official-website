@@ -57,13 +57,13 @@ import Review15 from './Resources/BookReviews/bookpages/Review15.js';
 // Podcasts
 
 import Podcast from "./Resources/Podcasts/Podcast";
-import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
-import FinshotsReview from './Resources/Podcasts/finshot_review';
-import FinanceReview from './Resources/Podcasts/school_of_finance';
-import Panchratna from './Resources/Podcasts/panchratna';
-import Indicator from './Resources/Podcasts/indicator';
-import PersonalFinance from './Resources/Podcasts/PersonalFinance';
-import MoneyExplained from './Resources/Podcasts/MoneyExplained';
+import WeStudyBillionaires from "./Resources/Podcasts/podcastlist/we_study_billionaires";
+import FinshotsReview from './Resources/Podcasts/podcastlist/finshot_review';
+import FinanceReview from './Resources/Podcasts/podcastlist/school_of_finance';
+import Panchratna from './Resources/Podcasts/podcastlist/panchratna';
+import Indicator from './Resources/Podcasts/podcastlist/indicator';
+import PersonalFinance from './Resources/Podcasts/podcastlist/PersonalFinance';
+import MoneyExplained from './Resources/Podcasts/podcastlist/MoneyExplained';
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 

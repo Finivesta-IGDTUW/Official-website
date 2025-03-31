@@ -1,6 +1,6 @@
 import React from 'react';
-import personalfinanceimg from '../Images/podcasts/personalfinanceimg.png';
-import '../BookReviews/bookpages/book-page.css';
+import personalfinanceimg from '../../Images/podcasts/personalfinanceimg.png';
+import '../../BookReviews/bookpages/book-page.css';
 
 const PersonalFinance = () => {
   return (
