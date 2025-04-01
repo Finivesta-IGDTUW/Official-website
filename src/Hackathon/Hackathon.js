@@ -1,50 +1,39 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-// import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { SiLitecoin, SiCardano, SiRipple } from "react-icons/si";
 import { TextPlugin } from "gsap/TextPlugin";
 import "./Hackathon.css";
-import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen } from "react-icons/fa";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { FaRobot, FaGlobe, FaUserGraduate } from "react-icons/fa";
-import {   FaHome, FaInfoCircle, FaListAlt, FaQuestionCircle, FaRocket, FaStar } from "react-icons/fa";
+import { FaCreditCard, FaGamepad, FaHome, FaInfoCircle, FaListAlt, FaQuestionCircle, FaRocket, FaStar, FaUsers, FaLightbulb, FaTrophy, FaBookOpen, FaChevronLeft, FaChevronRight, FaRobot, FaGlobe, FaUserGraduate, FaChartLine } from "react-icons/fa";
+
 // Data for Timeline, Tracks, FAQs
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-
 const timelineEvents = [
-  { date: "March 25", title: "Registrations Open", desc: "Start forming your team and register for the event." },
-  { date: "April 5", title: "Workshops & Mentorship", desc: "Learn from experts and get guidance for your project." },
-  { date: "April 15", title: "Project Submission", desc: "Submit your final project before the deadline." },
-  { date: "April 20", title: "Judging & Results", desc: "Top teams will be selected and winners announced!" },
+  { date: "April 2", title: "Registrations Open", desc: "Start forming your team and work on your project." },
+  { date: "April 11", title: "Project Submission", desc: "Submit the prototype of your project." },
+  { date: "April 12", title: "Mentorship Round", desc: "Understand how we want your final pitch to be." },
+  { date: "April 13", title: "Final Pitch and Judgement", desc: "D-Day: Present your final pitch and get judged!" },
 ];
-
-// const tracks = [
-//   { id: "ai_ml", title: "AI & ML", desc: "Innovate with Artificial Intelligence & Machine Learning." },
-//   { id: "blockchain", title: "Blockchain", desc: "Build secure decentralized applications using blockchain." },
-//   { id: "fintech", title: "FinTech", desc: "Revolutionize the finance industry with tech." },
-//   { id: "sustainability", title: "Sustainability", desc: "Create solutions for a greener future." },
-// ];
 
 const faqs = [
-  { question: "Who can participate?", answer: "Anyone from any background with a passion for tech and innovation!" },
-  { question: "Is there a registration fee?", answer: "No, the hackathon is completely free to join!" },
-  { question: "Do I need a team?", answer: "You can join as an individual or form a team during the event." },
-  { question: "What are the prizes?", answer: "Exciting cash prizes, goodies, and networking opportunities!" },
+  { question: "Who can participate?", answer: "The hackathon is open to students across colleges, branches, and academic years. Whether you're from a different institution, a different engineering stream, or a different batch, you are welcome to participate and collaborate." },
+  { question: "Is there a participation fee?", answer: "No, the hackathon is completely free to join!" },
+  { question: "Will the hackathon be held online or offline?", answer: "Two rounds will be held throughout the hackathon. 1st round will be an online round which will be for 24 hours where Teams will submit their innovative fintech ideas, focusing on feasibility, impact, and originality. Round 2 will be an offline round where Shortlisted teams develop a prototype along with project documentation, including a PPT and project links and after that they pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
+  { question: "What is the judging criteria?", answer: (<>The solution given by participants will judged on the following basis:<li><ol>Usability of sponsor tools</ol><ol>Innovation and new technologies</ol><ol>Business model</ol><ol>Scalability</ol><ol>USP</ol><ol>Presentation</ol></li></>) },
 ];
-
-
-
 
 const problemStatements = [
-  { title: "AI Chatbot for Mental Health", desc: "Develop a chatbot that provides mental health support using AI." },
-  { title: "Decentralized Voting System", desc: "Implement a voting system that ensures transparency using blockchain." },
-  { title: "Stock Price Prediction", desc: "Develop an ML model that predicts real-time stock prices." },
-  { title: "Smart Energy Tracker", desc: "Build an app that helps monitor and reduce energy consumption." },
+  { title: "Next-Gen Finance 💳💡", icon: <FaCreditCard />, desc: (<>Reimagine the future of finance by building <strong>smarter, faster, and more inclusive</strong> solutions. From seamless digital payments and neobanking to blockchain-powered DeFi and AI-driven investments—push the boundaries of financial technology to enhance accessibility and efficiency for all.</>),},
+  { title: "AI & Emerging Tech 🤖📊", icon: <FaRobot />, desc: (<>Unleash the power of AI, big data, and open banking to <strong>predict market trends, detect fraud, and personalize financial experiences</strong>. Whether it's AI-powered risk assessment, embedded finance APIs, or real-time analytics, create solutions that redefine how money moves in the digital era.</>),},
+  { title: "Beginner-Friendly Tracks 🚀🔰", icon: <FaUserGraduate />, desc: (<>Make finance effortless with <strong>user-friendly apps</strong> that help people track expenses, build better financial habits, and navigate cashless transactions. From gamified savings apps to bill-splitting tools and micro-donation platforms, simplify financial management for the everyday user.</>),},
+  { title: "Financial Games & Finopoly 🎲💰", icon: <FaGamepad />, desc: (<>Turn finance into a game! Develop <strong>interactive, engaging simulations</strong> where players learn about investing, budgeting, and market strategies while having fun. Whether it's <strong>Finopoly—our Monopoly-inspired financial literacy game</strong>, a stock trading fantasy league, a Shark Tank-style pitch battle, or a life simulator where financial choices shape the future—make learning finance an experience, not a chore!</>),},
+  { title: "Data Analytics & Visualization 📈🔍", icon: <FaChartLine />, desc: (<>Unlock the power of financial data! Analyze spending behaviors, forecast investment risks, detect transaction fraud, or map real estate pricing trends. Transform <strong>complex financial datasets into actionable insights</strong> through predictive modeling, dynamic dashboards, and AI-powered analytics.</>),},
+  { title: "Open Innovation 🌍💡", icon: <FaLightbulb />, desc: (<>Got a <strong>wild idea that doesn’t fit the mold</strong>? This track is your playground. Whether it’s a unique finance-meets-health concept, an unexpected use of blockchain, or a solution that redefines accessibility in finance, bring your most <strong>out-of-the-box</strong> innovation to life!</>),},
 ];
-const words = [ "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
+
+const words = [ "You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
 
 
 const Hackathon = () => {
@@ -205,31 +194,6 @@ const Hackathon = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  //   const distance = Math.sqrt(
-  //     Math.pow(e.clientX - lastX, 2) + Math.pow(e.clientY - lastY, 2)
-  //   );
-
-  //   // Only create a trail if the cursor has moved a significant distance
-  //   if (distance > 5) {
-  //     lastX = e.clientX;
-  //     lastY = e.clientY;
-  //     createTrail(e);
-  //   }
-  // };
-
-  // window.addEventListener("mousemove", handleMouseMove);
-
-  // Cleanup event listener on component unmount
-//   return () => {
-//     window.removeEventListener("mousemove", handleMouseMove);
-//   };
-// }, []);
-//   // Cleanup event listener on component unmount
-//   return () => {
-//     window.removeEventListener("mousemove", handleMouseMove);
-//   };
-// }, []);
-
   return (
     <div className="hackathon-container">
 
@@ -266,7 +230,7 @@ const Hackathon = () => {
        
           <div className="crypto-icon ripple"><SiRipple size={38} /></div>
         </div>
-        <h1 className="hackathonhero-title">The Future of  <span>Innovation</span>🚀</h1>
+        <h1 className="hackathonhero-title">The Future of <span>You</span>🚀</h1>
         <p className="hackathonhero-subtitle">
           Build the next-gen Fin-Tech solutions in this thrilling hackathon!
         </p>
@@ -319,52 +283,19 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Tracks Section */}
-      {/* Tracks Section */}
 {/* Tracks Section */}
-<section  id="tracks" className="features">
+<section id="tracks" className="features">
   <div className="star-container"></div>
   <h2 className="features-title">Tracks</h2>
   <div className="features-grid">
-    {[
-      { text: "AI & ML", icon: <FaRobot className="feature-icon" /> },
-      { text: "Blockchain", icon: <FaGlobe className="feature-icon" /> },
-      { text: "Beginner", icon: <FaUserGraduate className="feature-icon" /> },
-      { text: "Open Innovation", icon: <FaLightbulb className="feature-icon" /> },
-    ].map((feature, index) => (
+    {problemStatements.map((track, index) => (
       <div className="feature-card" key={index}>
-        {feature.icon} {/* Renders the respective icon */}
-        <h3 className="feature-text">{feature.text}</h3>
+        {track.icon} {/* Dynamically renders the icon */}
+        <h3 className="feature-text">{track.title}</h3> {/* Dynamically renders the title */}
       </div>
     ))}
   </div>
 </section>
-
-{/* Themes Section (Appears on Track Click) */}
-{/* {selectedTrack && (
-  <section className="problems">
-    <h2 className="problems-title">
-      {tracks.find((t) => t.id === selectedTrack)?.title} - Problem Statements
-    </h2>
-    <div className="problems-grid">
-      {problemStatements[selectedTrack].map((problem, index) => (
-        <div
-          key={index}
-          className={`problem-card ${openProblem === index ? "expanded" : ""}`}
-          onClick={() => toggleProblem(index)}
-        >
-          <h3 className="problem-title">{problem.title}</h3>
-          {openProblem === index && <p className="problem-desc">{problem.desc}</p>}
-          <button className="view-details-btn">
-            {openProblem === index ? "Hide Details" : "View Details"}
-          </button>
-        </div>
-      ))}
-    </div>
-  </section>
-)} */}
-
-
 
 
     <section className="problem-carousel">

@@ -427,10 +427,8 @@ button.slick-arrow.slick-prev::before{
       } 
 
 
-
-/*
 .banner {
-  background-image: url('../Events/FinWeek25/FINWEEK.png'); 
+  background-image: url('../Hackathon/DummyBanner.jpg'); 
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -481,4 +479,3 @@ button.slick-arrow.slick-prev::before{
     padding: 8px 16px;
   }
 }
-*/
