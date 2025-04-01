@@ -1,6 +1,6 @@
 import React from 'react';
-import panchratnaimg from '../Images/podcasts/panchratna.png';
-import '../BookReviews/bookpages/book-page.css';
+import panchratnaimg from '../../Images/podcasts/panchratna.png';
+import '../../BookReviews/bookpages/book-page.css';
 
 const Panchratna = () => {
   return (

@@ -8,6 +8,7 @@ const BNPLBlog = () => {
         <div className="blog-header bnpl">
           <h1>BUY NOW PAY LATER (BNPL) - A Convenience or a Trap?</h1>
           <p>Date ke liye perfect gift toh hai but Paise nhi? Buy Now, Pay Later try kiya?</p>
+          <p>Blog written by <i>Prathivya</i> and <i>Shatakshi</i></p>
         </div>
         <div className="blog-para">
           <p>

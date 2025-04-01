@@ -54,17 +54,18 @@ import Review11 from "./Resources/BookReviews/bookpages/Review11";
 import Review12 from "./Resources/BookReviews/bookpages/Review12";
 import Review13 from "./Resources/BookReviews/bookpages/Review13";
 import Review14 from './Resources/BookReviews/bookpages/Review14';
-
+import Review15 from './Resources/BookReviews/bookpages/Review15.js';
+import Review16 from './Resources/BookReviews/bookpages/Review16.js';
 // Podcasts
 
 import Podcast from "./Resources/Podcasts/Podcast";
-import WeStudyBillionaires from "./Resources/Podcasts/we_study_billionaires";
-import FinshotsReview from './Resources/Podcasts/finshot_review';
-import FinanceReview from './Resources/Podcasts/school_of_finance';
-import Panchratna from './Resources/Podcasts/panchratna';
-import Indicator from './Resources/Podcasts/indicator';
-import PersonalFinance from './Resources/Podcasts/PersonalFinance';
-import MoneyExplained from './Resources/Podcasts/MoneyExplained';
+import WeStudyBillionaires from "./Resources/Podcasts/podcastlist/we_study_billionaires";
+import FinshotsReview from './Resources/Podcasts/podcastlist/finshot_review';
+import FinanceReview from './Resources/Podcasts/podcastlist/school_of_finance';
+import Panchratna from './Resources/Podcasts/podcastlist/panchratna';
+import Indicator from './Resources/Podcasts/podcastlist/indicator';
+import PersonalFinance from './Resources/Podcasts/podcastlist/PersonalFinance';
+import MoneyExplained from './Resources/Podcasts/podcastlist/MoneyExplained';
 
 import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
@@ -136,7 +137,8 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/IWillTeachYouToBeRich" element={<Review12/>}/>
             <Route path="/resources/bookreviews/TheBarefootInvestor" element={<Review13/>}/>
             <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
-
+            <Route path="/resources/bookreviews/theleanstartup"element={<Review15/>}/>
+            <Route path="/resources/bookreviews/moneyworks" element={<Review16/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/podcasts/we_study_billionaires" element={<WeStudyBillionaires/>}/>
