@@ -12,64 +12,63 @@
 }
 
 .hackathon-container { 
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: visible;
-}
-
-.sidebar {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 1000;
-}
-
-.sidebar-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.sidebar-icon:hover {
-  background-color: #555;
-  transform: scale(1.1);
-}
-
-@media (max-width: 800px) {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
   .sidebar {
     position: fixed;
-    top: 91%;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    flex-direction: row;
-    justify-content: space-around;
-    transform: translateY(0);
-    background-color: #222;
-    padding: 10px 0;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
   }
-
-  .sidebar-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-}
   
+  .sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .sidebar-icon:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 800px) {
+    .sidebar {
+      position: fixed;
+      top: 91%;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      flex-direction: row;
+      justify-content: space-around;
+      transform: translateY(0);
+      background-color: #222;
+      padding: 10px 0;
+    }
+  
+    .sidebar-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+   
   /* Star Container - common for all sections */
   .star-container {
     position: absolute;
@@ -114,7 +113,7 @@
     font-weight: bold;
     position: relative;
     z-index: 2;
-    color:#9edf66;
+    color:#8cd158;
   }
   
   .hackathonhero-subtitle {
@@ -263,6 +262,7 @@
     width: 200px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+    /* display: flex; */
   }
   
   .feature-text {
@@ -352,16 +352,6 @@
     .timeline-event {
       width: 80%;
       margin:20px !important; /* Maintain alternating structure */
-    }
-  
-    .timeline-event.left {
-      margin-left: 30px;
-      
-    }
-  
-    .timeline-event.right {
-      margin-right: 30px;
-     
     }
   
   }
@@ -527,7 +517,7 @@
 
   .track-card,
   .feature-card {
-    width: 90%;
+    width: 50%;
   }
 
   .timeline-event {
@@ -593,8 +583,12 @@
 
   .track-card,
   .feature-card {
-    width: 100%;
+    width: 50%;
   }
+
+  
+
+  
 
   .timeline-event {
     font-size: 0.9rem;
@@ -710,4 +704,160 @@
   .problem-desc {
     font-size: 12px;
   }
+}
+
+
+.problem-carousel {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.carousel-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#9edf66;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+  background: transparent;/* Ensures boxes fit properly */
+}
+
+.carousel-box {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.15)
+  ); 
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Active Problem Box (Highlighted & Enlarged) */
+.carousel-box.active {
+  width: 35%;
+  height: 220px;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(158, 223, 102, 0.5);
+  z-index: 2;
+  opacity: 1;
+  
+  /* 🔥 Improved Glass Effect */
+  background: rgba(0, 0, 0, 0.5); /* Darker for more contrast */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px) brightness(1.2); /* Stronger blur to hide back box */
+  
+  /* Optional: Add a slight inner shadow for depth */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 
+              0 0 20px rgba(158, 223, 102, 0.6);
+}
+
+
+
+/* Previous and Next (Smaller & Less Visible) */
+.carousel-box.left {
+  left: 5%;
+  transform: translateY(-50%) scale(0.9);
+}
+
+.carousel-box.right {
+  right: 5%;
+  transform: translateY(-50%) scale(0.9);
+}
+.carousel-box h3{
+  color:#9edf66;
+}
+/* ✅ Responsive: For Smaller Screens (Only One Problem Statement Visible) */
+@media (max-width: 900px) {
+  .carousel-container {
+    height: 250px; /* Adjust height for better spacing */
+  }
+
+  .carousel-box {
+    width: 90%;
+    min-height: 150px;
+    position: static;
+    transform: translateY(0);
+    opacity: 1;
+    display: none; /* Hide all boxes */
+  }
+
+  .carousel-box.active {
+    width: 80%;
+    height: 170px;
+    transform: scale(1);
+    display: block; /* Only display the active box */
+  }
+
+  /* Optional: Adjust the dots position to be more centered */
+  .carousel-dots {
+    margin-top: 15px;
+  }
+}
+
+/* ✅ Dots Navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dot.active {
+  background: #8cd158;
+  width: 12px;
+  height: 12px;
+}
+
+/* ✅ Navigation Buttons */
+.carousel-btn {
+  background: none;
+  border: none;
+  color: #8cd158;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-btn.left {
+  left: 2px;
+}
+
+.carousel-btn.right {
+  right: 2px;
 }
