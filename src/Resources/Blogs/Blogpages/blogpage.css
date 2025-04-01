@@ -112,6 +112,10 @@
     background-image: url('./blog-images/crypto.jpg');
 }
 
+.stockmarket{
+    background-image: url('./blog-images/stockmarket.png');
+}
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
