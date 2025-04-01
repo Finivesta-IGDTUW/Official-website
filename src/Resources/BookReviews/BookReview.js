@@ -16,9 +16,15 @@ import IWillTeachYoutobeRich from "../Images/books/IWillTeachYouToBeRich.png";
 import TheBarefootInvestor from "../Images/books/TheBarefootInvestor.png";
 import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg";
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
+import MoneyWorks from "../Images/books/MoneyWorks.jpg";
 
 const books = [
   {
+    id: 16,
+    title: "Money Works",
+    image: MoneyWorks,
+    link: "/resources/bookreviews/moneyworks",
+  },{
     id: 15,
     title: "The Lean Startup",
     image: TheLeanStartup,
