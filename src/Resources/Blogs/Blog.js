@@ -15,8 +15,16 @@ import I11 from "../Images/blogs/11.png";
 import I12 from "../Images/blogs/investment.png";
 import I13 from "../Images/blogs/bnplcover.jpg";
 import I14 from "../Images/blogs/10.jpg";
+import I15 from "../Images/blogs/15.png";
 
 const blogs = [
+  {
+    id: 15,
+    title: "Stock Market vs. Real Estate",
+    description: "Where Should You Invest?",
+    image: I15,
+    link: "/resources/blogs/15-stockmarket",
+  },
   {
     id: 14,
     title: "Cryptocurrency Investing: Risks and Rewards",
