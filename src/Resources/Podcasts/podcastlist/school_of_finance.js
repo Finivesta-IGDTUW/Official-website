@@ -1,10 +1,9 @@
 import React from 'react';
-import FinanceCover from '../Images/podcasts/SchoolOfFinance.png';
-import '../BookReviews/bookpages/book-page.css';
+import FinanceCover from '../../Images/podcasts/SchoolOfFinance.png';
+import '../../BookReviews/bookpages/book-page.css';
 
 const FinanceReview = () => {
   
-
   return (
     <div className="book-page-box">
       <div className="book-header">
