@@ -9,7 +9,7 @@ const  Review8 = () => {
             <div className="book-page-box">
                 <div class="book-header">
                    <div className="book-img">
-                    <img src={ZeroToOne} alt="Your money or Your life"/>
+                    <img src={ZeroToOne} alt="Zero To One"/>
                    </div>
                    
                    <div class="book-title">
