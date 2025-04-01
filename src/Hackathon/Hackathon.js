@@ -4,11 +4,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { SiLitecoin, SiCardano, SiRipple } from "react-icons/si";
+import { TextPlugin } from "gsap/TextPlugin";
 import "./Hackathon.css";
 import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen } from "react-icons/fa";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaRobot, FaGlobe, FaUserGraduate } from "react-icons/fa";
+import {   FaHome, FaInfoCircle, FaListAlt, FaQuestionCircle, FaRocket, FaStar } from "react-icons/fa";
 // Data for Timeline, Tracks, FAQs
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
 
 const timelineEvents = [
   { date: "March 25", title: "Registrations Open", desc: "Start forming your team and register for the event." },
@@ -17,12 +21,12 @@ const timelineEvents = [
   { date: "April 20", title: "Judging & Results", desc: "Top teams will be selected and winners announced!" },
 ];
 
-const tracks = [
-  { id: "ai_ml", title: "AI & ML", desc: "Innovate with Artificial Intelligence & Machine Learning." },
-  { id: "blockchain", title: "Blockchain", desc: "Build secure decentralized applications using blockchain." },
-  { id: "fintech", title: "FinTech", desc: "Revolutionize the finance industry with tech." },
-  { id: "sustainability", title: "Sustainability", desc: "Create solutions for a greener future." },
-];
+// const tracks = [
+//   { id: "ai_ml", title: "AI & ML", desc: "Innovate with Artificial Intelligence & Machine Learning." },
+//   { id: "blockchain", title: "Blockchain", desc: "Build secure decentralized applications using blockchain." },
+//   { id: "fintech", title: "FinTech", desc: "Revolutionize the finance industry with tech." },
+//   { id: "sustainability", title: "Sustainability", desc: "Create solutions for a greener future." },
+// ];
 
 const faqs = [
   { question: "Who can participate?", answer: "Anyone from any background with a passion for tech and innovation!" },
@@ -31,41 +35,27 @@ const faqs = [
   { question: "What are the prizes?", answer: "Exciting cash prizes, goodies, and networking opportunities!" },
 ];
 
-const problemStatements = {
-  ai_ml: [
-    { title: "AI Chatbot for Mental Health", desc: "Develop a chatbot that provides mental health support using AI." },
-    { title: "Fraud Detection Model", desc: "Create an ML model that detects fraudulent transactions." },
-    { title: "AI Resume Screening Tool", desc: "Build an AI-powered tool that screens job applications efficiently." },
-  ],
-  blockchain: [
-    { title: "Decentralized Voting System", desc: "Implement a voting system that ensures transparency using blockchain." },
-    { title: "Land Record Management", desc: "Create a blockchain-based system for secure land record management." },
-    { title: "Digital Identity Verification", desc: "Develop a secure identity verification system using blockchain." },
-  ],
-  fintech: [
-    { title: "AI Finance Assistant", desc: "Design a personal finance assistant powered by AI." },
-    { title: "Stock Price Prediction", desc: "Develop an ML model that predicts real-time stock prices." },
-    { title: "Crypto Payment Gateway", desc: "Create a secure crypto payment gateway for small businesses." },
-  ],
-  sustainability: [
-    { title: "Smart Energy Tracker", desc: "Build an app that helps monitor and reduce energy consumption." },
-    { title: "Water Waste Monitor", desc: "Develop an application to track and minimize household water wastage." },
-    { title: "Carbon Footprint Reducer", desc: "Create a platform to encourage users to reduce their carbon footprint." },
-  ],
-};
-const words = ["Innovation ", "FinTech ", "AI Revolution ", "Blockchain "];
+
+
+
+const problemStatements = [
+  { title: "AI Chatbot for Mental Health", desc: "Develop a chatbot that provides mental health support using AI." },
+  { title: "Decentralized Voting System", desc: "Implement a voting system that ensures transparency using blockchain." },
+  { title: "Stock Price Prediction", desc: "Develop an ML model that predicts real-time stock prices." },
+  { title: "Smart Energy Tracker", desc: "Build an app that helps monitor and reduce energy consumption." },
+];
+const words = [ "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
 
 
 const Hackathon = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
-  const [selectedTrack, setSelectedTrack] = useState(null);
-  const [openProblem, setOpenProblem] = useState(null);
+
   useEffect(() => {
     // Crypto Icons Animation
     
       gsap.registerPlugin(ScrollTrigger);
     
-      // 🎭 Crypto Icons - Floating + Slight Rotation
+      
       gsap.utils.toArray(".crypto-icon").forEach((icon, index) => {
         gsap.to(icon, {
           y: index % 2 === 0 ? 20 : -20, // Alternate up & down movement
@@ -169,19 +159,41 @@ const Hackathon = () => {
       let tl = gsap.timeline({ repeat: -1 });
 
       words.forEach((word, i) => {
-        tl.to(".hackathonhero-title", {
-          duration: 1,
-          text: word, // Changes text dynamically
+        tl.to(".hackathonhero-title span", { // Targeting only the span inside the h1
+          duration: 3,
+          text: word, // Only changes the word inside
           ease: "power2.out",
-        }).to(".hackathonhero-title", { opacity: 0, duration: 0.5, delay: 0.5 }) // Fade out
-        .to(".hackathonhero-title", { opacity: 1, duration: 0.5 }); // Fade in with new word
+        })
+        .to(".hackathonhero-title span", { opacity: 0, duration: 1.5, delay: 1 }) // Smooth fade out
+        .to(".hackathonhero-title span", { opacity: 1, duration: 1 }); // Fade in with the new word
       });
     
-    
     }, []);
-    const handleTrackClick = (trackId) => {
-      setSelectedTrack(selectedTrack === trackId ? null : trackId);
+    
+    
+  
+
+    const [currentIndex, setCurrentIndex]=useState(0);
+
+    useEffect(()=>{
+      const interval=setInterval(()=>{
+        nextProblem();
+      },5000); // auto-scroll every 5 seconds
+
+      return()=> clearInterval(interval);
+    }, [currentIndex]);
+
+    const prevProblem=()=>{
+      setCurrentIndex((prevIndex)=>
+        prevIndex===0 ? problemStatements.length-1:prevIndex-1
+      );
     };
+
+    const nextProblem=()=> {
+      setCurrentIndex((prevIndex)=>
+      prevIndex===problemStatements.length-1?0:prevIndex+1
+    );
+  };
   
 
     // Generate stars for all sections
@@ -192,14 +204,58 @@ const Hackathon = () => {
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
-  const toggleProblem = (index) => {
-    setOpenProblem(openProblem === index ? null : index);
-  };
+
+  //   const distance = Math.sqrt(
+  //     Math.pow(e.clientX - lastX, 2) + Math.pow(e.clientY - lastY, 2)
+  //   );
+
+  //   // Only create a trail if the cursor has moved a significant distance
+  //   if (distance > 5) {
+  //     lastX = e.clientX;
+  //     lastY = e.clientY;
+  //     createTrail(e);
+  //   }
+  // };
+
+  // window.addEventListener("mousemove", handleMouseMove);
+
+  // Cleanup event listener on component unmount
+//   return () => {
+//     window.removeEventListener("mousemove", handleMouseMove);
+//   };
+// }, []);
+//   // Cleanup event listener on component unmount
+//   return () => {
+//     window.removeEventListener("mousemove", handleMouseMove);
+//   };
+// }, []);
 
   return (
     <div className="hackathon-container">
+
+
+            <div className="sidebar">
+        <a href="#" className="sidebar-icon" title="Hero Section">   
+          <FaHome />
+        </a>
+        <a href="#about" className="sidebar-icon" title="About Section">
+          <FaInfoCircle />
+        </a>
+        <a href="#features" className="sidebar-icon" title="Features Section">
+          <FaStar />
+        </a>
+        <a href="#timeline" className="sidebar-icon" title="Timeline Section">
+          <FaRocket />
+        </a>
+        <a href="#tracks" className="sidebar-icon" title="Tracks Section">
+          <FaListAlt />
+        </a>
+        <a href="#faqs" className="sidebar-icon" title="FAQs Section">
+          <FaQuestionCircle />
+        </a>
+      </div>
       {/* Hero Section */}
-      <section className="hackathonhero">
+      <section id="" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div>
@@ -210,14 +266,15 @@ const Hackathon = () => {
        
           <div className="crypto-icon ripple"><SiRipple size={38} /></div>
         </div>
-        <h1 className="hackathonhero-title">The Future of Innovation 🚀</h1>
+        <h1 className="hackathonhero-title">The Future of  <span>Innovation</span>🚀</h1>
         <p className="hackathonhero-subtitle">
           Build the next-gen Fin-Tech solutions in this thrilling hackathon!
         </p>
         <button className="hackathonhero-button">Get Started</button>
       </section>
+
         {/* About Section */}
-        <section className="about">
+        <section id="about" className="about">
         <div className="star-container"></div>
         <div className="about-container">
           <h2 className="about-title">About the Hackathon</h2>
@@ -228,7 +285,7 @@ const Hackathon = () => {
       </section>
 
    {/* Features Section */}
-   <section className="features">
+   <section id="features" className="features">
   <div className="star-container"></div>
   <h2 className="features-title">Why Join?</h2>
   <div className="features-grid">
@@ -248,7 +305,7 @@ const Hackathon = () => {
 
 
       {/* Timeline Section */}
-      <section className="timeline">
+      <section id="timeline" className="timeline">
         <div className="star-container"></div>
         <h2 className="timeline-title">Hackathon Timeline</h2>
         <div className="timeline-container">
@@ -265,28 +322,26 @@ const Hackathon = () => {
       {/* Tracks Section */}
       {/* Tracks Section */}
 {/* Tracks Section */}
-<section className="tracks">
+<section  id="tracks" className="features">
   <div className="star-container"></div>
-  <h2 className="tracks-title">Hackathon Tracks</h2>
-  <div className="tracks-grid">
-    {tracks.map((track) => (
-      <div
-        key={track.id}
-        className={`track-card ${selectedTrack === track.id ? "active" : ""}`}
-        onClick={() => handleTrackClick(track.id)}
-      >
-        <h3 className="track-title">{track.title}</h3>
-        <p className="track-desc">{track.desc}</p>
-        <button className="view-details-btn">
-          {selectedTrack === track.id ? "Hide Details" : "View Details"}
-        </button>
+  <h2 className="features-title">Tracks</h2>
+  <div className="features-grid">
+    {[
+      { text: "AI & ML", icon: <FaRobot className="feature-icon" /> },
+      { text: "Blockchain", icon: <FaGlobe className="feature-icon" /> },
+      { text: "Beginner", icon: <FaUserGraduate className="feature-icon" /> },
+      { text: "Open Innovation", icon: <FaLightbulb className="feature-icon" /> },
+    ].map((feature, index) => (
+      <div className="feature-card" key={index}>
+        {feature.icon} {/* Renders the respective icon */}
+        <h3 className="feature-text">{feature.text}</h3>
       </div>
     ))}
   </div>
-  </section>
+</section>
 
 {/* Themes Section (Appears on Track Click) */}
-{selectedTrack && (
+{/* {selectedTrack && (
   <section className="problems">
     <h2 className="problems-title">
       {tracks.find((t) => t.id === selectedTrack)?.title} - Problem Statements
@@ -307,13 +362,62 @@ const Hackathon = () => {
       ))}
     </div>
   </section>
-)}
+)} */}
 
-        {/* Themes Section (Appears on Track Click) */}
-      
+
+
+
+    <section className="problem-carousel">
+    <div className="star-container"></div>
+      <h2 className="carousel-title">Problem Statements</h2>
+      <div className="carousel-container">
+        <button className="carousel-btn left" onClick={prevProblem}>
+          <FaChevronLeft size={30} />
+        </button>
+
+        {problemStatements.map((problem, index) => {
+          let position = "";
+          if (index === currentIndex) {
+            position = "active";
+          } else if (
+            index === (currentIndex + 1) % problemStatements.length
+          ) {
+            position = "right";
+          } else if (
+            index === (currentIndex - 1 + problemStatements.length) %
+            problemStatements.length
+          ) {
+            position = "left";
+          }
+
+          return (
+            <div key={index} className={`carousel-box ${position}`}>
+              <h3>{problem.title}</h3>
+              <p>{problem.desc}</p>
+            </div>
+          );
+        })}
+
+        <button className="carousel-btn right" onClick={nextProblem}>
+          <FaChevronRight size={30} />
+        </button>
+      </div>
+
+      <div className="carousel-dots">
+        {problemStatements.map((_, index) => (
+          <div
+            key={index}
+            className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => setCurrentIndex(index)}
+          ></div>
+        ))}
+      </div>
+    </section>
+
+  
   
       {/* FAQs Section */}
-      <section className="faqs">
+      <section id="faqs" className="faqs">
         <div className="star-container"></div>
         <h2 className="faqs-title">Frequently Asked Questions</h2>
         <div className="faqs-container">

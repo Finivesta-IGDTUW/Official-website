@@ -153,7 +153,7 @@ const AppContent = () => {
 
           <Route path="/team" element={<Team/>}/>
           <Route path="/hackathon" element={<Hackathon/>}/>
-          { /* <Route path="/contact" element={<Contact/>}/> */}
+          {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
       <Footer/>
       </Layout>
