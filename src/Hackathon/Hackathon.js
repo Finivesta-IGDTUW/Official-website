@@ -25,12 +25,12 @@ const faqs = [
 ];
 
 const problemStatements = [
-  { title: "Next-Gen Finance 💳💡", icon: <FaCreditCard />, desc: (<>Reimagine the future of finance by building <strong>smarter, faster, and more inclusive</strong> solutions. From seamless digital payments and neobanking to blockchain-powered DeFi and AI-driven investments—push the boundaries of financial technology to enhance accessibility and efficiency for all.</>),},
-  { title: "AI & Emerging Tech 🤖📊", icon: <FaRobot />, desc: (<>Unleash the power of AI, big data, and open banking to <strong>predict market trends, detect fraud, and personalize financial experiences</strong>. Whether it's AI-powered risk assessment, embedded finance APIs, or real-time analytics, create solutions that redefine how money moves in the digital era.</>),},
-  { title: "Beginner-Friendly Tracks 🚀🔰", icon: <FaUserGraduate />, desc: (<>Make finance effortless with <strong>user-friendly apps</strong> that help people track expenses, build better financial habits, and navigate cashless transactions. From gamified savings apps to bill-splitting tools and micro-donation platforms, simplify financial management for the everyday user.</>),},
-  { title: "Financial Games & Finopoly 🎲💰", icon: <FaGamepad />, desc: (<>Turn finance into a game! Develop <strong>interactive, engaging simulations</strong> where players learn about investing, budgeting, and market strategies while having fun. Whether it's <strong>Finopoly—our Monopoly-inspired financial literacy game</strong>, a stock trading fantasy league, a Shark Tank-style pitch battle, or a life simulator where financial choices shape the future—make learning finance an experience, not a chore!</>),},
-  { title: "Data Analytics & Visualization 📈🔍", icon: <FaChartLine />, desc: (<>Unlock the power of financial data! Analyze spending behaviors, forecast investment risks, detect transaction fraud, or map real estate pricing trends. Transform <strong>complex financial datasets into actionable insights</strong> through predictive modeling, dynamic dashboards, and AI-powered analytics.</>),},
-  { title: "Open Innovation 🌍💡", icon: <FaLightbulb />, desc: (<>Got a <strong>wild idea that doesn’t fit the mold</strong>? This track is your playground. Whether it’s a unique finance-meets-health concept, an unexpected use of blockchain, or a solution that redefines accessibility in finance, bring your most <strong>out-of-the-box</strong> innovation to life!</>),},
+  { title: "Next-Gen Finance", icon: <FaCreditCard />, desc: (<>Reimagine the future of finance by building <strong>smarter, faster, and more inclusive</strong> solutions. From seamless digital payments and neobanking to blockchain-powered DeFi and AI-driven investments—push the boundaries of financial technology to enhance accessibility and efficiency for all.</>),},
+  { title: "AI & Emerging Tech", icon: <FaRobot />, desc: (<>Unleash the power of AI, big data, and open banking to <strong>predict market trends, detect fraud, and personalize financial experiences</strong>. Whether it's AI-powered risk assessment, embedded finance APIs, or real-time analytics, create solutions that redefine how money moves in the digital era.</>),},
+  { title: "Beginner-Friendly Tracks", icon: <FaUserGraduate />, desc: (<>Make finance effortless with <strong>user-friendly apps</strong> that help people track expenses, build better financial habits, and navigate cashless transactions. From gamified savings apps to bill-splitting tools and micro-donation platforms, simplify financial management for the everyday user.</>),},
+  { title: "Financial Games & Finopoly", icon: <FaGamepad />, desc: (<>Turn finance into a game! Develop <strong>interactive, engaging simulations</strong> where players learn about investing, budgeting, and market strategies while having fun. Whether it's <strong>Finopoly—our Monopoly-inspired financial literacy game</strong>, a stock trading fantasy league, a Shark Tank-style pitch battle, or a life simulator where financial choices shape the future—make learning finance an experience, not a chore!</>),},
+  { title: "Data Analytics & Visualization", icon: <FaChartLine />, desc: (<>Unlock the power of financial data! Analyze spending behaviors, forecast investment risks, detect transaction fraud, or map real estate pricing trends. Transform <strong>complex financial datasets into actionable insights</strong> through predictive modeling, dynamic dashboards, and AI-powered analytics.</>),},
+  { title: "Open Innovation", icon: <FaLightbulb />, desc: (<>Got a <strong>wild idea that doesn’t fit the mold</strong>? This track is your playground. Whether it’s a unique finance-meets-health concept, an unexpected use of blockchain, or a solution that redefines accessibility in finance, bring your most <strong>out-of-the-box</strong> innovation to life!</>),},
 ];
 
 const words = [ "You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
@@ -44,7 +44,6 @@ const Hackathon = () => {
     
       gsap.registerPlugin(ScrollTrigger);
     
-      
       gsap.utils.toArray(".crypto-icon").forEach((icon, index) => {
         gsap.to(icon, {
           y: index % 2 === 0 ? 20 : -20, // Alternate up & down movement
@@ -133,6 +132,7 @@ const Hackathon = () => {
           },
         });
       });
+
       const starContainers = document.querySelectorAll(".star-container");
       starContainers.forEach((container) => {
         container.innerHTML = "";
@@ -145,8 +145,8 @@ const Hackathon = () => {
           container.appendChild(star);
         }
       });
-      let tl = gsap.timeline({ repeat: -1 });
 
+      let tl = gsap.timeline({ repeat: -1 });
       words.forEach((word, i) => {
         tl.to(".hackathonhero-title span", { // Targeting only the span inside the h1
           duration: 3,
@@ -157,39 +157,31 @@ const Hackathon = () => {
         .to(".hackathonhero-title span", { opacity: 1, duration: 1 }); // Fade in with the new word
       });
     
-    }, []);
+  }, []);
     
-    
-  
+  const [currentIndex, setCurrentIndex]=useState(0);
 
-    const [currentIndex, setCurrentIndex]=useState(0);
+  useEffect(()=>{
+    const interval=setInterval(()=>{
+      nextProblem();
+    },5000); // auto-scroll every 5 seconds
 
-    useEffect(()=>{
-      const interval=setInterval(()=>{
-        nextProblem();
-      },5000); // auto-scroll every 5 seconds
+    return()=> clearInterval(interval);
+  }, [currentIndex]);
 
-      return()=> clearInterval(interval);
-    }, [currentIndex]);
-
-    const prevProblem=()=>{
-      setCurrentIndex((prevIndex)=>
-        prevIndex===0 ? problemStatements.length-1:prevIndex-1
-      );
-    };
-
-    const nextProblem=()=> {
-      setCurrentIndex((prevIndex)=>
-      prevIndex===problemStatements.length-1?0:prevIndex+1
+  const prevProblem=()=>{
+    setCurrentIndex((prevIndex)=>
+      prevIndex===0 ? problemStatements.length-1:prevIndex-1
     );
   };
-  
 
-    // Generate stars for all sections
-  
+  const nextProblem=()=> {
+    setCurrentIndex((prevIndex)=>
+      prevIndex===problemStatements.length-1 ? 0 : prevIndex+1
+    );
+  };
 
-
-
+  // Generate stars for all sections
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
@@ -197,9 +189,8 @@ const Hackathon = () => {
   return (
     <div className="hackathon-container">
 
-
-            <div className="sidebar">
-        <a href="#" className="sidebar-icon" title="Hero Section">   
+      <div className="sidebar">
+        <a href="#hero" className="sidebar-icon" title="Hero Section">   
           <FaHome />
         </a>
         <a href="#about" className="sidebar-icon" title="About Section">
@@ -218,8 +209,9 @@ const Hackathon = () => {
           <FaQuestionCircle />
         </a>
       </div>
+
       {/* Hero Section */}
-      <section id="" className="hackathonhero">
+      <section id="#hero" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div>
@@ -237,8 +229,8 @@ const Hackathon = () => {
         <button className="hackathonhero-button">Get Started</button>
       </section>
 
-        {/* About Section */}
-        <section id="about" className="about">
+      {/* About Section */}
+      <section id="about" className="about">
         <div className="star-container"></div>
         <div className="about-container">
           <h2 className="about-title">About the Hackathon</h2>
@@ -248,25 +240,24 @@ const Hackathon = () => {
         </div>
       </section>
 
-   {/* Features Section */}
-   <section id="features" className="features">
-  <div className="star-container"></div>
-  <h2 className="features-title">Why Join?</h2>
-  <div className="features-grid">
-    {[
-      { text: "Networking", icon: <FaUsers className="feature-icon" /> },
-      { text: "Innovation", icon: <FaLightbulb className="feature-icon" /> },
-      { text: "Prizes", icon: <FaTrophy className="feature-icon" /> },
-      { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
-    ].map((feature, index) => (
-      <div className="feature-card" key={index}>
-        {feature.icon} {/* Renders the respective icon */}
-        <h3 className="feature-text">{feature.text}</h3>
-      </div>
-    ))}
-  </div>
-</section>
-
+      {/* Features Section */}
+      <section id="features" className="features">
+        <div className="star-container"></div>
+        <h2 className="features-title">Why Join?</h2>
+        <div className="features-grid">
+          {[
+            { text: "Networking", icon: <FaUsers className="feature-icon" /> },
+            { text: "Innovation", icon: <FaLightbulb className="feature-icon" /> },
+            { text: "Prizes", icon: <FaTrophy className="feature-icon" /> },
+            { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
+          ].map((feature, index) => (
+            <div className="feature-card" key={index}>
+              {feature.icon} {/* Renders the respective icon */}
+              <h3 className="feature-text">{feature.text}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Timeline Section */}
       <section id="timeline" className="timeline">
@@ -283,70 +274,67 @@ const Hackathon = () => {
         </div>
       </section>
 
-{/* Tracks Section */}
-<section id="tracks" className="features">
-  <div className="star-container"></div>
-  <h2 className="features-title">Tracks</h2>
-  <div className="features-grid">
-    {problemStatements.map((track, index) => (
-      <div className="feature-card" key={index}>
-        {track.icon} {/* Dynamically renders the icon */}
-        <h3 className="feature-text">{track.title}</h3> {/* Dynamically renders the title */}
-      </div>
-    ))}
-  </div>
-</section>
-
-
-    <section className="problem-carousel">
-    <div className="star-container"></div>
-      <h2 className="carousel-title">Problem Statements</h2>
-      <div className="carousel-container">
-        <button className="carousel-btn left" onClick={prevProblem}>
-          <FaChevronLeft size={30} />
-        </button>
-
-        {problemStatements.map((problem, index) => {
-          let position = "";
-          if (index === currentIndex) {
-            position = "active";
-          } else if (
-            index === (currentIndex + 1) % problemStatements.length
-          ) {
-            position = "right";
-          } else if (
-            index === (currentIndex - 1 + problemStatements.length) %
-            problemStatements.length
-          ) {
-            position = "left";
-          }
-
-          return (
-            <div key={index} className={`carousel-box ${position}`}>
-              <h3>{problem.title}</h3>
-              <p>{problem.desc}</p>
+      {/* Tracks Section */}
+      <section id="tracks" className="features">
+        <div className="star-container"></div>
+        <h2 className="features-title">Tracks</h2>
+        <div className="features-grid">
+          {problemStatements.map((track, index) => (
+            <div className="feature-card" key={index}>
+              {track.icon} {/* Dynamically renders the icon */}
+              <h3 className="feature-text">{track.title}</h3> {/* Dynamically renders the title */}
             </div>
-          );
-        })}
+          ))}
+        </div>
+      </section>
 
-        <button className="carousel-btn right" onClick={nextProblem}>
-          <FaChevronRight size={30} />
-        </button>
-      </div>
+      <section className="problem-carousel">
+        <div className="star-container"></div>
+          <h2 className="carousel-title">Problem Statements</h2>
+          <div className="carousel-container">
+            <button className="carousel-btn left" onClick={prevProblem}>
+              <FaChevronLeft size={30} />
+            </button>
 
-      <div className="carousel-dots">
-        {problemStatements.map((_, index) => (
-          <div
-            key={index}
-            className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(index)}
-          ></div>
-        ))}
-      </div>
-    </section>
+            {problemStatements.map((problem, index) => {
+              let position = "";
+              if (index === currentIndex) {
+                position = "active";
+              } else if (
+                index === (currentIndex + 1) % problemStatements.length
+              ) {
+                position = "right";
+              } else if (
+                index === (currentIndex - 1 + problemStatements.length) %
+                problemStatements.length
+              ) {
+                position = "left";
+              }
 
-  
-  
+              return (
+                <div key={index} className={`carousel-box ${position}`}>
+                  <h3>{problem.title}</h3>
+                  <p>{problem.desc}</p>
+                </div>
+              );
+            })}
+
+            <button className="carousel-btn right" onClick={nextProblem}>
+              <FaChevronRight size={30} />
+            </button>
+          </div>
+
+          <div className="carousel-dots">
+            {problemStatements.map((_, index) => (
+              <div
+                key={index}
+                className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
+                onClick={() => setCurrentIndex(index)}
+              ></div>
+            ))}
+          </div>
+      </section>
+
       {/* FAQs Section */}
       <section id="faqs" className="faqs">
         <div className="star-container"></div>
@@ -362,6 +350,7 @@ const Hackathon = () => {
           ))}
         </div>
       </section>
+
     </div>
   );
 };

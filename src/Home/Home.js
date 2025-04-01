@@ -87,7 +87,7 @@ const Home = () => {
 
       {/* Banner Section */}
 
-      <section className="banner">
+      <section className="home-banner">
         <div className="banner-content">
           <button
             className="banner-button"
