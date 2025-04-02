@@ -69,7 +69,7 @@ const Hackathon = () => {
         ".about-container",
         ".features-title",
         ".features-grid",
-        ".timeline-title",
+        ".hack-timeline-title",
         ".tracks-title",
         ".faqs-title"
       ];
@@ -262,7 +262,7 @@ const Hackathon = () => {
       {/* Timeline Section */}
       <section id="timeline" className="timeline">
         <div className="star-container"></div>
-        <h2 className="timeline-title">Hackathon Timeline</h2>
+        <h2 className="hack-timeline-title">Hackathon Timeline</h2>
         <div className="timeline-container">
           {timelineEvents.map((event, index) => (
             <div className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`} key={index}>

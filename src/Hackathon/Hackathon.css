@@ -8,13 +8,13 @@
 
 .sidebar {
   position: fixed;
-  top: 50%;
   left: 20px;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 20px;
   z-index: 1000;
+  height: 100%;
+  justify-content: center;
 }
 
 .sidebar-icon {
@@ -241,7 +241,7 @@
   overflow: hidden;
 }
 
-.timeline-title {
+.hack-timeline-title {
   font-size: 2rem;
   color: #9edf66;
   margin-bottom: 40px;
@@ -610,7 +610,6 @@
 @media screen and (max-width: 900px) {
   .carousel-box {
     width: 60%;
-    transform: translateY(0);
     opacity: 1;
     display: none;
   }
@@ -621,6 +620,10 @@
     display: block; 
   }
 
+  .carousel-box.left, .carousel-box.right {
+    display: none;
+  }
+
   .carousel-dots {
     margin-top: 15px;
   }
@@ -629,12 +632,12 @@
 @media screen and (max-width: 800px) {
   .sidebar {
     position: fixed;
-    top: 91%;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 60px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     transform: translateY(0);
     background-color: #222;
     padding: 10px 0;
