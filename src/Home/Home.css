@@ -77,14 +77,15 @@
   font-size: 1.7vw; /* Responsive font size */
   font-weight: 300;
   line-height: 1.5;
-  max-width:40%;
+  max-width: 40%;
 }
 
 .button-container {
   position: relative;
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-  justify-content: flex-start; /* Adjust as needed */
+  justify-content: center; /* Adjust as needed */
+  margin: 10px;
 }
 
 .button1,
@@ -432,7 +433,7 @@ button.slick-arrow.slick-prev::before{
   background-size: cover;
   background-position: center;
   text-align: center;
-  aspect-ratio: 2.5;
+  aspect-ratio: 2.01;
   position: relative; 
 }
 
@@ -447,18 +448,14 @@ button.slick-arrow.slick-prev::before{
 }
 
 .banner-button {
-  background-color: #2a6c44; 
+  background-color: #9edf66; 
   color: rgb(0, 0, 0);
   border: none;
-  padding: 15px 30px; 
+  padding: 5px 20px; 
   font-size: 1.5rem; 
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  position: absolute;
-  bottom: 5px; 
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .banner-button:hover {
@@ -468,14 +465,7 @@ button.slick-arrow.slick-prev::before{
 @media (max-width: 768px) {
 
   .banner-button {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 5px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner-button {
-    font-size: 0.5rem;
-    padding: 4px 16px;
   }
 }
