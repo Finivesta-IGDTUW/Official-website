@@ -7,7 +7,7 @@ const DigitalPayments = () => {
       <div className="blog-page-box">
         <div className="blog-header digital">
           <h1>The Death of Cash? How Digital Payments Are Shaping the Future of Money?</h1>
-          <p>By – Khushi</p>
+          <p>Blog by <i>Khushi</i></p>
         </div>
         <div className="blog-para">
           <p>
