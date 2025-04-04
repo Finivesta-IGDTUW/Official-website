@@ -77,15 +77,14 @@
   font-size: 1.7vw; /* Responsive font size */
   font-weight: 300;
   line-height: 1.5;
-  max-width: 40%;
+  max-width:40%;
 }
 
 .button-container {
   position: relative;
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-  justify-content: center; /* Adjust as needed */
-  margin: 10px;
+  justify-content: flex-start; /* Adjust as needed */
 }
 
 .button1,
@@ -428,12 +427,14 @@ button.slick-arrow.slick-prev::before{
       } 
 
 
-.home-banner {
-  background-image: url('../Hackathon/DummyBanner.jpg'); 
+
+/*
+.banner {
+  background-image: url('../Events/FinWeek25/FINWEEK.png'); 
   background-size: cover;
   background-position: center;
   text-align: center;
-  aspect-ratio: 2.01;
+  aspect-ratio: 2.5;
   position: relative; 
 }
 
@@ -448,24 +449,36 @@ button.slick-arrow.slick-prev::before{
 }
 
 .banner-button {
-  background-color: #9edf66; 
+  background-color: #d3d957; 
   color: rgb(0, 0, 0);
   border: none;
-  padding: 5px 20px; 
+  padding: 15px 30px; 
   font-size: 1.5rem; 
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .banner-button:hover {
-  background-color: #5bd68d; 
+  background-color: #b5c44a; 
 }
 
 @media (max-width: 768px) {
 
   .banner-button {
-    font-size: 1rem;
-    padding: 5px 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .banner-button {
+    font-size: 0.7rem;
+    padding: 8px 16px;
+  }
+}
+*/
