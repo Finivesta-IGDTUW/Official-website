@@ -16,8 +16,15 @@ import I12 from "../Images/blogs/investment.png";
 import I13 from "../Images/blogs/bnplcover.jpg";
 import I14 from "../Images/blogs/10.jpg";
 import I15 from "../Images/blogs/15.png";
-
+import I16 from "../Images/blogs/DeathOfCash.png";
 const blogs = [
+  {
+    id: 16,
+    title: "The Death Of Cash",
+    description: "How Digital Payments Are Shaping the Future of Money?",
+    image: I16,
+    link: "/resources/blogs/16-TheDeathOfCash",
+  },
   {
     id: 15,
     title: "Stock Market vs. Real Estate",
