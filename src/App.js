@@ -9,6 +9,7 @@ import Layout from "./NavbarFooter/Layout";
 import Navbar from './NavbarFooter/Navbar';
 import Footer from "./NavbarFooter/Footer";
 
+import Hackathon from './Hackathon/Hackathon.js';
 import Home from "./Home/Home";
 import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
@@ -33,6 +34,7 @@ import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import StockMarket from './Resources/Blogs/Blogpages/stockmarket.js';
+import IndiaUPISystem from './Resources/Blogs/Blogpages/IndiasUPI-system.js';
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -121,6 +123,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
               <Route path="/resources/blogs/14-Cryptocurrency" element={<Cryptocurrency/>}/>
               <Route path="/resources/blogs/15-stockmarket" element={<StockMarket/>}/>
+              <Route path="/resources/blogs/17-IndiasUPISys" element={<IndiaUPISystem/>}/>
   
             {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
@@ -155,7 +158,8 @@ const AppContent = () => {
             <Route path="/resources/podcasts/Panchratna" element={<Panchratna/>}/>
 
           <Route path="/team" element={<Team/>}/>
-          { /* <Route path="/contact" element={<Contact/>}/> */}
+          <Route path="/hackathon" element={<Hackathon/>}/>
+          {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
       <Footer/>
       </Layout>
