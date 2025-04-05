@@ -7,7 +7,7 @@ const Cryptocurrency = () => {
       <div className="blog-page-box">
         <div className="blog-header crypto">
           <h1>Cryptocurrency Investing: Risks and Rewards</h1>
-          <p><b>By Khushi and Sachita Singla</b></p>
+          <p><b>By <i>Khushi</i> and <i>Sachita Singla</i></b></p>
         </div>
         <div className="blog-para">
           <p>
