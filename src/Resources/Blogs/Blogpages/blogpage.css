@@ -115,6 +115,9 @@
 .stockmarket{
     background-image: url('./blog-images/stockmarket.png');
 }
+.digital{
+    background-image: url('./blog-images/digital.webp');
+}
 
 @media screen and (max-width:650px) {
     .blog-page-box{
