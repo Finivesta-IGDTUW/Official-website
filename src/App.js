@@ -13,9 +13,9 @@ import Home from "./Home/Home";
 import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
+import Game from "./Games/Game.js";
 import MoneyMasterclass from './Resources/MoneyMasterclass/MoneyMasterclass';
-import Games from "./Resources/Games/Game.js";
-import HigherLower from "./Resources/Games/HigherLower/src/App1";
+
 // blogs
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
@@ -32,11 +32,10 @@ import GoldOnDhanteras from "./Resources/Blogs/Blogpages/buying-gold-on-dhantera
 import BNPLBlog from "./Resources/Blogs/Blogpages/BNPLBlog.js";
 import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
-import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import StockMarket from './Resources/Blogs/Blogpages/stockmarket.js';
-import IndiaUPISystem from './Resources/Blogs/Blogpages/IndiasUPI-system.js';
 import DigitalPayments from './Resources/Blogs/Blogpages/digital.js';
-
+import IndiaUPISystem from './Resources/Blogs/Blogpages/IndiasUPI-system';
+import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
@@ -71,9 +70,20 @@ import Panchratna from './Resources/Podcasts/podcastlist/panchratna';
 import Indicator from './Resources/Podcasts/podcastlist/indicator';
 import PersonalFinance from './Resources/Podcasts/podcastlist/PersonalFinance';
 import MoneyExplained from './Resources/Podcasts/podcastlist/MoneyExplained';
+import FinWeek25 from './Events/FinWeek25/FinWeek25';
 
-import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
-
+import Scramble from './Games/Scramble/Scramble.js';
+import FinanceBingo from "./Games/FinanceBingo/FinanceBingo/FinanceBingo.js"
+import One from './Games/BudgetingGame/one.js';
+import Two from './Games/BudgetingGame/two.js';
+import Three from './Games/BudgetingGame/three.js';
+import Four from'./Games/BudgetingGame/four.js';
+import Five from './Games/BudgetingGame/five.js';
+import Six from './Games/BudgetingGame/six.js';
+import Seven from './Games/BudgetingGame/seven.js';
+import Eight from './Games/BudgetingGame/eight.js';
+import Nine from './Games/BudgetingGame/nine.js';
+import HigherLower from "./Games/HigherLower/src/App1";
 
 const AppContent = () => {
 
@@ -105,12 +115,12 @@ const AppContent = () => {
           <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
+          <Route path="/games" element={<Game/>}/>
   
           {/* Under resources */}
             <Route path="/resources/moneymasterclass" element={<MoneyMasterclass/>}/>
             <Route path="/resources/blogs" element={<Blog/>}/>
-            <Route path="/resources/games" element={<Games/>}/>
-            <Route path="/resources/games/higherlower" element={<HigherLower/>}/>
+          
               {/* Blog pages */}
               <Route path="/resources/blogs/01-AI-in-finance" element={<AIinfinance/>}/>
               <Route path="/resources/blogs/02-finance-and-technology" element={<Financeandtechnology/>}/>
@@ -158,12 +168,20 @@ const AppContent = () => {
             <Route path="/resources/stocks" element={<Stocks/>}/>
             <Route path="/resources/videos" element={<Youtube/>}/>
             <Route path="/resources/trading" element={<TradingApps/>}/>
-            <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
-            <Route path="/resources/podcasts/indicator" element={<Indicator/>}/>
-            <Route path="/resources/podcasts/PersonalFinance" element={<PersonalFinance/>}/>
-            <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
-            <Route path="/resources/podcasts/Panchratna" element={<Panchratna/>}/>
 
+
+            <Route path="/games/higherlower" element={<HigherLower/>}/>
+            <Route path="/games/budgetinggame/one" element={<One />} />
+            <Route path="/games/budgetinggame/two" element={<Two />} />
+            <Route path="/games/budgetinggame/three" element={<Three />} />
+            <Route path="/games/budgetinggame/four" element={<Four />} />
+            <Route path="/games/budgetinggame/five" element={<Five />} />
+            <Route path="/games/budgetinggame/six" element={<Six />} />
+            <Route path="/games/budgetinggame/seven" element={<Seven />} />
+            <Route path="/games/budgetinggame/eight" element={<Eight />} />
+            <Route path="/games/budgetinggame/nine" element={<Nine />} />
+            <Route path="/games/financebingo" element={<FinanceBingo />} />
+            <Route path="/games/Scramble" element={<Scramble/>} />
           <Route path="/team" element={<Team/>}/>
           { /* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>

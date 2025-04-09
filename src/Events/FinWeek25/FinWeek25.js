@@ -51,7 +51,12 @@ const FinWeek25 = () => {
                 <p className="event-date">Feb 10th, 2025</p>
                 <p className="event-day">Monday</p>
                 <p className="event-venue"><b>Venue: </b> Google Meet</p>
+
+              <p className="event-participation"><b>Participation: </b> Open For All</p>
+
+
               <p className="event-participation"><b>Participation: </b>Open For All</p>
+
               </div>
               </div>
           </div>
