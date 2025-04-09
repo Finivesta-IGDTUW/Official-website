@@ -12,16 +12,15 @@ const StockMarket = () => {
                 <div className="blog-para">                    
                     <p>
                     <ol>
-    <li><b>Labor Surplus Economy</b></li><br />
-    <ul>
-        <li>India is a labor-surplus economy, particularly in agriculture, leading to low wages and productivity.</li><br />
-        <li>This cycle limits investment in skills and technology, keeping productivity stagnant.</li><br />
-    </ul><br />
-
-    <li><b>Investment and Capital Formation</b></li><br />
-    <ul>
-        <li>Economic growth relies on investments in infrastructure, technology, and industries.</li><br />
-        <li>Capital formation, which includes increasing assets like factories, machinery, and education, is crucial for progress.</li><br />
+                    <li><b>Labor Surplus Economy</b></li><br />
+                    <ul>
+                    <li>India is a labor-surplus economy, particularly in agriculture, leading to low wages and productivity.</li><br />
+                    <li>This cycle limits investment in skills and technology, keeping productivity stagnant.</li><br />
+                    </ul><br />
+                    <li><b>Investment and Capital Formation</b></li><br />
+                    <ul>
+                    <li>Economic growth relies on investments in infrastructure, technology, and industries.</li><br />
+                    <li>Capital formation, which includes increasing assets like factories, machinery, and education, is crucial for progress.</li><br />
     </ul><br />
 
     <li><b>Industrialization and Structural Change</b></li><br />
