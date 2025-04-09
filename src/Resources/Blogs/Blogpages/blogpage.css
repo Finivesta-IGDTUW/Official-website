@@ -122,6 +122,10 @@
     background-image: url('./blog-images/digital.webp');
 }
 
+.economic{
+    background-image: url('./blog-images/indiaeconomic.jpg');
+}
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
