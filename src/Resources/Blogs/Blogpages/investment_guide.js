@@ -8,6 +8,7 @@ const InvestmentGuide = () => {
         <div className="blog-header investment_guide">
           <h1>Introduction to Investing and Annual Returns</h1>
           <p>Understanding different investment options and their potential returns</p>
+          <p>Blog written by <i>Sakshi</i></p>
         </div>
         <div className="blog-para">
           <p>

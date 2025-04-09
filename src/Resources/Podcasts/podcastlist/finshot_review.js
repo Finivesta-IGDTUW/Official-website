@@ -1,6 +1,6 @@
 import React from 'react';
-import FinshotsCover from '../Images/podcasts/finshotsdaily3.jpeg';
-import '../BookReviews/bookpages/book-page.css';
+import FinshotsCover from '../../Images/podcasts/finshotsdaily3.jpeg';
+import '../../BookReviews/bookpages/book-page.css';
 
 const FinshotsReview = () => {
   

@@ -13,7 +13,7 @@ const Game = () => {
 
       <div className="resourcesbox">
         <div className="boxsmall game">
-          <a href="/resources/games/HigherLower/Home">
+          <a href="/resources/games/HigherLower">
             <div className="img">
               <img src={HL} alt="Higher or Lower Game Cover" />
             </div>

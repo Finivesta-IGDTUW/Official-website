@@ -86,6 +86,9 @@
 .compound {
     background-image: url('./blog-images/comp-img.png');
 }
+.indiaUpiSys{
+    background-image: url('./blog-images/IndiaUPISys.png');
+}
 .gold{
     background-image: url('./blog-images/gold.jpeg');
 }
@@ -110,6 +113,13 @@
 
 .crypto{
     background-image: url('./blog-images/crypto.jpg');
+}
+
+.stockmarket{
+    background-image: url('./blog-images/stockmarket.png');
+}
+.digital{
+    background-image: url('./blog-images/digital.webp');
 }
 
 @media screen and (max-width:650px) {

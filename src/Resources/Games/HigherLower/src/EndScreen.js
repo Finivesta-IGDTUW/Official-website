@@ -1,6 +1,6 @@
 // EndScreen.js
 import React from "react";
-import "./HigherLower.css"
+import end from './end.gif';
 function EndScreen({ score, highScore, restart, returnToMenu }) {
   return (
     <div className="end-container">

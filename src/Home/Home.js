@@ -47,7 +47,6 @@ const Home = () => {
 
   return (
     <div className="Home">
-      {/*
 
       <section className="hero">
         <div className="content">
@@ -83,9 +82,9 @@ const Home = () => {
         </div>
       </section>
 
-      */}
-
       {/* Banner Section */}
+
+      {/*
       <section className="banner">
         <div className="banner-content">
           <button
@@ -96,6 +95,7 @@ const Home = () => {
           </button>
         </div>
       </section>
+      */}
 
       {/* Jhalak's code */}
       <section className="course">
