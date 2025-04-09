@@ -122,6 +122,10 @@
     background-image: url('./blog-images/digital.webp');
 }
 
+.Economy{
+    background-image: url('./blog-images/indiaEco.jpg');
+}
+
 .economic{
     background-image: url('./blog-images/indiaeconomic.jpg');
 }

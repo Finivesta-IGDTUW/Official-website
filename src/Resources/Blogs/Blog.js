@@ -19,8 +19,16 @@ import I15 from "../Images/blogs/15.png";
 import I16 from "../Images/blogs/cash.png";
 import I17 from "../Images/blogs/IndiaUpiSys.png";
 import I18 from "../Images/blogs/economicgrowth.jpg";
+import I19 from "../Images/blogs/19.jpeg";
 
 const blogs = [
+  {
+    id: 19,
+    title: "India’s Economic Growth and Industrialization: A Path to Progress",
+    description: "Can India Turn Its Economic Potential into Global Power?",
+    image: I19,
+    link: "/resources/blogs/19-IndiasEconomicGrowth",
+  },
   {
     id: 18,
     title: "Economic Growth and Industrialization in India",
