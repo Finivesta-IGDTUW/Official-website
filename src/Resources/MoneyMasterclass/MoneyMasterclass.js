@@ -7,8 +7,16 @@ import Session3 from "../Images/moneymasterclass/Session03.jpg";
 import Session4 from "../Images/moneymasterclass/Session4.png";
 import Session5 from "../Images/moneymasterclass/Session5.jpg";
 import Session6 from "../Images/moneymasterclass/Session6.png";
+import Session7 from "../Images/moneymasterclass/Session07.jpeg";
 
 const sessions = [
+  {
+    id: 7,
+    title: "Session 7",
+    description: "Stocks in a Shaky Economy",
+    image: Session7,
+    link: "https://www.canva.com/design/DAGjW9NZfUA/bUpx9LtVlBrNf7hERWVjFA/view?utm_content=DAGjW9NZfUA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2b43ec3dab",
+  },
   {
     id: 6,
     title: "Session 6",
