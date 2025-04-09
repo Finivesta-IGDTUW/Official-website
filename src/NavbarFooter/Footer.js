@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             <p className="text-footer"> 
-                Copyright &copy; 2025 Finivesta IGDTUW - All Rights Reserved.
+                Copyright &copy; 2023 Finivesta IGDTUW - All Rights Reserved.
             </p> 
 
         </footer> 

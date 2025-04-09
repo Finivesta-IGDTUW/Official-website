@@ -110,9 +110,6 @@
 .bnpl{
     background-image: url('./blog-images/comp-img.png');
 }
-.deathOfCash{
-    background-image: url('./blog-images/cashDeath.png');
-}
 
 .crypto{
     background-image: url('./blog-images/crypto.jpg');
@@ -120,6 +117,9 @@
 
 .stockmarket{
     background-image: url('./blog-images/stockmarket.png');
+}
+.digital{
+    background-image: url('./blog-images/digital.webp');
 }
 
 @media screen and (max-width:650px) {
