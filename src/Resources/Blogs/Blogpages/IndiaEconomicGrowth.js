@@ -86,10 +86,6 @@ const IndiaEconomicGrowth = () => {
                         India stands at a pivotal crossroads, where ambition meets opportunity. The wheels of industrialization, innovation, and strategic investment are propelling the nation forward, yet hurdles still lie ahead.
                         <br/>
                         A future-proof India must embrace a balanced approach—one that harmonizes sustainability, inclusive workforce participation, and bold policymaking. With the right vision and determination, the country can transform its growth story into a lasting legacy of prosperity and global leadership.
-                        <br/><br/>
-
-
-
                     </p>
                 </div>
             </div>
