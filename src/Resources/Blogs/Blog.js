@@ -27,7 +27,7 @@ const blogs = [
     title: "India’s Economic Growth and Industrialization: A Path to Progress",
     description: "Can India Turn Its Economic Potential into Global Power?",
     image: I19,
-    link: "/resources/blogs/18-IndiasEconomicGrowth",
+    link: "/resources/blogs/19-IndiasEconomicGrowth",
   },
   {
     id: 18,
