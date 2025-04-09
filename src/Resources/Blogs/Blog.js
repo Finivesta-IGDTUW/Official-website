@@ -17,9 +17,17 @@ import I13 from "../Images/blogs/bnplcover.jpg";
 import I14 from "../Images/blogs/10.jpg";
 import I15 from "../Images/blogs/15.png";
 import I16 from "../Images/blogs/cash.png";
-import I17 from "../Images/blogs/IndiaUpiSys.png"
+import I17 from "../Images/blogs/IndiaUpiSys.png";
+import I18 from "../Images/blogs/economicgrowth.jpg";
 
 const blogs = [
+  {
+    id: 18,
+    title: "Economic Growth and Industrialization in India",
+    description: "From Vision to Reality: India's Growth Story",
+    image: I18,
+    link: "/resources/blogs/18-EconomicGrowth",
+  },
   {
     id: 17,
     title: "India's UPI System",
