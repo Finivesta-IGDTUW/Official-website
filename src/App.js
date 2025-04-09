@@ -35,6 +35,7 @@ import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import StockMarket from './Resources/Blogs/Blogpages/stockmarket.js';
 import IndiaUPISystem from './Resources/Blogs/Blogpages/IndiasUPI-system.js';
 import DigitalPayments from './Resources/Blogs/Blogpages/digital.js';
+import IndiaEconomicGrowth from './Resources/Blogs/Blogpages/IndiaEconomicGrowth.js';
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -127,6 +128,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/15-stockmarket" element={<StockMarket/>}/>
               <Route path="/resources/blogs/16-digitalcashclash" element={<DigitalPayments/>}/>
               <Route path="/resources/blogs/17-IndiasUPISys" element={<IndiaUPISystem/>}/>
+              <Route path="/resources/blogs/18-IndiasEconomicGrowth" element={<IndiaEconomicGrowth/>}/>
   
             {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
