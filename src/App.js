@@ -33,7 +33,7 @@ import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import StockMarket from './Resources/Blogs/Blogpages/stockmarket.js';
-
+import DigitalPayments from './Resources/Blogs/Blogpages/digital.js';
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
@@ -56,6 +56,8 @@ import Review13 from "./Resources/BookReviews/bookpages/Review13";
 import Review14 from './Resources/BookReviews/bookpages/Review14';
 import Review15 from './Resources/BookReviews/bookpages/Review15.js';
 import Review16 from './Resources/BookReviews/bookpages/Review16.js';
+import Review17 from './Resources/BookReviews/bookpages/Review17.js';
+import Review18 from './Resources/BookReviews/bookpages/Review18.js';
 // Podcasts
 
 import Podcast from "./Resources/Podcasts/Podcast";
@@ -121,6 +123,7 @@ const AppContent = () => {
               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
               <Route path="/resources/blogs/14-Cryptocurrency" element={<Cryptocurrency/>}/>
               <Route path="/resources/blogs/15-stockmarket" element={<StockMarket/>}/>
+              <Route path="/resources/blogs/digitalcashclash" element={<DigitalPayments/>}/>
   
             {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
@@ -140,6 +143,8 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/thesimplestpathtowealth" element={<Review14/>}/>
             <Route path="/resources/bookreviews/theleanstartup"element={<Review15/>}/>
             <Route path="/resources/bookreviews/moneyworks" element={<Review16/>}/>
+            <Route path="/resources/bookreviews/themillnextdoor" element={<Review17/>}/>
+            <Route path="/resources/bookreviews/intellinvestor" element={<Review18/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/podcasts/we_study_billionaires" element={<WeStudyBillionaires/>}/>

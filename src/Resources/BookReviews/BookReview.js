@@ -17,8 +17,19 @@ import TheBarefootInvestor from "../Images/books/TheBarefootInvestor.png";
 import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg";
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
-
 const books = [
+  {
+    id: 18,
+    title: "Intelligent Investor",
+    image: IntellInvestor,
+    link: "/resources/bookreviews/intellinvestor",
+  },
+  {
+    id: 17,
+    title: "The Millionaire Next Door",
+    image: MillNextDoor,
+    link: "/resources/bookreviews/themillnextdoor",
+  },
   {
     id: 16,
     title: "Money Works",
