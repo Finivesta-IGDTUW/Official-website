@@ -7,7 +7,7 @@ import CustomTable from "../../../Components/CustomTable";
 
 const IndiaUPISystem = () => {
     const tableData1 = {
-        header: ["Feature", "UPI", "sWIFT", "Visa & MasterCard","PayPal","Google Pay/ Apple Pay"],
+        header: ["Feature", "UPI", "SWIFT", "Visa & MasterCard","PayPal","Google Pay/ Apple Pay"],
         rows: [
             ["Launch year","2016","1973","1958(Visa), 1966(MasterCard)","1998","2014(Google Pay), 2014(Apple Pay)"],
             ["Transaction Volume(Annual)","79 billion transactions(2024)", "42 million messages per day","190+ billion(Visa, 2023)","19 billion transactions(Paypal 2023)","Billions of transactions(2023)"],
@@ -67,7 +67,7 @@ const IndiaUPISystem = () => {
                         a virtual payment address (VPA). Soon, biometric authentication (fingerprint or facial recognition) 
                         will make transactions even more secure.
 </ol>
-                        <br/><br/>
+                        <br/>
                         <h3>
                         UPI’s Global Expansion: A Rising Challenger
                         </h3>
@@ -107,6 +107,7 @@ const IndiaUPISystem = () => {
                         </h3>
                         To understand how UPI is spreading worldwide, here’s a breakdown of its usage in different countries where it has gained traction:
                         <img src={IndiaUPI} className="image-in-blog" alt="India's UPI System"/>
+                        <br/>
                         <h3>How UPI Is Expanding Globally</h3>
                         <ol>
                             <li>
@@ -132,6 +133,7 @@ const IndiaUPISystem = () => {
                         </ol>
                         <br/>
                         <CustomTable tableData={tableData1} />
+                        <br/>
                         <b>Challenges to Global Dominance</b>
                         <ol>
                         Despite UPI’s strengths, several roadblocks stand in the way of its worldwide expansion:
@@ -145,7 +147,7 @@ const IndiaUPISystem = () => {
                         <li>Infrastructure Challenges - UPI depends on a strong digital banking system, which isn’t available everywhere. Setting up the required technology and ensuring smooth integration with local banks can be expensive and time-consuming.
                         </li> 
                     </ol>
-                    <br/><br/>
+                    <br/>
 <h3>How Can UPI Become a Global Standard?</h3>
 <ul>
                         For UPI to expand successfully worldwide, India needs to take bold steps:
