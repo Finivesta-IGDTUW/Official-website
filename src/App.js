@@ -33,7 +33,9 @@ import Cryptocurrency from "./Resources/Blogs/Blogpages/Cryptocurrency.js";
 import USelection from './Resources/Blogs/Blogpages/US-election2024';
 import InvestmentGuide from './Resources/Blogs/Blogpages/investment_guide';
 import StockMarket from './Resources/Blogs/Blogpages/stockmarket.js';
+import IndiaUPISystem from './Resources/Blogs/Blogpages/IndiasUPI-system.js';
 import DigitalPayments from './Resources/Blogs/Blogpages/digital.js';
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
@@ -58,8 +60,8 @@ import Review15 from './Resources/BookReviews/bookpages/Review15.js';
 import Review16 from './Resources/BookReviews/bookpages/Review16.js';
 import Review17 from './Resources/BookReviews/bookpages/Review17.js';
 import Review18 from './Resources/BookReviews/bookpages/Review18.js';
-// Podcasts
 
+// Podcasts
 import Podcast from "./Resources/Podcasts/Podcast";
 import WeStudyBillionaires from "./Resources/Podcasts/podcastlist/we_study_billionaires";
 import FinshotsReview from './Resources/Podcasts/podcastlist/finshot_review';
@@ -123,7 +125,8 @@ const AppContent = () => {
               <Route path="/resources/blogs/13-buy-now-pay-later" element={<BNPLBlog />} />
               <Route path="/resources/blogs/14-Cryptocurrency" element={<Cryptocurrency/>}/>
               <Route path="/resources/blogs/15-stockmarket" element={<StockMarket/>}/>
-              <Route path="/resources/blogs/digitalcashclash" element={<DigitalPayments/>}/>
+              <Route path="/resources/blogs/16-digitalcashclash" element={<DigitalPayments/>}/>
+              <Route path="/resources/blogs/17-IndiasUPISys" element={<IndiaUPISystem/>}/>
   
             {/*Book pages*/}
             <Route path="/resources/bookreviews" element={<BookReview/>}/>
