@@ -89,6 +89,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 /* Bingo table styling */
@@ -127,10 +128,12 @@
 .letter-div {
     height: 15vh; /* Reduced height */
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     color: #222; /* Grey color for the letters */
     margin-top: 0.5rem; /* Reduced margin */
+    background-color: transparent !important;
 }
 
 .letters-bingo {
@@ -139,6 +142,7 @@
     display: none;
     color: #86d145; /* Hover green color for bingo letters */
     border: #cccece;
+    background-color: transparent !important;
 }
 
 /* Strikethrough style */
@@ -147,7 +151,7 @@
 .strickout {
     text-decoration: line-through;
     background-color: #006400; /* Dark green for the entire cell */
-    color: #ffffff; /* White text for visibility */
+    color: #006400; /* White text for visibility */
     border-radius: 10%; /* Slightly rounded corners */
     border: none;
     
@@ -161,11 +165,45 @@
 
 /* Inner div (if present) should not interfere */
 
+.bingo-grid {
+    margin-bottom: 20px; /* Add space below the grid */
+}
 
+/* Bingo message styling */
+.bingo-message {
+    text-align: center;
+    color: #71b139; /* Green text */
+    font-size: 2rem; /* Large text size */
+    font-weight: bold;
+    margin-top: 10px; /* Space above the bingo message */
+    background-color: transparent; /* No background color */
+}
 
 .show-bingo {
     display: inline;
 }
+/* Bingo letters styling */
+.bingo-letters {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Space between grid and letters */
+    font-size: 2rem; /* Font size for letters */
+    font-weight: bold; /* Bold text */
+    color: #71b139; /* Green text color */
+    background-color: transparent; /* No background color */
+    border: none; /* Remove any border */
+    width: 100%; /* Ensure it spans the width of its container */
+    background-color: transparent !important;
+}
+
+/* Individual letter styling */
+.bingo-letter {
+    margin: 0 10px; /* Space between letters */
+    text-transform: uppercase; /* Ensure letters are uppercase */
+    background-color: transparent !important;
+}
+
 
 /* Styling for the question display */
 .question-container {
@@ -213,7 +251,47 @@
     margin: 0.5rem; 
     transition: background-color 0.3s ease;
 }
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 80vh;
+    margin-top: 1rem;
+}
+
+/* Left panel: Bingo grid */
+.left-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 200rem;
+}
+
+/* Right panel: Questions and buttons */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+}
+
 
 .action-button:hover {
     background-color: #86d145;
 }
+@media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
