@@ -36,7 +36,9 @@ const FinanceBingo = () => {
 
   const [questionIndex, setQuestionIndex] = useState(0);
   const [randomizedQuestionOrder] = useState(
-    Array.from({ length: questions.length }, (_, i) => i).sort(() => Math.random() - 0.5)
+    Array.from({ length: questions.length }, (_, i) => i)
+      .filter((q) => q !== 0)
+      .sort(() => Math.random() - 0.5)
   );
   const [completedCombinations, setCompletedCombinations] = useState(new Set());
   const [winningIterator, setWinningIterator] = useState(0);
@@ -49,16 +51,22 @@ const FinanceBingo = () => {
 
   const handleAnswer = (isCorrect, randomQuestionNumber) => {
     if (isCorrect) {
-      setStruckCells((prev) => [...prev, randomQuestionNumber - 1]);
-      if (checkWin()) {
-        setWinningIterator((prev) => prev + 1);
-        if (winningIterator + 1 === 5) {
+      const updatedStruckCells = [...struckCells, randomQuestionNumber - 1];
+      setStruckCells(updatedStruckCells);
+
+      const newWins = checkWinWith(updatedStruckCells);
+      if (newWins > 0) {
+        const updatedIterator = winningIterator + newWins;
+        setWinningIterator(updatedIterator);
+
+        if (updatedIterator >= 5) {
           alert("B I N G O");
           window.location.reload();
+          return;
         }
       }
     }
-    // Ensure questionIndex does not exceed the length of the questions array
+
     if (questionIndex < questions.length - 1) {
       setQuestionIndex((prev) => prev + 1);
     } else {
@@ -66,7 +74,7 @@ const FinanceBingo = () => {
     }
   };
 
-  const checkWin = () => {
+  const checkWinWith = (cells) => {
     const winningPositions = [
       [0, 1, 2, 3, 4],
       [5, 6, 7, 8, 9],
@@ -78,18 +86,21 @@ const FinanceBingo = () => {
       [2, 7, 12, 17, 22],
       [3, 8, 13, 18, 23],
       [4, 9, 14, 19, 24],
-      [0, 6, 12, 18, 24],
-      [4, 8, 12, 16, 20],
     ];
 
+    let newWins = 0;
+
     for (const combination of winningPositions) {
-      if (completedCombinations.has(combination.toString())) continue;
-      if (combination.every((index) => struckCells.includes(index))) {
-        setCompletedCombinations((prev) => new Set([...prev, combination.toString()]));
-        return true;
+      const key = combination.toString();
+      if (completedCombinations.has(key)) continue;
+
+      if (combination.every((index) => cells.includes(index))) {
+        setCompletedCombinations((prev) => new Set([...prev, key]));
+        newWins++;
       }
     }
-    return false;
+
+    return newWins;
   };
 
   return (
@@ -98,14 +109,26 @@ const FinanceBingo = () => {
       <header className="header">
         <h1>FINANCE BINGO</h1>
       </header>
-      <QuestionDisplay
-        question={questions[questionIndex]}
-        questionNumber={randomizedQuestionOrder[questionIndex]}
-        handleAnswer={handleAnswer}
-      />
-      <BingoTable struckCells={struckCells} />
-      <BingoLetters winningIterator={winningIterator} />
-      <ActionButtons />
+
+      <div className="main-content">
+        {/* Left: Bingo Table */}
+        <div className="left-section">
+          <BingoTable struckCells={struckCells} />
+        </div>
+
+        {/* Right: Questions, Buttons, Bingo Letters */}
+        <div className="right-section">
+          <QuestionDisplay
+            question={questions[questionIndex]}
+            questionNumber={randomizedQuestionOrder[questionIndex]}
+            handleAnswer={handleAnswer}
+          />
+          <div className="bingo-letters">
+            <BingoLetters winningIterator={winningIterator} />
+          </div>
+          <ActionButtons />
+        </div>
+      </div>
     </div>
   );
 };
