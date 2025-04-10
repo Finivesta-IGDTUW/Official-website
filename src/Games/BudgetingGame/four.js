@@ -85,7 +85,7 @@ const Four = () => {
 
     const goToFivePage = () => {
         playClickSound(); 
-        navigate('/games/budgetinggame/five.js'); 
+        navigate('/games/budgetinggame/five'); 
     };
 
   

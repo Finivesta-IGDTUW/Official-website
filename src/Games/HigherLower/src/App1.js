@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import commodityData from "./data";
-import "./HigherLower.css";
+import "./index_higher.css";
 import StartScreen from "./StartScreen";
 import GameScreen from "./GameScreen";
 import EndScreen from "./EndScreen";
 import LoadingScreen from "./LoadingScreen";
 
-function Home() {
+function App1() {
   const [screen, setScreen] = useState("start");
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
@@ -123,4 +123,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default App1;

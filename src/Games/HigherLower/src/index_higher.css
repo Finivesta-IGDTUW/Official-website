@@ -8,14 +8,7 @@
   box-sizing: border-box;
 }
 
-/* Global Cursor & Base Styles */
-html, body {
-  background-color: black;
-  font-family: 'Kanit', sans-serif;
-  height: 100%;
-  overflow-x: hidden;  /* Prevent scrolling */
-  scroll-behavior: smooth;
-}
+
 
 #root {
   height: 100%;
@@ -64,7 +57,7 @@ html, body {
   60% { opacity: 0.7; }
 }
 
-/* 3D Card Effect (Microeffect on Hover) */
+/* 3D Card Effect */
 .commodity-card {
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -86,7 +79,7 @@ html, body {
   margin: 35px auto;
   padding: 60px 30px;
   text-align: center;
-  background: url('./images/background.jpeg') no-repeat center center/cover;
+  background: url('../public/images/background.jpeg') no-repeat center center/cover;
   animation: fadeIn 1s ease;
 }
 @keyframes fadeIn {
@@ -135,27 +128,43 @@ html, body {
 
 /* Game Mode Buttons (Start Screen) */
 .game-mode-container {
-  position: relative;
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
+  margin-bottom: 30px;
 }
 .game-mode-button {
-  display: block;
-  margin-top: 10px;
   padding: 10px 20px;
-  background-color: #5f8e33;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  width: 20vw;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: rgb(10, 43, 22);
+  font-size: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 .game-mode-button:hover {
-  background-color: #83976d;
+  transform: scale(1.1);
+  background-color: var(--secondary-color);
+}
+.game-mode-button:active {
+  animation: button-elastic 0.4s var(--ease-elastic);
+}
+@keyframes button-elastic {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.95); }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 /* Metric Toggle (Start Screen) */
@@ -168,13 +177,13 @@ html, body {
   margin-bottom: 40px;
 }
 .metric-toggle button {
-  width: 50vw;
+  width: 30vw;
   padding: 10px;
   background: transparent;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border: 3px solid rgb(232, 236, 231);
-  border-radius: 50px;
+  border-radius: 30px;
   transition: background 0.3s ease;
   position: relative;
 }
@@ -228,8 +237,8 @@ html, body {
 }
 .settings-panel {
   position: fixed;
-  top: 60%;
-  right: 2%;
+  top: 80%;
+  right: 10%;
   transform: translate(-50%, -50%);
   background: rgba(48, 58, 45, 0.95);
   padding: 10px;
@@ -284,11 +293,9 @@ html, body {
 
 /* Quit Button */
 .quit-button {
-  flex-direction: row;
-  position: relative;
+  position: fixed;
   bottom: 5px;
   left: 20px;
-  height: 10vh;
   padding: 10px 20px;
   background: transparent;
   font-size: 15px;
@@ -306,7 +313,7 @@ html, body {
 /* Timer (Prominent Styling) */
 .timer {
   position: fixed;
-  top: 60px;
+  top: 18vh;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.5rem;
@@ -356,10 +363,12 @@ html, body {
 /* Dual Comparison Mode (Game Screen) */
 .dual-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 35px;
-  margin: 80px 0;
+ 
+
 }
 .dual-card h2 {
   font-size: 28px;
@@ -369,14 +378,17 @@ html, body {
   font-size: 36px;
   font-weight: bold;
 }
-
-/* Dual Buttons - Buttons arranged vertically below the cards */
+.hidden-price {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #aaaaaa;
+}
 .dual-buttons {
   display: flex;
-  flex-direction: column;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 80vh ;
 }
 .dual-buttons button {
   padding: 12px 30px;
@@ -408,10 +420,9 @@ html, body {
 }
 .single-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 80vh;
 }
 .single-buttons button {
   padding: 12px 30px;
@@ -434,7 +445,7 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 10rem;
-  animation: enhanced-pop 0.8s var(--ease-elastic);
+  animation: enhanced-pop 0.8s var(--ease-elastic), text-glitch 2.0s steps(2) infinite alternate;
 }
 @keyframes enhanced-pop {
   0% {
@@ -459,7 +470,7 @@ html, body {
 /* Scoreboard with Graphic Background and Slide Down Effect */
 .score-board {
   position: absolute;
-  top: 70px;
+  top: 10vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -470,10 +481,6 @@ html, body {
   border-radius: 10px;
   animation: slideDown 1s ease-out forwards;
   animation-delay: 0.2s;
-}
-@keyframes slideDown {
-  0% { transform: translateY(-50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
 }
 
 /* End Screen Container */
@@ -526,6 +533,7 @@ html, body {
   animation-delay: 1.5s;
   transform: translate(15px, -35px);
 }
+
 .end-buttons button {
   width: 20vw;
   background-color: transparent;
@@ -536,6 +544,7 @@ html, body {
   transition: 0.3s ease;
   padding: 15px 15px;
 }
+
 .end-buttons button:hover {
   background-color: rgb(88, 135, 87);
   color: black;
@@ -546,9 +555,15 @@ html, body {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 @keyframes scaleIn {
   0% { transform: scale(0.8); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 /* Loading Container & Spinner */
@@ -602,12 +617,24 @@ html, body {
 
 /* Swipe Animations for Commodity Cards */
 @keyframes swipe-right-card {
-  0% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(100%); opacity: 0; }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 @keyframes swipe-left-card {
-  0% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-100%); opacity: 0; }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 .swipe-right-card {
   animation: swipe-right-card 0.6s forwards;
@@ -619,23 +646,35 @@ html, body {
 /* Responsive Styles for Mobile and Tablets */
 /* For tablets and small laptops (max-width: 768px) */
 @media screen and (max-width: 768px) {
-  .header-animation h1 { width: 90vw; }
-  .header-animation img { width: 70vw; }
+  .header-animation h1 {
+    width: 90vw;
+  }
+  .header-animation img {
+    width: 70vw;
+  }
   .dual-container {
     flex-direction: column;
     gap: 20px;
     margin: 20px 0;
   }
-  .dual-card, .single-card {
-    flex-direction: column;
+  .dual-card,
+  .single-card {
     width: 90%;
     height: auto;
     min-height: 300px;
     padding: 15px;
   }
-  .commodity-image { height: 150px; }
-  .dual-card .price, .single-card .price { font-size: 1.5rem; }
-  .timer { font-size: 1.5rem; top: 15px; }
+  .commodity-image {
+    height: 150px;
+  }
+  .dual-card .price,
+  .single-card .price {
+    font-size: 1.5rem;
+  }
+  .timer {
+    font-size: 1.5rem;
+    top: 13vh;
+  }
   .settings-panel {
     width: 90%;
     bottom: 70px;
@@ -643,41 +682,80 @@ html, body {
     right: 5%;
     transform: none;
   }
-  .end-container h2 { font-size: 60px; text-overflow: clip; }
-  .end-container p { font-size: 1.5rem; }
-  .end-buttons { flex-direction: column; width: 90%; }
-  .end-buttons button { width: 100%; font-size: 1.2rem; }
+  .end-container h2 {
+    font-size: 60px;
+    text-overflow: clip;
+  }
+  .end-container p {
+    font-size: 1.5rem;
+  }
+  .end-buttons {
+    flex-direction: column;
+    width: 90%;
+  }
+  .end-buttons button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
 }
 
 /* For phones (max-width: 480px) */
 @media screen and (max-width: 480px) {
-  .header-animation h1 { width: 90vw; }
-  .header-animation img { width: 90vw; }
-  .dual-card, .single-card { width: 85vw; min-height: 250px; }
-  .commodity-image { height: 120px; }
-  .dual-buttons button, .single-buttons button {
+  .header-animation h1 {
+    width: 90vw;
+  }
+  .header-animation img {
+    width: 90vw;
+  }
+  
+  .dual-card,
+  .single-card {
+    width: 85vw;
+    min-height: 250px;
+  }
+  .commodity-image {
+    height: 120px;
+  }
+  .dual-buttons button,
+  .single-buttons button {
     padding: 10px;
     font-size: 1rem;
   }
-  .timer { font-size: 1.2rem; }
-  .settings-button, .quit-button {
+  .timer {
+    font-size: 1.2rem;
+  }
+  .settings-button,
+  .quit-button {
     padding: 8px 12px;
     font-size: 0.8rem;
   }
-  .result-overlay { font-size: 4rem; }
+  .result-overlay {
+    font-size: 4rem;
+  }
+  
   /* Adjust settings button position for mobile */
   .settings-button {
     position: fixed;
     left: 10px;
-    top: 70px;
+    top: 10px;
     z-index: 200;
   }
+  
 }
 
 /* For very small phones (max-width: 320px) */
 @media screen and (max-width: 320px) {
-  .header-animation h1 { width: 80vw; }
-  .header-animation img { width: 100vw; }
-  .game-mode-button { font-size: 1rem; }
-  .dual-card h2, .single-card h2 { font-size: 1.2rem; }
+  .header-animation h1 {
+    width: 80vw;
+  }
+  .header-animation img {
+    width: 100vw;
+  }
+  .game-mode-button {
+    font-size: 1rem;
+  }
+  .dual-card h2,
+  .single-card h2 {
+    font-size: 1.2rem;
+  }
 }

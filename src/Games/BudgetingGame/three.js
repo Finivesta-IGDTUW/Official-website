@@ -41,7 +41,7 @@ const Three = () => {
         localStorage.setItem('value1', rangeValue);
 
         playClickSound();
-        navigate('/games/budgetinggame/four.js');
+        navigate('/games/budgetinggame/four');
     };
 
     useEffect(() => {

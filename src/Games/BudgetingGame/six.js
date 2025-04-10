@@ -88,7 +88,7 @@ const Six = () => {
 
     const goToSevenPage = () => {
         playClickSound(); 
-        navigate('/games/budgetinggame/seven.js'); 
+        navigate('/games/budgetinggame/seven'); 
     };
 
     useEffect(() => {

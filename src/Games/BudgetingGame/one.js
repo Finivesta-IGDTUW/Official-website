@@ -23,7 +23,7 @@ const One = () => {
 
     const goToTwoPage = () => {
         playClickSound(); 
-        navigate('/games/Budgetingame/two.js');  
+        navigate('/games/budgetinggame/two');  
     };
 
     useEffect(() => {

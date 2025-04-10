@@ -102,7 +102,7 @@ const Eight = () => {
 
     const goToNinePage = () => {
         playClickSound(); 
-        navigate('/games/budgetinggame/nine.js'); 
+        navigate('/games/budgetinggame/nine'); 
     };
 
     return (

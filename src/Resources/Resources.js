@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Resources.css";
 
+// Import resource images
 import BlogsImage from "./Images/blogs_img2.png";
 import BooksImage from "./Images/book_reviews_img.png";
 import PodcastImages from "./Images/podcasts.jpg";
@@ -9,7 +10,6 @@ import VideosImage from "./Images/Videos.jpg";
 import ShareMarketImage from "./Images/sharemarket_img2.png";
 import TradingAppImage from "./Images/tradingapps.png";
 import MoneyMasterclassImage from "./Images/moneymasterclass/MoneyMasterclass.png";
-
 const Resources = () => {
   return (
     <div className="resources">
@@ -116,7 +116,6 @@ const Resources = () => {
             </p>
           </div>
         </Link>
-        
       </div>
     </div>
   );

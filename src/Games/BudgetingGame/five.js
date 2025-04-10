@@ -40,7 +40,7 @@ const Five = () => {
         const result = Math.abs(91250 - sliderValue); 
         localStorage.setItem('result2', result);
         localStorage.setItem('value2', sliderValue); 
-        navigate('/games/budgetinggame/six.js'); 
+        navigate('/games/budgetinggame/six'); 
     };
 
     // Play background audio when the component is mounted and stop it when the component unmounts

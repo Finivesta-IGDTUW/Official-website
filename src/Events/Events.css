@@ -31,7 +31,7 @@
 .event-Year {
   font-size: 3em;
   margin: 20px 9vw;
-  text-align: left;
+  text-align: center;
   color: #fff;
   text-decoration: underline #5f8e33;
 }
@@ -107,9 +107,58 @@
   margin: 10vh 10vw;
 }
 
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 12vh 12vw;
+}
+
+.finweek-banner {
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.finweek-banner:hover {
+  transform: scale(1.05);
+}
+
+.event-divs.finweek-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.event-divs.finweek-grid .span-two {
+  grid-column: span 2;
+}
+
+.banner-arrow {
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  border-top: 5vw solid #d3d957;
+  transition: transform 0.3s ease; 
+  margin-bottom: 3vw;
+  position: absolute;
+}
+
+.banner-arrow-rotate {
+  transform: rotate(180deg); 
+}
+
 @media (max-width: 600px) {
   .event-divs {
       grid-template-columns: 1fr; /* Single column grid */
+  }
+
+  .event-divs.finweek-grid {
+    grid-template-columns: 1fr; /* Single column grid */
+  }
+
+  .event-divs.finweek-grid .span-two {
+    grid-column: 1 / -1;
   }
 
   .event-element {

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./HigherLower.css"
+
 const LoadingScreen = () => {
   return (
     <div className="loading-container">

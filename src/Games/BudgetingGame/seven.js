@@ -44,7 +44,7 @@ const Seven = () => {
         localStorage.setItem('result3', result);
         localStorage.setItem('value3', value);
 
-        navigate('/games/budgetinggame/eight.js'); 
+        navigate('/games/budgetinggame/eight'); 
     };
 
     useEffect(() => {

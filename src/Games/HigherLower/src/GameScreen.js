@@ -4,6 +4,7 @@ import { Howl } from "howler";
 import { fetchCommodity } from "./CommodityObj";
 import backgroundMusic from "./sounds/background.mp3";
 import quit from "./sounds/quit.mp3";
+// Import sound files explicitly
 import correctSound from "./sounds/correct.mp3";
 import wrongSound from "./sounds/wrong.mp3";
 import clickSound from "./sounds/click.mp3";
@@ -12,10 +13,6 @@ import clickSound from "./sounds/click.mp3";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Import the CSS file that contains your styles (ensure it includes the hover microanimation)
-import "./HigherLower.css";
-
-// Setup sound objects using Howler.
 const sounds = {
   correct: new Howl({ src: [correctSound] }),
   wrong: new Howl({ src: [wrongSound] }),
@@ -30,7 +27,7 @@ const getPlaceholderImage = (side) => {
   return "/images/placeholder.png";
 };
 
-// Helper to get a unique commodity that is not the same as the one to exclude.
+// Helper to get unique commodity
 const getUniqueCommodity = (cData, excludeCommodity = null) => {
   let newCommodity;
   do {
@@ -66,7 +63,7 @@ function GameScreen({
   const wrapperRef = useRef(null);
   const musicRef = useRef(null);
 
-  // Refs for swipe detection.
+  // Refs for swipe detection (if using pointer input)
   const startXRef = useRef(null);
   const startYRef = useRef(null);
 
@@ -136,7 +133,7 @@ function GameScreen({
     }
   }, [timerValue, gameMode, handleLoss]);
 
-  // Helper function to animate all commodity cards.
+  // New helper function to animate all commodity cards.
   // 'animationClass' should be "swipe-right-card" or "swipe-left-card"
   const animateCards = (animationClass, callback) => {
     const cards = wrapperRef.current.querySelectorAll(".commodity-card");
@@ -160,20 +157,34 @@ function GameScreen({
   };
 
   // Handler for Dual Comparison answer.
-  const handleDualAnswer = (choice) => {
-    if (answerSubmitted) return;
-    setAnswerSubmitted(true);
-    sounds.flip.play();
+  // Handler for Dual Comparison answer.
+const handleDualAnswer = (choice) => {
+  if (answerSubmitted) return;
+  setAnswerSubmitted(true);
+  sounds.flip.play();
 
-    const leftPrice = leftCommodity.price;
-    const rightPrice = rightCommodity.price;
-    const isCorrect =
-      choice === "higher" ? rightPrice > leftPrice : rightPrice < leftPrice;
+  const leftPrice = leftCommodity.price;
+  const rightPrice = rightCommodity.price;
+  const isCorrect =
+    choice === "higher" ? rightPrice > leftPrice : rightPrice < leftPrice;
 
-    if (isCorrect) {
-      // For a correct answer, do NOT animate swipe; update immediately.
+  if (!isCorrect) {
+    // For a wrong answer: Reveal the right commodity price immediately.
+    setResult("wrong");
+    sounds.wrong.play();
+    // Delay animation so the result is visible on the right.
+    setTimeout(() => {
+      animateCards("swipe-left-card", () => {
+        // After animation complete, trigger loss.
+        handleLoss();
+      });
+    }, 500);
+  } else {
+    // For a correct answer: Animate immediately.
+    animateCards("swipe-right-card", () => {
       setResult("correct");
       sounds.correct.play();
+
       setTimeout(() => {
         setScore((prev) => {
           const newScore = prev + 1;
@@ -189,53 +200,51 @@ function GameScreen({
         setAnswerSubmitted(false);
         setResult(null);
       }, 500);
-    } else {
-      // For a wrong answer, animate left swipe.
+    });
+  }
+};
+
+// Handler for Single Price Prediction answer.
+const handleSingleAnswer = (choice) => {
+  if (answerSubmitted) return;
+  setAnswerSubmitted(true);
+  sounds.flip.play();
+
+  const currentPrice = currentCommodity.price;
+  const nextCommodity = fetchCommodity(cData);
+  const nextPrice = nextCommodity.price;
+  const isCorrect =
+    choice === "higher" ? nextPrice > currentPrice : nextPrice < currentPrice;
+
+  if (!isCorrect) {
+    // For a wrong answer: Reveal the result immediately.
+    setResult("wrong");
+    sounds.wrong.play();
+    setTimeout(() => {
       animateCards("swipe-left-card", () => {
-        setResult("wrong");
-        sounds.wrong.play();
-        setTimeout(() => {
-          handleLoss();
-        }, 500);
+        handleLoss();
       });
-    }
-  };
-
-  // Handler for Single Price Prediction answer.
-  const handleSingleAnswer = (choice) => {
-    if (answerSubmitted) return;
-    setAnswerSubmitted(true);
-    sounds.flip.play();
-
-    const currentPrice = currentCommodity.price;
-    const nextCommodity = fetchCommodity(cData);
-    const nextPrice = nextCommodity.price;
-    const isCorrect =
-      choice === "higher" ? nextPrice > currentPrice : nextPrice < currentPrice;
-
-    const animationClass = isCorrect ? "swipe-right-card" : "swipe-left-card";
-    animateCards(animationClass, () => {
-      setResult(isCorrect ? "correct" : "wrong");
-      sounds[isCorrect ? "correct" : "wrong"].play();
+    }, 500);
+  } else {
+    animateCards("swipe-right-card", () => {
+      setResult("correct");
+      sounds.correct.play();
       setTimeout(() => {
-        if (isCorrect) {
-          setScore((prev) => {
-            const newScore = prev + 1;
-            if (newScore > highScore) setHighScore(newScore);
-            return newScore;
-          });
-          setCurrentCommodity(nextCommodity);
-          setAnswerSubmitted(false);
-          setResult(null);
-          if (gameMode === "Beat The Clock") {
-            setTimerValue(15);
-          }
-        } else {
-          handleLoss();
+        setScore((prev) => {
+          const newScore = prev + 1;
+          if (newScore > highScore) setHighScore(newScore);
+          return newScore;
+        });
+        setCurrentCommodity(nextCommodity);
+        setAnswerSubmitted(false);
+        setResult(null);
+        if (gameMode === "Beat The Clock") {
+          setTimerValue(15);
         }
       }, 500);
     });
-  };
+  }
+};
 
   // --- Swipe Detection (for pointer/mouse input) ---
   const handlePointerDown = (e) => {
@@ -249,7 +258,8 @@ function GameScreen({
     // Set threshold for swipe detection (50px)
     if (Math.abs(diffX) > 50 && !answerSubmitted) {
       // Determine answer from swipe direction:
-      // Right swipe → answer "higher", Left swipe → answer "lower"
+      // Right swipe → answer "higher"
+      // Left swipe → answer "lower"
       const swipeChoice = diffX > 0 ? "higher" : "lower";
       if (metricToggle) {
         handleDualAnswer(swipeChoice);
@@ -263,6 +273,8 @@ function GameScreen({
 
   // --- Quit Handler ---
   const handleQuit = () => {
+    // Replace this with your desired quit logic.
+    // For demonstration, we redirect to the home page.
     sounds.quit.play();
     handleLoss();
   };
@@ -331,8 +343,12 @@ function GameScreen({
         </div>
         {!answerSubmitted && (
           <div className="dual-buttons">
-            <button onClick={() => handleDualAnswer("higher")}>Higher</button>
-            <button onClick={() => handleDualAnswer("lower")}>Lower</button>
+            <button onClick={() => handleDualAnswer("higher")}>
+              Higher
+            </button>
+            <button onClick={() => handleDualAnswer("lower")}>
+              Lower
+            </button>
           </div>
         )}
         {result && (
@@ -373,7 +389,10 @@ function GameScreen({
             {currentCommodity && (
               <>
                 <img
-                  src={currentCommodity.image || "/images/placeholder.png"}
+                  src={
+                    currentCommodity.image ||
+                    "/images/placeholder.png"
+                  }
                   alt={currentCommodity.name}
                   className="commodity-image"
                 />
@@ -385,10 +404,20 @@ function GameScreen({
             )}
           </div>
         </div>
+       
         {!answerSubmitted && (
           <div className="single-buttons">
-            <button onClick={() => handleSingleAnswer("lower")}>Lower</button>
-            <button onClick={() => handleSingleAnswer("higher")}>Higher</button>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button onClick={() => handleSingleAnswer("lower")}>
+              Lower
+            </button>
+            <button onClick={() => handleSingleAnswer("higher")}>
+              Higher
+            </button>
           </div>
         )}
         {result && (

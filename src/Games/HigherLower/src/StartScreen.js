@@ -1,9 +1,9 @@
 // StartScreen.js
 import React, { useState } from "react";
-import header_image from "./images/header.png";
+import header_image from "./header.png";
 import { Howl } from "howler";
 import button_c from "./sounds/button_pressed.mp3";
-import "./HigherLower.css";
+
 // Create a Howl instance for the button toggle sound
 const buttonSound = new Howl({
   src: [button_c],
@@ -24,15 +24,6 @@ function StartScreen({ handleStart, metricToggle, setMetricToggle, isMusicOn, to
         </p>
       </div>
 
-      <div className="game-mode-container">
-        <button className="game-mode-button" onClick={() => handleStart("Classic")}>
-          Classic
-        </button>
-        <button className="game-mode-button" onClick={() => handleStart("Beat The Clock")}>
-          Beat The Clock
-        </button>
-      </div>
-      <br />
       <div className="metric-toggle">
         <button
           className={metricToggle ? "active" : ""}
@@ -51,6 +42,16 @@ function StartScreen({ handleStart, metricToggle, setMetricToggle, isMusicOn, to
           }}
         >
           Single Price Prediction
+        </button>
+      </div>
+      <br />
+      
+      <div className="game-mode-container">
+        <button className="game-mode-button" onClick={() => handleStart("Classic")}>
+          Classic
+        </button>
+        <button className="game-mode-button" onClick={() => handleStart("Beat The Clock")}>
+          Beat The Clock
         </button>
       </div>
       <div className="settings">

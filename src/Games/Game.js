@@ -1,6 +1,6 @@
 import "../Resources/Resources.css";
 
-import HL from './Images/higherlower.png'; 
+import HL from './HigherLower/public/images/bg.png'
 import balance from './Images/G.jpg';
 
 const Game = () => {
@@ -15,7 +15,7 @@ const Game = () => {
 
 
         <div className="boxsmall game">
-          <a href="/games/HigherLower/Home">
+          <a href="/games/HigherLower">
             <div className="img">
               <img src={HL} alt="Higher or Lower Game Cover" />
             </div>
@@ -29,7 +29,7 @@ const Game = () => {
         </div>
 
         <div className="boxsmall game">
-          <a href="/games/budgetinggame/">
+          <a href="/games/budgetinggame/one">
             <div className="img">
               <img src={balance} alt="Budgeting Game Cover" />
             </div>
