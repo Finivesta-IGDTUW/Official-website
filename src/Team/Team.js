@@ -1,24 +1,37 @@
 import React from "react";
 import "./Team.css";
 import '../ContactUs/Contact.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect, startTransition } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { lazy, Suspense } from 'react';
 
-import Team23 from './Media/Tenure23';
+// import Team23 from './Media/Tenure23';
 import Team24 from './Media/Tenure24';
-
 import TeamPic23 from './Media/TeamPic23.jpeg';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+const Team23 = lazy(() => import('./Media/Tenure23')); // Lazy load only when needed
 
 const Team = () => {
 
     const [showTeam23, setShowTeam23] = useState(false);
 
     const toggleTeam23 = () => {
-        setShowTeam23(prevShowTeam23 => !prevShowTeam23);
+        startTransition(() => {
+            setShowTeam23(prevShowTeam23 => !prevShowTeam23);
+        });
     };
+
+    useEffect(() => {
+        if (showTeam23) {
+            setTimeout(() => {
+            Aos.refresh();
+            }, 0);
+        }
+    }, [showTeam23]);
 
     useEffect(() => {
         Aos.init({
@@ -40,32 +53,32 @@ const Team = () => {
 
             <section className="cores">
                 
-                <h1>Year '24 - '25</h1>
+                <h1 data-aos="fade-up">Year '24 - '25</h1>
                 <Team24/>
                 
-                <div className="after-core-line"></div>
+                <div className="after-core-line" data-aos="fade-up"></div>
 
-                <h1>Year '23 - '24</h1>
-                <div className="drop-down-team" onClick={toggleTeam23}>
+                <h1 data-aos="fade-up">Year '23 - '24</h1>
+                <div className="drop-down-team" onClick={toggleTeam23} data-aos="fade-up">
                     <img src={TeamPic23} alt="Team 23" />
                     <p className="team-drop-down-text">Meet the previous faces of Finivesta</p>
                     <div className={`team-arrow ${showTeam23 ? 'team-arrow-rotate' : ''}`}></div>
                 </div>
                 {showTeam23 && (
-                    <div data-aos="fade-down">
+                    <Suspense fallback={<div>Loading...</div>}>
                         <Team23 />
-                    </div>
+                    </Suspense>
                 )}
             </section>
 
-            <div className="after-core-line"></div>
+            <div className="after-core-line" data-aos="fade-up"></div>
 
-            <div className="contact-header">
+            <div className="contact-header" data-aos="fade-up">
                 <h1>Contact Us</h1>
                 <p>We are here to assist you. Reach out to us for any queries or support :)</p>
             </div>
 
-            <div className="wrapper">
+            <div className="wrapper" data-aos="fade-up">
                 <div className="contactbox">
                     <p>
                         <b>
@@ -90,7 +103,6 @@ const Team = () => {
                         height="300"
                         style={{ border: 0 }}
                         allowFullScreen=""
-                        loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>

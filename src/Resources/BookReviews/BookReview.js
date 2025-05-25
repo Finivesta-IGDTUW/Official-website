@@ -140,7 +140,7 @@ const BookReview = () => {
           <div key={book.id} className="boxsmall">
             <a href={book.link}>
               <div className="img review">
-                <img src={book.image} alt={`${book.title} Book Cover`} />
+                <img src={book.image} alt={`${book.title} Book Cover`} loading="lazy" />
               </div>
               <div className="text">
                 <h2>{book.title}</h2>

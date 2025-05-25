@@ -4,6 +4,7 @@ import events from "./EventsList";
 import FinWeekBanner from './FinWeek25/FINWEEK.png';
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 const Events = () => {
 
@@ -75,6 +76,9 @@ const Events = () => {
 
   return (
     <div className="event-Events">
+      <Helmet>
+        <link rel="preload" as="image" href={FinWeekBanner} />
+      </Helmet>
       <div className="event-events-header">
         <h1>Our Events</h1>
         <p>
@@ -85,7 +89,7 @@ const Events = () => {
       <h1 className="event-Year">2025</h1>
       <div className="event-divs">{renderAfterFinWeekEvents()}</div>
       <div className="banner-container" onClick={toggleFinWeekEvents}>
-        <img src={FinWeekBanner} alt="FinWeek Banner" className="finweek-banner" />
+        <img src={FinWeekBanner} loading="eager" alt="FinWeek Banner" className="finweek-banner" /> {/*to load faster */}
         <div className={`banner-arrow ${showFinWeekEvents ? 'banner-arrow-rotate' : ''}`}></div>
       </div>
       {showFinWeekEvents && (

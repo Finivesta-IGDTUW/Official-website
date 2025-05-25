@@ -83,7 +83,7 @@ const Resources = () => {
         {resources.map((resource) => (
           <Link key={resource.id} to={resource.link} className="boxsmall">
             <div className="img">
-              <img src={resource.image} alt={resource.title} />
+              <img src={resource.image} alt={resource.title} loading="lazy"/>
             </div>
             <div className="text">
               <h2>{resource.title}</h2>

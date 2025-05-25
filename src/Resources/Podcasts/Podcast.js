@@ -107,7 +107,7 @@ const Podcast = () => {
             {podcast.link ? (
               <Link to={podcast.link}>
                 <div className="img podcast">
-                  <img src={podcast.image} alt={podcast.title} />
+                  <img src={podcast.image} alt={podcast.title} loading="lazy"/>
                 </div>
               </Link>
             ) : (
@@ -117,7 +117,7 @@ const Podcast = () => {
                 rel="noopener noreferrer"
               >
                 <div className="img podcast">
-                  <img src={podcast.image} alt={podcast.title} />
+                  <img src={podcast.image} alt={podcast.title} loading="lazy"/>
                 </div>
               </a>
             )}

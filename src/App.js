@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Layout from "./NavbarFooter/Layout";
 
@@ -73,7 +73,7 @@ import Indicator from './Resources/Podcasts/podcastlist/indicator';
 import PersonalFinance from './Resources/Podcasts/podcastlist/PersonalFinance';
 import MoneyExplained from './Resources/Podcasts/podcastlist/MoneyExplained';
 
-import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
+// import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
 
 const AppContent = () => {
@@ -103,7 +103,6 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/events" element={<Events/>}/>
-          <Route path="/finweek25" element={<FinWeek25/>}/>
           <Route path="/sponsors" element={<Sponsor/>}/>
           <Route path="/resources" element={<Resources/>}/>
   
@@ -206,9 +205,11 @@ function App() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </HelmetProvider>
   );
 }
 

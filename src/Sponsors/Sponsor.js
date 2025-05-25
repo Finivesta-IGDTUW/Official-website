@@ -1,4 +1,3 @@
-import React from "react";
 import "./Sponsor.css";
 
 import Finlatics from './SponsorImages/image16.png';
@@ -15,135 +14,154 @@ import Markblend from './SponsorImages/image12.png';
 import Finwizz from './SponsorImages/image13.png';
 import Stockpe from './SponsorImages/image14.png';
 import Stockgro from './SponsorImages/image15.png';
-import Lwt from './SponsorImages/image.png'
+import Lwt from './SponsorImages/image.png';
 import StockEdge from './SponsorImages/StockEdge.png';
 import Unstop from './SponsorImages/Unstop11.png';
 
+const sponsors = [
+  {
+    id: "a7",
+    name: "StockEdge",
+    img: StockEdge,
+    url: "https://www.linkedin.com/company/stockedge/",
+  },
+  {
+    id: "a8",
+    name: "Unstop",
+    img: Unstop,
+    url: "https://www.linkedin.com/company/unstop/",
+  },
+  {
+    id: "a1",
+    name: "Finlatics",
+    img: Finlatics,
+    url: "https://www.linkedin.com/company/fincrux-enabling-insights/",
+  },
+  {
+    id: "a2",
+    name: "StoxHero",
+    img: StoxHero,
+    url: "https://www.linkedin.com/company/stoxhero/",
+  },
+  {
+    id: "a3",
+    name: "One Percent Club",
+    img: Onepercclub,
+    url: null, // No link provided
+  },
+  {
+    id: "a4",
+    name: "Coding Ninjas",
+    img: CodingNinjas,
+    url: "https://www.linkedin.com/school/codingninjas/",
+  },
+  {
+    id: "a5",
+    name: "Stock Pe",
+    img: Stockpe,
+    url: "https://www.linkedin.com/company/stockpe/",
+  },
+  {
+    id: "a6",
+    name: "Learning While Travelling",
+    img: Lwt,
+    url: "https://www.linkedin.com/company/learningwhiletravelling/",
+  },
+];
+
+const partners = [
+  {
+    id: "b1",
+    name: "StockGro",
+    img: Stockgro,
+    url: "https://www.linkedin.com/company/stockgro/",
+  },
+  {
+    id: "b2",
+    name: "FinShots",
+    img: Finshots,
+    url: "https://www.linkedin.com/showcase/finshots/",
+  },
+  {
+    id: "b3",
+    name: "Adira CSD",
+    img: Adira,
+    url: "https://www.linkedin.com/in/adira-csd-280a71226/",
+  },
+  {
+    id: "b4",
+    name: "Assets DTU",
+    img: AssetsDtu,
+    url: "https://www.linkedin.com/company/assets-dtu/",
+  },
+  {
+    id: "b5",
+    name: "CSD - IGDTUW",
+    img: Csd,
+    url: "https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all",
+  },
+  {
+    id: "b6",
+    name: "B. H. A. V.",
+    img: Bhav,
+    url: "https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/",
+  },
+  {
+    id: "b7",
+    name: "TechnoLiterati",
+    img: TechnoLit,
+    url: "https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all",
+  },
+  {
+    id: "b8",
+    name: "MarkBlend",
+    img: Markblend,
+    url: "https://www.linkedin.com/company/markblend-social-media-agency/",
+  },
+  {
+    id: "b9",
+    name: "FinWizz",
+    img: Finwizz,
+    url: "https://www.linkedin.com/company/beat-the-markets/",
+  },
+];
 
 const Sponsor = () => {
-    return (
-        <div className="sponspage">
-            <div className="sponsors-header">
-            <h1>Our Sponsors</h1>
-            <p>Empowering innovation and growth, thanks to the support of our valued sponsors.</p>
-            </div>
+  const renderLogo = ({ id, name, img, url }) => (
+    <div className="logos" id={id} key={id}>
+      {url ? (
+        <a href={url} target="_blank" rel="noreferrer">
+          <img src={img} alt={name} />
+          <div className="shade">{name}</div>
+        </a>
+      ) : (
+        <>
+          <img src={img} alt={name} />
+          <div className="shade">{name}</div>
+        </>
+      )}
+    </div>
+  );
 
-            <div class="sponsors_container">
-                {/* Added blank links to link logo to the page of the sponsors */}
+  return (
+    <div className="sponspage">
+      <div className="sponsors-header">
+        <h1>Our Sponsors</h1>
+        <p>
+          Empowering innovation and growth, thanks to the support of our valued
+          sponsors.
+        </p>
+      </div>
 
-                <div class="logos" id="a7">
-                    <a href="https://www.linkedin.com/company/stockedge/" target="_blank" rel="noreferrer"> 
-                        <img src={StockEdge} alt=""/>
-                        <div class="shade">StockEdge</div>
-                    </a>
-                </div> 
-                <div class="logos" id="a8">
-                    <a href="https://www.linkedin.com/company/unstop/" target="_blank" rel="noreferrer"> 
-                        <img src={Unstop} alt=""/>
-                        <div class="shade">Unstop</div>
-                    </a>
-                </div> 
-                <div class="logos" id="a1">
-                    <a href="https://www.linkedin.com/company/fincrux-enabling-insights/" target="_blank" rel="noreferrer"> 
-                        <img src={Finlatics} alt=""/>
-                        <div class="shade">Finlatics</div>
-                    </a>
-                </div>
-                <div class="logos" id="a2">
-                    <a href="https://www.linkedin.com/company/stoxhero/" target="_blank" rel="noreferrer">
-                        <img src={StoxHero} alt=""/>
-                        <div class="shade">StoxHero</div>
-                    </a>
-                </div>
-                <div class="logos" id="a3">
-                    {/* <a href="" target="_blank" rel="noreferrer"> */}
-                        <img src={Onepercclub} alt=""/>
-                        <div class="shade">One Percent Club</div>
-                    {/* </a> */}
-                </div>
-                <div class="logos" id="a4">
-                    <a href="https://www.linkedin.com/school/codingninjas/" target="_blank" rel="noreferrer">
-                        <img src={CodingNinjas} alt=""/>
-                        <div class="shade">Coding Ninjas</div>
-                    </a>
-                </div>
-                <div class="logos" id="a5">
-                    <a href="https://www.linkedin.com/company/stockpe/" target="_blank" rel="noreferrer">
-                        <img src={Stockpe} alt=""/>
-                        <div class="shade">Stock Pe</div>
-                    </a>
-                </div>
-                <div class="logos" id="a6">
-                    <a href="https://www.linkedin.com/company/learningwhiletravelling/" target="_blank" rel="noreferrer">
-                        <img src={Lwt} alt=""/>
-                        <div class="shade">Learning While Travelling</div>
-                    </a>
-                </div>
-            </div>
-            
-            <div className="sponsi-vertical-line"></div>
+      <div className="sponsors_container">{sponsors.map(renderLogo)}</div>
 
-            <h1 class="our_partners">Our Partners</h1>
+      <div className="sponsi-vertical-line"></div>
 
-            <div class="partners_container">
-                <div class="logos" id="b1">
-                    <a href="https://www.linkedin.com/company/stockgro/" target="_blank" rel="noreferrer">
-                        <img src={Stockgro} alt=""/>
-                        <div class="shade">StockGro</div>
-                    </a>
-                </div> 
-                <div class="logos" id="b2">
-                    <a href="https://www.linkedin.com/showcase/finshots/" target="_blank" rel="noreferrer">
-                        <img src={Finshots} alt=""/>
-                        <div class="shade">FinShots</div>
-                    </a>
-                </div>
-                <div class="logos" id="b3">
-                    <a href="https://www.linkedin.com/in/adira-csd-280a71226/" target="_blank" rel="noreferrer">
-                        <img src={Adira} alt=""/>
-                        <div class="shade">Adira CSD</div>
-                    </a>
-                </div>
-                <div class="logos" id="b4">
-                    <a href="https://www.linkedin.com/company/assets-dtu/" target="_blank" rel="noreferrer">
-                        <img src={AssetsDtu} alt=""/>
-                        <div class="shade">Assets DTU</div>
-                    </a>
-                </div> 
-                <div class="logos" id="b5">
-                    <a href="https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all" target="_blank" rel="noreferrer">
-                        <img src={Csd} alt=""/>
-                        <div class="shade">CSD - IGDTUW</div>
-                    </a>
-                </div>
-                <div class="logos" id="b6">
-                    <a href="https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/" target="_blank" rel="noreferrer">
-                        <img src={Bhav} alt=""/>
-                        <div class="shade">B. H. A. V.</div>
-                    </a>
-                </div>
-                <div class="logos" id="b7">
-                    <a href="https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all" target="_blank" rel="noreferrer">
-                        <img src={TechnoLit} alt=""/>
-                        <div class="shade">TechnoLiterati</div>
-                    </a>
-                </div> 
-                <div class="logos" id="b8">
-                    <a href="https://www.linkedin.com/company/markblend-social-media-agency/" target="_blank" rel="noreferrer">
-                        <img src={Markblend} alt=""/>
-                        <div class="shade">MarkBlend</div>
-                    </a>
-                </div>
-                <div class="logos" id="b9">
-                    <a href="https://www.linkedin.com/company/beat-the-markets/" target="_blank" rel="noreferrer">
-                        <img src={Finwizz} alt=""/>
-                        <div class="shade">FinWizz</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-    );
+      <h1 className="our_partners">Our Partners</h1>
+
+      <div className="partners_container">{partners.map(renderLogo)}</div>
+    </div>
+  );
 };
 
 export default Sponsor;
