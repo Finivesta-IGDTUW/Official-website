@@ -19,8 +19,15 @@ import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
 import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
 import letstalkmoney from "../Images/books/letstalkmoney.jpg";
+import thePersonalMBA from "../Images/books/thePersonalMBA.jpg";
 
 const books = [
+  {
+    id: 21,
+    title: "The Personal MBA",
+    image: thePersonalMBA,
+    link: "/resources/bookreviews/thePersonalMBA",
+  },
   {
     id: 20,
     title: "The Alchemy of Finance",
@@ -50,7 +57,8 @@ const books = [
     title: "Money Works",
     image: MoneyWorks,
     link: "/resources/bookreviews/moneyworks",
-  },{
+  },
+  {
     id: 15,
     title: "The Lean Startup",
     image: TheLeanStartup,
@@ -155,7 +163,11 @@ const BookReview = () => {
           <div key={book.id} className="boxsmall">
             <a href={book.link}>
               <div className="img review">
-                <img src={book.image} alt={`${book.title} Book Cover`} loading="lazy" />
+                <img
+                  src={book.image}
+                  alt={`${book.title} Book Cover`}
+                  loading="lazy"
+                />
               </div>
               <div className="text">
                 <h2>{book.title}</h2>
