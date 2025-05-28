@@ -77,7 +77,7 @@ const MoneyMasterclass = () => {
           <div key={session.id} className="boxsmall">
             <a href={session.link} target="_blank" rel="noreferrer">
               <div className="landscape">
-                <img src={session.image} alt={`${session.title} Cover`} />
+                <img src={session.image} alt={`${session.title} Cover`} loading="lazy"/>
               </div>
               <div className="text">
                 <h2>{session.title}</h2>

@@ -170,7 +170,7 @@ const Blog = () => {
           <div key={blog.id} className="boxsmall blog">
             <a href={blog.link}>
               <div className="img">
-                <img src={blog.image} alt={blog.title} />
+                <img src={blog.image} alt={blog.title} loading="lazy"/>
               </div>
               <div className="text">
                 <h2>{blog.title}</h2>

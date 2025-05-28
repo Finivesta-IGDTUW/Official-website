@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             <p className="text-footer"> 
-                Copyright &copy; 2025 Finivesta IGDTUW - All Rights Reserved.
+                Copyright &copy; {new Date().getFullYear()} Finivesta IGDTUW - All Rights Reserved.
             </p> 
 
         </footer> 
