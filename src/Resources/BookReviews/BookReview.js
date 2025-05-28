@@ -18,6 +18,7 @@ import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
 import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
+import letstalkmoney from "../Images/books/letstalkmoney.jpg";
 
 const books = [
   {
@@ -25,6 +26,12 @@ const books = [
     title: "The Alchemy of Finance",
     image: AlchemyofFinance,
     link: "/resources/bookreviews/alchemyfinance",
+  },
+  {
+    id: 19,
+    title: "Let's Talk Money",
+    image: letstalkmoney,
+    link: "/resources/bookreviews/letstalkmoney",
   },
   {
     id: 18,

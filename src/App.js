@@ -63,6 +63,7 @@ import Review16 from './Resources/BookReviews/bookpages/Review16.js';
 import Review17 from './Resources/BookReviews/bookpages/Review17.js';
 import Review18 from './Resources/BookReviews/bookpages/Review18.js';
 import Review20 from './Resources/BookReviews/bookpages/Review20.js';
+import Review19 from './Resources/BookReviews/bookpages/Review19.js';
 
 // Podcasts
 import Podcast from "./Resources/Podcasts/Podcast";
@@ -154,7 +155,7 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/themillnextdoor" element={<Review17/>}/>
             <Route path="/resources/bookreviews/intellinvestor" element={<Review18/>}/>
             <Route path="/resources/bookreviews/alchemyfinance" element={<Review20/>}/>
-
+            <Route path="/resources/bookreviews/letstalkmoney" element={<Review19/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
             <Route path="/resources/podcasts/we_study_billionaires" element={<WeStudyBillionaires/>}/>
