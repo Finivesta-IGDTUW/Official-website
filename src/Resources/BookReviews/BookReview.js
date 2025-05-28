@@ -17,7 +17,15 @@ import TheBarefootInvestor from "../Images/books/TheBarefootInvestor.png";
 import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg";
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
+import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
+
 const books = [
+  {
+    id: 20,
+    title: "The Alchemy of Finance",
+    image: AlchemyofFinance,
+    link: "/resources/bookreviews/alchemyfinance",
+  },
   {
     id: 18,
     title: "Intelligent Investor",
