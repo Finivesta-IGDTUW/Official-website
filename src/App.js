@@ -62,6 +62,7 @@ import Review15 from './Resources/BookReviews/bookpages/Review15.js';
 import Review16 from './Resources/BookReviews/bookpages/Review16.js';
 import Review17 from './Resources/BookReviews/bookpages/Review17.js';
 import Review18 from './Resources/BookReviews/bookpages/Review18.js';
+import Review20 from './Resources/BookReviews/bookpages/Review20.js';
 import Review19 from './Resources/BookReviews/bookpages/Review19.js';
 
 // Podcasts
@@ -73,6 +74,7 @@ import Panchratna from './Resources/Podcasts/podcastlist/panchratna';
 import Indicator from './Resources/Podcasts/podcastlist/indicator';
 import PersonalFinance from './Resources/Podcasts/podcastlist/PersonalFinance';
 import MoneyExplained from './Resources/Podcasts/podcastlist/MoneyExplained';
+import MoneyControl from './Resources/Podcasts/podcastlist/moneycontrol.js';
 
 // import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
@@ -152,6 +154,7 @@ const AppContent = () => {
             <Route path="/resources/bookreviews/moneyworks" element={<Review16/>}/>
             <Route path="/resources/bookreviews/themillnextdoor" element={<Review17/>}/>
             <Route path="/resources/bookreviews/intellinvestor" element={<Review18/>}/>
+            <Route path="/resources/bookreviews/alchemyfinance" element={<Review20/>}/>
             <Route path="/resources/bookreviews/letstalkmoney" element={<Review19/>}/>
             <Route path="/resources/youtube" element={<Youtube/>}/>
             <Route path="/resources/podcasts" element={<Podcast/>}/>
@@ -166,6 +169,7 @@ const AppContent = () => {
             <Route path="/resources/podcasts/PersonalFinance" element={<PersonalFinance/>}/>
             <Route path="/resources/podcasts/MoneyExplained" element={<MoneyExplained/>}/>
             <Route path="/resources/podcasts/Panchratna" element={<Panchratna/>}/>
+            <Route path="/resources/podcasts/moneycontrol" element={<MoneyControl/>}/>
 
           <Route path="/team" element={<Team/>}/>
           { /* <Route path="/contact" element={<Contact/>}/> */}

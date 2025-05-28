@@ -12,8 +12,17 @@ import panchratnaimg from "../Images/podcasts/panchratna.png";
 import indicatorimg from "../Images/podcasts/indicatorimg.png";
 import personalfinanceimg from "../Images/podcasts/personalfinanceimg.png";
 import MoneyExplained from "../Images/podcasts/moneyExplained.png";
+import MoneyControlImage from "../Images/podcasts/moneycontrol.jpg";
 
 const podcasts = [
+  {
+    id: 11,
+    title: "Money Control",
+    image: MoneyControlImage,
+    link: "/resources/podcasts/moneycontrol",
+    externalLink: "https://open.spotify.com/show/6mcVOxYVPF4BXPRKGz0Cna",
+    iconClass: "fab fa-spotify",
+  },
   {
     id: 10,
     title: "We Study Billionaires",
