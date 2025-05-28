@@ -70,6 +70,7 @@ import Review18 from "./Resources/BookReviews/bookpages/Review18.js";
 import Review20 from "./Resources/BookReviews/bookpages/Review20.js";
 import Review19 from "./Resources/BookReviews/bookpages/Review19.js";
 import Review21 from "./Resources/BookReviews/bookpages/Review21.js";
+import Review22 from "./Resources/BookReviews/bookpages/Review22.js";
 
 // Podcasts
 import Podcast from "./Resources/Podcasts/Podcast";
@@ -279,6 +280,10 @@ const AppContent = () => {
           <Route
             path="/resources/bookreviews/thePersonalMBA"
             element={<Review21 />}
+          />
+          <Route
+            path="/resources/bookreviews/thinkandgrowrich"
+            element={<Review22 />}
           />
           <Route path="/resources/youtube" element={<Youtube />} />
           <Route path="/resources/podcasts" element={<Podcast />} />

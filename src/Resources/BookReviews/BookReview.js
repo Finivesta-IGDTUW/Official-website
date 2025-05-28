@@ -20,8 +20,15 @@ import MoneyWorks from "../Images/books/MoneyWorks.jpg";
 import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
 import letstalkmoney from "../Images/books/letstalkmoney.jpg";
 import thePersonalMBA from "../Images/books/thePersonalMBA.jpg";
+import ThinkAndGrowRich from "../Images/books/ThinkAndGrowRich.jpg";
 
 const books = [
+  {
+    id: 22,
+    title: "Think and Grow Rich",
+    image: ThinkAndGrowRich,
+    link: "/resources/bookreviews/thinkandgrowrich",
+  },
   {
     id: 21,
     title: "The Personal MBA",
