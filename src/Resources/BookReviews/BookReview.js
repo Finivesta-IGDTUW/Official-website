@@ -20,8 +20,15 @@ import MoneyWorks from "../Images/books/MoneyWorks.jpg";
 import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
 import letstalkmoney from "../Images/books/letstalkmoney.jpg";
 import thePersonalMBA from "../Images/books/thePersonalMBA.jpg";
+import ThinkAndGrowRich from "../Images/books/ThinkAndGrowRich.jpg";
 
 const books = [
+  {
+    id: 22,
+    title: "Think and Grow Rich",
+    image: ThinkAndGrowRich,
+    link: "/resources/bookreviews/thinkandgrowrich",
+  },
   {
     id: 21,
     title: "The Personal MBA",
@@ -106,12 +113,14 @@ const books = [
     image: Doglapan,
     link: "/resources/bookreviews/doglapan",
   },
+  /*
   {
     id: 7,
     title: "Intelligent Investor",
     image: IntellInvestor,
     link: "/resources/bookreviews/intelligentinvestor",
   },
+  */
   {
     id: 6,
     title: "Rich Dad Poor Dad",
@@ -124,12 +133,14 @@ const books = [
     image: PsychOfMoney,
     link: "/resources/bookreviews/psychologyofmoney",
   },
+  /*
   {
     id: 4,
     title: "The Millionaire Next Door",
     image: MillNextDoor,
     link: "/resources/bookreviews/millnextdoor",
   },
+  */
   {
     id: 3,
     title: "The Richest Man In Babylon",
