@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './book-page.css';
 import TheMillNextDoor from '../../Images/books/MillNextDoor.jpg';
 
@@ -15,9 +16,18 @@ const Review17 = () => {
             <p className="author">
               by <i>Thomas J. Stanley and William D. Danko</i>
             </p>
-            <p>
-              Book Review by <i>Khushi</i>
-            </p>
+            <div className="review-switch">
+              <Link
+                  to="/resources/bookreviews/millnextdoor"
+                  className="review-switch-btn"
+                  style={{ textDecoration: "none" }}
+              >
+                  Book Review by <i>Mansi</i>
+              </Link>
+              <button className="review-switch-btn active" disabled>
+                  Book Review by <i>Khushi</i>
+              </button>
+            </div>
           </div>
         </div>
         <div className="book-para">

@@ -32,6 +32,7 @@
     flex-direction: column;
     /* position: relative; */
     align-items: center;
+    width: 100%;
 }
 .book-header h1{
     font-size: 1.4rem;
@@ -57,6 +58,41 @@
 
 .author{
   margin-bottom:30px;
+}
+
+.review-switch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.review-switch-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 0;
+  transition: color 0.2s, border-bottom 0.2s;
+  text-decoration: none;
+  flex: 1 1 0;
+  text-align: center;
+  min-width: 0;
+}
+
+.review-switch-btn.active,
+.review-switch-btn:disabled {
+  color: #fff;
+  border-bottom: 3px solid #5f8e33;
+  cursor: default;
+  text-decoration: none;
+}
+
+.review-switch-btn:not(.active):hover {
+  color: #e0e0e0;
+  text-decoration: underline;
 }
 
 @media screen and (max-width:650px) {

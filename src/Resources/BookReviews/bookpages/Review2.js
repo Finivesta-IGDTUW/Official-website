@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './book-page.css';
 import IntellInvestor from '../../Images/books/IntellInvestor.jpg';
 
@@ -6,15 +7,27 @@ const  Review2 = () => {
   return (
         <div>
             <div className="book-page-box">
-                <div class="book-header ">
+                <div className="book-header ">
                    <div className="book-img">
                    <img src={IntellInvestor} alt="IntellInvestor"/>                                 
                    </div>
                    
-                   <div class="book-title">
+                   <div className="book-title">
                     <h1>Intelligent Investor</h1>
-                    <p class="author">by <i>Benjamin Graham</i></p>
-                    <p>Book review by <i>Simer Khurmi</i></p>           
+                    <p className="author">by <i>Benjamin Graham</i></p>
+                    {/* <p>Book review by <i>Simer Khurmi</i></p> */}
+                    <div className="review-switch">
+                        <button className="review-switch-btn active" disabled>
+                            Book Review by <i>Simer Khurmi</i>
+                        </button>
+                        <Link
+                            to="/resources/bookreviews/intellinvestor"
+                            className="review-switch-btn"
+                            style={{ textDecoration: "none" }}
+                        >
+                            Book Review by <i>Aashi</i>
+                        </Link>
+                    </div>
                    </div>
                 </div>
                

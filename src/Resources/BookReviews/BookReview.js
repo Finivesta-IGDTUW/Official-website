@@ -106,12 +106,14 @@ const books = [
     image: Doglapan,
     link: "/resources/bookreviews/doglapan",
   },
+  /*
   {
     id: 7,
     title: "Intelligent Investor",
     image: IntellInvestor,
     link: "/resources/bookreviews/intelligentinvestor",
   },
+  */
   {
     id: 6,
     title: "Rich Dad Poor Dad",
@@ -124,12 +126,14 @@ const books = [
     image: PsychOfMoney,
     link: "/resources/bookreviews/psychologyofmoney",
   },
+  /*
   {
     id: 4,
     title: "The Millionaire Next Door",
     image: MillNextDoor,
     link: "/resources/bookreviews/millnextdoor",
   },
+  */
   {
     id: 3,
     title: "The Richest Man In Babylon",
