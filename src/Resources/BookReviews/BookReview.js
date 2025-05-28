@@ -17,7 +17,14 @@ import TheBarefootInvestor from "../Images/books/TheBarefootInvestor.png";
 import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg";
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
+import letstalkmoney from "../Images/books/letstalkmoney.jpg";
 const books = [
+  {
+    id: 19,
+    title: "Let's Talk Money",
+    image: letstalkmoney,
+    link: "/resources/bookreviews/letstalkmoney",
+  },
   {
     id: 18,
     title: "Intelligent Investor",
