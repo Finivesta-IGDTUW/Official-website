@@ -1,5 +1,5 @@
 import React from 'react';
-import MoneyControlImage from '../../Images/podcasts/moneycontrol.jpg';
+import MoneyControlImage from '../../Images/podcasts/moneycontrol.jpeg';
 import '../../BookReviews/bookpages/book-page.css';
 
 const MoneyControl = () => {

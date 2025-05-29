@@ -12,7 +12,7 @@ import panchratnaimg from "../Images/podcasts/panchratna.png";
 import indicatorimg from "../Images/podcasts/indicatorimg.png";
 import personalfinanceimg from "../Images/podcasts/personalfinanceimg.png";
 import MoneyExplained from "../Images/podcasts/moneyExplained.png";
-import MoneyControlImage from "../Images/podcasts/moneycontrol.jpg";
+import MoneyControlImage from "../Images/podcasts/moneycontrol.jpeg";
 
 const podcasts = [
   {
