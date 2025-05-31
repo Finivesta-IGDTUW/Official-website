@@ -11,7 +11,7 @@
   display: flex;
   height:auto;
   /* width: ; */
-  aspect-ratio: 16 / 9; 
+  aspect-ratio: 4; 
   position: relative;
   overflow: hidden;
   background-color: black;
@@ -19,7 +19,7 @@
   background-size: cover; /* Makes the background image cover the entire container */
   background-position: center center;
   /* margin-top: 8%; */
-  background-image: url('./Images/Home.jpeg');
+  background-image: url('./Images/BannerNew.png');
 }
 
 /* Media queries for responsiveness */
