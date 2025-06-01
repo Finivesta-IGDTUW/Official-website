@@ -50,6 +50,7 @@ const Home = () => {
 
       <section className="hero">
         <div className="content">
+          {/*}
           <h1>
             <span>FINANCE</span> AND <span>ECONOMICS</span> SOCIETY
           </h1>
@@ -88,6 +89,7 @@ const Home = () => {
               </button>
             </a>
           </div>
+          */}
         </div>
       </section>
 
