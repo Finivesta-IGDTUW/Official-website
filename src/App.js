@@ -20,6 +20,20 @@ import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import MoneyMasterclass from "./Resources/MoneyMasterclass/MoneyMasterclass";
 
+import Game from "./Games/Game.js";
+import BudgetingGameOne from "./Games/BudgetingGame/one.js";
+import BudgetingGameTwo from "./Games/BudgetingGame/two.js";
+import BudgetingGameThree from "./Games/BudgetingGame/three.js";
+import BudgetingGameFour from "./Games/BudgetingGame/four.js";
+import BudgetingGameFive from "./Games/BudgetingGame/five.js";
+import BudgetingGameSix from "./Games/BudgetingGame/six.js";
+import BudgetingGameSeven from "./Games/BudgetingGame/seven.js";
+import BudgetingGameEight from "./Games/BudgetingGame/eight.js";
+import BudgetingGameNine from "./Games/BudgetingGame/nine.js";
+import FinanceBingo from "./Games/FinanceBingo/FinanceBingo/FinanceBingo.js";
+import HigherLower from "./Games/HigherLower/src/App1.js";
+import Scramble from "./Games/Scramble/Scramble.js";
+
 // blogs
 import Blog from "./Resources/Blogs/Blog";
 import TradingApps from "./Resources/TradingApps/TradingApps";
@@ -86,6 +100,7 @@ import MoneyControl from "./Resources/Podcasts/podcastlist/moneycontrol.js";
 // import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
 
 const AppContent = () => {
+  /*
   const location = useLocation();
   useEffect(() => {}, [location]);
 
@@ -97,6 +112,7 @@ const AppContent = () => {
       setLoaded(true); // Trigger animation after loader disappears
     }); // Small delay to ensure smooth animation
   }, []);
+  */
 
   return (
     /* <div className={`App app-content ${loaded ? 'loaded' : ''}`}> */
@@ -325,6 +341,47 @@ const AppContent = () => {
           />
 
           <Route path="/team" element={<Team />} />
+          <Route path="/games" element={<Game />} />
+          <Route
+            path="/games/budgetinggame/one"
+            element={<BudgetingGameOne />}
+          />
+          <Route
+            path="/games/budgetinggame/two"
+            element={<BudgetingGameTwo />}
+          />
+          <Route
+            path="/games/budgetinggame/three"
+            element={<BudgetingGameThree />}
+          />
+          <Route
+            path="/games/budgetinggame/four"
+            element={<BudgetingGameFour />}
+          />
+          <Route
+            path="/games/budgetinggame/five"
+            element={<BudgetingGameFive />}
+          />
+          <Route
+            path="/games/budgetinggame/six"
+            element={<BudgetingGameSix />}
+          />
+          <Route
+            path="/games/budgetinggame/seven"
+            element={<BudgetingGameSeven />}
+          />
+          <Route
+            path="/games/budgetinggame/eight"
+            element={<BudgetingGameEight />}
+          />
+          <Route
+            path="/games/budgetinggame/nine"
+            element={<BudgetingGameNine />}
+          />
+          <Route path="/games/financebingo" element={<FinanceBingo />} />
+          <Route path="/games/higherlower" element={<HigherLower />} />
+          <Route path="/games/scramble" element={<Scramble />} />
+
           {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
         <Footer />
