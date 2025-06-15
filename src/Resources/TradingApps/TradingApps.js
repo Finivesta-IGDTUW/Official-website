@@ -168,7 +168,7 @@ const TradingApps = () => {
         {tradingApps.map((app) => (
           <div key={app.id} className="boxsmall tradingapps">
             <div className="img">
-              <img src={app.image} alt={app.title} />
+              <img src={app.image} alt={app.title} loading="lazy"/>
             </div>
             <div className="text">
               <h2>{app.title}</h2>
@@ -197,7 +197,7 @@ const TradingApps = () => {
         {tradingWebsites.map((website) => (
           <div key={website.id} className="boxsmall tradingapps">
             <div className="img">
-              <img src={website.image} alt={website.title} />
+              <img src={website.image} alt={website.title} loading="lazy"/>
             </div>
             <div className="text">
               <h2>{website.title}</h2>

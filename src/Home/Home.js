@@ -50,6 +50,7 @@ const Home = () => {
 
       <section className="hero">
         <div className="content">
+          {/*}
           <h1>
             <span>FINANCE</span> AND <span>ECONOMICS</span> SOCIETY
           </h1>
@@ -58,27 +59,37 @@ const Home = () => {
             enthusiasts
           </p>
           <div className="button-container">
-            <button
-              className="button1"
-              data-inline="true"
-              onClick={() =>
-                (window.location.href = "https://www.igdtuw.ac.in/")
-              }
+            <a
+              href="https://www.igdtuw.ac.in/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              IGDTUW
-              <span className="tooltip-text">Visit site</span>
-            </button>
-            <button
-              className="button2"
-              data-inline="true"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.instagram.com/finivesta_igdtuw/")
-              }
+              <button
+                className="button1"
+                data-inline="true"
+                type="button"
+              >
+                IGDTUW
+                <span className="tooltip-text">Visit site</span>
+              </button>
+            </a>
+            <a
+              href="https://www.instagram.com/finivesta_igdtuw/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              View More
-            </button>
+              <button
+                className="button2"
+                data-inline="true"
+                type="button"
+              >
+                View More
+              </button>
+            </a>
           </div>
+          */}
         </div>
       </section>
 

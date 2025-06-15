@@ -19,31 +19,50 @@ import Gargi from './Tenure23/Treas_Gargi.png';
 import Meera from './Tenure23/Treas_Meera.png';
 import Saachi from './Tenure23/Tech_Saachi.png';
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+import { useEffect } from "react";
+
 const Team23 = () => {
-    document.addEventListener('DOMContentLoaded', function() {
-        var photos = document.querySelectorAll('.photo');
-    
-        photos.forEach(function(photo) {
-            photo.addEventListener('touchstart', function() {
-                photo.classList.add('touch');
-            });
-    
-            photo.addEventListener('touchend', function() {
-                photo.classList.remove('touch');
-            });
+    useEffect(() => {
+        const photos = document.querySelectorAll('.photo');
+        photos.forEach(photo => {
+            const handleTouchStart = () => photo.classList.add('touch');
+            const handleTouchEnd = () => photo.classList.remove('touch');
+            photo.addEventListener('touchstart', handleTouchStart);
+            photo.addEventListener('touchend', handleTouchEnd);
+
+            // Store handlers for cleanup
+            photo._handleTouchStart = handleTouchStart;
+            photo._handleTouchEnd = handleTouchEnd;
         });
-    });
+
+        // Cleanup function
+        return () => {
+            photos.forEach(photo => {
+                photo.removeEventListener('touchstart', photo._handleTouchStart);
+                photo.removeEventListener('touchend', photo._handleTouchEnd);
+                delete photo._handleTouchStart;
+                delete photo._handleTouchEnd;
+            });
+        };
+    }, []);
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
 
     return (
       
         <div>
 
             <section className="cores">
-                <h2>Leads</h2>
+                <h2 data-aos="fade-up">Leads</h2>
                 <div className="cores-photo">
                     
-                    <div className="photo">
-                    <img src={Ritika} alt="Avatar" className="image" />
+                    <div className="photo" data-aos="fade-up">
+                    <img src={Ritika} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/ritikasinghgautam/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -54,8 +73,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Khushi} alt="Avatar" className="image" />
+                    <div className="photo" data-aos="fade-up">
+                    <img src={Khushi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/khushi-sharma-17185021b/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -66,8 +85,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Tejasvi} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Tejasvi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/tjv-sb/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -78,8 +97,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Akshika} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Akshika} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/akshika-dhankhar-8447b2223/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -90,8 +109,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Manasi} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Manasi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/manasi-duggal" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -102,8 +121,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Gargi} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Gargi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/gargi-goel9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -114,8 +133,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Meera} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Meera} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/meera-parida-82b62a223" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -130,8 +149,8 @@ const Team23 = () => {
                 <h2>Heads</h2>
                 <div className="cores-photo">
 
-                    <div className="photo">
-                    <img src={Anshika} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Anshika} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/anshika-aggarwal-704847249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -142,8 +161,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Kashish} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Kashish} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/kashish-narwal-a45bab25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -154,8 +173,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Anandita} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Anandita} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/anandita-mayer-9b5941261/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -166,8 +185,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Sanskriti} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Sanskriti} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/sanskritividushi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -178,8 +197,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Gunjan} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Gunjan} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/gunjanvaishnavijangra" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -190,8 +209,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Mansi} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Mansi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/manasi-bhagat-498646251/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -202,8 +221,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Aiman} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Aiman} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/aiman-zakir-358a2b257/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -214,8 +233,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Urja} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Urja} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/urja-kohli04" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -226,8 +245,8 @@ const Team23 = () => {
                     </div>
                     </div>
                     
-                    <div className="photo">
-                    <img src={Aadya} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Aadya} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/aadya-kumar-a00718248/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -238,8 +257,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Disha} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Disha} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/dishabajaj12?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>
@@ -250,8 +269,8 @@ const Team23 = () => {
                     </div>
                     </div>
 
-                    <div className="photo">
-                    <img src={Saachi} alt="Avatar" className="image" />
+                    <div className="photo"  data-aos="fade-up">
+                    <img src={Saachi} loading="lazy" alt="Avatar" className="image" />
                     <div className="overlay23">
                         <a href="https://www.linkedin.com/in/saachi-bansal/" className="icons" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin-in"/>

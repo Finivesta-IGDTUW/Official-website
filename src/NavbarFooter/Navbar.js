@@ -48,6 +48,7 @@ const Navbar = () => {
               <a href="/resources">Resources</a>
               <button 
                   className="nav-dropdown-arrow" 
+                  onClick={toggleDropdown} // Toggle dropdown on click
                   onMouseEnter={() => setIsDropdownOpen(true)} // Open dropdown on hover
                   onMouseLeave={() => setIsDropdownOpen(false)} // Close dropdown on mouse leave
               >

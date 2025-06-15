@@ -60,7 +60,7 @@ const Stocks = () => {
           <div key={stock.id} className="boxsmall stock">
             <a target="_blank" rel="noreferrer" href={stock.link}>
               <div className="img">
-                <img src={stock.image} alt={stock.title} />
+                <img src={stock.image} alt={stock.title} loading="lazy"/>
               </div>
               <div className="text">
                 <h2>{stock.title}</h2>

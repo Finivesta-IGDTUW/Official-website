@@ -69,7 +69,7 @@ const Youtube = () => {
           <div key={video.id} className="boxsmall">
             <a target="_blank" rel="noreferrer" href={video.link}>
               <div className="landscape">
-                <img src={video.image} alt={video.title} />
+                <img src={video.image} alt={video.title} loading="lazy"/>
               </div>
               <div className="text">
                 <h2>{video.title}</h2>

@@ -11,7 +11,7 @@
   display: flex;
   height:auto;
   /* width: ; */
-  aspect-ratio: 16 / 9; 
+  aspect-ratio: 4; 
   position: relative;
   overflow: hidden;
   background-color: black;
@@ -19,7 +19,7 @@
   background-size: cover; /* Makes the background image cover the entire container */
   background-position: center center;
   /* margin-top: 8%; */
-  background-image: url('./Images/Home.jpeg');
+  background-image: url('./Images/BannerNew.png');
 }
 
 /* Media queries for responsiveness */
@@ -85,6 +85,7 @@
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   justify-content: flex-start; /* Adjust as needed */
+  margin-top: 3vh;
 }
 
 .button1,
@@ -93,7 +94,6 @@
   padding: 1% 2%; /* Adjust padding for buttons */
   border-radius: 10px;
   margin-left: 0%; 
-  ; /* Responsive font size */
   transition: 0.4s;
 }
 
@@ -102,7 +102,8 @@
   background-color: #71B139;
   color: white;
   border: none;
-  font-size: 2vw
+  font-size: 2vw;
+  padding: 1vw;
 }
 
 .tooltip-text {
@@ -149,6 +150,8 @@
   border: 1px solid transparent; /* Added border for visibility */
   font-size: 1.3vw;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  width: 10vw;
+  margin: 1vw;
 }
 
 .button2:hover{

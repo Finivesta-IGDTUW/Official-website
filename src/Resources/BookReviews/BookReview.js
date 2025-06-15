@@ -17,7 +17,36 @@ import TheBarefootInvestor from "../Images/books/TheBarefootInvestor.png";
 import TheSimplestPathToWealth from "../Images/books/thesimplestpathtowealth.jpg";
 import TheLeanStartup from "../Images/books/lean_startup.jpeg";
 import MoneyWorks from "../Images/books/MoneyWorks.jpg";
+import AlchemyofFinance from "../Images/books/AlchemyofFinance.jpg";
+import letstalkmoney from "../Images/books/letstalkmoney.jpg";
+import thePersonalMBA from "../Images/books/thePersonalMBA.jpg";
+import ThinkAndGrowRich from "../Images/books/ThinkAndGrowRich.jpg";
+
 const books = [
+  {
+    id: 22,
+    title: "Think and Grow Rich",
+    image: ThinkAndGrowRich,
+    link: "/resources/bookreviews/thinkandgrowrich",
+  },
+  {
+    id: 21,
+    title: "The Personal MBA",
+    image: thePersonalMBA,
+    link: "/resources/bookreviews/thePersonalMBA",
+  },
+  {
+    id: 20,
+    title: "The Alchemy of Finance",
+    image: AlchemyofFinance,
+    link: "/resources/bookreviews/alchemyfinance",
+  },
+  {
+    id: 19,
+    title: "Let's Talk Money",
+    image: letstalkmoney,
+    link: "/resources/bookreviews/letstalkmoney",
+  },
   {
     id: 18,
     title: "Intelligent Investor",
@@ -35,7 +64,8 @@ const books = [
     title: "Money Works",
     image: MoneyWorks,
     link: "/resources/bookreviews/moneyworks",
-  },{
+  },
+  {
     id: 15,
     title: "The Lean Startup",
     image: TheLeanStartup,
@@ -83,12 +113,14 @@ const books = [
     image: Doglapan,
     link: "/resources/bookreviews/doglapan",
   },
+  /*
   {
     id: 7,
     title: "Intelligent Investor",
     image: IntellInvestor,
     link: "/resources/bookreviews/intelligentinvestor",
   },
+  */
   {
     id: 6,
     title: "Rich Dad Poor Dad",
@@ -101,12 +133,14 @@ const books = [
     image: PsychOfMoney,
     link: "/resources/bookreviews/psychologyofmoney",
   },
+  /*
   {
     id: 4,
     title: "The Millionaire Next Door",
     image: MillNextDoor,
     link: "/resources/bookreviews/millnextdoor",
   },
+  */
   {
     id: 3,
     title: "The Richest Man In Babylon",
@@ -140,7 +174,11 @@ const BookReview = () => {
           <div key={book.id} className="boxsmall">
             <a href={book.link}>
               <div className="img review">
-                <img src={book.image} alt={`${book.title} Book Cover`} />
+                <img
+                  src={book.image}
+                  alt={`${book.title} Book Cover`}
+                  loading="lazy"
+                />
               </div>
               <div className="text">
                 <h2>{book.title}</h2>
