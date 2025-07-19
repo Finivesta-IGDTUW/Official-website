@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +19,23 @@ import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import MoneyMasterclass from "./Resources/MoneyMasterclass/MoneyMasterclass";
+
+import Game from "./Games/Game.js";
+/*
+import BudgetingGameOne from "./Games/BudgetingGame/one.js";
+import BudgetingGameTwo from "./Games/BudgetingGame/two.js";
+import BudgetingGameThree from "./Games/BudgetingGame/three.js";
+import BudgetingGameFour from "./Games/BudgetingGame/four.js";
+import BudgetingGameFive from "./Games/BudgetingGame/five.js";
+import BudgetingGameSix from "./Games/BudgetingGame/six.js";
+import BudgetingGameSeven from "./Games/BudgetingGame/seven.js";
+import BudgetingGameEight from "./Games/BudgetingGame/eight.js";
+import BudgetingGameNine from "./Games/BudgetingGame/nine.js";
+import FinanceBingo from "./Games/FinanceBingo/FinanceBingo/FinanceBingo.js";
+import HigherLower from "./Games/HigherLower/src/App1.js";
+import Scramble from "./Games/Scramble/Scramble.js";
+*/
+import Wordle from "./Games/Wordle/WordleTitle";
 
 // blogs
 import Blog from "./Resources/Blogs/Blog";
@@ -87,6 +104,11 @@ import MoneyControl from "./Resources/Podcasts/podcastlist/moneycontrol.js";
 
 const AppContent = () => {
   const location = useLocation();
+  const isGameFullScreen =
+    location.pathname.startsWith("/games/") && location.pathname !== "/games/";
+
+  /*
+  const location = useLocation();
   useEffect(() => {}, [location]);
 
   const [loaded, setLoaded] = useState(false);
@@ -97,6 +119,7 @@ const AppContent = () => {
       setLoaded(true); // Trigger animation after loader disappears
     }); // Small delay to ensure smooth animation
   }, []);
+  */
 
   return (
     /* <div className={`App app-content ${loaded ? 'loaded' : ''}`}> */
@@ -108,7 +131,7 @@ const AppContent = () => {
           rel="stylesheet"
         />
       </Helmet>
-      <Navbar />
+      {!isGameFullScreen && <Navbar />}
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -325,9 +348,12 @@ const AppContent = () => {
           />
 
           <Route path="/team" element={<Team />} />
+          <Route path="/games" element={<Game />} />
+          <Route path="/games/wordle" element={<Wordle />} />
+
           {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
-        <Footer />
+        {!isGameFullScreen && <Footer />}
       </Layout>
     </div>
   );
