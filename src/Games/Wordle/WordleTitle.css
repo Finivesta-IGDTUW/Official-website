@@ -361,6 +361,11 @@
   .wordle-titlepage-heading {
     font-size: 1.2rem;
   }
+
+  .wordle-titlepage-btns {
+    gap: 0;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 600px) {
