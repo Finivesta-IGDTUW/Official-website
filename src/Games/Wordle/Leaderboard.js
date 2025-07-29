@@ -25,7 +25,7 @@ function getTodayIST() {
 
 const fetchAllUsersMap = async () => {
   const db = getFirestore(getApp());
-  const usersCol = collection(db, "users");
+  const usersCol = collection(db, "games", "wordle", "users");
   const usersSnap = await getDocs(usersCol);
   const userMap = {};
   usersSnap.forEach((doc) => {
@@ -71,7 +71,14 @@ const medal = [
   </span>,
 ];
 
-const Leaderboard = ({ message, user: userProp }) => {
+const Leaderboard = ({
+  message,
+  user: userProp,
+  miniatureBoard,
+  setUser,
+  soundOn = true,
+  playClick = () => {},
+}) => {
   const [period, setPeriod] = useState("day"); // "day", "week", "all"
   const [selectedDay, setSelectedDay] = useState(() => getTodayIST());
   const [selectedWeek, setSelectedWeek] = useState(() => {
@@ -91,25 +98,7 @@ const Leaderboard = ({ message, user: userProp }) => {
   const [userDisplayMap, setUserDisplayMap] = useState({});
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showAddAnon, setShowAddAnon] = useState(true);
-
-  // Fetch the earliest date in the leaderboard on mount
-  useEffect(() => {
-    const fetchFirstDay = async () => {
-      const db = getFirestore(getApp());
-      const q = query(
-        collection(db, "wordle_leaderboard"),
-        orderBy("date", "asc"),
-        limit(1)
-      );
-      const snap = await getDocs(q);
-      if (!snap.empty) {
-        setFirstDay(snap.docs[0].data().date);
-      } else {
-        setFirstDay(new Date().toISOString().slice(0, 10));
-      }
-    };
-    fetchFirstDay();
-  }, []);
+  const [anonResult, setAnonResult] = useState(null);
 
   const todayStr = getTodayIST();
 
@@ -252,10 +241,18 @@ const Leaderboard = ({ message, user: userProp }) => {
       ]);
       setLeaders(allResults);
       setUserDisplayMap(userMap);
+      // Set firstDay from allResults
+      if (allResults.length > 0) {
+        const dates = allResults.map((r) => r.date);
+        const minDate = dates.reduce((a, b) => (a < b ? a : b));
+        setFirstDay(minDate);
+      } else {
+        setFirstDay(new Date().toISOString().slice(0, 10));
+      }
       setLoading(false);
     };
     fetchLeaders();
-  }, [period, selectedDay, selectedWeek]);
+  }, [period, selectedDay, selectedWeek, userProp]);
 
   function getRankedLeaders(leaders, period) {
     if (period === "day") {
@@ -326,6 +323,21 @@ const Leaderboard = ({ message, user: userProp }) => {
     return [];
   }
 
+  // Replace all onClick handlers for arrows and options to play sound
+  // Helper wrappers
+  const handleMoveDay = (n) => {
+    playClick && soundOn && playClick();
+    moveDay(n);
+  };
+  const handleMoveWeek = (n) => {
+    playClick && soundOn && playClick();
+    moveWeek(n);
+  };
+  const handleSetPeriod = (p) => {
+    playClick && soundOn && playClick();
+    setPeriod(p);
+  };
+
   return (
     <div className="leaderboard-container">
       {message && <div className="leaderboard-message">{message}</div>}
@@ -353,26 +365,27 @@ const Leaderboard = ({ message, user: userProp }) => {
           show={showLoginModal}
           onClose={() => setShowLoginModal(false)}
           user={userProp}
-          setUser={() => {}} // Pass a no-op if not available
+          setUser={setUser}
+          latestResult={anonResult}
         />
       )}
 
       <div className="leaderboard-toggle">
         <button
           className={period === "day" ? "active" : ""}
-          onClick={() => setPeriod("day")}
+          onClick={() => handleSetPeriod("day")}
         >
           Day
         </button>
         <button
           className={period === "week" ? "active" : ""}
-          onClick={() => setPeriod("week")}
+          onClick={() => handleSetPeriod("week")}
         >
           Week
         </button>
         <button
           className={period === "all" ? "active" : ""}
-          onClick={() => setPeriod("all")}
+          onClick={() => handleSetPeriod("all")}
         >
           All Time
         </button>
@@ -381,11 +394,17 @@ const Leaderboard = ({ message, user: userProp }) => {
         <div className="leaderboard-select-arrows">
           <button
             className="leaderboard-arrow"
-            onClick={() => moveDay(-1)}
+            onClick={() => handleMoveDay(-1)}
             aria-label="Previous Day"
-            disabled={firstDay && selectedDay <= firstDay}
+            disabled={
+              firstDay &&
+              new Date(selectedDay + "T00:00:00+05:30") <=
+                new Date(firstDay + "T00:00:00+05:30")
+            }
             style={
-              firstDay && selectedDay <= firstDay
+              firstDay &&
+              new Date(selectedDay + "T00:00:00+05:30") <=
+                new Date(firstDay + "T00:00:00+05:30")
                 ? { display: "none" }
                 : undefined
             }
@@ -395,10 +414,18 @@ const Leaderboard = ({ message, user: userProp }) => {
           <span className="leaderboard-date">{selectedDay}</span>
           <button
             className="leaderboard-arrow"
-            onClick={() => moveDay(1)}
+            onClick={() => handleMoveDay(1)}
             aria-label="Next Day"
-            disabled={selectedDay >= todayStr}
-            style={selectedDay >= todayStr ? { display: "none" } : undefined}
+            disabled={
+              new Date(selectedDay + "T00:00:00+05:30") >=
+              new Date(todayStr + "T00:00:00+05:30")
+            }
+            style={
+              new Date(selectedDay + "T00:00:00+05:30") >=
+              new Date(todayStr + "T00:00:00+05:30")
+                ? { display: "none" }
+                : undefined
+            }
           >
             <FaChevronRight />
           </button>
@@ -410,7 +437,7 @@ const Leaderboard = ({ message, user: userProp }) => {
             <>
               <button
                 className="leaderboard-arrow"
-                onClick={() => moveWeek(-1)}
+                onClick={() => handleMoveWeek(-1)}
                 aria-label="Previous Week"
                 disabled={selectedWeek <= firstDay}
                 style={
@@ -424,7 +451,7 @@ const Leaderboard = ({ message, user: userProp }) => {
               </span>
               <button
                 className="leaderboard-arrow"
-                onClick={() => moveWeek(1)}
+                onClick={() => handleMoveWeek(1)}
                 aria-label="Next Week"
                 disabled={
                   // Disable if next week would be after or equal to today's week
