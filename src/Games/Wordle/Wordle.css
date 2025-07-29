@@ -206,6 +206,15 @@
     min-width: 44px;
     font-size: 0.85rem;
   }
+
+  .wordle-congrats-message {
+    margin: 24px auto;
+    padding: 18px 8px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    max-width: 95vw;
+    box-shadow: 0 1px 8px rgba(95, 142, 51, 0.1);
+  }
 }
 
 @media (max-width: 360px) {

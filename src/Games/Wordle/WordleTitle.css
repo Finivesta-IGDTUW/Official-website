@@ -366,6 +366,14 @@
     gap: 0;
     margin-top: 0;
   }
+
+  .wordle-titlepage-btn {
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 16px 24px;
+    margin: 8px 0;
+  }
 }
 
 @media (max-width: 600px) {
