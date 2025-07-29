@@ -9,12 +9,25 @@ import {
   GoogleAuthProvider,
   signOut,
 } from "firebase/auth";
-import { getFirestore, doc, updateDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  updateDoc,
+  arrayUnion,
+} from "firebase/firestore";
 import { app } from "../../firebase";
 import "./SignInRegister.css";
 import { getApp } from "firebase/app";
 
-const SignInRegister = ({ show, onClose, user, setUser, playClick }) => {
+const SignInRegister = ({
+  show,
+  onClose,
+  user,
+  setUser,
+  playClick,
+  latestResult,
+}) => {
   const [isRegister, setIsRegister] = useState(false);
   const [form, setForm] = useState({
     email: "",
@@ -45,6 +58,24 @@ const SignInRegister = ({ show, onClose, user, setUser, playClick }) => {
       setDisplayNameInput(
         result.user.displayName || result.user.email.split("@")[0]
       );
+      // Save user info and score to Firestore
+      const db = getFirestore(getApp());
+      const userDoc = doc(db, "games", "wordle", "users", result.user.uid);
+      const userData = {
+        createdAt: new Date().toISOString(),
+        displayName: result.user.displayName || "",
+        email: result.user.email || "",
+        username:
+          result.user.displayName || result.user.email.split("@")[0] || "",
+      };
+      if (latestResult) {
+        userData.results = arrayUnion({
+          dateOfAttempt: latestResult.date,
+          timeTaken: latestResult.timeTaken,
+          numberOfTries: latestResult.tries,
+        });
+      }
+      await setDoc(userDoc, userData, { merge: true });
       onClose && onClose();
     } catch (error) {
       setError("Google login failed.");
@@ -66,6 +97,24 @@ const SignInRegister = ({ show, onClose, user, setUser, playClick }) => {
       setDisplayNameInput(
         result.user.displayName || result.user.email.split("@")[0]
       );
+      // Save user info and score to Firestore
+      const db = getFirestore(getApp());
+      const userDoc = doc(db, "games", "wordle", "users", result.user.uid);
+      const userData = {
+        createdAt: new Date().toISOString(),
+        displayName: result.user.displayName || "",
+        email: result.user.email || "",
+        username:
+          result.user.displayName || result.user.email.split("@")[0] || "",
+      };
+      if (latestResult) {
+        userData.results = arrayUnion({
+          dateOfAttempt: latestResult.date,
+          timeTaken: latestResult.timeTaken,
+          numberOfTries: latestResult.tries,
+        });
+      }
+      await setDoc(userDoc, userData, { merge: true });
       onClose && onClose();
     } catch (err) {
       setError("Invalid credentials or user does not exist.");
@@ -99,6 +148,23 @@ const SignInRegister = ({ show, onClose, user, setUser, playClick }) => {
       await updateProfile(result.user, { displayName: form.username });
       setUser({ ...result.user, displayName: form.username });
       setDisplayNameInput(form.username);
+
+      const db = getFirestore(getApp());
+      const userDoc = doc(db, "games", "wordle", "users", result.user.uid);
+      const userData = {
+        createdAt: new Date().toISOString(),
+        displayName: form.username,
+        email: result.user.email || "",
+        username: form.username,
+      };
+      if (latestResult) {
+        userData.results = arrayUnion({
+          dateOfAttempt: latestResult.date,
+          timeTaken: latestResult.timeTaken,
+          numberOfTries: latestResult.tries,
+        });
+      }
+      await setDoc(userDoc, userData, { merge: true });
       onClose && onClose();
     } catch (err) {
       setError("Registration failed. " + (err.message || ""));

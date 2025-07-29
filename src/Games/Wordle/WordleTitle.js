@@ -26,15 +26,35 @@ const WordleTitle = ({ onHowToPlay }) => {
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   const [leaderboardMessage, setLeaderboardMessage] = useState("");
   const [gameType, setGameType] = useState("daily");
+  const [miniatureBoard, setMiniatureBoard] = useState(null);
   const [dailyPopup, setDailyPopup] = useState("");
+  const keypadAudioRef = useRef(null);
 
   const navigate = useNavigate();
 
   // Play sound if enabled
   const playClick = () => {
-    if (soundOn && audioRef.current) {
+    if (
+      soundOn &&
+      audioRef.current &&
+      document.body.contains(audioRef.current)
+    ) {
       audioRef.current.currentTime = 0;
-      audioRef.current.play();
+      audioRef.current.play().catch(() => {});
+    }
+  };
+
+  // Play keypad click sound
+  const playKeypadClick = () => {
+    if (
+      soundOn &&
+      keypadAudioRef.current &&
+      document.body.contains(keypadAudioRef.current)
+    ) {
+      keypadAudioRef.current.currentTime = 0;
+      keypadAudioRef.current.play().catch(() => {});
+    } else {
+      // Audio not played: conditions not met
     }
   };
 
@@ -43,9 +63,10 @@ const WordleTitle = ({ onHowToPlay }) => {
     setShowLeaderboard(true);
   };
 
-  const handleShowLeaderboard = (msg) => {
+  const handleShowLeaderboard = (msg, miniatureBoardArg) => {
     setShowGame(false);
     setLeaderboardMessage(msg);
+    setMiniatureBoard(miniatureBoardArg);
     setShowLeaderboard(true);
   };
 
@@ -68,7 +89,7 @@ const WordleTitle = ({ onHowToPlay }) => {
   // Permanent close game button handler
   const handleCloseGame = () => {
     playClick();
-    navigate(-1); // Go back to previous route
+    navigate("/"); // Go back to home
   };
 
   // Back to title page from game
@@ -80,6 +101,7 @@ const WordleTitle = ({ onHowToPlay }) => {
   };
 
   const handleStartDaily = async () => {
+    playClick();
     setGameType("daily");
     if (user && user.uid) {
       const alreadyPlayed = await hasPlayedDailyChallenge();
@@ -92,6 +114,7 @@ const WordleTitle = ({ onHowToPlay }) => {
   };
 
   const handleStartNormal = () => {
+    playClick();
     setGameType("normal");
     setShowGame(true);
   };
@@ -130,6 +153,11 @@ const WordleTitle = ({ onHowToPlay }) => {
         src="/assets/audio/DoubleMouseClick.wav"
         preload="auto"
       />
+      <audio
+        ref={keypadAudioRef}
+        src="/assets/audio/KeyBoardClick.mp3"
+        preload="auto"
+      />
       {/* Back Icon (only when game is open) */}
       {(showGame || showLeaderboard) && (
         <button
@@ -158,7 +186,10 @@ const WordleTitle = ({ onHowToPlay }) => {
       </button>
       <button
         className={`wordle-user-btn${showModal ? " fade-out" : ""}`}
-        onClick={() => setShowLoginModal(true)}
+        onClick={() => {
+          playClick();
+          setShowLoginModal(true);
+        }}
         aria-label="User"
       >
         {user && (user.displayName || user.email) ? (
@@ -188,8 +219,39 @@ const WordleTitle = ({ onHowToPlay }) => {
         <h1
           className={`wordle-titlepage-heading${showGame ? " heading-up" : ""}`}
         >
-          {showLeaderboard ? "Wordle Street Leaderboard" : "Wordle Street"}
+          {showLeaderboard ? (
+            "Wordle Street Leaderboard"
+          ) : !showGame && !showLeaderboard ? (
+            <img
+              src={require("./WordleStreetLogo.png")}
+              alt="Wordle Street Logo"
+              style={{ height: "30vh", marginBottom: 8 }}
+            />
+          ) : gameType === "daily" ? (
+            `Challenge for ${new Date().toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}`
+          ) : (
+            "Guess the word"
+          )}
         </h1>
+        {/* Show small logo next to back button when not on home screen */}
+        {(showGame || showLeaderboard) && (
+          <img
+            src={require("./WordleStreetLogo.png")}
+            alt="Wordle Street Logo"
+            style={{
+              height: 42,
+              marginLeft: 20,
+              verticalAlign: "middle",
+              position: "absolute",
+              left: 56,
+              top: 24,
+            }}
+          />
+        )}
         {!showGame && !showLeaderboard && (
           <div className={`wordle-titlepage-btns${fadeOut ? " fade-out" : ""}`}>
             <button className="wordle-titlepage-btn" onClick={handleStartDaily}>
@@ -232,11 +294,20 @@ const WordleTitle = ({ onHowToPlay }) => {
               gameType={gameType}
               showLeaderboard={handleShowLeaderboard}
               user={user}
+              playKeypadClick={playKeypadClick}
+              soundOn={soundOn}
             />
           </div>
         )}
         {showLeaderboard && (
-          <Leaderboard message={leaderboardMessage} user={user} />
+          <Leaderboard
+            message={leaderboardMessage}
+            user={user}
+            miniatureBoard={miniatureBoard}
+            setUser={setUser}
+            soundOn={soundOn}
+            playClick={playClick}
+          />
         )}
       </div>
       <button className="wordle-titlepage-howto" onClick={handleHowToPlay}>

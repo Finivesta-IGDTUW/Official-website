@@ -32,7 +32,13 @@ const getEmptyGrid = () => Array.from({ length: 6 }, () => Array(5).fill(""));
 const getEmptyStatusGrid = () =>
   Array.from({ length: 6 }, () => Array(5).fill(""));
 
-const Wordle = ({ showLeaderboard, user, gameType }) => {
+const Wordle = ({
+  showLeaderboard,
+  user,
+  gameType,
+  playKeypadClick,
+  soundOn = true,
+}) => {
   const [grid, setGrid] = useState(getEmptyGrid());
   const [statusGrid, setStatusGrid] = useState(getEmptyStatusGrid());
   const [currentRow, setCurrentRow] = useState(0);
@@ -115,6 +121,9 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
     } else if (key === "ENTER") {
       handleEnter();
     } else if (/^[A-Z]$/.test(key) && currentCol < 5) {
+      if (typeof playKeypadClick === "function" && soundOn) {
+        playKeypadClick();
+      }
       handleLetter(key);
     }
   };
@@ -155,60 +164,110 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
       setTimeout(() => setMessage(""), 1200);
       return;
     }
-    const { statusRow, newKeyboardStatus } = checkGuess(guess);
-    const newStatusGrid = statusGrid.map((row, i) =>
-      i === currentRow ? statusRow : row
-    );
-    setStatusGrid(newStatusGrid);
-    setKeyboardStatus((prev) => ({ ...prev, ...newKeyboardStatus }));
 
-    if (guess === wordOfTheDay) {
-      setMessage(
-        `Congratulations!\nYou guessed the word correctly in ${
-          currentRow + 1
-        } tries and ${formatTimer(timer)} time`
-      );
-      setTimerActive(false);
+    // Show loader while checking word
+    setMessage("Checking if the word exists...");
 
-      // Only save if daily challenge
-      if (user && user.uid && gameType === "daily") {
-        saveWordleResult({
-          userId: user.uid,
-          dateOfAttempt: getTodayIST(),
-          timeTaken: timer,
-          numberOfTries: currentRow + 1,
-        });
-      }
-
-      // ...inside handleEnter, after a win, for unlogged users:
-      if (!user && gameType === "daily") {
-        localStorage.setItem(
-          "wordle_last_result",
-          JSON.stringify({
-            userId: "anon-" + getTodayIST(), // unique per day for anonymous user
-            name: "You",
-            date: getTodayIST(),
-            tries: currentRow + 1,
-            timeTaken: timer,
-          })
+    // Check if word exists using dictionaryapi.dev
+    fetch(
+      `https://api.dictionaryapi.dev/api/v2/entries/en/${guess.toLowerCase()}`
+    )
+      .then((res) => {
+        if (!res.ok) return null;
+        return res.json();
+      })
+      .catch(() => null)
+      .then((data) => {
+        // Remove loader message before showing result
+        setMessage("");
+        if (!data) {
+          setMessage("Oops! Word not defined.");
+          setTimeout(() => setMessage(""), 1500);
+          return;
+        }
+        // Word exists, continue with game logic
+        const { statusRow, newKeyboardStatus } = checkGuess(guess);
+        const newStatusGrid = statusGrid.map((row, i) =>
+          i === currentRow ? statusRow : row
         );
-      }
+        setStatusGrid(newStatusGrid);
+        setKeyboardStatus((prev) => ({ ...prev, ...newKeyboardStatus }));
 
-      if (gameType === "daily" && typeof showLeaderboard === "function") {
-        setTimeout(() => {
-          showLeaderboard(
-            `Congratulations! You guessed the word in ${formatTimer(
-              timer
-            )} time with ${currentRow + 1} guesses`
+        if (guess === wordOfTheDay) {
+          setMessage(
+            `Congratulations!\nYou guessed the word correctly in ${
+              currentRow + 1
+            } tries and ${formatTimer(timer)} time`
           );
-        }, 1200);
-      }
-    } else if (currentRow === 5) {
-      setMessage(`Game Over! The word was ${wordOfTheDay}`);
-    } else {
-      setCurrentRow(currentRow + 1);
-      setCurrentCol(0);
-    }
+          setTimerActive(false);
+
+          // Only save if daily challenge
+          if (user && user.uid && gameType === "daily") {
+            saveWordleResult({
+              userId: user.uid,
+              dateOfAttempt: getTodayIST(),
+              timeTaken: timer,
+              numberOfTries: currentRow + 1,
+            });
+          }
+
+          // ...inside handleEnter, after a win, for unlogged users:
+          if (!user && gameType === "daily") {
+            localStorage.setItem(
+              "wordle_last_result",
+              JSON.stringify({
+                userId: "anon-" + getTodayIST(), // unique per day for anonymous user
+                name: "You",
+                date: getTodayIST(),
+                tries: currentRow + 1,
+                timeTaken: timer,
+              })
+            );
+          }
+
+          if (gameType === "daily" && typeof showLeaderboard === "function") {
+            setTimeout(() => {
+              showLeaderboard(
+                `Congratulations! You guessed the word in ${formatTimer(
+                  timer
+                )} time with ${currentRow + 1} guesses`
+              );
+            });
+          }
+        } else if (currentRow === 5) {
+          // Last attempt failed, show final message
+          setMessage(`Game Over! The word was ${wordOfTheDay}`);
+          setTimerActive(false);
+          // Store failed result for daily challenge
+          if (gameType === "daily") {
+            // For logged-in users
+            if (user && user.uid) {
+              saveWordleResult({
+                userId: user.uid,
+                dateOfAttempt: getTodayIST(),
+                timeTaken: timer,
+                numberOfTries: 7, // 7 means failed
+              });
+            }
+            // For anonymous users
+            if (!user) {
+              localStorage.setItem(
+                "wordle_last_result",
+                JSON.stringify({
+                  userId: "anon-" + getTodayIST(),
+                  name: "You",
+                  date: getTodayIST(),
+                  tries: 7,
+                  timeTaken: timer,
+                })
+              );
+            }
+          }
+        } else {
+          setCurrentRow(currentRow + 1);
+          setCurrentCol(0);
+        }
+      });
   };
 
   // Check guess and return status for each letter
@@ -313,6 +372,9 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
 
   // Handle on-screen keyboard
   const handleKeyboardClick = (key) => {
+    if (typeof playKeypadClick === "function" && soundOn) {
+      playKeypadClick();
+    }
     if (key === "ENTER") handleEnter();
     else if (key === "BACKSPACE") handleBackspace();
     else handleLetter(key);
@@ -321,7 +383,10 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
 
   return (
     <div>
-      {message && message.startsWith("Congratulations!") ? (
+      {/* Main game UI */}
+      {message &&
+      (message.startsWith("Congratulations!") ||
+        message.startsWith("Game Over!")) ? (
         <div className="wordle-congrats-message">
           {message.split("\n").map((line, idx) => (
             <div key={idx}>{line}</div>
@@ -338,9 +403,7 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
               setMessage("");
               setTimer(0);
               setTimerActive(true);
-              // Optionally, fetch a new word for normal game
               if (gameType !== "daily") {
-                // Fetch a new random word from Firestore
                 (async () => {
                   const db = getFirestore(getApp());
                   const colRef = collection(
@@ -362,7 +425,7 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
               }
             }}
           >
-            Play Again
+            Go Back Home
           </button>
         </div>
       ) : (
@@ -375,6 +438,9 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
             ref={inputRef}
             style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}
             onKeyDown={handleKeyDown}
+            inputMode="none"
+            readOnly
+            tabIndex={-1}
           />
           <div className="wordle-grid">
             {grid.map((row, rowIdx) => (
@@ -431,8 +497,35 @@ const Wordle = ({ showLeaderboard, user, gameType }) => {
           <div className="wordle-timer">{formatTimer(timer)}</div>
         </div>
       )}
+
+      {/* Bottom-right popup for error/info messages */}
+      {message &&
+        !(
+          message.startsWith("Congratulations!") ||
+          message.startsWith("Game Over!")
+        ) && (
+          <div
+            style={{
+              position: "fixed",
+              bottom: "32px",
+              right: "32px",
+              zIndex: 9999,
+              background: "#fff",
+              color: "#222",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+              borderRadius: "12px",
+              padding: "16px 24px",
+              fontWeight: "bold",
+              fontSize: "1.1rem",
+              minWidth: "220px",
+              textAlign: "center",
+              border: "2px solid #5f8e33",
+            }}
+          >
+            {message}
+          </div>
+        )}
     </div>
   );
 };
-
 export default Wordle;

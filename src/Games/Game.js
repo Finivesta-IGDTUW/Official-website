@@ -1,6 +1,6 @@
 import "../Resources/Resources.css";
 
-import GameImg from "../Images/LightBG.jpg";
+import WordleImg from "./Wordle/WordleStreetLogo.png";
 // import HL from "./HigherLower/public/images/bg.png";
 // import balance from "./Images/G.jpg";
 
@@ -13,10 +13,10 @@ const Game = () => {
       </div>
 
       <div className="resourcesbox">
-        <div className="boxsmall game">
+        <div className="boxsmall game podcast">
           <a href="/games/wordle">
             <div className="img">
-              <img src={GameImg} alt="Higher or Lower Game Cover" />
+              <img src={WordleImg} alt="Wordle Game Cover" />
             </div>
             <div className="text">
               <h2>Wordle</h2>
