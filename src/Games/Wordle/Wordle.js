@@ -503,28 +503,7 @@ const Wordle = ({
         !(
           message.startsWith("Congratulations!") ||
           message.startsWith("Game Over!")
-        ) && (
-          <div
-            style={{
-              position: "fixed",
-              bottom: "32px",
-              right: "32px",
-              zIndex: 9999,
-              background: "#fff",
-              color: "#222",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-              borderRadius: "12px",
-              padding: "16px 24px",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              minWidth: "220px",
-              textAlign: "center",
-              border: "2px solid #5f8e33",
-            }}
-          >
-            {message}
-          </div>
-        )}
+        ) && <div className="wordle-popup-message">{message}</div>}
     </div>
   );
 };
