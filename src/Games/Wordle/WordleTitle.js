@@ -297,6 +297,7 @@ const WordleTitle = ({ onHowToPlay }) => {
               playKeypadClick={playKeypadClick}
               soundOn={soundOn}
               pauseTimer={showModal}
+              onCloseGame={() => setShowGame(false)}
             />
           </div>
         )}

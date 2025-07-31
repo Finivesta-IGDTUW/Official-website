@@ -39,6 +39,7 @@ const Wordle = ({
   playKeypadClick,
   soundOn = true,
   pauseTimer = false,
+  onCloseGame,
 }) => {
   const [grid, setGrid] = useState(getEmptyGrid());
   const [statusGrid, setStatusGrid] = useState(getEmptyStatusGrid());
@@ -195,10 +196,11 @@ const Wordle = ({
         setKeyboardStatus((prev) => ({ ...prev, ...newKeyboardStatus }));
 
         if (guess === wordOfTheDay) {
+          const { m, s, ms } = getTimerParts(timer);
           setMessage(
             `Congratulations!\nYou guessed the word correctly in ${
               currentRow + 1
-            } tries and ${getTimerParts(timer)} time`
+            } tries and ${m}:${s}:${ms} time`
           );
           setTimerActive(false);
 
@@ -238,7 +240,7 @@ const Wordle = ({
           }
         } else if (currentRow === 5) {
           // Last attempt failed, show final message
-          setMessage(`Game Over! The word was ${wordOfTheDay}`);
+          setMessage(`Game Over!\nThe word was ${wordOfTheDay}.`);
           setTimerActive(false);
           // Store failed result for daily challenge
           if (gameType === "daily") {
@@ -397,6 +399,9 @@ const Wordle = ({
             className="wordle-titlepage-btn"
             style={{ marginTop: "24px" }}
             onClick={() => {
+              if (typeof onCloseGame === "function") {
+                onCloseGame();
+              }
               setGrid(getEmptyGrid());
               setStatusGrid(getEmptyStatusGrid());
               setCurrentRow(0);

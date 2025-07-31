@@ -102,6 +102,7 @@ const Leaderboard = ({
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showAddAnon, setShowAddAnon] = useState(true);
   const [anonResult, setAnonResult] = useState(null);
+  const [localMessage, setLocalMessage] = useState("");
 
   const todayStr = getTodayIST();
 
@@ -368,17 +369,42 @@ const Leaderboard = ({
           localStorage.getItem("wordle_last_result")
         );
         if (!lastResult || !userProp?.uid) return;
-        // Check if this result is already present for this user
-        const alreadyExists = leaders.some(
-          (u) =>
-            u.userId === userProp.uid &&
-            u.date === lastResult.date &&
-            u.timeTaken === lastResult.timeTaken &&
-            u.numberOfTries === lastResult.tries
-        );
-        if (alreadyExists) return;
+        // Check in Firebase if a result for this user and date already exists
         const db = getFirestore(getApp());
         const userDoc = doc(db, "games", "wordle", "users", userProp.uid);
+        const userSnap = await getDocs(
+          query(
+            collection(db, "games", "wordle", "users")
+            // No direct query for nested array, so fetch and filter
+          )
+        );
+        let alreadyExists = false;
+        userSnap.forEach((doc) => {
+          if (doc.id === userProp.uid) {
+            const data = doc.data();
+            const results = data.results || [];
+            alreadyExists = results.some(
+              (r) => r.dateOfAttempt === lastResult.date
+            );
+          }
+        });
+        if (alreadyExists) {
+          // Show message if already exists
+          setShowAddAnon(false);
+          setTimeout(() => {
+            setShowAddAnon(true);
+          }, 4000);
+          setTimeout(() => {
+            setLocalMessage(
+              "Logged in. But you already have a result saved. No repeating like this bud."
+            );
+          }, 100);
+          setTimeout(() => {
+            setLocalMessage("");
+          }, 4000);
+          return;
+        }
+        // ...existing code...
         await updateDoc(userDoc, {
           results: arrayUnion({
             dateOfAttempt: lastResult.date,
@@ -663,6 +689,11 @@ const Leaderboard = ({
           </table>
         )}
       </div>
+      {message &&
+        !(
+          message.startsWith("Congratulations!") ||
+          message.startsWith("Game Over!")
+        ) && <div className="wordle-popup-message">{localMessage}</div>}
     </div>
   );
 };
