@@ -104,11 +104,11 @@ const Wordle = ({
   }, [message]);
 
   // Format timer as MM:SS:MS
-  const formatTimer = (t) => {
+  const getTimerParts = (t) => {
     const m = String(Math.floor(t / 60000)).padStart(2, "0");
     const s = String(Math.floor((t % 60000) / 1000)).padStart(2, "0");
     const ms = String(Math.floor((t % 1000) / 10)).padStart(2, "0");
-    return `${m}:${s}:${ms}`;
+    return { m, s, ms };
   };
 
   // Handle keyboard input
@@ -197,7 +197,7 @@ const Wordle = ({
           setMessage(
             `Congratulations!\nYou guessed the word correctly in ${
               currentRow + 1
-            } tries and ${formatTimer(timer)} time`
+            } tries and ${getTimerParts(timer)} time`
           );
           setTimerActive(false);
 
@@ -228,7 +228,7 @@ const Wordle = ({
           if (gameType === "daily" && typeof showLeaderboard === "function") {
             setTimeout(() => {
               showLeaderboard(
-                `Congratulations! You guessed the word in ${formatTimer(
+                `Congratulations! You guessed the word in ${getTimerParts(
                   timer
                 )} time with ${currentRow + 1} guesses`
               );
@@ -494,7 +494,25 @@ const Wordle = ({
               </div>
             ))}
           </div>
-          <div className="wordle-timer">{formatTimer(timer)}</div>
+          {(() => {
+            const { m, s, ms } = getTimerParts(timer);
+            return (
+              <div
+                className="wordle-timer"
+                style={{
+                  display: "flex",
+                  gap: "0.25em",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                <span className="wordle-timer-minutes">{m}</span>
+                <span>:</span>
+                <span className="wordle-timer-seconds">{s}</span>
+                <span>:</span>
+                <span className="wordle-timer-ms">{ms}</span>
+              </div>
+            );
+          })()}
         </div>
       )}
 

@@ -1,10 +1,21 @@
 .wordle-timer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.3rem;
   font-weight: 600;
   color: #5f8e33;
   margin-bottom: 12px;
-  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.wordle-timer-minutes,
+.wordle-timer-seconds,
+.wordle-timer-ms {
+  display: inline-block;
+  min-width: 2ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .wordle-congrats-message {
@@ -176,8 +187,7 @@
 
 @media (max-width: 550px) {
   .wordle-container {
-    max-width: 98vw;
-    min-width: 0;
+    width: 98vw;
     padding: 0 2vw 8px 2vw;
     border-radius: 10px;
     box-shadow: 0 2px 12px #0002;
@@ -190,7 +200,7 @@
     gap: 3px;
   }
   .wordle-cell {
-    width: 36px;
+    width: 46px;
     height: 36px;
     font-size: 1.2rem;
     border-radius: 4px;
@@ -200,7 +210,7 @@
     height: 32px;
     font-size: 0.9rem;
     border-radius: 4px;
-    padding: 0 2px;
+    padding: 0 15px;
   }
   .wordle-key.special {
     min-width: 44px;

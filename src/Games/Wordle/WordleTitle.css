@@ -373,6 +373,16 @@
     padding: 16px 24px;
     margin: 8px 0;
   }
+
+  .wordle-titlepage-howto {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .wordle-titlepage-sound {
+    right: 16px;
+    bottom: 16px;
+  }
 }
 
 @media (max-width: 600px) {

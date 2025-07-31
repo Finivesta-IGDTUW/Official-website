@@ -171,10 +171,13 @@ const Leaderboard = ({
       }
     } catch {}
     if (anonResult) {
-      const anonScore = Math.max(
-        0,
-        10000 - (anonResult.tries * 1000 + anonResult.timeTaken)
-      );
+      let anonScore = 0;
+      if (anonResult.tries <= 6) {
+        anonScore = Math.max(
+          1000,
+          10000 - (anonResult.tries * 1000 + anonResult.timeTaken)
+        );
+      } // else score remains 0
       // For day/week: check userId+date, for all: check userId
       const alreadyInList =
         period === "all"
@@ -259,10 +262,19 @@ const Leaderboard = ({
       // Filter results for the selected IST date
       const filtered = leaders.filter((user) => user.date === selectedDay);
       return filtered
-        .map((user) => ({
-          ...user,
-          score: Math.max(0, 10000 - (user.tries * 1000 + user.timeTaken)),
-        }))
+        .map((user) => {
+          let score = 0;
+          if (user.tries <= 6) {
+            score = Math.max(
+              1000,
+              10000 - (user.tries * 1000 + user.timeTaken)
+            );
+          }
+          return {
+            ...user,
+            score,
+          };
+        })
         .sort((a, b) => b.score - a.score);
     }
     if (period === "week") {
@@ -279,7 +291,10 @@ const Leaderboard = ({
       // Group by user, sum scores for the week, divide by days played
       const userMap = {};
       filtered.forEach((user) => {
-        const score = Math.max(0, 10000 - (user.tries * 1000 + user.timeTaken));
+        let score = 0;
+        if (user.tries <= 6) {
+          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
+        }
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
             name: user.name,
@@ -302,7 +317,10 @@ const Leaderboard = ({
       // Group by user, sum all scores, apply streak bonus if you want
       const userMap = {};
       leaders.forEach((user) => {
-        const score = Math.max(0, 10000 - (user.tries * 1000 + user.timeTaken));
+        let score = 0;
+        if (user.tries <= 6) {
+          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
+        }
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
             name: user.name,
