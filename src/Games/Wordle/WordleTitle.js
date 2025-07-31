@@ -182,7 +182,7 @@ const WordleTitle = ({ onHowToPlay }) => {
         onClick={handleCloseGame}
         aria-label="Close Game"
       >
-        <FaTimes size={28} />
+        <FaTimes size={18} style={{ margin: 0 }} />
       </button>
       <button
         className={`wordle-user-btn${showModal ? " fade-out" : ""}`}
@@ -296,6 +296,7 @@ const WordleTitle = ({ onHowToPlay }) => {
               user={user}
               playKeypadClick={playKeypadClick}
               soundOn={soundOn}
+              pauseTimer={showModal}
             />
           </div>
         )}
@@ -310,19 +311,23 @@ const WordleTitle = ({ onHowToPlay }) => {
           />
         )}
       </div>
-      <button className="wordle-titlepage-howto" onClick={handleHowToPlay}>
-        How to Play
-      </button>
+      {!showLeaderboard && (
+        <>
+          <button className="wordle-titlepage-howto" onClick={handleHowToPlay}>
+            How to Play
+          </button>
+          <button
+            className="wordle-titlepage-sound"
+            onClick={handleSoundToggle}
+            aria-label={soundOn ? "Sound On" : "Sound Off"}
+          >
+            {soundOn ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
+          </button>
+        </>
+      )}
       {showModal && (
         <HowToPlayWordle onClose={closeModal} playClick={playClick} />
       )}
-      <button
-        className="wordle-titlepage-sound"
-        onClick={handleSoundToggle}
-        aria-label={soundOn ? "Sound On" : "Sound Off"}
-      >
-        {soundOn ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
-      </button>
     </div>
   );
 };

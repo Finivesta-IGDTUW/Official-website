@@ -130,17 +130,26 @@
   left: 24px;
   background: #222;
   color: #5f8e33;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  border: 1.5px solid #5f8e33;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1100;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, opacity 0.3s;
-  box-shadow: 0 2px 12px #0002;
+  transition: background 0.2s, color 0.2s, border 0.2s, opacity 0.3s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 6px #0002;
+}
+
+.wordle-close-game-btn:hover {
+  background: #eafbe1;
+  color: #222;
+  border-color: #7bbf4d;
+  box-shadow: 0 2px 12px #5f8e3350;
 }
 
 .wordle-close-game-btn:hover {
@@ -168,6 +177,13 @@
   z-index: 1100;
   cursor: pointer;
   transition: background 0.2s;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+}
+
+.wordle-user-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 2px 12px #5f8e3350;
+  background: #eafbe1;
 }
 
 .wordle-user-btn.fade-out {
@@ -304,7 +320,7 @@
 }
 
 .wordle-modal-x {
-  align-self: flex-end;
+  align-self: self-start;
   color: #5f8e33;
   background: none;
   border: none;

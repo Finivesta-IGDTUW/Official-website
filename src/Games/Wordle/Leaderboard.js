@@ -6,6 +6,9 @@ import {
   orderBy,
   limit,
   getDocs,
+  doc,
+  arrayUnion,
+  updateDoc,
 } from "firebase/firestore";
 import { getApp } from "firebase/app";
 import "./Leaderboard.css";
@@ -142,6 +145,7 @@ const Leaderboard = ({
   let rankedLeaders = getRankedLeaders(leaders, period);
 
   // Add anonymous user's result for all periods (day, week, all)
+  // Only add anonymous user's result if not logged in
   if (!userProp?.uid) {
     let anonResult = null;
     try {
@@ -356,6 +360,49 @@ const Leaderboard = ({
     setPeriod(p);
   };
 
+  // Automatically transfer localStorage result to Firebase for logged-in users
+  useEffect(() => {
+    const transferAnonToFirebase = async () => {
+      try {
+        const lastResult = JSON.parse(
+          localStorage.getItem("wordle_last_result")
+        );
+        if (!lastResult || !userProp?.uid) return;
+        // Check if this result is already present for this user
+        const alreadyExists = leaders.some(
+          (u) =>
+            u.userId === userProp.uid &&
+            u.date === lastResult.date &&
+            u.timeTaken === lastResult.timeTaken &&
+            u.numberOfTries === lastResult.tries
+        );
+        if (alreadyExists) return;
+        const db = getFirestore(getApp());
+        const userDoc = doc(db, "games", "wordle", "users", userProp.uid);
+        await updateDoc(userDoc, {
+          results: arrayUnion({
+            dateOfAttempt: lastResult.date,
+            timeTaken: lastResult.timeTaken,
+            numberOfTries: lastResult.tries,
+          }),
+        });
+        localStorage.removeItem("wordle_last_result");
+        // Refresh leaderboard by refetching data
+        const [allResults, userMap] = await Promise.all([
+          fetchAllUserResults(),
+          fetchAllUsersMap(),
+        ]);
+        setLeaders(allResults);
+        setUserDisplayMap(userMap);
+      } catch (err) {
+        // Silent fail
+      }
+    };
+    if (userProp?.uid && localStorage.getItem("wordle_last_result")) {
+      transferAnonToFirebase();
+    }
+  }, [userProp, leaders]);
+
   return (
     <div className="leaderboard-container">
       {message && <div className="leaderboard-message">{message}</div>}
@@ -377,6 +424,8 @@ const Leaderboard = ({
           </button>
         </div>
       )}
+
+      {/* Automatically transfer previous score for logged-in users, no button shown */}
 
       {showLoginModal && (
         <SignInRegister
@@ -515,57 +564,101 @@ const Leaderboard = ({
                   </td>
                 </tr>
               )}
-              {rankedLeaders.map((user, idx) => {
-                // Highlight if: logged in and matches, or anon and matches anonResult
-                const isCurrent =
-                  (userProp?.uid &&
-                    (period === "day"
-                      ? user.userId === userProp?.uid
-                      : user.id === userProp?.uid)) ||
-                  (!userProp?.uid &&
-                    user.userId &&
-                    localStorage.getItem("wordle_last_result") &&
-                    (() => {
-                      try {
-                        const anon = JSON.parse(
-                          localStorage.getItem("wordle_last_result")
-                        );
-                        return (
-                          anon &&
-                          anon.date === selectedDay &&
-                          user.userId === anon.userId &&
-                          user.date === anon.date
-                        );
-                      } catch {
-                        return false;
-                      }
-                    })());
 
-                return (
-                  <tr
-                    key={period === "day" ? user.userId + user.date : user.id}
-                    className={isCurrent ? "highlight-current-user" : ""}
-                  >
-                    <td>
-                      {idx < 3 ? (
-                        <span
-                          className={`medal ${
-                            ["goldpos", "silverpos", "bronzepos"][idx]
-                          }`}
-                        >
-                          {medal[idx]}
-                        </span>
-                      ) : (
-                        <span className="rank-num">{idx + 1}</span>
-                      )}
-                    </td>
-                    <td>
-                      {userDisplayMap[user.userId] || user.name || "Anonymous"}
-                    </td>
-                    <td>{user.score}</td>
-                  </tr>
-                );
-              })}
+              {/* Show only top 10, but always show current user */}
+              {(() => {
+                // Find current user index
+                let currentIdx = -1;
+                let currentUserRow = null;
+                rankedLeaders.forEach((user, idx) => {
+                  const isCurrent =
+                    (userProp?.uid &&
+                      (period === "day"
+                        ? user.userId === userProp?.uid
+                        : user.id === userProp?.uid)) ||
+                    (!userProp?.uid &&
+                      user.userId &&
+                      localStorage.getItem("wordle_last_result") &&
+                      (() => {
+                        try {
+                          const anon = JSON.parse(
+                            localStorage.getItem("wordle_last_result")
+                          );
+                          return (
+                            anon &&
+                            anon.date === selectedDay &&
+                            user.userId === anon.userId &&
+                            user.date === anon.date
+                          );
+                        } catch {
+                          return false;
+                        }
+                      })());
+                  if (isCurrent) {
+                    currentIdx = idx;
+                    currentUserRow = user;
+                  }
+                });
+
+                let displayRows = rankedLeaders.slice(0, 10);
+                // If current user is not in top 10, replace 10th with current user
+                if (currentIdx > 9 && currentUserRow) {
+                  displayRows[9] = currentUserRow;
+                }
+
+                return displayRows.map((user, idx) => {
+                  const isCurrent =
+                    (userProp?.uid &&
+                      (period === "day"
+                        ? user.userId === userProp?.uid
+                        : user.id === userProp?.uid)) ||
+                    (!userProp?.uid &&
+                      user.userId &&
+                      localStorage.getItem("wordle_last_result") &&
+                      (() => {
+                        try {
+                          const anon = JSON.parse(
+                            localStorage.getItem("wordle_last_result")
+                          );
+                          return (
+                            anon &&
+                            anon.date === selectedDay &&
+                            user.userId === anon.userId &&
+                            user.date === anon.date
+                          );
+                        } catch {
+                          return false;
+                        }
+                      })());
+
+                  return (
+                    <tr
+                      key={period === "day" ? user.userId + user.date : user.id}
+                      className={isCurrent ? "highlight-current-user" : ""}
+                    >
+                      <td>
+                        {idx < 3 ? (
+                          <span
+                            className={`medal ${
+                              ["goldpos", "silverpos", "bronzepos"][idx]
+                            }`}
+                          >
+                            {medal[idx]}
+                          </span>
+                        ) : (
+                          <span className="rank-num">{idx + 1}</span>
+                        )}
+                      </td>
+                      <td>
+                        {userDisplayMap[user.userId] ||
+                          user.name ||
+                          "Anonymous"}
+                      </td>
+                      <td>{user.score}</td>
+                    </tr>
+                  );
+                });
+              })()}
             </tbody>
           </table>
         )}

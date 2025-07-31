@@ -38,6 +38,7 @@ const Wordle = ({
   gameType,
   playKeypadClick,
   soundOn = true,
+  pauseTimer = false,
 }) => {
   const [grid, setGrid] = useState(getEmptyGrid());
   const [statusGrid, setStatusGrid] = useState(getEmptyStatusGrid());
@@ -85,13 +86,13 @@ const Wordle = ({
   // Timer effect
   useEffect(() => {
     let interval = null;
-    if (timerActive) {
+    if (timerActive && !pauseTimer) {
       interval = setInterval(() => {
         setTimer((t) => t + 10); // update every 10ms
       }, 10);
     }
     return () => clearInterval(interval);
-  }, [timerActive]);
+  }, [timerActive, pauseTimer]);
 
   // Stop timer on win or lose
   useEffect(() => {
@@ -227,10 +228,11 @@ const Wordle = ({
 
           if (gameType === "daily" && typeof showLeaderboard === "function") {
             setTimeout(() => {
+              const { m, s, ms } = getTimerParts(timer);
               showLeaderboard(
-                `Congratulations! You guessed the word in ${getTimerParts(
-                  timer
-                )} time with ${currentRow + 1} guesses`
+                `Congratulations! You guessed the word in ${m}:${s}:${ms} time with ${
+                  currentRow + 1
+                } guesses`
               );
             });
           }
