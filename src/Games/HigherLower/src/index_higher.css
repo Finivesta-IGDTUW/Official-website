@@ -236,16 +236,16 @@
   color: black;
 }
 .settings-panel {
-  position: fixed;
+  position:sticky;
   top: 80%;
-  right: 10%;
+  left: 75%;
   transform: translate(-50%, -50%);
   background: rgba(48, 58, 45, 0.95);
   padding: 10px;
   border: 4px solid lightgrey;
   border-radius: 10px;
   z-index: 100;
-  width: 50%;
+  width: 40%;
   max-width: 200px;
   text-align: center;
   animation: fadeIn 0.3s ease-out;
@@ -362,6 +362,7 @@
 
 /* Dual Comparison Mode (Game Screen) */
 .dual-container {
+  margin:5%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -388,7 +389,9 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-bottom: 80vh ;
+  margin-top:15%;
+  height: 100%;
+  
 }
 .dual-buttons button {
   padding: 12px 30px;
@@ -420,13 +423,15 @@
 }
 .single-buttons {
   display: flex;
+  margin:15% 5%;
+  height:100px;
   gap: 40px;
   justify-content: center;
-  margin-bottom: 80vh;
+  /* margin:30%; */
 }
 .single-buttons button {
-  padding: 12px 30px;
-  font-size: 22px;
+  padding: 12px 55px;
+  font-size: 25px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -485,6 +490,7 @@
 
 /* End Screen Container */
 .end-container {
+  margin-top:20px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -510,7 +516,7 @@
 .end-container1 h2 {
   width: 50vw;
   height: 12vh;
-  font-size: 90px;
+  font-size: 70px;
   color: #e9f3e9;
   animation: slideDown 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -536,6 +542,7 @@
 
 .end-buttons button {
   width: 20vw;
+  margin:10px;
   background-color: transparent;
   font-size: 40px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -645,6 +652,17 @@
 
 /* Responsive Styles for Mobile and Tablets */
 /* For tablets and small laptops (max-width: 768px) */
+@media screen and (max-width:1307px){
+  .single-buttons{
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width:1047px) {
+  .dual-buttons{
+    margin-top:5px;;
+  }
+
+}
 @media screen and (max-width: 768px) {
   .header-animation h1 {
     width: 90vw;
@@ -653,15 +671,15 @@
     width: 70vw;
   }
   .dual-container {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .dual-card,
   .single-card {
     width: 90%;
     height: auto;
-    min-height: 300px;
+    min-height: 350px;
     padding: 15px;
   }
   .commodity-image {
@@ -710,16 +728,16 @@
   
   .dual-card,
   .single-card {
-    width: 85vw;
-    min-height: 250px;
+    width: 50%;
+    min-height: 300px;
   }
   .commodity-image {
-    height: 120px;
+    height: 140px;
   }
   .dual-buttons button,
   .single-buttons button {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 25px;
+    font-size: 1.2rem;
   }
   .timer {
     font-size: 1.2rem;
