@@ -3,46 +3,45 @@
 }
 
 .header {
-  background-image: url('../Images/bgfortabs.jpg');
+  background-image: url("../Images/bgfortabs.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   padding: 20px;
   text-align: center;
-  height: 200px; 
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;  
+  margin: auto;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
 }
 
-.blogs{
-  background-image: url('./Images/blog_bg.jpg');
+.blogs {
+  background-image: url("./Images/blog_bg.jpg");
 }
-.brs{
-  background-image: url('./Images/book review_bg.jpg');
+.brs {
+  background-image: url("./Images/book review_bg.jpg");
 }
-.yt{
-  background-image: url('./Images/video_bg.jpg');
+.yt {
+  background-image: url("./Images/video_bg.jpg");
 }
-.pc{
-  background-image: url('./Images/podcast_bg.jpg');
+.pc {
+  background-image: url("./Images/podcast_bg.jpg");
 }
-.sm{
-  background-image: url('./Images/stock market_bg.jpg');
+.sm {
+  background-image: url("./Images/stock market_bg.jpg");
 }
-.tap{
-  background-image: url('./Images/trading apps_bg.jpg');
+.tap {
+  background-image: url("./Images/trading apps_bg.jpg");
 }
 .moneymc {
-  background-image: url('./Images/MoneyMasterclasscopy.png');
+  background-image: url("./Images/MoneyMasterclasscopy.png");
   background-position: bottom;
 }
-
 
 .header h1 {
   font-size: 2.2em;
@@ -51,19 +50,19 @@
 
 .box-main h1 {
   font-size: 2.2em;
-  font-weight: 500; 
-  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
 }
 
 .header p {
-  margin-top: 10px; 
-  font-size: 1em; 
+  margin-top: 10px;
+  font-size: 1em;
   text-align: center;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-.resourcesbox{
+.resourcesbox {
   display: flex;
   /* margin: auto; */
   flex-wrap: wrap;
@@ -76,21 +75,21 @@
   box-sizing: border-box;
   width: 26vw;
   height: auto;
-  border-radius:5px;
+  border-radius: 5px;
   background-color: rgb(31, 30, 30);
   margin: 1vw;
   text-decoration: none;
   transition: 0.3s ease-out;
 }
 
-.boxsmall img{
+.boxsmall img {
   height: 15rem;
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(9, 11, 10, 0.7);
 }
-.boxsmall:hover{
+.boxsmall:hover {
   transform: translatey(-10px);
 }
 
@@ -114,7 +113,7 @@
   cursor: pointer;
 }
 
-.boxsmall h2{
+.boxsmall h2 {
   color: white;
   text-align: center;
   flex-wrap: wrap;
@@ -125,11 +124,11 @@
   font-size: 1.2rem;
   margin: 0;
   text-decoration: none;
-  min-height: 2.8rem; 
+  min-height: 2.8rem;
   height: auto;
 }
 
-.boxsmall p{
+.boxsmall p {
   color: white;
   text-align: center;
   font-weight: 400;
@@ -148,10 +147,10 @@
 }
 
 .bookreview .boxsmall:hover,
-.Youtube .boxsmall:hover{
-    transform: scale(0.98);
+.Youtube .boxsmall:hover {
+  transform: scale(0.98);
 }
-.Youtube .links:hover{
+.Youtube .links:hover {
   text-decoration: underline;
 }
 
@@ -161,7 +160,7 @@
 .tradingapps i {
   text-align: center;
   justify-self: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .boxsmall i {
   font-size: 1.2rem;
@@ -172,7 +171,7 @@
     width: 32vw;
     margin: 2vw;
   }
-  .resourcesbox{
+  .resourcesbox {
     justify-content: center;
     padding: 4vw;
   }
@@ -183,7 +182,7 @@
     width: 38vw;
     margin: 2vw;
   }
-  .resourcesbox{
+  .resourcesbox {
     justify-content: center;
     padding: 4vw;
   }
