@@ -176,11 +176,11 @@ const Leaderboard = ({
       }
     } catch {}
     if (anonResult) {
-      let anonScore = 0;
-      if (anonResult.tries <= 6) {
+      let anonScore = 100;
+      if (anonResult.tries <= 6) { 
         anonScore = Math.max(
-          1000,
-          10000 - (anonResult.tries * 1000 + anonResult.timeTaken)
+          100,
+          12000 - (anonResult.tries * 1000 + anonResult.timeTaken*2)
         );
       } // else score remains 0
       // For day/week: check userId+date, for all: check userId
@@ -268,11 +268,11 @@ const Leaderboard = ({
       const filtered = leaders.filter((user) => user.date === selectedDay);
       return filtered
         .map((user) => {
-          let score = 0;
+          let score = 100;
           if (user.tries <= 6) {
             score = Math.max(
-              1000,
-              10000 - (user.tries * 1000 + user.timeTaken)
+              100,
+              12000 - (user.tries * 1000 + user.timeTaken*2)
             );
           }
           return {
@@ -296,9 +296,9 @@ const Leaderboard = ({
       // Group by user, sum scores for the week, divide by days played
       const userMap = {};
       filtered.forEach((user) => {
-        let score = 0;
+        let score = 100;
         if (user.tries <= 6) {
-          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
+          score = Math.max(100, 12000 - (user.tries * 1000 + user.timeTaken*2));
         }
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
@@ -322,9 +322,9 @@ const Leaderboard = ({
       // Group by user, sum all scores, apply streak bonus if you want
       const userMap = {};
       leaders.forEach((user) => {
-        let score = 0;
+        let score = 100;
         if (user.tries <= 6) {
-          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
+          score = Math.max(100, 12000 - (user.tries * 1000 + user.timeTaken*2));
         }
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
