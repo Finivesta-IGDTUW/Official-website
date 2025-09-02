@@ -89,7 +89,7 @@ const Events = () => {
       <h1 className="event-Year">2025</h1>
       <div className="event-divs">{renderAfterFinWeekEvents()}</div>
       <div className="banner-container" onClick={toggleFinWeekEvents}>
-        <img src={FinWeekBanner} loading="eager" alt="FinWeek Banner" className="finweek-banner" /> {/*to load faster */}
+        <img src="https://res.cloudinary.com/dtoiqexe1/image/upload/v1756801236/FINWEEK2_nagfgl.jpg" loading="eager" alt="FinWeek Banner" className="finweek-banner" /> {/*to load faster */}
         <div className={`banner-arrow ${showFinWeekEvents ? 'banner-arrow-rotate' : ''}`}></div>
       </div>
       {showFinWeekEvents && (
