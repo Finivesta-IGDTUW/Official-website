@@ -3,8 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5vw;
-    row-gap: 2.5vw;
+    gap: 4vw;
     padding: 1vw;
     text-align: center;
     position: relative;

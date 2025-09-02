@@ -12,58 +12,58 @@ const teamMembers = [
     members: [
         {
         name: "Sanskriti Vidushi",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799486/4_pdl2en.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799486/4_pdl2en.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827769/creative_nishtha_4_mxpdqp.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827769/creative_nishtha_4_mxpdqp.png',
         linkedin: "https://www.linkedin.com/in/sanskritividushi/",
         instagram: "https://www.instagram.com/sanskritividushi/"
       },
 
       {
         name: "Abhaya Trivedi",
-        img:'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799477/1_lxghvd.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799477/1_lxghvd.png',
+        img:'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827774/creative_nishtha_fqkjiv.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827774/creative_nishtha_fqkjiv.png',
         linkedin: "https://www.linkedin.com/in/abhayatrivedi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram: "https://www.instagram.com/abbhayaaa/"
       },
       {
         name: "Harshita Soni",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799482/2_sng83m.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799482/2_sng83m.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827757/creative_nishtha_2_yqui9f.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827757/creative_nishtha_2_yqui9f.png',
         linkedin: "https://www.linkedin.com/in/harshita-soni-414005286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram: "https://www.instagram.com/harshita_soni.15/"
       },
       {
         name: "Aanvi Gupta",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799482/3_mjne5h.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799482/3_mjne5h.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827757/creative_nishtha_3_cpaj2f.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827757/creative_nishtha_3_cpaj2f.png',
         linkedin: "https://www.linkedin.com/in/aanvig",
         instagram: "https://www.instagram.com/aanvig_/"
       },
       {
         name: "Mishthi Kainthola",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799500/5_tshc00.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799500/5_tshc00.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827762/creative_nishtha_5_qtpqav.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827762/creative_nishtha_5_qtpqav.png',
         linkedin: "https://www.linkedin.com/in/mishthi-kainthola-206854288?",
         instagram: "https://www.instagram.com/mishthi.kainthola/"
       },
       {
         name: "Khushi Khorwal",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799501/6_rveyqq.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799501/6_rveyqq.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827764/creative_nishtha_6_bghzop.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827764/creative_nishtha_6_bghzop.png',
         linkedin: "https://www.linkedin.com/in/khushi-khorwal-4a956a288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram: "https://www.instagram.com/khushikhorwal24/"
       },
       {
         name: "Anshika Patra",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799503/8_jrq707.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799503/8_jrq707.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827771/creative_nishtha_8_fqvooj.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827771/creative_nishtha_8_fqvooj.png',
         linkedin: "https://www.linkedin.com/in/anshika-patra-b67a52291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram: "https://www.instagram.com/p._.anshika/"
       },
       {
         name: "Urvashi Yadav",
-        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799499/7_g1yfdy.png',
-        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756799499/7_g1yfdy.png',
+        img: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827768/creative_nishtha_7_h1rz4o.png',
+        imgOL: 'https://res.cloudinary.com/dtoiqexe1/image/upload/v1756827768/creative_nishtha_7_h1rz4o.png',
         linkedin: "http://linkedin.com/in/urvashiyadav2004",
         instagram: "https://www.instagram.com/urvashi2004/"
       }
