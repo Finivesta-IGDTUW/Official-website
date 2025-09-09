@@ -11,6 +11,9 @@ import {
 } from "firebase/firestore";
 import { getApp } from "firebase/app";
 import "./Wordle.css";
+import winSound from "../sounds/win.mp3";
+import loseSound from "../sounds/lose.mp3";
+
 
 // Get today's date in IST (YYYY-MM-DD)
 function getTodayIST() {
@@ -460,6 +463,16 @@ useEffect(() => {
     else handleLetter(key);
     inputRef.current && inputRef.current.focus();
   };
+
+  useEffect(() => {
+  if (message.startsWith("Congratulations!")) {
+    const audio = new Audio(winSound);
+    audio.play();
+  } else if (message.startsWith("Game Over!")) {
+    const audio = new Audio(loseSound);
+    audio.play();
+  }
+}, [message]);
 
   return (
   <div>

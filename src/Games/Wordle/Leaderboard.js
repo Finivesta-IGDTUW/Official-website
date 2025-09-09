@@ -265,22 +265,10 @@ const Leaderboard = ({
   function getRankedLeaders(leaders, period) {
     if (period === "day") {
       // Filter results for the selected IST date
-      const filtered = leaders.filter((user) => user.date === selectedDay);
-      return filtered
-        .map((user) => {
-          let score = 100;
-          if (user.tries <= 6) {
-            score = Math.max(
-              100,
-              12000 - (user.tries * 1000 + user.timeTaken*2)
-            );
-          }
-          return {
-            ...user,
-            score,
-          };
-        })
-        .sort((a, b) => b.score - a.score);
+      return leaders
+      .filter((user) => user.date === selectedDay)
+      .sort((a, b) => a.timeTaken - b.timeTaken); 
+
     }
     if (period === "week") {
       // Get all dates in the selected week (IST)
@@ -295,54 +283,41 @@ const Leaderboard = ({
       const filtered = leaders.filter((user) => weekDates.includes(user.date));
       // Group by user, sum scores for the week, divide by days played
       const userMap = {};
-      filtered.forEach((user) => {
-        let score = 100;
-        if (user.tries <= 6) {
-          score = Math.max(100, 12000 - (user.tries * 1000 + user.timeTaken*2));
-        }
+       filtered.forEach((user) => {
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
             name: user.name,
-            scores: [],
+            plays: 0,
           };
+          
         }
-        userMap[user.userId].scores.push(score);
+        userMap[user.userId].plays++;
+        
       });
       return Object.entries(userMap)
-        .map(([userId, data]) => ({
-          id: userId,
-          name: data.name,
-          score: Math.round(
-            data.scores.reduce((a, b) => a + b, 0) / data.scores.length
-          ),
-        }))
-        .sort((a, b) => b.score - a.score);
+        .map(([id, data]) => ({ id, name: data.name, plays: data.plays }))
+        .sort((a, b) => b.plays - a.plays); // ✅ most plays wins
     }
     if (period === "all") {
-      // Group by user, sum all scores, apply streak bonus if you want
       const userMap = {};
       leaders.forEach((user) => {
-        let score = 100;
-        if (user.tries <= 6) {
-          score = Math.max(100, 12000 - (user.tries * 1000 + user.timeTaken*2));
-        }
         if (!userMap[user.userId]) {
           userMap[user.userId] = {
-            name: user.name,
-            scores: [],
-          };
-        }
-        userMap[user.userId].scores.push({ date: user.date, score });
-      });
-      // Optionally, add streak logic here
-      return Object.entries(userMap)
-        .map(([userId, data]) => ({
-          id: userId,
-          name: data.name,
-          score: data.scores.reduce((a, b) => a + b.score, 0),
-        }))
-        .sort((a, b) => b.score - a.score);
-    }
+          name: user.name,
+          plays: 0,
+        };
+      }
+      userMap[user.userId].plays++;
+    });
+    return Object.entries(userMap)
+      .map(([userId, data]) => ({
+        id: userId,
+        name: data.name,
+        plays: data.plays,
+      }))
+      .sort((a, b) => b.plays - a.plays); // ✅ most plays wins
+  }
+
     return [];
   }
 
@@ -428,6 +403,18 @@ const Leaderboard = ({
       transferAnonToFirebase();
     }
   }, [userProp, leaders]);
+
+function formatTime(ms) {
+  const seconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+
+  if (minutes > 0) {
+    return `${minutes}m ${remainingSeconds}s`;
+  } else {
+    return `${remainingSeconds}s`;
+  }
+}
 
   return (
     <div className="leaderboard-container">
@@ -579,7 +566,7 @@ const Leaderboard = ({
               <tr>
                 <th>Rank</th>
                 <th>Name</th>
-                <th>Score</th>
+                {period === "day" ? <th>Time</th> : <th>Plays</th>}
               </tr>
             </thead>
             <tbody>
@@ -680,7 +667,11 @@ const Leaderboard = ({
                           user.name ||
                           "Anonymous"}
                       </td>
-                      <td>{user.score}</td>
+                      <td>
+                        {period === "day"
+                        ? formatTime(user.timeTaken)
+                        : user.plays?? "-"}
+                      </td>
                     </tr>
                   );
                 });
