@@ -134,12 +134,12 @@
 .wordle-key-row {
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 6px;
 }
 
 .wordle-key {
-  min-width: 36px;
+  min-width: 42px;
   height: 44px;
   background: #222;
   color: #fff;
@@ -157,7 +157,7 @@
 .wordle-key.absent { background: #444; color: #888; }
 
 .wordle-key.special {
-  min-width: 60px;
+  min-width: 70px;
   background: #333;
   font-size: 1rem;
 }
@@ -316,8 +316,8 @@
   .wordle-grid { gap: 3px; margin-bottom: 12px; }
   .wordle-row { gap: 3px; }
   .wordle-cell { width: 46px; height: 36px; font-size: 1.2rem; border-radius: 4px; }
-  .wordle-key { min-width: 28px; height: 32px; font-size: 0.9rem; border-radius: 4px; padding: 0 15px; }
-  .wordle-key.special { min-width: 44px; font-size: 0.85rem; }
+  .wordle-key { min-width: 32px; height: 36px; font-size: 0.9rem; border-radius: 4px; padding: 0 15px; }
+  .wordle-key.special { min-width: 50px; font-size: 0.85rem; }
   .wordle-congrats-message { margin: 24px auto; padding: 18px 8px; font-size: 1.05rem; border-radius: 8px; max-width: 95vw; }
 }
 
@@ -360,7 +360,7 @@
   0% { transform: scale(0.7); opacity: 0; box-shadow: 0 0 0 rgba(185,28,28,0); }
   70% { transform: scale(1.05); opacity: 1; box-shadow: 0 6px 25px rgba(185,28,28,0.4), 0 0 50px rgba(185,28,28,0.2); }
   100% { transform: scale(1); box-shadow: 0 4px 20px rgba(185,28,28,0.2), 0 0 40px rgba(185,28,28,0.1); }
-  
+}
   .wordle-container {
     width: 98vw;
     padding: 0 2vw 8px 2vw;
@@ -401,7 +401,7 @@
     max-width: 95vw;
     box-shadow: 0 1px 8px rgba(95, 142, 51, 0.1);
   }
-}
+
 
 @media (max-width: 450px) {
   .wordle-container {
@@ -432,14 +432,14 @@
     margin-bottom: 7px;
   }
   .wordle-key {
-    min-width: 32px;
-    height: 48px;
+    min-width: 36px;
+    height: 52px;
     font-size: 1rem;
     border-radius: 3px;
     padding: 0 1px;
   }
   .wordle-key.special {
-    min-width: 28px;
+    min-width: 32px;
     font-size: 0.8rem;
     padding:8px;
   }
@@ -474,14 +474,14 @@
     margin-bottom: 7px;
   }
   .wordle-key {
-    min-width: 20px;
-    height: 40px;
+    min-width: 24px;
+    height: 44px;
     font-size: 0.9rem;
     border-radius: 3px;
     padding: 0 10px;
   }
   .wordle-key.special {
-    min-width: 16px;
+    min-width: 20px;
     font-size: 0.6rem;
     padding:7px;
   }
@@ -516,14 +516,14 @@
     margin-bottom: 7px;
   }
   .wordle-key {
-    min-width: 15px;
-    height: 40px;
+    min-width: 18px;
+    height: 44px;
     font-size: 0.85rem;
     border-radius: 3px;
     padding: 0 10px;
   }
   .wordle-key.special {
-    min-width: 14px;
+    min-width: 17px;
     font-size: 0.5rem;
     padding:7px;
   }

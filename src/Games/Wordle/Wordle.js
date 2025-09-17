@@ -112,8 +112,15 @@ const spawnSparkles = (count = 20) => {
       const db = getFirestore(getApp());
       if (gameType === "daily") {
         const colRef = collection(db, "games", "wordle", "word_of_the_day");
-        const today = getTodayIST();
-        const q = query(colRef, where("date", "==", today));
+        const today = getTodayIST(); // assuming this returns a Date object
+
+// Create a new Date object for 45 days ago
+const pastDate = new Date(today);
+pastDate.setDate(pastDate.getDate() - 30);
+
+console.log(pastDate); // Date object 45 days before today
+
+        const q = query(colRef, where("date", "==", pastDate));
         const snap = await getDocs(q);
         if (!snap.empty) {
           const docData = snap.docs[0].data();

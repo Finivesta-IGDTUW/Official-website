@@ -220,7 +220,7 @@ const WordleTitle = ({ onHowToPlay }) => {
           className={`wordle-titlepage-heading${showGame ? " heading-up" : ""}`}
         >
           {showLeaderboard ? (
-            "Wordle Street Leaderboard"
+            <div className="wordle-street-title">Wordle Street Leaderboard</div>
           ) : !showGame && !showLeaderboard ? (
             <img
               src={require("./WordleStreet.jpeg")}
