@@ -1,164 +1,118 @@
-.contactPage {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-  }
-  
-.contact-header {
-    /* background-image: url('../Images/bgfortabs.jpg');
-    height: 200px; */
-    background-size: cover;
-    background-position: center;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin: auto;  
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: multiply;
+.contact-page {
+  min-height: 100vh;
+  background: #101010;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
 }
-  
+
+.contact-header {
+  text-align: center;
+  color: #fff;
+  padding: 40px 10px 20px 10px;
+  background: #181818;
+}
+
 .contact-header h1 {
   font-size: 2.2em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
 }
 
 .contact-header p {
-  margin-top: 10px; 
-  font-size: 1em; 
+  font-size: 1.1em;
+  color: #bab7b7;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 32px auto;
+  background: #181818;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px #0004;
+  padding: 32px 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-col {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #5fae33;
+  font-size: 1rem;
+  background: #222;
+  color: #fff;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border: 1.5px solid #7bbf4d;
+  background: #232323;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+.contact-submit {
+  background: #5fae33;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.contact-submit:hover {
+  background: #7bbf4d;
+  color: #222;
+}
+
+.contact-status {
+  color: #7bbf4d;
   text-align: center;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-}
-  
-  .wrapper {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center; 
-    margin: 20px 20px; 
-  }
-  
-  .contactbox, .map {
-    flex: 1; 
-    padding: 20px;
-    color: #fff;
-    font-size: 2vw;
-  }
-
-  .map iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    max-width: 100%; 
-    box-sizing: border-box; 
-}
-  
-  .message {
-    color: #fff;
-    text-align: center;
-    font-size: 2.5vw;
-    margin-top: 50px;
-  }
-  
-  .container {
-    border-radius: 5px;
-    background-color: #000000; /* Changed background color */
-    padding: 20px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .col-50, .col-75, .col-100 {
-    padding: 0 10px; /* Added padding for gap */
-    box-sizing: border-box;
-}
-
-.col-50 {
-    flex: 1 1 45%; /* Adjusted flex basis for better spacing */
-}
-
-.col-75 {
-    flex: 1 1 55%; /* Adjusted flex basis for better spacing */
-}
-
-.col-100 {
-    flex: 1 1 100%;
-}
-  
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    background-color: #303030; /* Changed background color of textboxes */
-    border: none;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
-    font-size: medium;
-    color: #ffffff;
-  }
-  
-  input[type="text"]::placeholder,
-  input[type="email"]::placeholder,
-  input[type="tel"]::placeholder,
-  textarea::placeholder {
-    color: #bab7b7; /* Change placeholder font color to gray */
-    font-family:  "Poppins", sans-serif;
-    font-size: medium;
-    padding-left: 1vw;
-  }
-  
-  input[type="submit"] {
-    background-color: #000000;
-    color:#7AAE4A ;
-    padding: 10px 40px; /* Reduced padding for smaller button */
-    border-radius: 5px;
-    cursor: pointer;
-    width: auto; /* Auto width for smaller button */
-    float: right;
-    border: 2px solid #7AAE4A;
-    font-size: medium;
-    font-family: "Poppins", sans-serif ;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-    color: #ffffff;
-  }
-
-  .form-status {
-    text-align: center;
-    margin-top: 20px;
-    color: #ffffff;
+  margin-top: 18px;
+  font-size: 1.1rem;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .col-50, .col-75, .col-100 {
-        flex: 1 1 100%;
-        padding: 0 5px; /* Adjust padding for mobile view */
-    }
-
-    input[type="submit"] {
-        width: 100%; /* Full width button for mobile view */
-        float: none;
-    }
+@media (max-width: 700px) {
+  .contact-container {
+    padding: 18px 6px;
+  }
+  .contact-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-col {
+    flex: 1 1 100%;
+  }
 }

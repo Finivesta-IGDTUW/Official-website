@@ -1,0 +1,492 @@
+[1mdiff --git a/src/Games/Wordle/Wordle.css b/src/Games/Wordle/Wordle.css[m
+[1mindex 93c6e94..75e76fa 100644[m
+[1m--- a/src/Games/Wordle/Wordle.css[m
+[1m+++ b/src/Games/Wordle/Wordle.css[m
+[36m@@ -1,3 +1,30 @@[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   WORDLE CONTAINER[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.wordle-container {[m
+[32m+[m[32m  max-width: 550px;[m
+[32m+[m[32m  margin: 0 auto;[m
+[32m+[m[32m  padding: 0 8px 8px 8px;[m
+[32m+[m[32m  background: linear-gradient(135deg, #181818 0%, #1e1e1e 100%);[m
+[32m+[m[32m  border-radius: 16px;[m
+[32m+[m[32m  box-shadow: 0 4px 32px #0002;[m
+[32m+[m[32m  color: #fff;[m
+[32m+[m[32m  position: relative;[m
+[32m+[m[32m  font-family: "Poppins", Arial, sans-serif;[m
+[32m+[m[32m  overflow: hidden;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   TITLE & TIMER[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.wordle-title {[m
+[32m+[m[32m  text-align: center;[m
+[32m+[m[32m  margin: 18px;[m
+[32m+[m[32m  font-size: 2rem;[m
+[32m+[m[32m  letter-spacing: 2px;[m
+[32m+[m[32m  color: #5f8e33;[m
+[32m+[m[32m}[m
+[32m+[m
+ .wordle-timer {[m
+   display: flex;[m
+   justify-content: center;[m
+[36m@@ -18,40 +45,9 @@[m
+   font-variant-numeric: tabular-nums;[m
+ }[m
+ [m
+[31m-.wordle-congrats-message {[m
+[31m-  margin: 40px auto;[m
+[31m-  padding: 32px 24px;[m
+[31m-  border: 2px solid #5f8e33;[m
+[31m-  border-radius: 12px;[m
+[31m-  color: #2d5c1a;[m
+[31m-  font-size: 1.5rem;[m
+[31m-  font-weight: 700;[m
+[31m-  text-align: center;[m
+[31m-  box-shadow: 0 2px 16px rgba(95, 142, 51, 0.08);[m
+[31m-  max-width: 400px;[m
+[31m-}[m
+[31m-[m
+[31m-.wordle-container {[m
+[31m-  max-width: 550px;[m
+[31m-  margin: 0;[m
+[31m-  margin-top: 0;[m
+[31m-  padding: 0 8px 8px 8px;[m
+[31m-  background: #181818;[m
+[31m-  border-radius: 16px;[m
+[31m-  box-shadow: 0 4px 32px #0002;[m
+[31m-  color: #fff;[m
+[31m-  position: relative;[m
+[31m-  font-family: "Poppins", Arial, sans-serif;[m
+[31m-}[m
+[31m-[m
+[31m-.wordle-title {[m
+[31m-  text-align: center;[m
+[31m-  margin: 18px;[m
+[31m-  font-size: 2rem;[m
+[31m-  letter-spacing: 2px;[m
+[31m-  color: #5f8e33;[m
+[31m-}[m
+[31m-[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   GRID & CELLS[m
+[32m+[m[32m======================== */[m
+ .wordle-grid {[m
+   display: flex;[m
+   flex-direction: column;[m
+[36m@@ -80,6 +76,7 @@[m
+   transition: background 0.3s, border 0.3s, color 0.3s, transform 0.3s;[m
+   box-sizing: border-box;[m
+   perspective: 300px;[m
+[32m+[m[32m  position: relative;[m
+ }[m
+ [m
+ .wordle-cell.flip {[m
+[36m@@ -87,15 +84,9 @@[m
+ }[m
+ [m
+ @keyframes flip {[m
+[31m-  0% {[m
+[31m-    transform: rotateX(0deg);[m
+[31m-  }[m
+[31m-  50% {[m
+[31m-    transform: rotateX(90deg);[m
+[31m-  }[m
+[31m-  100% {[m
+[31m-    transform: rotateX(0deg);[m
+[31m-  }[m
+[32m+[m[32m  0% { transform: rotateX(0deg); }[m
+[32m+[m[32m  50% { transform: rotateX(90deg); }[m
+[32m+[m[32m  100% { transform: rotateX(0deg); }[m
+ }[m
+ [m
+ .wordle-cell.correct {[m
+[36m@@ -116,10 +107,29 @@[m
+   color: #888;[m
+ }[m
+ [m
+[31m-.wordle-keyboard {[m
+[31m-  margin-top: 18px;[m
+[31m-  user-select: none;[m
+[32m+[m[32m/* ROW ANIMATIONS */[m
+[32m+[m[32m@keyframes rowDance {[m
+[32m+[m[32m  0%,100% { transform: translateY(0); }[m
+[32m+[m[32m  20% { transform: translateY(-10px); }[m
+[32m+[m[32m  40% { transform: translateY(5px); }[m
+[32m+[m[32m  60% { transform: translateY(-5px); }[m
+[32m+[m[32m  80% { transform: translateY(2px); }[m
+[32m+[m[32m}[m
+[32m+[m[32m.wordle-row.dance { animation: rowDance 0.6s ease; }[m
+[32m+[m
+[32m+[m[32m@keyframes shakeRow {[m
+[32m+[m[32m  0%,100% { transform: translateX(0); }[m
+[32m+[m[32m  20% { transform: translateX(-5px); }[m
+[32m+[m[32m  40% { transform: translateX(5px); }[m
+[32m+[m[32m  60% { transform: translateX(-5px); }[m
+[32m+[m[32m  80% { transform: translateX(5px); }[m
+ }[m
+[32m+[m[32m.wordle-row.shake { animation: shakeRow 0.5s ease; }[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   KEYBOARD[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.wordle-keyboard { margin-top: 18px; user-select: none; }[m
+ [m
+ .wordle-key-row {[m
+   display: flex;[m
+[36m@@ -142,32 +152,145 @@[m
+   text-transform: uppercase;[m
+ }[m
+ [m
+[31m-.wordle-key.correct {[m
+[32m+[m[32m.wordle-key.correct { background: #5f8e33; color: #fff; }[m
+[32m+[m[32m.wordle-key.present { background: #eab308; color: #fff; }[m
+[32m+[m[32m.wordle-key.absent { background: #444; color: #888; }[m
+[32m+[m
+[32m+[m[32m.wordle-key.special {[m
+[32m+[m[32m  min-width: 60px;[m
+[32m+[m[32m  background: #333;[m
+[32m+[m[32m  font-size: 1rem;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.wordle-key:disabled { opacity: 0.6; cursor: not-allowed; }[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   CURSOR[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.typing-cursor {[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  right: 6px;[m
+[32m+[m[32m  top: 50%;[m
+[32m+[m[32m  transform: translateY(-50%);[m
+[32m+[m[32m  width: 2px;[m
+[32m+[m[32m  height: 60%;[m
+   background: #5f8e33;[m
+[32m+[m[32m  animation: caretBlink 1s steps(1) infinite;[m
+[32m+[m[32m  pointer-events: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m@keyframes caretBlink { 50% { opacity: 0; } }[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   CONGRATS MESSAGE[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.wordle-congrats-message {[m
+[32m+[m[32m  margin: 40px auto;[m
+[32m+[m[32m  padding: 32px 24px;[m
+[32m+[m[32m  border: 2px solid #5f8e33;[m
+[32m+[m[32m  border-radius: 12px;[m
+   color: #fff;[m
+[32m+[m[32m  font-size: 1.5rem;[m
+[32m+[m[32m  font-weight: 700;[m
+[32m+[m[32m  text-align: center;[m
+[32m+[m[32m  box-shadow: 0 2px 16px rgba(95, 142, 51, 0.08);[m
+[32m+[m[32m  max-width: 400px;[m
+[32m+[m[32m  background: linear-gradient(135deg, #1e2b1d, #2d5c1a);[m
+[32m+[m[32m  animation: popInGlow 0.6s ease forwards;[m
+ }[m
+ [m
+[31m-.wordle-key.present {[m
+[31m-  background: #eab308;[m
+[32m+[m[32m.wordle-congrats-message div {[m
+[32m+[m[32m  opacity: 0;[m
+[32m+[m[32m  transform: translateY(20px);[m
+[32m+[m[32m  animation: slideFade 0.5s forwards;[m
+[32m+[m[32m}[m
+[32m+[m[32m.wordle-congrats-message div:nth-child(1) { animation-delay: 0.1s; }[m
+[32m+[m[32m.wordle-congrats-message div:nth-child(2) { animation-delay: 0.3s; }[m
+[32m+[m[32m.wordle-congrats-message div:nth-child(3) { animation-delay: 0.5s; }[m
+[32m+[m
+[32m+[m[32m@keyframes popInGlow {[m
+[32m+[m[32m  0% { transform: scale(0.7); opacity: 0; box-shadow: 0 0 0 rgba(95,142,51,0); }[m
+[32m+[m[32m  70% { transform: scale(1.05); opacity: 1; box-shadow: 0 6px 25px rgba(95,142,51,0.4), 0 0 50px rgba(95,142,51,0.2); }[m
+[32m+[m[32m  100% { transform: scale(1); box-shadow: 0 4px 20px rgba(95,142,51,0.2), 0 0 40px rgba(95,142,51,0.1); }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m@keyframes slideFade {[m
+[32m+[m[32m  to { opacity: 1; transform: translateY(0); }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   BUTTONS[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.wordle-btn {[m
+[32m+[m[32m  background: linear-gradient(90deg, #5f8e33, #a1d490);[m
+   color: #fff;[m
+[32m+[m[32m  border-radius: 12px;[m
+[32m+[m[32m  border: none;[m
+[32m+[m[32m  padding: 10px 20px;[m
+[32m+[m[32m  font-weight: 600;[m
+[32m+[m[32m  cursor: pointer;[m
+[32m+[m[32m  transition: transform 0.2s, box-shadow 0.2s;[m
+[32m+[m[32m  margin-top: 16px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.wordle-btn:hover {[m
+[32m+[m[32m  transform: scale(1.05);[m
+[32m+[m[32m  box-shadow: 0 6px 20px rgba(95,142,51,0.5);[m
+ }[m
+ [m
+[31m-.wordle-key.absent {[m
+[31m-  background: #444;[m
+[31m-  color: #888;[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   COINS[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.coin-layer {[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  top: 10px;[m
+[32m+[m[32m  left: 50%;[m
+[32m+[m[32m  transform: translateX(-50%);[m
+[32m+[m[32m  display: flex;[m
+[32m+[m[32m  flex-direction: column-reverse;[m
+[32m+[m[32m  align-items: center;[m
+[32m+[m[32m  pointer-events: none;[m
+ }[m
+ [m
+[31m-.wordle-key.special {[m
+[31m-  min-width: 60px;[m
+[31m-  background: #333;[m
+[31m-  font-size: 1rem;[m
+[32m+[m[32m.coin {[m
+[32m+[m[32m  font-size: 1.5rem;[m
+[32m+[m[32m  opacity: 0;[m
+[32m+[m[32m  margin-bottom: -12px;[m
+[32m+[m[32m  transform: translateY(-40px) scale(0.7);[m
+[32m+[m[32m  animation: dropCoin 0.5s cubic-bezier(0.25,1.2,0.5,1) forwards;[m
+[32m+[m[32m  animation-delay: var(--delay, 0s);[m
+[32m+[m[32m  filter: drop-shadow(0 0 4px gold);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m@keyframes dropCoin {[m
+[32m+[m[32m  0% { transform: translateY(-40px) scale(0.7); opacity: 0; }[m
+[32m+[m[32m  60% { transform: translateY(5px) scale(1.05); opacity: 1; }[m
+[32m+[m[32m  80% { transform: translateY(-2px) scale(0.95); }[m
+[32m+[m[32m  100% { transform: translateY(0) scale(1); }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   SPARKLES / CONFETTI[m
+[32m+[m[32m======================== */[m
+[32m+[m[32m.sparkle {[m
+[32m+[m[32m  position: absolute;[m
+[32m+[m[32m  width: 6px;[m
+[32m+[m[32m  height: 6px;[m
+[32m+[m[32m  background: gold;[m
+[32m+[m[32m  border-radius: 50%;[m
+[32m+[m[32m  top: 50%;[m
+[32m+[m[32m  left: 50%;[m
+[32m+[m[32m  opacity: 0.8;[m
+[32m+[m[32m  animation: sparkleMove 2s infinite;[m
+ }[m
+ [m
+[31m-.wordle-key:disabled {[m
+[31m-  opacity: 0.6;[m
+[31m-  cursor: not-allowed;[m
+[32m+[m[32m@keyframes sparkleMove {[m
+[32m+[m[32m  0% { transform: translate(0,0) scale(0.5); opacity: 0.8; }[m
+[32m+[m[32m  50% { transform: translate(100px,-150px) scale(1); opacity: 1; }[m
+[32m+[m[32m  100% { transform: translate(-50px,-200px) scale(0.5); opacity: 0; }[m
+ }[m
+ [m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   POPUP MESSAGES[m
+[32m+[m[32m======================== */[m
+ .wordle-popup-message {[m
+   position: fixed;[m
+   bottom: 32px;[m
+[36m@@ -185,171 +308,27 @@[m
+   border: 2px solid #5f8e33;[m
+ }[m
+ [m
+[32m+[m[32m/* ========================[m
+[32m+[m[32m   RESPONSIVE[m
+[32m+[m[32m======================== */[m
+ @media (max-width: 550px) {[m
+[31m-  .wordle-container {[m
+[31m-    width: 98vw;[m
+[31m-    padding: 0 2vw 8px 2vw;[m
+[31m-    border-radius: 10px;[m
+[31m-    box-shadow: 0 2px 12px #0002;[m
+[31m-  }[m
+[31m-  .wordle-grid {[m
+[31m-    gap: 3px;[m
+[31m-    margin-bottom: 12px;[m
+[31m-  }[m
+[31m-  .wordle-row {[m
+[31m-    gap: 3px;[m
+[31m-  }[m
+[31m-  .wordle-cell {[m
+[31m-    width: 46px;[m
+[31m-    height: 44px;[m
+[31m-    font-size: 1.3rem;[m
+[31m-    border-radius: 4px;[m
+[31m-  }[m
+[31m-  .wordle-key {[m
+[31m-    min-width: 28px;[m
+[31m-    height: 48px;[m
+[31m-    font-size: 1rem;[m
+[31m-    border-radius: 4px;[m
+[31m-    padding: 0 15px;[m
+[31m-  }[m
+[31m-  .wordle-key.special {[m
+[31m-    min-width: 44px;[m
+[31m-    font-size: 0.80rem;[m
+[31m-    padding:0px 15px;[m
+[31m-  }[m
+[31m-[m
+[31m-  .wordle-congrats-message {[m
+[31m-    margin: 24px auto;[m
+[31m-    padding: 18px 8px;[m
+[31m-    font-size: 1.05rem;[m
+[31m-    border-radius: 8px;[m
+[31m-    max-width: 95vw;[m
+[31m-    box-shadow: 0 1px 8px rgba(95, 142, 51, 0.1);[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-@media (max-width: 450px) {[m
+[31m-  .wordle-container {[m
+[31m-    max-width: 100vw;[m
+[31m-    padding: 0 1vw 6px 1vw;[m
+[31m-    border-radius: 7px;[m
+[31m-  }[m
+[31m-  .wordle-grid {[m
+[31m-    gap: 2px;[m
+[31m-    margin-bottom: 8px;[m
+[31m-  }[m
+[31m-  .wordle-row {[m
+[31m-    gap: 3px;[m
+[31m-  }[m
+[31m-  .wordle-cell {[m
+[31m-    width: 36px;[m
+[31m-    height: 36px;[m
+[31m-    font-size: 0.85rem;[m
+[31m-    border-radius: 3px;[m
+[31m-  }[m
+[31m-  .wordle-keyboard {[m
+[31m-    margin-top: 18px;[m
+[31m-    margin-left:5px;[m
+[31m-    margin-right:5px;[m
+[31m-  }[m
+[31m-  .wordle-key-row {[m
+[31m-    gap: 4px;[m
+[31m-    margin-bottom: 7px;[m
+[31m-  }[m
+[31m-  .wordle-key {[m
+[31m-    min-width: 32px;[m
+[31m-    height: 48px;[m
+[31m-    font-size: 1rem;[m
+[31m-    border-radius: 3px;[m
+[31m-    padding: 0 1px;[m
+[31m-  }[m
+[31m-  .wordle-key.special {[m
+[31m-    min-width: 28px;[m
+[31m-    font-size: 0.8rem;[m
+[31m-    padding:8px;[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-@media (max-width: 370px) {[m
+[31m-  .wordle-container {[m
+[31m-    max-width: 100vw;[m
+[31m-    padding: 0 1vw 6px 1vw;[m
+[31m-    border-radius: 7px;[m
+[31m-  }[m
+[31m-  .wordle-grid {[m
+[31m-    gap: 2px;[m
+[31m-    margin-bottom: 8px;[m
+[31m-  }[m
+[31m-  .wordle-row {[m
+[31m-    gap: 2px;[m
+[31m-  }[m
+[31m-  .wordle-cell {[m
+[31m-    width: 36px;[m
+[31m-    height: 36px;[m
+[31m-    font-size: 0.85rem;[m
+[31m-    border-radius: 3px;[m
+[31m-  }[m
+[31m-  .wordle-keyboard {[m
+[31m-    margin-top: 18px;[m
+[31m-    margin-left:3px;[m
+[31m-    margin-right:3px;[m
+[31m-  }[m
+[31m-  .wordle-key-row {[m
+[31m-    gap: 4px;[m
+[31m-    margin-bottom: 7px;[m
+[31m-  }[m
+[31m-  .wordle-key {[m
+[31m-    min-width: 20px;[m
+[31m-    height: 40px;[m
+[31m-    font-size: 0.9rem;[m
+[31m-    border-radius: 3px;[m
+[31m-    padding: 0 10px;[m
+[31m-  }[m
+[31m-  .wordle-key.special {[m
+[31m-    min-width: 16px;[m
+[31m-    font-size: 0.6rem;[m
+[31m-    padding:7px;[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-@media (max-width: 305px) {[m
+[31m-  .wordle-container {[m
+[31m-    max-width: 100vw;[m
+[31m-    padding: 0 1vw 6px 1vw;[m
+[31m-    border-radius: 7px;[m
+[31m-  }[m
+[31m-  .wordle-grid {[m
+[31m-    gap: 2px;[m
+[31m-    margin-bottom: 8px;[m
+[31m-  }[m
+[31m-  .wordle-row {[m
+[31m-    gap: 2px;[m
+[31m-  }[m
+[31m-  .wordle-cell {[m
+[31m-    width: 32px;[m
+[31m-    height: 32px;[m
+[31m-    font-size: 0.85rem;[m
+[31m-    border-radius: 3px;[m
+[31m-  }[m
+[31m-  .wordle-keyboard {[m
+[31m-    margin-top: 15px;[m
+[31m-    margin-left:2px;[m
+[31m-    margin-right:2px;[m
+[31m-  }[m
+[31m-  .wordle-key-row {[m
+[31m-    gap: 3px;[m
+[31m-    margin-bottom: 7px;[m
+[31m-  }[m
+[31m-  .wordle-key {[m
+[31m-    min-width: 15px;[m
+[31m-    height: 40px;[m
+[31m-    font-size: 0.85rem;[m
+[31m-    border-radius: 3px;[m
+[31m-    padding: 0 10px;[m
+[31m-  }[m
+[31m-  .wordle-key.special {[m
+[31m-    min-width: 14px;[m
+[31m-    font-size: 0.5rem;[m
+[31m-    padding:7px;[m
+[31m-  }[m
+[32m+[m[32m  .wordle-container { width: 98vw; padding: 0 2vw 8px 2vw; border-radius: 10px; box-shadow: 0 2px 12px #0002; }[m
+[32m+[m[32m  .wordle-grid { gap: 3px; margin-bottom: 12px; }[m
+[32m+[m[32m  .wordle-row { gap: 3px; }[m
+[32m+[m[32m  .wordle-cell { width: 46px; height: 36px; font-size: 1.2rem; border-radius: 4px; }[m
+[32m+[m[32m  .wordle-key { min-width: 28px; height: 32px; font-size: 0.9rem; border-radius: 4px; padding: 0 15px; }[m
+[32m+[m[32m  .wordle-key.special { min-width: 44px; font-size: 0.85rem; }[m
+[32m+[m[32m  .wordle-congrats-message { margin: 24px auto; padding: 18px 8px; font-size: 1.05rem; border-radius: 8px; max-width: 95vw; }[m
+ }[m
+[32m+[m
+[32m+[m[32m@media (max-width: 360px) {[m
+[32m+[m[32m  .wordle-container { max-width: 100vw; padding: 0 1vw 6px 1vw; border-radius: 7px; }[m
+[32m+[m[32m  .wordle-grid { gap: 2px; margin-bottom: 8px; }[m
+[32m+[m[32m  .wordle-row { gap: 2px; }[m
+[32m+[m[32m  .wordle-cell { width: 26px; height: 26px; font-size: 0.85rem; border-radius: 3px; }[m
+[32m+[m[32m  .wordle-keyboard { margin-top: 10px; }[m
+[32m+[m[32m  .wordle-key-row { gap: 2px; margin-bottom: 2px; }[m
+[32m+[m[32m  .wordle-key { min-width: 18px; height: 22px; font-size: 0.7rem; border-radius: 3px; padding: 0 1px; }[m
+[32m+[m[32m  .wordle-key.special { min-width: 28px; font-size: 0.7rem; }[m
+[32m+[m[32m}[m
+[41m+[m
