@@ -14,8 +14,18 @@ import FinWeek2 from "./Images/FinWeek2.png";
 import FinWeek3 from "./Images/FinWeek3.png";
 import FinWeek4 from "./Images/FinWeek4.png";
 import FinWeek5 from "./Images/FinWeek5.png";
+import Orientation25 from "./Images/Orientation_25.jpg";
 
 const events = [
+  {
+    name: "Orientation",
+    photo: Orientation25,
+    link: "https://www.instagram.com/reel/DPMB8yUEy6m/?utm_source=ig_web_copy_link&igsh=MTcyZXRzY2JyZXMxNQ==",
+    byline:
+      "Finivesta Orientation 2025: Where Finance Meets Fun! Gear up for a power-packed session where finance meets thrill!",
+    year: 2025,
+    backgroundColor: "#99e17a",
+  },
   {
     name: "Fin Feud",
     photo: FinFeud,
