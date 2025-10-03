@@ -44,7 +44,7 @@ nav {
 }
 
 .logoheader img{
-    height: calc(4vh + 5px);
+    height: calc(3.7vh + 4.7px);
     margin-left: 5vw;
     margin-top: 7px;
 }
@@ -166,7 +166,7 @@ nav {
     display: block;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
     .menu a {
         margin-left: 0;
         padding: 1vw 2vw;
@@ -176,7 +176,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 890px) {
     .menu {
         flex-direction: column;
         background-color: #333333;
