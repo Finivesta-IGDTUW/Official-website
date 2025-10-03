@@ -31,6 +31,7 @@ const Footer = () => {
                 <a className="fbut" href="/sponsors">Sponsors</a>
                 <a className="fbut" href="/resources">Resources</a>
                 <a className="fbut" href="/team">Our Team</a>
+                <a className="fbut" href="/games">Games</a>
                 {/* <a className="fbut" href="/contact">Contact Us</a> */}
             </div>
 

@@ -10,9 +10,18 @@ import VideosImage from "./Images/Videos.jpg";
 import ShareMarketImage from "./Images/sharemarket_img2.png";
 import TradingAppImage from "./Images/tradingapps.png";
 import MoneyMasterclassImage from "./Images/moneymasterclass/MoneyMasterclass.png";
+import NewsletterImage from "./Images/newsletter.jpg";
 
 // Resource data array
 const resources = [
+  {
+    id: 8,
+    title: "Newsletter",
+    description:
+      "Stay updated with our monthly newsletter featuring the latest finance news, market trends, and insights to keep you informed and ahead in the financial world.",
+    image: NewsletterImage,
+    link: "/resources/newsletter",
+  },
   {
     id: 1,
     title: "Money Masterclass",
