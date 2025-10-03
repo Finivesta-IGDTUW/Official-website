@@ -8,6 +8,7 @@ import {
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import Layout from "./NavbarFooter/Layout";
+import PopupMessage from "../src/Components/PopupMessage.js";
 
 // import Loader from './Loader/Loader';
 
@@ -19,6 +20,7 @@ import Events from "./Events/Events";
 import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import MoneyMasterclass from "./Resources/MoneyMasterclass/MoneyMasterclass";
+import Newsletter from "./Resources/Newsletter/newsletter";
 
 import Game from "./Games/Game.js";
 /*
@@ -133,6 +135,7 @@ const AppContent = () => {
       </Helmet>
       {!isGameFullScreen && <Navbar />}
       <Layout>
+      <PopupMessage />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
@@ -140,6 +143,10 @@ const AppContent = () => {
           <Route path="/resources" element={<Resources />} />
 
           {/* Under resources */}
+          <Route
+            path="/resources/newsletter"
+            element={<Newsletter />}
+          />
           <Route
             path="/resources/moneymasterclass"
             element={<MoneyMasterclass />}
