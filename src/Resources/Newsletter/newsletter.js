@@ -4,7 +4,16 @@ import "../Resources.css";
 import new0 from '../Images/Newsletter/new0.png';
 import new1 from '../Images/Newsletter/new1.png';
 import new2 from '../Images/Newsletter/new2.png';
+import new3 from '../Images/Newsletter/new3.png';
+
 const sessions = [
+
+  {
+    id: 4,
+    title: "October Edition",
+    image: new3,
+    link: '/Newsletter3.pdf',
+  },
   
   {
     id: 3,
