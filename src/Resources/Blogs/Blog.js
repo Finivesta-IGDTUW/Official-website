@@ -20,8 +20,16 @@ import I16 from "../Images/blogs/cash.png";
 import I17 from "../Images/blogs/IndiaUpiSys.png";
 import I18 from "../Images/blogs/economicgrowth.jpg";
 import I19 from "../Images/blogs/19.jpeg";
+import I20 from "../Images/blogs/20.jpeg";
 
 const blogs = [
+  {
+    id: 20,
+    title: "The U.S. vs. The World (Again)",
+    description: "What’s Behind America’s New Tariff War?",
+    image: I20,
+    link: "/resources/blogs/20-UStariffs",
+  },
   {
     id: 19,
     title: "India’s Economic Growth and Industrialization: A Path to Progress",
