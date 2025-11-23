@@ -42,6 +42,7 @@ import IndiaUPISystem from "./Resources/Blogs/Blogpages/IndiasUPI-system.js";
 import DigitalPayments from "./Resources/Blogs/Blogpages/digital.js";
 import IndiaEconomicGrowth from "./Resources/Blogs/Blogpages/IndiaEconomicGrowth.js";
 import EconomicGrowth from "./Resources/Blogs/Blogpages/economicgrowth.js";
+import Louvre_heist from "./Resources/Blogs/Blogpages/Louvre-heist.js";
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -124,6 +125,7 @@ const AppContent = () => {
           <Route path="/resources/blogs" element={<Blog />} />
 
           {/* Blog pages */}
+          
           <Route
             path="/resources/blogs/01-AI-in-finance"
             element={<AIinfinance />}
@@ -196,6 +198,10 @@ const AppContent = () => {
           <Route
             path="/resources/blogs/19-IndiasEconomicGrowth"
             element={<IndiaEconomicGrowth />}
+          />
+          <Route
+            path="/resources/blogs/20-Louvre-heist"
+            element={<Louvre_heist />}
           />
 
           {/*Book pages*/}
