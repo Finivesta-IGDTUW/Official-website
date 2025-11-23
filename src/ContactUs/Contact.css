@@ -96,56 +96,6 @@
 }
   
   
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    background-color: #303030; /* Changed background color of textboxes */
-    border: none;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
-    font-size: medium;
-    color: #ffffff;
-  }
-  
-  input[type="text"]::placeholder,
-  input[type="email"]::placeholder,
-  input[type="tel"]::placeholder,
-  textarea::placeholder {
-    color: #bab7b7; /* Change placeholder font color to gray */
-    font-family:  "Poppins", sans-serif;
-    font-size: medium;
-    padding-left: 1vw;
-  }
-  
-  input[type="submit"] {
-    background-color: #000000;
-    color:#7AAE4A ;
-    padding: 10px 40px; /* Reduced padding for smaller button */
-    border-radius: 5px;
-    cursor: pointer;
-    width: auto; /* Auto width for smaller button */
-    float: right;
-    border: 2px solid #7AAE4A;
-    font-size: medium;
-    font-family: "Poppins", sans-serif ;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-    color: #ffffff;
-  }
-
-  .form-status {
-    text-align: center;
-    margin-top: 20px;
-    color: #ffffff;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
     .row {
@@ -155,10 +105,5 @@
     .col-50, .col-75, .col-100 {
         flex: 1 1 100%;
         padding: 0 5px; /* Adjust padding for mobile view */
-    }
-
-    input[type="submit"] {
-        width: 100%; /* Full width button for mobile view */
-        float: none;
     }
 }

@@ -1,0 +1,197 @@
+.leaderboard-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5f8e33;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.leaderboard-add-anon-message {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border: 1px solid #e0c97f;
+  border-radius: 6px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.leaderboard-add-btn,
+.leaderboard-pass-btn {
+  background: #5f8e33;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.leaderboard-pass-btn {
+  background: #bbb;
+  color: #333;
+}
+
+.leaderboard-container {
+  max-width: 500px;
+  margin: 0;
+  background: #181818;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px #0002;
+  color: #fff;
+  padding: 24px 16px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.leaderboard-title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  color: #5f8e33;
+}
+
+.leaderboard-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.leaderboard-toggle button {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.leaderboard-toggle button.active {
+  background: #5f8e33;
+  color: #fff;
+}
+
+.leaderboard-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.leaderboard-table {
+  margin-top: 10px;
+}
+
+.leaderboard-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 10px 6px;
+  text-align: left;
+  color: #aaa;
+}
+
+.leaderboard-table th {
+  background: #222;
+  color: #5f8e33;
+  font-weight: 600;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: #232323;
+}
+
+.leaderboard-table tr:nth-child(odd) {
+  background: #181818;
+}
+
+.leaderboard-table table,
+.leaderboard-table th,
+.leaderboard-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.medal {
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+.medal.goldpos {
+  color: #ffd700;
+}
+.medal.silverpos {
+  color: #c0c0c0;
+}
+.medal.bronzepos {
+  color: #cd7f32;
+}
+
+.rank-num {
+  font-weight: bold;
+  color: #aaa;
+}
+
+.leaderboard-loading {
+  text-align: center;
+  color: #eab308;
+  padding: 18px 0;
+}
+
+.leaderboard-select-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.leaderboard-arrow {
+  background: none;
+  border: none;
+  color: #5f8e33;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.leaderboard-date {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 6px;
+}
+
+.highlight-current-user {
+  border: 2px solid #5f8e33;
+  background-color: #eaffea;
+  font-weight: bold;
+}
+
+.wordle-popup-message {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  min-width: 220px;
+  text-align: center;
+  border: 2px solid #5f8e33;
+}
+
+
