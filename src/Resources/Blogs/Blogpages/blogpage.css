@@ -129,6 +129,10 @@
 .economic{
     background-image: url('./blog-images/indiaeconomic.jpg');
 }
+.ttt {
+    background-image: url('./blog-images/ttt_img2.jpg.png');
+}
+
 
 @media screen and (max-width:650px) {
     .blog-page-box{

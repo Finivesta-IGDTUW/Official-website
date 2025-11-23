@@ -20,8 +20,17 @@ import I16 from "../Images/blogs/cash.png";
 import I17 from "../Images/blogs/IndiaUpiSys.png";
 import I18 from "../Images/blogs/economicgrowth.jpg";
 import I19 from "../Images/blogs/19.jpeg";
+import I20 from "./Blogpages/blog-images/ttt_tax_image1.jpg";
 
 const blogs = [
+  {
+    id:20,
+    title:"Treasures,Taxes and Trouble",
+    description:"Inside the British Museum's money dilemma",
+    image:I20,
+    link:"/resources/blogs/20-ttt",
+  },
+
   {
     id: 19,
     title: "India’s Economic Growth and Industrialization: A Path to Progress",
