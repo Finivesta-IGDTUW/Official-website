@@ -61,6 +61,7 @@ import IndiaUPISystem from "./Resources/Blogs/Blogpages/IndiasUPI-system.js";
 import DigitalPayments from "./Resources/Blogs/Blogpages/digital.js";
 import IndiaEconomicGrowth from "./Resources/Blogs/Blogpages/IndiaEconomicGrowth.js";
 import EconomicGrowth from "./Resources/Blogs/Blogpages/economicgrowth.js";
+import GlobalDebt from "./Resources/Blogs/Blogpages/theparadox_globaldebt.js";
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -226,6 +227,10 @@ const AppContent = () => {
           <Route
             path="/resources/blogs/19-IndiasEconomicGrowth"
             element={<IndiaEconomicGrowth />}
+          />
+          <Route
+            path="/resources/blogs/20-GlobalDebt"
+            element={<GlobalDebt />}
           />
 
           {/*Book pages*/}

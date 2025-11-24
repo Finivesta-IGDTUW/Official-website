@@ -130,6 +130,11 @@
     background-image: url('./blog-images/indiaeconomic.jpg');
 }
 
+.globaldebt {
+    background-image: url('./blog-images/The-global-debt-crisis-cover.jpg');
+}
+
+
 @media screen and (max-width:650px) {
     .blog-page-box{
         width: 99vw;
