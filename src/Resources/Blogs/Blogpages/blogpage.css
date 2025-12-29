@@ -129,6 +129,10 @@
 .economic{
     background-image: url('./blog-images/indiaeconomic.jpg');
 }
+.ustariff{
+    background-image: url('./blog-images/tariff-banner.jpg');
+}
+
 
 @media screen and (max-width:650px) {
     .blog-page-box{
