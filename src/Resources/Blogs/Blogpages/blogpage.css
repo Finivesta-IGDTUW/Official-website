@@ -62,7 +62,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     object-fit: cover; /* Ensures the image covers the container without stretching */
 }
-
+.louvre {
+    background-image: url('./blog-images/louvre.jpg');
+}
 .ai-fin {
     background-image: url('./blog-images/aifin-img.png');
 }
