@@ -20,14 +20,14 @@ import I16 from "../Images/blogs/cash.png";
 import I17 from "../Images/blogs/IndiaUpiSys.png";
 import I18 from "../Images/blogs/economicgrowth.jpg";
 import I19 from "../Images/blogs/19.jpeg";
-import I20 from "../Images/blogs/louvre-img.jpg";
+import I21 from "../Images/blogs/louvre-img.jpg";
 
 const blogs = [
   {
-    id: 20,
+    id: 21,
     title: "The Day the Louvre Lost Its Crown Jewels",
     description: "The boldest heists in modern history",
-    image: I20,
+    image: I21,
     link: "/resources/blogs/20-Louvre-heist",
   },
   {
