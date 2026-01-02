@@ -1,0 +1,357 @@
+/* ========== FIX TOP GAP ========== */
+/* Add this to your Hackathon.css */
+.hackathon-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.hackathonhero {
+    margin-top: 0 !important;
+    padding-top: 50px !important; /* Reduced from default, adjust this value as needed */
+}
+
+.hackathonhero-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove any default body margins that might add space */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== RESPONSIVE TRACKS SECTION ========== */
+.tracks-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+}
+
+.tracks-title {
+    font-size: 2rem;
+    color: #9edf66;
+    margin-bottom: 40px;
+}
+
+.tracks-container {
+    position: relative;
+    width: 70vh;
+    height: 70vh;
+    border: 2px solid #9edf66;
+    border-radius: 50%;
+    max-width: 90vw;
+    max-height: 90vw;
+}
+
+.tracks-container .tracks-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tracks-container .tracks-icon .tracks-imgBx {
+    position: absolute;
+    width: 10vh;
+    left: -3vw;
+    height: 10vh;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #222, 0 0 0 6px #fff;
+    transform: rotate(calc(360deg/6 * var(--i)));
+    transform-origin: 40vh;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.tracks-container .tracks-icon .tracks-imgBx .active {
+    box-shadow: 0 0 0 4px #222, 0 0 0 10px #9edf66;
+}
+
+.tracks-container .tracks-icon .tracks-imgBx svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/6 * var(--i)));
+    transition: fill 0.3s ease;
+}
+
+.tracks-container .tracks-icon .tracks-imgBx.active svg {
+    fill: #9edf66;
+}
+
+.tracks-content {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracks-content::before {
+    content: '';
+    position: absolute;
+    inset: 60px;
+    border: 4px solid transparent;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animte_01 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animte_01 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tracks-content::after {
+    content: '';
+    position: absolute;
+    inset: 120px;
+    border: 4px solid transparent;
+    border-left: 4px solid #9edf66;
+    border-right: 4px solid #9edf66;
+    border-radius: 50%;
+    animation: animte_02 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animte_02 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.tracks-contentBx {
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracks-contentBx.active {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.tracks-contentBx .tracks-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 330px;
+    max-width: 80vw;
+}
+
+.tracks-contentBx .tracks-card .tracks-imgBx {
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tracks-contentBx .tracks-card .tracks-imgBx svg {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: #9edf66;
+}
+
+.tracks-contentBx .tracks-card .tracks-textBx {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #9edf66;
+    line-height: 1em;
+    text-align: center;
+}
+
+.tracks-contentBx .tracks-card .tracks-textBx p {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+    .tracks-container {
+        width: 60vh;
+        height: 60vh;
+    }
+
+    .tracks-container .tracks-icon .tracks-imgBx {
+        width: 8vh;
+        height: 8vh;
+        transform-origin: 30vh;
+    }
+
+    .tracks-content::before {
+        inset: 40px;
+    }
+
+    .tracks-content::after {
+        inset: 80px;
+    }
+
+    .tracks-contentBx .tracks-card {
+        width: 280px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .tracks-body {
+        min-height: 60vh;
+        padding: 10px;
+    }
+
+    .tracks-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .tracks-container {
+        width: 50vh;
+        height: 50vh;
+        max-width: 85vw;
+        max-height: 85vw;
+    }
+
+    .tracks-container .tracks-icon .tracks-imgBx {
+        width: 7vh;
+        height: 7vh;
+        left: -2.5vw;
+        transform-origin: 25vh;
+    }
+
+    .tracks-content::before {
+        inset: 30px;
+        border-width: 3px;
+        border-left-width: 3px;
+        border-right-width: 3px;
+    }
+
+    .tracks-content::after {
+        inset: 60px;
+        border-width: 3px;
+        border-left-width: 3px;
+        border-right-width: 3px;
+    }
+
+    .tracks-contentBx .tracks-card {
+        width: 240px;
+        gap: 10px;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-imgBx {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-textBx {
+        font-size: 1em;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-textBx p {
+        font-size: 0.8em;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .tracks-body {
+        min-height: 50vh;
+    }
+
+    .tracks-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .tracks-container {
+        width: 40vh;
+        height: 40vh;
+        max-width: 90vw;
+        max-height: 90vw;
+        border-width: 1.5px;
+    }
+
+    .tracks-container .tracks-icon .tracks-imgBx {
+        width: 6vh;
+        height: 6vh;
+        left: -2vw;
+        transform-origin: 20vh;
+        box-shadow: 0 0 0 3px #222, 0 0 0 5px #fff;
+    }
+
+    .tracks-container .tracks-icon .tracks-imgBx.active {
+        box-shadow: 0 0 0 3px #222, 0 0 0 7px #9edf66;
+    }
+
+    .tracks-content::before {
+        inset: 20px;
+        border-width: 2px;
+        border-left-width: 2px;
+        border-right-width: 2px;
+    }
+
+    .tracks-content::after {
+        inset: 40px;
+        border-width: 2px;
+        border-left-width: 2px;
+        border-right-width: 2px;
+    }
+
+    .tracks-contentBx .tracks-card {
+        width: 200px;
+        gap: 8px;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-imgBx {
+        width: 6vh;
+        height: 6vh;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-textBx {
+        font-size: 0.9em;
+    }
+
+    .tracks-contentBx .tracks-card .tracks-textBx p {
+        font-size: 0.75em;
+    }
+}

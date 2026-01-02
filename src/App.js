@@ -106,6 +106,7 @@ import MoneyExplained from "./Resources/Podcasts/podcastlist/MoneyExplained";
 import MoneyControl from "./Resources/Podcasts/podcastlist/moneycontrol.js";
 
 // import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
+import Hackathon from './Hackathon/Hackathon';
 
 const AppContent = () => {
   const location = useLocation();
@@ -143,6 +144,7 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsor />} />
+          <Route path="/hackathon" element={<Hackathon/>}/>
           <Route path="/resources" element={<Resources />} />
 
           {/* Under resources */}
