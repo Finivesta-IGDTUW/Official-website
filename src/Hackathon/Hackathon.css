@@ -1,3 +1,4 @@
+
 .cursor-trail {
   position: absolute;
   width: 15px;
@@ -111,15 +112,14 @@ section > *:not(.star-container) {
   
   /* Hackathon Hero Section */
   .hackathonhero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    background-color: #000000;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
   
   .hackathonhero-title {
     font-size: 3rem;
@@ -1259,4 +1259,99 @@ section > *:not(.star-container) {
 
 .devfolio-apply-button {
   cursor: pointer;
+}
+
+.devfolio-apply-button {
+  cursor: pointer;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure Devfolio button is visible */
+.devfolio-apply-button iframe {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}/* Devfolio button styling */
+.apply-button {
+  cursor: pointer;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure Devfolio button is visible */
+.apply-button iframe {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.devfolio-apply-button {
+  cursor: pointer;
+  margin: 20px auto;
+  position: relative;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Ensure Devfolio button iframe is visible */
+.devfolio-apply-button iframe,
+.devfolio-apply-button > * {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+/* 🔥 DEVFOLIO SAFE ZONE */
+
+.devfolio-wrapper {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.devfolio-apply-button iframe {
+  min-width: 312px;
+  min-height: 44px;
+  z-index: 99999 !important;
+}
+
+/* Prevent overlays from blocking clicks */
+.star-container,
+.crypto-icons {
+  pointer-events: none;
+}
+
+.fallback-apply-button {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 20px;
+}
+.devfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.devfolio-apply-button {
+  min-height: 44px;     /* REQUIRED */
+  min-width: 312px;    /* REQUIRED */
+  overflow: visible;   /* IMPORTANT */
+}
+
+.devfolio-apply-button iframe {
+  height: 44px !important;
+  width: 312px !important;
 }

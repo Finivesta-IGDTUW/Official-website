@@ -26,37 +26,29 @@ const timelineEvents = [
 ];
 
 const faqs = [
-  { question: "Who can participate?", answer: "The hackathon is open to students across colleges, branches, and academic years. Whether you're from a different institution, a different engineering stream, or a different batch, you are welcome to participate and collaborate." },
-  { question: "Is there a participation fee?", answer: "No, the hackathon is completely free to join!" },
-  { question: "Will the hackathon be held online or offline?", answer: "Two rounds will be held throughout the hackathon. 1st round will be an online round where Teams will submit their innovative fintech ideas, focusing on feasibility, impact, and originality. Round 2 will be an offline round where Shortlisted teams develop a prototype along with project documentation, including a PPT and project links and after that they pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
-  { question: "What is the judging criteria?", answer: (<>The solution given by participants will judged on the following basis:<ol>Usability of sponsor tools</ol><ol>Innovation and new technologies</ol><ol>Business model</ol><ol>Scalability</ol><ol>USP</ol><ol>Presentation</ol></>) },
+  { question: "Are cross-college and cross-specialization teams allowed?", answer: "Yes. Teams may include members from different colleges and different academic specializations." },
+  { question: "Who can participate?", answer: (<>The hackathon is open to students and early innovators with an interest in finance and technology.<ol>Team Size: 1 to 4 members</ol></>) },
+  { question: "Is a working prototype mandatory?", answer: "Yes. Teams must submit at least a basic working prototype or functional demo that clearly demonstrates the idea and core features of the solution." },
+  { question: "Is the pitch deck mandatory?", answer:"The pitch deck is strictly mandatory. It must be 5–7 slides only and should clearly explain the problem, solution, technology and impact." },
+  { question: "Can we submit projects built before the hackathon?", answer: "No. All submissions must be built during the hackathon period. Any reuse of old projects must be clearly disclosed and should not form the majority of the solution." },
+  { question: "Can a team participate in multiple problem statements?", answer: "No. Each team can submit only one project under one problem statement." },
+  { question: "How to create a team ?", answer: "Once you apply to Devfolio you can either apply as a solo team or a team of upto 2-4 members. If you apply as a solo team, wait for your application to get accepted. Once your application is accepted you can join or create a team. If you want to apply as a team then select create a team or join a team by entering the referral link. Once all team members join you can submit your application and wait for it to get reviewed. You can only submit your project once your application gets accepted."},
+  { question: "Will accommodation be provided ?", answer: "No, accommodation and travelling expenses will not be provided by the organizers." },
 ];
 
 const problemStatements = [
-  { title: "CredChain Rewards - Blockchain", icon: <FaCreditCard />, desc: (<>Reinvent how financial behaviour and trustworthiness are measured and rewarded. Build a
-system where multiple user metrics (credit score, transaction history, reputation scores) are
-securely logged on-chain, offering transparent, tamper-proof credibility. Integrate
-partnerships with e-commerce, travel, fintech, and lifestyle platforms so users can instantly
-redeem rewards, discounts, and benefits based on their verified on-chain metrics.</>),},
-  { title: "Intelligent Conversational Banking Agent - LLMs , AI", icon: <FaRobot />, desc: (<>Build an LLM-powered financial assistant that integrates with APIs to answer customer
-queries, analyze account activity, summarize statements, and provide simple, jargon-free
-insights. It should understand policy documents, detect user emotion, support chat + voice,
-and handle tasks like KYC, loan eligibility, charges, and limits instantly.</>),},
-  { title: "Hostel Life Utility Manager - UI/UX Beginner Track (Freshers Only)", icon: <FaUserGraduate />, desc: (<>Build a student friendly budgeting app/webapp that helps hostelers plan monthly expenses,
-track spending across categories, and manage shared utilities with roommates. It should
-auto-split bills, assign payers, send polite reminders, and offer clear visual breakdowns to
-avoid end-of-month shortages.</>),},
-  { title: "Financial Games & Finopoly - Game Development", icon: <FaGamepad />, desc: (<>Turn finance into pure gameplay by creating a fun, interactive game where money, choices,
-and strategy shape the world. Build Finopoly, a stock-trading fantasy league, a Shark Tank
-pitch battle, or a life simulator where decisions change the player’s journey. Keep it simple:
-earning, spending, trading, and risks should trigger engaging outcomes without real-world
-complexity. Let players explore, experiment, and compete in a quirky, memorable world
-driven by creativity and smart design. Platform(s): Blender, Unity, 3js.</>),},
-  { title: "Quantifying the Markets - Machine Learning", icon: <FaChartLine />, desc: (<>Analyze historical price movements, detect market patterns, forecast short-term returns, and
-evaluate company performance using real-world stock data. Perform quantitative operations
-on Financial Datasets such as S&P 500, Dow Jones, Sensex including daily/weekly returns,
-volatility checks, moving averages, rolling statistics, and trend identification.</>),},
-  { title: "Open Innovation", icon: <FaLightbulb />, desc: (<>Got a <strong>wild idea that doesn’t fit the mold</strong>? This track is your playground. Whether it’s a unique finance-meets-health concept, an unexpected use of blockchain, or a solution that redefines accessibility in finance, bring your most <strong>out-of-the-box</strong> innovation to life!</>),},
+  { title: "OnChain Rewards - Blockchain (OnChain Rewards)", icon: <FaCreditCard />, desc: (<>Reimagine financial trust using blockchain. Build a secure, on-chain credibility system that verifies multiple user trust metrics and unlocks real-time rewards across e-commerce, travel, fintech, and lifestyle platforms.
+</>),},
+  { title: "Offroad Semantic Scene Segmentation Challenge", icon: <FaRobot />, desc: (<>Develop a semantic scene segmentation model for off-road environments using synthetic desert imagery generated via Duality AI’s Falcon digital twin platform. The model should accurately classify terrain and object classes and demonstrate strong generalization when evaluated on unseen desert locations.</>),},
+  { title: "Hostel Life Utility Manager - UI/UX Beginner Track (Freshers Only)", icon: <FaUserGraduate />, desc: (<>Simplify hostel finances. Design an intuitive budgeting app that helps students track expenses, split bills, manage shared utilities, and avoid end-of-month money stress through clean UI and smart reminders.
+</>),},
+  { title: "Financial Games & Finopoly - Game Development", icon: <FaGamepad />, desc: (<>Turn finance into fun. Create a finance-inspired game where earning, spending, trading, and risk drive gameplay, helping players learn financial concepts through strategy, storytelling, and interaction.
+</>),},
+  { title: "Quantifying the Markets - Machine Learning", icon: <FaChartLine />, desc: (<>Decode market data with machine learning. Analyze real-world financial datasets to identify trends, volatility, and short-term forecasts, focusing on strong quantitative reasoning and clear insights.
+</>),},
+  { title: "Open Innovation", icon: <FaLightbulb />, desc: (<>
+No rules, no limits. Bring bold, unconventional ideas that redefine finance - whether through health, accessibility, blockchain, or any unexpected intersection.
+</>),},
 ];
 
 const words = ["You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
@@ -87,20 +79,33 @@ const sponsors = [
 
 const Hackathon = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [devfolioLoaded, setDevfolioLoaded] = useState(false);
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
+ useEffect(() => {
+  const scriptId = "devfolio-sdk";
+
+  if (document.getElementById(scriptId)) {
+    if (window.Devfolio) {
+      window.Devfolio.initialize();
+      setDevfolioLoaded(true);
     }
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.id = scriptId;
+  script.src = "https://apply.devfolio.co/v2/sdk.js";
+  script.async = true;
+
+  script.onload = () => {
+    if (window.Devfolio) {
+      window.Devfolio.initialize(); 
+      setDevfolioLoaded(true);
+    }
+  };
+
+  document.body.appendChild(script);
 }, []);
-
-  
-
 
   useEffect(() => {
     // GSAP Setup & Animations
@@ -302,13 +307,25 @@ const Hackathon = () => {
         <p className="hackathonhero-subtitle">
           Build the next-gen Fin-Tech solutions in this thrilling hackathon!
         </p>
-
+    <div className="devfolio-wrapper">
         <div
         className="devfolio-apply-button"
         data-hackathon-slug="pay-load"
-        data-button-theme="dark"
-        style={{ height: "44px", width: "312px" }}
+        data-button-theme="light"
+        alt="DEVFOLIO LOGO"
         ></div>
+</div>
+        {/* Fallback button if Devfolio doesn't load */}
+        {!devfolioLoaded && (
+          <a
+            href="https://pay-load.devfolio.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fallback-apply-button"
+          >
+            Apply with Devfolio
+          </a>
+        )}
 
         {/* <a
         href="https://pay-load.devfolio.co/"
@@ -544,7 +561,7 @@ const Hackathon = () => {
       </section>
 
       {/* Sponsors Slider */}
-      <div className="sponsor-slider-section">
+      {/* <div className="sponsor-slider-section">
         <h2>Our Sponsors</h2>
         <div className="sponsor-slider">
           <div className="slider-track">
@@ -561,10 +578,10 @@ const Hackathon = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Prizes Section */}
-      <div className="prizes-section">
+      {/* <div className="prizes-section">
         <div className="star-container">  </div>
         <h2> Prizes</h2>
         <div className="prizes-container">
@@ -589,7 +606,7 @@ const Hackathon = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
   
       {/* FAQs Section */}
       <section id="faqs" className="faqs">
