@@ -22,7 +22,7 @@ const timelineEvents = [
   { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
   { date: "5th - 26th January, 2026", title: "Submission Window", desc: "Submit the prototype of your project." },
   { date: "28th January, 2026", title: "Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
-  { date: "30th January, 2026 (Tentative)", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
+  { date: "31st January, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
 ];
 
 const faqs = [
@@ -447,8 +447,8 @@ const Hackathon = () => {
                   <FaCreditCard />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Next-Gen Finance</h3>
-                  <p>Innovating the future of financial systems</p>
+                  <h3>Offroad Semantic Scene Segmentation</h3>
+                  <p>Teaching machines to understand off-road desert environments</p>
                 </div>
               </div>
             </div>
@@ -458,7 +458,7 @@ const Hackathon = () => {
                   <FaRobot />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>AI & Emerging Tech</h3>
+                  <h3>Machine Learning</h3>
                   <p>Harnessing AI to drive innovation</p>
                 </div>
               </div>
@@ -491,8 +491,8 @@ const Hackathon = () => {
                   <FaChartLine />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Data Analytics & Visualization</h3>
-                  <p>Turning data into actionable insights</p>
+                  <h3>Blockchain</h3>
+                  <p>Building secure and transparent decentralized solutions</p>
                 </div>
               </div>
             </div>
