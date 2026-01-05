@@ -20,15 +20,32 @@ import I16 from "../Images/blogs/cash.png";
 import I17 from "../Images/blogs/IndiaUpiSys.png";
 import I18 from "../Images/blogs/economicgrowth.jpg";
 import I19 from "../Images/blogs/19.jpeg";
-import I20 from "./Blogpages/blog-images/ttt_tax_image1.jpg";
+import I22 from "./Blogpages/blog-images/ttt_tax_image1.jpg";
+import I20 from "../Images/blogs/20.jpeg";
+import I21 from "../Images/blogs/louvre-img.jpg";
 
 const blogs = [
   {
-    id:20,
+    id:22,
     title:"Treasures,Taxes and Trouble",
     description:"Inside the British Museum's money dilemma",
-    image:I20,
+    image:I22,
     link:"/resources/blogs/20-ttt",
+  },
+
+  {
+    id: 21,
+    title: "The Day the Louvre Lost Its Crown Jewels",
+    description: "The boldest heists in modern history",
+    image: I21,
+    link: "/resources/blogs/20-Louvre-heist",
+  },
+  {
+    id: 20,
+    title: "The U.S. vs. The World (Again)",
+    description: "What’s Behind America’s New Tariff War?",
+    image: I20,
+    link: "/resources/blogs/20-UStariffs",
   },
 
   {

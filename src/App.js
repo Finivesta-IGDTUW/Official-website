@@ -64,6 +64,9 @@ import EconomicGrowth from "./Resources/Blogs/Blogpages/economicgrowth.js";
 import TTT from "./Resources/Blogs/Blogpages/ttt";
 
 
+import Louvre_heist from "./Resources/Blogs/Blogpages/Louvre-heist.js";
+import  UStariffs from "./Resources/Blogs/Blogpages/us-tariffs.js";
+
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
 import Stocks from "./Resources/StockMarket/Stocks";
@@ -156,6 +159,7 @@ const AppContent = () => {
           <Route path="/resources/blogs" element={<Blog />} />
 
           {/* Blog pages */}
+          
           <Route
             path="/resources/blogs/01-AI-in-finance"
             element={<AIinfinance />}
@@ -230,8 +234,18 @@ const AppContent = () => {
             element={<IndiaEconomicGrowth />}
           />
           <Route
+
           path="/resources/blogs/20-ttt"
           element={<TTT />}
+          />
+
+
+            path="/resources/blogs/20-Louvre-heist"
+            element={<Louvre_heist />}
+          />
+          <Route
+            path="/resources/blogs/20-UStariffs"
+            element={<UStariffs />}
           />
 
 
