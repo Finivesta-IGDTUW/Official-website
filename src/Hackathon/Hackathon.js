@@ -7,6 +7,10 @@ import { TextPlugin } from "gsap/TextPlugin";
 import "./Hackathon.css";
 import './Tracks.css';
 import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen, FaChevronLeft, FaChevronRight, FaRobot, FaGlobe, FaUserGraduate, FaHome, FaInfoCircle, FaListAlt, FaQuestionCircle, FaRocket, FaStar } from "react-icons/fa";
+// import devfolioBtn from "./apply-with-devfolio.png";
+//sponsors logos
+import interviewbuddylogo from './SponsorImages/interviewbuddy.png';
+import yrilogo from './SponsorImages/yri.png';
 
 const prizes = [
   { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
@@ -59,25 +63,44 @@ const words = ["You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
 
 const sponsors = [
   {
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor1.com'
+    name: "YRI Fellowship",
+    image: yrilogo,
+    website: 'https://www.yriscience.com/'
   },
   {
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor2.com'
+    name: "InterviewBuddy",
+    image: interviewbuddylogo,
+    website: 'https://interviewbuddy.net/'
   },
   {
+    name: "xyz",
     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
     website: 'https://www.sponsor3.com'
   },
   {
+    name: "abcd",
     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
     website: 'https://www.sponsor4.com'
   }
 ];
 
+
 const Hackathon = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
+
+  
+
 
   useEffect(() => {
     // GSAP Setup & Animations
@@ -279,7 +302,26 @@ const Hackathon = () => {
         <p className="hackathonhero-subtitle">
           Build the next-gen Fin-Tech solutions in this thrilling hackathon!
         </p>
-        <button className="hackathonhero-button">Get Started</button>
+
+        <div
+        className="devfolio-apply-button"
+        data-hackathon-slug="pay-load"
+        data-button-theme="dark"
+        style={{ height: "44px", width: "312px" }}
+        ></div>
+
+        {/* <a
+        href="https://pay-load.devfolio.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+          <img
+          src={devfolioBtn}
+          alt="Apply with Devfolio"
+          className="devfolio-button"
+          />
+        </a> */}
+
       </section>
 
       {/* About Section */}
@@ -508,14 +550,13 @@ const Hackathon = () => {
           <div className="slider-track">
             {sponsors.concat(sponsors).concat(sponsors).map((sponsor, index) => (
               <div
-                key={index}
                 className="hack-slide"
                 onClick={() => handleClick(sponsor.website)}
               >
-                <img
-                  src={sponsor.image}
-                  alt={`Sponsor ${index + 1}`}
-                />
+                <div className="sponsor-card">
+                  <img src={sponsor.image} alt={sponsor.name} />
+                  <span className="sponsor-name">{sponsor.name}</span>
+                </div>  
               </div>
             ))}
           </div>
