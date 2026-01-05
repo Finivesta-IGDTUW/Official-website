@@ -24,7 +24,7 @@ export default function PopupMessage() {
     setShowPopup(false);
     // Set the flag before navigation
     sessionStorage.setItem("popupShown", "true");
-    navigate("/resources/newsletter");
+    navigate("/hackathon");
   };
 
   if (!showPopup) return null;
@@ -39,14 +39,14 @@ export default function PopupMessage() {
           ✕
         </button>
 
-        <h2>Stay Updated!</h2>
-        <p>Check out our latest newsletter!</p>
+        <h2>Payload'26</h2>
+        <p>Finivesta's FinTech Hackathon!<br></br>Click on the banner to know more details</p>
         <br/>
         <button
           onClick={handleNewsletterClick}
           className="button"
         >
-          Go to Newsletter
+          Apply Now!
         </button>
       </div>
     </div>
