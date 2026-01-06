@@ -447,8 +447,8 @@ const Hackathon = () => {
                   <FaCreditCard />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Offroad Semantic Scene Segmentation</h3>
-                  <p>Teaching machines to understand off-road desert environments</p>
+                  <h3>Machine Learning</h3>
+                  <p>Quantifying the Markets</p>
                 </div>
               </div>
             </div>
@@ -458,8 +458,8 @@ const Hackathon = () => {
                   <FaRobot />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Machine Learning</h3>
-                  <p>Harnessing AI to drive innovation</p>
+                  <h3>AI & Emerging Tech</h3>
+                  <p>Off-Road Semantic Scene Segmentation</p>
                 </div>
               </div>
             </div>
@@ -469,8 +469,8 @@ const Hackathon = () => {
                   <FaUserGraduate />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Beginner Friendly</h3>
-                  <p>Tracks designed for newcomers</p>
+                  <h3>UI/UX Beginner-Friendly Track</h3>
+                  <p>Hostel Life Utility Manager</p>
                 </div>
               </div>
             </div>
@@ -480,8 +480,8 @@ const Hackathon = () => {
                   <FaGamepad />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Financial Games</h3>
-                  <p>Gamifying finance for better learning</p>
+                  <h3>Game Development</h3>
+                  <p>Financial Games & Finopoly</p>
                 </div>
               </div>
             </div>
@@ -492,7 +492,7 @@ const Hackathon = () => {
                 </div>
                 <div className="tracks-textBx">
                   <h3>Blockchain</h3>
-                  <p>Building secure and transparent decentralized solutions</p>
+                  <p>OnChain Rewards(Ethereum Track)</p>
                 </div>
               </div>
             </div>
@@ -502,8 +502,8 @@ const Hackathon = () => {
                   <FaLightbulb />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Open Innovation</h3>
-                  <p>Breaking boundaries with creativity</p>
+                   <h3>Open Innovation</h3>
+                  <p>Your Idea, Your Innovation!</p>
                 </div>
               </div>
             </div>

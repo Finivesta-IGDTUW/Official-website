@@ -112,7 +112,7 @@ section > *:not(.star-container) {
   
   /* Hackathon Hero Section */
   .hackathonhero {
-  height: 55vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -550,6 +550,7 @@ section > *:not(.star-container) {
 
 @media screen and (max-width: 480px) {
   .hackathonhero {
+    margin-top: 20vh;
     height: 80vh;
     padding: 10px;
   }
@@ -1364,7 +1365,7 @@ section > *:not(.star-container) {
 @media screen and (max-width: 768px) {
   .hackathonhero {
     height: auto;
-    min-height: 65vh;
+    min-height: 50vh;
     padding: 20px 10px;
     gap: 8px;
   }
@@ -1391,8 +1392,9 @@ section > *:not(.star-container) {
 }
 @media screen and (max-width: 480px) {
   .hackathonhero {
-    min-height: 65vh;
-    padding-top: 10px;
+    min-height: 45vh;
+    padding-top: 40px;
+    margin-top: 10vh;
   }
 
   .hackathonhero-title {
