@@ -112,12 +112,12 @@ section > *:not(.star-container) {
   
   /* Hackathon Hero Section */
   .hackathonhero {
-  height: 100vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
   
@@ -130,7 +130,7 @@ section > *:not(.star-container) {
   }
   
   .hackathonhero-subtitle {
-    margin-top: 10px;
+    margin-top: 2px;
     font-size: 1.2rem;
     position: relative;
     z-index: 2;
@@ -470,10 +470,14 @@ section > *:not(.star-container) {
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
   .hackathonhero-title {
+    height: auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     font-size: 2.5rem;
   }
 
   .hackathonhero-subtitle {
+    margin-top: 0px;
     font-size: 1rem;
   }
 
@@ -546,6 +550,7 @@ section > *:not(.star-container) {
 
 @media screen and (max-width: 480px) {
   .hackathonhero {
+    margin-top: 20vh;
     height: 80vh;
     padding: 10px;
   }
@@ -1263,7 +1268,7 @@ section > *:not(.star-container) {
 
 .devfolio-apply-button {
   cursor: pointer;
-  margin: 20px auto;
+  margin: 15px auto;
   position: relative;
   z-index: 10;
 }
@@ -1290,7 +1295,7 @@ section > *:not(.star-container) {
 
 .devfolio-apply-button {
   cursor: pointer;
-  margin: 20px auto;
+  margin: 15px auto;
   position: relative;
   z-index: 9999 !important;
   opacity: 1 !important;
@@ -1313,7 +1318,7 @@ section > *:not(.star-container) {
   z-index: 99999;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .devfolio-apply-button iframe {
@@ -1346,7 +1351,7 @@ section > *:not(.star-container) {
 }
 
 .devfolio-apply-button {
-  min-height: 44px;     /* REQUIRED */
+  min-height: 0px;     /* REQUIRED */
   min-width: 312px;    /* REQUIRED */
   overflow: visible;   /* IMPORTANT */
 }
@@ -1354,4 +1359,54 @@ section > *:not(.star-container) {
 .devfolio-apply-button iframe {
   height: 44px !important;
   width: 312px !important;
+}
+
+/* 🔧 HERO SPACING FIX FOR SMALL SCREENS */
+@media screen and (max-width: 768px) {
+  .hackathonhero {
+    height: auto;
+    min-height: 50vh;
+    padding: 20px 10px;
+    gap: 8px;
+  }
+
+  .hackathonhero-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  .hackathonhero-subtitle {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .hackathonhero-button {
+    margin-top: 10px;
+  }
+
+  .devfolio-wrapper {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hackathonhero {
+    min-height: 45vh;
+    padding-top: 40px;
+    margin-top: 10vh;
+  }
+
+  .hackathonhero-title {
+    font-size: 1.6rem;
+  }
+
+  .hackathonhero-subtitle {
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
+  .devfolio-wrapper {
+    margin-top: 3px;
+  }
 }

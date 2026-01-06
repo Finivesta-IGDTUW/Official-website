@@ -19,7 +19,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/company/finivesta-igdtuw/" target="_blank" rel="noreferrer" className="icon-circle">
                         <i className="fab fa-linkedin-in"/>
                     </a>
-                    <a href="https://chat.whatsapp.com/Dm4pWr93QKF0UpjWdaKWh4" target="_blank" rel="noreferrer" className="icon-circle">
+                    <a href="https://chat.whatsapp.com/Cb2SXkNdH9k19PMRUe2MFd?mode=ems_wa_c" target="_blank" rel="noreferrer" className="icon-circle">
                         <i className="fab fa-whatsapp" />
                     </a>
                 </div>

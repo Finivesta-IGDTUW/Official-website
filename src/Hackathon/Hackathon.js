@@ -22,7 +22,7 @@ const timelineEvents = [
   { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
   { date: "5th - 26th January, 2026", title: "Submission Window", desc: "Submit the prototype of your project." },
   { date: "28th January, 2026", title: "Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
-  { date: "30th January, 2026 (Tentative)", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
+  { date: "31st January, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
 ];
 
 const faqs = [
@@ -447,8 +447,8 @@ const Hackathon = () => {
                   <FaCreditCard />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Next-Gen Finance</h3>
-                  <p>Innovating the future of financial systems</p>
+                  <h3>Machine Learning</h3>
+                  <p>Quantifying the Markets</p>
                 </div>
               </div>
             </div>
@@ -459,7 +459,7 @@ const Hackathon = () => {
                 </div>
                 <div className="tracks-textBx">
                   <h3>AI & Emerging Tech</h3>
-                  <p>Harnessing AI to drive innovation</p>
+                  <p>Off-Road Semantic Scene Segmentation</p>
                 </div>
               </div>
             </div>
@@ -469,8 +469,8 @@ const Hackathon = () => {
                   <FaUserGraduate />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Beginner Friendly</h3>
-                  <p>Tracks designed for newcomers</p>
+                  <h3>UI/UX Beginner-Friendly Track</h3>
+                  <p>Hostel Life Utility Manager</p>
                 </div>
               </div>
             </div>
@@ -480,8 +480,8 @@ const Hackathon = () => {
                   <FaGamepad />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Financial Games</h3>
-                  <p>Gamifying finance for better learning</p>
+                  <h3>Game Development</h3>
+                  <p>Financial Games & Finopoly</p>
                 </div>
               </div>
             </div>
@@ -491,8 +491,8 @@ const Hackathon = () => {
                   <FaChartLine />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Data Analytics & Visualization</h3>
-                  <p>Turning data into actionable insights</p>
+                  <h3>Blockchain</h3>
+                  <p>OnChain Rewards(Ethereum Track)</p>
                 </div>
               </div>
             </div>
@@ -502,8 +502,8 @@ const Hackathon = () => {
                   <FaLightbulb />
                 </div>
                 <div className="tracks-textBx">
-                  <h3>Open Innovation</h3>
-                  <p>Breaking boundaries with creativity</p>
+                   <h3>Open Innovation</h3>
+                  <p>Your Idea, Your Innovation!</p>
                 </div>
               </div>
             </div>
