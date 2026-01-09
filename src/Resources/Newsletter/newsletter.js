@@ -5,8 +5,27 @@ import new0 from '../Images/Newsletter/new0.png';
 import new1 from '../Images/Newsletter/new1.png';
 import new2 from '../Images/Newsletter/new2.png';
 import new3 from '../Images/Newsletter/new3.png';
+import new4 from '../Images/Newsletter/new4.png';
+import new5 from '../Images/Newsletter/new5.png';
+
 
 const sessions = [
+
+  
+  {
+    id: 6,
+    title: "December Edition",
+    image: new5,
+    link: '/Newsletter5.pdf',
+  },
+
+  
+  {
+    id: 5,
+    title: "November Edition",
+    image: new4,
+    link: '/Newsletter4.pdf',
+  },
 
   {
     id: 4,
