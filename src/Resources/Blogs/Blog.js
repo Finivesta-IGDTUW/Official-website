@@ -106,7 +106,7 @@ const blogs = [
     title: "The 2024 U.S. Election",
     description: "What a Trump Return V/S Harris Victory Means for the Global Economy",
     image: I11,
-    link: "/resources/blog-images/11-US-election-2024",
+    link: "/resources/blogs/11-US-election-2024",
   },
   {
     id: 10,
