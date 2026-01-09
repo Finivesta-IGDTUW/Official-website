@@ -64,6 +64,7 @@ import EconomicGrowth from "./Resources/Blogs/Blogpages/economicgrowth.js";
 
 import Louvre_heist from "./Resources/Blogs/Blogpages/Louvre-heist.js";
 import  UStariffs from "./Resources/Blogs/Blogpages/us-tariffs.js";
+import TTT from "./Resources/Blogs/Blogpages/TTT";
 
 import BookReview from "./Resources/BookReviews/BookReview";
 import Youtube from "./Resources/Youtube/Youtube";
@@ -241,6 +242,11 @@ const AppContent = () => {
             path="/resources/blogs/20-UStariffs"
             element={<UStariffs />}
           />
+          <Route
+          path="/resources/blogs/20-TTT"
+          element={<TTT />}
+          />
+
 
           {/*Book pages*/}
           <Route path="/resources/bookreviews" element={<BookReview />} />
