@@ -22,8 +22,15 @@ import I18 from "../Images/blogs/economicgrowth.jpg";
 import I19 from "../Images/blogs/19.jpeg";
 import I20 from "../Images/blogs/20.jpeg";
 import I21 from "../Images/blogs/louvre-img.jpg";
-
+import I22 from "../Images/blogs/ttt_tax_image1.png";
 const blogs = [
+  {
+    id:22,
+    title:"Treasures,Taxes and Trouble",
+    description:"Inside the British Museum's money dilemma",
+    image:I22,
+    link:"/resources/blogs/20-TTT",
+  },
   {
     id: 21,
     title: "The Day the Louvre Lost Its Crown Jewels",
