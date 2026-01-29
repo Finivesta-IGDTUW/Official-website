@@ -20,9 +20,9 @@ const prizes = [
 
 const timelineEvents = [
   { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
-  { date: "5th - 26th January, 2026", title: "Submission Window", desc: "Submit the prototype of your project." },
-  { date: "28th January, 2026", title: "Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
-  { date: "31st January, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
+  { date: "2nd February, 2026", title: "Submission Deadline", desc: "Submit the prototype of your project." },
+  { date: "5th February, 2026", title: "First Round Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
+  { date: "7th February, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
 ];
 
 const faqs = [
@@ -34,6 +34,7 @@ const faqs = [
   { question: "Can a team participate in multiple problem statements?", answer: "No. Each team can submit only one project under one problem statement." },
   { question: "How to create a team ?", answer: "Once you apply to Devfolio you can either apply as a solo team or a team of upto 2-4 members. If you apply as a solo team, wait for your application to get accepted. Once your application is accepted you can join or create a team. If you want to apply as a team then select create a team or join a team by entering the referral link. Once all team members join you can submit your application and wait for it to get reviewed. You can only submit your project once your application gets accepted."},
   { question: "Will accommodation be provided ?", answer: "No, accommodation and travelling expenses will not be provided by the organizers." },
+  { question: "I’ve joined a team, but I’m not verified yet. What should I do?", answer: "Once your team leader has created the team, individual verification may take some time. The verification process can take up to 12 hours. If you are still not verified after 12 hours, please tag us on the Discord server for assistance." },
 ];
 
 const problemStatements = [
