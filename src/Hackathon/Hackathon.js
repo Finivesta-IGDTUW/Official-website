@@ -12,17 +12,17 @@ import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen, FaChevronLeft, FaChevronRig
 import interviewbuddylogo from './SponsorImages/interviewbuddy.png';
 import yrilogo from './SponsorImages/yri.png';
 
-const prizes = [
-  { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
-  { title: "2nd Prize", short: "₹5,000 + Goodies", detail: "Silver Medal winner gets amazing goodies & swags!", medal: "🥈" },
-  { title: "3rd Prize", short: "₹2,500 + Gifts", detail: "Bronze Medal winner receives exciting gifts!", medal: "🥉" }
-];
+// const prizes = [
+//   { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
+//   { title: "2nd Prize", short: "₹5,000 + Goodies", detail: "Silver Medal winner gets amazing goodies & swags!", medal: "🥈" },
+//   { title: "3rd Prize", short: "₹2,500 + Gifts", detail: "Bronze Medal winner receives exciting gifts!", medal: "🥉" }
+// ];
 
 const timelineEvents = [
   { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
-  { date: "5th - 26th January, 2026", title: "Submission Window", desc: "Submit the prototype of your project." },
-  { date: "28th January, 2026", title: "Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
-  { date: "31st January, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
+  { date: "2nd February, 2026", title: "Submission Deadline", desc: "Submit the prototype of your project." },
+  { date: "5th February, 2026", title: "First Round Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
+  { date: "7th February, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
 ];
 
 const faqs = [
@@ -34,6 +34,7 @@ const faqs = [
   { question: "Can a team participate in multiple problem statements?", answer: "No. Each team can submit only one project under one problem statement." },
   { question: "How to create a team ?", answer: "Once you apply to Devfolio you can either apply as a solo team or a team of upto 2-4 members. If you apply as a solo team, wait for your application to get accepted. Once your application is accepted you can join or create a team. If you want to apply as a team then select create a team or join a team by entering the referral link. Once all team members join you can submit your application and wait for it to get reviewed. You can only submit your project once your application gets accepted."},
   { question: "Will accommodation be provided ?", answer: "No, accommodation and travelling expenses will not be provided by the organizers." },
+  { question: "I’ve joined a team, but I’m not verified yet. What should I do?", answer: "Once your team leader has created the team, individual verification may take some time. The verification process can take up to 12 hours. If you are still not verified after 12 hours, please tag us on the Discord server for assistance." },
 ];
 
 const problemStatements = [
@@ -53,28 +54,28 @@ No rules, no limits. Bring bold, unconventional ideas that redefine finance - wh
 
 const words = ["You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
 
-const sponsors = [
-  {
-    name: "YRI Fellowship",
-    image: yrilogo,
-    website: 'https://www.yriscience.com/'
-  },
-  {
-    name: "InterviewBuddy",
-    image: interviewbuddylogo,
-    website: 'https://interviewbuddy.net/'
-  },
-  {
-    name: "xyz",
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor3.com'
-  },
-  {
-    name: "abcd",
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor4.com'
-  }
-];
+// const sponsors = [
+//   {
+//     name: "YRI Fellowship",
+//     image: yrilogo,
+//     website: 'https://www.yriscience.com/'
+//   },
+//   {
+//     name: "InterviewBuddy",
+//     image: interviewbuddylogo,
+//     website: 'https://interviewbuddy.net/'
+//   },
+//   {
+//     name: "xyz",
+//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
+//     website: 'https://www.sponsor3.com'
+//   },
+//   {
+//     name: "abcd",
+//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
+//     website: 'https://www.sponsor4.com'
+//   }
+// ];
 
 
 const Hackathon = () => {
@@ -266,12 +267,57 @@ const Hackathon = () => {
   const handleMouseOver = (id) => {
     setActiveContent(id);
   };
+
+useEffect(() => {
+  const sections = document.querySelectorAll('section[id]');
+  const sidebarLinks = document.querySelectorAll('.sidebar-icon');
+
+  const handleScroll = () => {
+    let currentSection = '';
+    
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      // Check if we're in this section (with some offset for better UX)
+      if (window.scrollY >= sectionTop - 150) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // Special handling for hero section (when at top of page)
+    if (window.scrollY < 100) {
+      currentSection = 'hero';
+    }
+
+    // Remove active class from all icons
+    sidebarLinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    // Add active class to current section's icon
+    sidebarLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (
+        (href === '#' && currentSection === 'hero') ||
+        (href === `#${currentSection}`)
+      ) {
+        link.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Call once on mount
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
   
   return (
     <div className="hackathon-container">
 
       <div className="sidebar">
-        <a href="#" className="sidebar-icon" title="Hero Section">   
+        <a href="#hero" className="sidebar-icon" title="Hero Section">   
           <FaHome />
         </a>
         <a href="#about" className="sidebar-icon" title="About Section">
@@ -292,7 +338,7 @@ const Hackathon = () => {
       </div>
 
       {/* Hero Section */}
-      <section id="" className="hackathonhero">
+      <section id="hero" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div>
