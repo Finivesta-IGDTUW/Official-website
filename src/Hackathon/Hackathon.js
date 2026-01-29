@@ -12,11 +12,11 @@ import { FaUsers, FaLightbulb, FaTrophy, FaBookOpen, FaChevronLeft, FaChevronRig
 import interviewbuddylogo from './SponsorImages/interviewbuddy.png';
 import yrilogo from './SponsorImages/yri.png';
 
-const prizes = [
-  { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
-  { title: "2nd Prize", short: "₹5,000 + Goodies", detail: "Silver Medal winner gets amazing goodies & swags!", medal: "🥈" },
-  { title: "3rd Prize", short: "₹2,500 + Gifts", detail: "Bronze Medal winner receives exciting gifts!", medal: "🥉" }
-];
+// const prizes = [
+//   { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
+//   { title: "2nd Prize", short: "₹5,000 + Goodies", detail: "Silver Medal winner gets amazing goodies & swags!", medal: "🥈" },
+//   { title: "3rd Prize", short: "₹2,500 + Gifts", detail: "Bronze Medal winner receives exciting gifts!", medal: "🥉" }
+// ];
 
 const timelineEvents = [
   { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
@@ -54,28 +54,28 @@ No rules, no limits. Bring bold, unconventional ideas that redefine finance - wh
 
 const words = ["You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
 
-const sponsors = [
-  {
-    name: "YRI Fellowship",
-    image: yrilogo,
-    website: 'https://www.yriscience.com/'
-  },
-  {
-    name: "InterviewBuddy",
-    image: interviewbuddylogo,
-    website: 'https://interviewbuddy.net/'
-  },
-  {
-    name: "xyz",
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor3.com'
-  },
-  {
-    name: "abcd",
-    image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-    website: 'https://www.sponsor4.com'
-  }
-];
+// const sponsors = [
+//   {
+//     name: "YRI Fellowship",
+//     image: yrilogo,
+//     website: 'https://www.yriscience.com/'
+//   },
+//   {
+//     name: "InterviewBuddy",
+//     image: interviewbuddylogo,
+//     website: 'https://interviewbuddy.net/'
+//   },
+//   {
+//     name: "xyz",
+//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
+//     website: 'https://www.sponsor3.com'
+//   },
+//   {
+//     name: "abcd",
+//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
+//     website: 'https://www.sponsor4.com'
+//   }
+// ];
 
 
 const Hackathon = () => {
@@ -317,7 +317,7 @@ useEffect(() => {
     <div className="hackathon-container">
 
       <div className="sidebar">
-        <a href="#" className="sidebar-icon" title="Hero Section">   
+        <a href="#hero" className="sidebar-icon" title="Hero Section">   
           <FaHome />
         </a>
         <a href="#about" className="sidebar-icon" title="About Section">
@@ -338,7 +338,7 @@ useEffect(() => {
       </div>
 
       {/* Hero Section */}
-      <section id="" className="hackathonhero">
+      <section id="hero" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div>
