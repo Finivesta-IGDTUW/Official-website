@@ -53,7 +53,7 @@
   @media (max-width: 800px) {
     .sidebar {
       position: fixed;
-      top: 91%;
+      top: 93%;
       left: 0;
       width: 100%;
       height: 60px;
@@ -61,7 +61,7 @@
       justify-content: space-around;
       transform: translateY(0);
       background-color: #222;
-      padding: 10px 0;
+      padding: 7px 0;
     }
   
     .sidebar-icon {
@@ -1409,4 +1409,22 @@ section > *:not(.star-container) {
   .devfolio-wrapper {
     margin-top: 3px;
   }
+}
+
+/* Active sidebar icon styling */
+.sidebar-icon.active {
+  background-color: #71B139;
+  box-shadow: 0 0 15px rgba(113, 177, 57, 0.6);
+  transform: scale(1.15);
+}
+
+/* Smooth transition for active state */
+.sidebar-icon {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Override hover effect when active */
+.sidebar-icon.active:hover {
+  background-color: #71B139;
+  transform: scale(1.15);
 }

@@ -266,6 +266,51 @@ const Hackathon = () => {
   const handleMouseOver = (id) => {
     setActiveContent(id);
   };
+
+useEffect(() => {
+  const sections = document.querySelectorAll('section[id]');
+  const sidebarLinks = document.querySelectorAll('.sidebar-icon');
+
+  const handleScroll = () => {
+    let currentSection = '';
+    
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      // Check if we're in this section (with some offset for better UX)
+      if (window.scrollY >= sectionTop - 150) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // Special handling for hero section (when at top of page)
+    if (window.scrollY < 100) {
+      currentSection = 'hero';
+    }
+
+    // Remove active class from all icons
+    sidebarLinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    // Add active class to current section's icon
+    sidebarLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (
+        (href === '#' && currentSection === 'hero') ||
+        (href === `#${currentSection}`)
+      ) {
+        link.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Call once on mount
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
   
   return (
     <div className="hackathon-container">
