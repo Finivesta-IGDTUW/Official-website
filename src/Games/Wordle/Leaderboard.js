@@ -270,6 +270,7 @@ const Leaderboard = ({
         }
       }
     } catch {}
+    setAnonResult(anonResult);
     if (anonResult) {
       const anonScore = calculateScore({
         tries: anonResult.tries,
