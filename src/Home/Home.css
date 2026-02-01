@@ -19,8 +19,9 @@
   background-size: cover; /* Makes the background image cover the entire container */
   background-position: center center;
   /* margin-top: 8%; */
-  background-image: url('./Images/BannerNew.png');
+  background-image: url('./Images/hackathon-image-banner.png');
 }
+
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
@@ -485,3 +486,54 @@ button.slick-arrow.slick-prev::before{
   }
 }
 */
+/* Registration Button Styles */
+.register-button-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.register-button {
+  background-color: #71B139;
+  color: white;
+  border: none;
+  padding: 1.5vw 3vw;
+  font-size: 2vw;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(113, 177, 57, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-button:hover {
+  background-color: #5c922c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(113, 177, 57, 0.6);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive styles for registration button */
+@media only screen and (max-width: 768px) {
+  .register-button {
+    padding: 3vw 6vw;
+    font-size: 4vw;
+  }
+  
+  .register-button-container {
+    bottom: 3%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .register-button {
+    padding: 4vw 8vw;
+    font-size: 5vw;
+  }
+}

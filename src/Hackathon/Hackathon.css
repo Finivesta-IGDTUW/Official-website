@@ -1,0 +1,1412 @@
+
+.cursor-trail {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #9edf66;
+  border-radius: 50%;
+  pointer-events: none; /* Prevent the trail from interfering with mouse events */
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  box-shadow: 0 0 10px 5px #9edf66; /* Add a glowing effect */
+  z-index: 1000;
+}
+
+.hackathon-container { 
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+  
+  .sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .sidebar-icon:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 800px) {
+    .sidebar {
+      position: fixed;
+      top: 91%;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      flex-direction: row;
+      justify-content: space-around;
+      transform: translateY(0);
+      background-color: #222;
+      padding: 10px 0;
+    }
+  
+    .sidebar-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+   
+  /* Star Container - common for all sections */
+  .star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+section > *:not(.star-container) {
+  position: relative;
+  z-index: 2;
+}
+
+  
+  .star {
+    position: absolute;
+    background-color: #9edf66;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: star-flicker 3s infinite alternate;
+  }
+  
+  @keyframes star-flicker {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.3; transform: scale(0.8); }
+  }
+  
+  /* Hackathon Hero Section */
+  .hackathonhero {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+}
+
+  
+  .hackathonhero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    color:#8cd158;
+  }
+  
+  .hackathonhero-subtitle {
+    margin-top: 2px;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hackathonhero-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9edf66;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    /* transition: 0.3s; */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.5);
+  }
+  
+  .hackathonhero-button:hover {
+    background-color: #8cd158;
+    box-shadow: 0 0 15px rgba(158, 223, 102, 0.8);
+    transform: scale(1.05);
+  
+  }
+  
+  /* Crypto Icons */
+  .crypto-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .crypto-icon {
+    position: absolute;
+    color: #9edf66;
+    opacity: 0.5;
+  }
+  
+  .bitcoin {
+    top: 10%;
+    left: 10%;
+  }
+  
+  .ethereum {
+    bottom: 20%;
+    right: 20%;
+  }
+  
+  .litecoin {
+    top: 30%;
+    left: 25%;
+  }
+  
+  .cardano {
+    bottom: 30%;
+    right: 30%;
+  }
+  
+  .ripple {
+    bottom: 10%;
+    left: 50%;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 80px 20px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-container{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+    /* transition: 0.3s ease-in-out; */
+  }
+ .feature-card{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+    transition: 0.3s ease-in-out;
+  }
+
+  
+  .about-container:hover, .feature-card:hover, .timeline-event:hover, .track-card:hover, .faq-card:hover {
+    box-shadow: 0 0 15px rgba(158, 223, 102, 0.7);
+    transform: scale(1.03);
+  }
+  
+  
+  .about-title {
+    font-size: 2rem;
+    color: #9edf66;
+  }
+  
+  .about-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: lightgray;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 80px 20px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .features-title {
+    font-size: 2rem;
+    color: #9edf66;
+  }
+  
+  .features-grid {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    /* display: flex; */
+  }
+  
+  .feature-text {
+    font-size: 1.2rem;
+    color: #9edf66;
+  }
+  .feature-icon {
+    font-size: 2rem;  /* Adjust size */
+    color: #9edf66;   /* Customize color */
+    margin-bottom: 10px; /* Add spacing */
+  }
+  
+  /* Timeline Section */
+.timeline {
+    padding: 80px 20px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timeline-title {
+    font-size: 2rem;
+    color: #9edf66;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }  
+  
+  .timeline-event {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+    /* transition: 0.3s ease-in-out; */
+  }
+  
+  .timeline-event.left {
+    margin-left: 50px;
+  }
+  
+  .timeline-event.right {
+    margin-right: 50px;
+    text-align: right;
+  }
+  
+  .timeline-date {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #9edf66;
+    color: #222222;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .timeline-event-title {
+    font-size: 1.2rem;
+    color: #9edf66;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-event-desc {
+    font-size: 1rem;
+    color: lightgray;
+  }
+  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container {
+      max-width: 100%;
+    }
+  
+    .timeline-event {
+      width: 80%;
+      margin:20px !important; /* Maintain alternating structure */
+    }
+  
+  }
+  
+  
+  .tracks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .track-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+    /* transition: 0.3s ease-in-out; */
+  }
+  
+  .track-title {
+    font-size: 1.2rem;
+    color: #9edf66;
+    margin-bottom: 10px;
+  }
+  
+  .track-desc {
+    font-size: 1rem;
+    color: lightgray;
+  }
+  .view-details-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9edf66;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    /* transition: 0.3s; */
+    position:relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.5);
+  }
+  
+  .view-details-btn:hover {
+    background-color: #8cd158;
+    box-shadow: 0 0 15px rgba(158, 223, 102, 0.8);
+    transform: scale(1.05);
+  }
+  
+  /* FAQs Section */
+  .faqs {
+    padding: 80px 20px;
+    background-color: #000000;;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .faqs-title {
+    font-size: 2rem;
+    color: #9edf66;
+    margin-bottom: 40px;
+  }
+  
+  .faqs-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .faq-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+    /* transition: 0.3s ease-in-out; */
+  }
+  
+  .faq-question {
+    font-size: 1.1rem;
+    color: #9edf66;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .faq-answer {
+    font-size: 1rem;
+    color: lightgray;
+  }
+
+  /* Base styles remain unchanged */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .hackathonhero-title {
+    height: auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+  }
+
+  .hackathonhero-subtitle {
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+
+  .features-grid,
+  .tracks-grid {
+    gap: 15px;
+  }
+
+  .track-card,
+  .feature-card {
+    width: 180px;
+    padding: 15px;
+  }
+
+  .timeline-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hackathonhero-title {
+    font-size: 2rem;
+  }
+
+  .hackathonhero-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hackathonhero-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .features-grid,
+  .tracks-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .track-card,
+  .feature-card {
+    width: 50%;
+  }
+
+  .timeline-event {
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .timeline-date {
+    left: 10%;
+    transform: translateX(0);
+    font-size: 0.8rem;
+  }
+
+  .faq-card {
+    padding: 15px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hackathonhero {
+    margin-top: 20vh;
+    height: 80vh;
+    padding: 10px;
+  }
+
+  .hackathonhero-title {
+    font-size: 1.8rem;
+  }
+
+  .hackathonhero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hackathonhero-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .about-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .features,
+  .timeline,
+  .tracks,
+  .faqs {
+    padding: 50px 10px;
+  }
+
+  .features-grid,
+  .tracks-grid {
+    gap: 10px;
+  }
+
+  .track-card,
+  .feature-card {
+    width: 50%;
+  }
+
+  
+
+  
+
+  .timeline-event {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .faq-card {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Problem Statements Grid */
+/* Problem Statements Grid */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px;
+  
+}
+
+/* Individual Problem Card */
+.problem-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+  color: #9edf66;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.problem-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(158, 223, 102, 0.5);
+}
+
+/* Problem Title */
+.problem-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Problem Description (Initially Hidden) */
+.problem-desc {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Expand Animation */
+.problem-card.expanded .problem-desc {
+  opacity: 1;
+  height: auto;
+  color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .problems-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .problem-card {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .problem-title {
+    font-size: 16px;
+  }
+
+  .problem-desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .problems-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .problem-card {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .problem-title {
+    font-size: 14px;
+  }
+
+  .problem-desc {
+    font-size: 12px;
+  }
+}
+
+
+.problem-carousel {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.carousel-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#9edf66;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+  background: transparent;/* Ensures boxes fit properly */
+}
+
+.carousel-box {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.15)
+  ); 
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(158, 223, 102, 0.3);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.carousel-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+  background-image: 
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  background-position: 0 0, 50px 50px, 100px 100px;
+  animation: twinkle 6s infinite ease-in-out;
+  opacity: 0.1;
+}
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Active Problem Box (Highlighted & Enlarged) */
+.carousel-box.active {
+  width: 35%;
+  height: 220px;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(158, 223, 102, 0.5);
+  z-index: 2;
+  opacity: 1;
+  
+  background: radial-gradient(ellipse at center, #000000 0%, #000 80%);
+  background-blend-mode: screen;
+  color: white;
+  border: 1px solid rgba(41, 36, 36, 0);
+  box-shadow: 0 0 20px rgba(158, 223, 102, 0.5),
+              inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+
+/* Previous and Next (Smaller & Less Visible) */
+.carousel-box.left {
+  left: 5%;
+  transform: translateY(-50%) scale(0.9);
+}
+
+.carousel-box.right {
+  right: 5%;
+  transform: translateY(-50%) scale(0.9);
+}
+.carousel-box h3{
+  color:#9edf66;
+  margin:10px 0px;
+}
+/* ✅ Responsive: For Smaller Screens (Only One Problem Statement Visible) */
+@media (max-width: 900px) {
+  .carousel-container {
+    height:500px; /* Adjust height for better spacing */
+  }
+
+  .carousel-box {
+    width: 90%;
+    min-height: 90%;
+    position: static;
+    transform: translateY(0);
+    opacity: 1;
+    display: none; /* Hide all boxes */
+  }
+
+  .carousel-box.active {
+    width: 80%;
+    height: 170px;
+    transform: scale(1);
+    display: block; /* Only display the active box */
+  }
+
+  /* Optional: Adjust the dots position to be more centered */
+  .carousel-dots {
+    margin-top: 15px;
+  }
+}
+
+/* ✅ Dots Navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dot.active {
+  background: #8cd158;
+  width: 12px;
+  height: 12px;
+}
+
+/* ✅ Navigation Buttons */
+.carousel-btn {
+  background: none;
+  border: none;
+  color: #8cd158;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-btn.left {
+  left: 2px;
+}
+
+.carousel-btn.right {
+  right: 2px;
+}
+
+
+.sponsor-slider-section h2 {
+  font-size: 2rem;
+  color: #9edf66;
+  margin: 20px 0;
+}
+
+.sponsor-slider-section {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background-color: #070707;
+  position:relative;
+}
+
+.sponsor-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(200px * 4 * 2);
+  animation: scroll 20s linear infinite;
+}
+
+.hack-slide {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  margin: 0 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Default state */
+.hack-slide img {
+  width: 100%;
+  height: 100px;        /* control logo size HERE */
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0;
+}
+
+
+/* Hover effect: Pause animation and apply style */
+.sponsor-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.sponsor-slider:hover .hack-slide img {
+  transform: scale(1.1);
+
+  opacity: 0.9;
+}
+
+/* Star effect animation */
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffdf00;
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: sparkle-animation 0.5s ease-out infinite;
+}
+
+/* Animation for sparkle effect */
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(0.5) translate(-50%, -50%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+/* Animation */
+
+
+
+
+.prizes-section h2{
+  font-size: 2rem;
+  color: #9edf66;
+  margin: 30px 0; 
+}
+
+.prizes-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #0a0a0a;
+  color: white;
+}
+
+.prizes-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.prize-card {
+  width: 280px;
+  height: 220px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.prize-1 {
+  transform: translateY(20px);
+}
+
+.prize-0 {
+  transform: translateY(-20px) scale(1.05);
+  z-index: 2;
+}
+
+.prize-2 {
+  transform: translateY(20px);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.prize-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2),
+              0 0 20px rgba(158, 223, 102, 0.4);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front button,
+.card-back button {
+  margin-top: 1rem;
+  padding: 6px 12px;
+  border: none;
+  background: #9edf66;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.medal-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.prize-card:hover {
+  transform: perspective(1000px) rotateY(10deg) ;
+}
+
+/* Hover tilt effect for the left side */
+.prize-card:hover:active {
+  transform: perspective(1000px) rotateY(-10deg) ;
+}
+
+@media screen and (min-width: 769px) {
+  .prize-0 { order: 2; } /* 1st Prize goes in the center */
+  .prize-1 { order: 1; } /* 2nd Prize to the left */
+  .prize-2 { order: 3; } /* 3rd Prize to the right */
+}
+@media screen and (max-width: 768px) {
+
+  /* Stack cards vertically and center them */
+  .prizes-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Reduced gap to avoid too much space on smaller screens */
+  }
+
+  .prize-card {
+    width: 90%; /* Make cards responsive to screen width */
+    height: 40vh; /* Allow cards to adjust height on smaller screens */
+    margin: 1rem 0; /* Ensures consistent gap between all cards */
+  }
+ .prize-card {
+    order: initial; /* Default order for each card */
+  }
+  /* Remove any transform effects or z-index that may cause layout issues */
+  .prize-0,
+  .prize-1,
+  .prize-2 {
+    transform: none; /* Ensure no raised effect on mobile */
+    z-index: 1; /* Reset z-index for mobile */
+  }
+}
+/* 🔒 FORCE timeline visibility (prevents GSAP hiding issues) */
+.timeline,
+.timeline-container,
+.timeline-event {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* ================= FAQ FINAL FIX ================= */
+
+.faqs {
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+}
+
+.faqs-container {
+  position: relative;
+  z-index: 3;
+}
+
+.faq-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-card:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.faq-question {
+  color: #9edf66;
+  font-size: 1.05rem;
+}
+
+.faq-answer {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 10px;
+
+  /* Accordion animation */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+}
+/* Add these rules at the END of your CSS file to override GSAP animations */
+
+/* 🔒 FORCE visibility for all animated sections INCLUDING HERO */
+.hackathonhero,
+.hackathonhero-title,
+.hackathonhero-subtitle,
+.hackathonhero-button,
+.about,
+.about-container,
+.about-title,
+.about-text,
+.features,
+.features-title,
+.features-grid,
+.feature-card,
+.timeline,
+.timeline-container,
+.timeline-event,
+.faqs,
+.faqs-container,
+.faq-card {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Ensure proper stacking context */
+.about,
+.features,
+.timeline,
+.faqs {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make sure star containers don't interfere */
+.star-container {
+  z-index: 0 !important;
+}
+
+/* Ensure all content is above stars */
+section > *:not(.star-container) {
+  position: relative;
+  z-index: 2 !important;
+}
+
+/* Sponsor card wrapper */
+.sponsor-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sponsor name (hidden initially) */
+.sponsor-name {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #9edf66;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Logo hover effect */
+.sponsor-card img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* On hover: show name BELOW logo */
+.hack-slide:hover .sponsor-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: subtle lift */
+.hack-slide:hover img {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.devfolio-apply-button {
+  cursor: pointer;
+}
+
+.devfolio-apply-button {
+  cursor: pointer;
+  margin: 15px auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure Devfolio button is visible */
+.devfolio-apply-button iframe {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}/* Devfolio button styling */
+.apply-button {
+  cursor: pointer;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure Devfolio button is visible */
+.apply-button iframe {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.devfolio-apply-button {
+  cursor: pointer;
+  margin: 15px auto;
+  position: relative;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Ensure Devfolio button iframe is visible */
+.devfolio-apply-button iframe,
+.devfolio-apply-button > * {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+/* 🔥 DEVFOLIO SAFE ZONE */
+
+.devfolio-wrapper {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.devfolio-apply-button iframe {
+  min-width: 312px;
+  min-height: 44px;
+  z-index: 99999 !important;
+}
+
+/* Prevent overlays from blocking clicks */
+.star-container,
+.crypto-icons {
+  pointer-events: none;
+}
+
+.fallback-apply-button {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 20px;
+}
+.devfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.devfolio-apply-button {
+  min-height: 0px;     /* REQUIRED */
+  min-width: 312px;    /* REQUIRED */
+  overflow: visible;   /* IMPORTANT */
+}
+
+.devfolio-apply-button iframe {
+  height: 44px !important;
+  width: 312px !important;
+}
+
+/* 🔧 HERO SPACING FIX FOR SMALL SCREENS */
+@media screen and (max-width: 768px) {
+  .hackathonhero {
+    height: auto;
+    min-height: 50vh;
+    padding: 20px 10px;
+    gap: 8px;
+  }
+
+  .hackathonhero-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  .hackathonhero-subtitle {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .hackathonhero-button {
+    margin-top: 10px;
+  }
+
+  .devfolio-wrapper {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hackathonhero {
+    min-height: 45vh;
+    padding-top: 40px;
+    margin-top: 10vh;
+  }
+
+  .hackathonhero-title {
+    font-size: 1.6rem;
+  }
+
+  .hackathonhero-subtitle {
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
+  .devfolio-wrapper {
+    margin-top: 3px;
+  }
+}

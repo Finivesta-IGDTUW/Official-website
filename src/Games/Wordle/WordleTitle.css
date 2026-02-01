@@ -67,7 +67,7 @@
   color: #5f8e33;
   border: 2px solid #5f8e33;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 14px 0;
   cursor: pointer;
@@ -420,4 +420,8 @@
 .wordle-modal-rules-scroll::-webkit-scrollbar-track {
   background: #333;
   border-radius: 6px;
+}
+
+.wordle-street-title{
+  margin-top: 65px;
 }

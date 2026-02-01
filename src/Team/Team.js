@@ -7,13 +7,16 @@ import "aos/dist/aos.css";
 import { lazy, Suspense } from 'react';
 
 // import Team23 from './Media/Tenure23';
-import Team24 from './Media/Tenure24';
+// import Team24 from './Media/Tenure24';
+import Team25 from './Media/Tenure25';
 import TeamPic23 from './Media/TeamPic23.jpeg';
+import TeamPic24 from './Media/TeamPic24Cropped.jpg';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const Team23 = lazy(() => import('./Media/Tenure23')); // Lazy load only when needed
+const Team24 = lazy(() => import('./Media/Tenure24'));
 
 const Team = () => {
 
@@ -39,6 +42,28 @@ const Team = () => {
         });
     }, []);
 
+    
+    const [showTeam24, setShowTeam24] = useState(false);
+
+    const toggleTeam24 = () => {
+        startTransition(() => {
+            setShowTeam24(prevShowTeam24 => !prevShowTeam24);
+        });
+    };
+
+    useEffect(() => {
+        if (showTeam24) {
+            setTimeout(() => {
+            Aos.refresh();
+            }, 0);
+        }
+    }, [showTeam24]);
+
+    useEffect(() => {
+        Aos.init({
+            duration: 1000, 
+        });
+    }, []);
     return (
       
         <div className="Team"> 
@@ -53,10 +78,22 @@ const Team = () => {
 
             <section className="cores">
                 
-                <h1 data-aos="fade-up">Year '24 - '25</h1>
-                <Team24/>
+                <h1 data-aos="fade-up">Year '25 - '26</h1>
+                <Team25/>
                 
                 <div className="after-core-line" data-aos="fade-up"></div>
+
+                <h1 data-aos="fade-up">Year '24 - '25</h1>
+                <div className="drop-down-team" onClick={toggleTeam24} data-aos="fade-up">
+                    <img src={TeamPic24} alt="Team 24" />
+                    <p className="team-drop-down-text">Meet the previous faces of Finivesta</p>
+                    <div className={`team-arrow ${showTeam24 ? 'team-arrow-rotate' : ''}`}></div>
+                </div>
+                {showTeam24 && (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Team24 />
+                    </Suspense>
+                )}
 
                 <h1 data-aos="fade-up">Year '23 - '24</h1>
                 <div className="drop-down-team" onClick={toggleTeam23} data-aos="fade-up">

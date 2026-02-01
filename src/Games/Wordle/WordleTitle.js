@@ -220,10 +220,10 @@ const WordleTitle = ({ onHowToPlay }) => {
           className={`wordle-titlepage-heading${showGame ? " heading-up" : ""}`}
         >
           {showLeaderboard ? (
-            "Wordle Street Leaderboard"
+            <div className="wordle-street-title">Wordle Street Leaderboard</div>
           ) : !showGame && !showLeaderboard ? (
             <img
-              src={require("./WordleStreetLogo.png")}
+              src={require("./WordleStreet.jpeg")}
               alt="Wordle Street Logo"
               style={{ height: "30vh", marginBottom: 8 }}
             />
@@ -240,7 +240,7 @@ const WordleTitle = ({ onHowToPlay }) => {
         {/* Show small logo next to back button when not on home screen */}
         {(showGame || showLeaderboard) && (
           <img
-            src={require("./WordleStreetLogo.png")}
+            src={require("./WordleStreet.jpeg")}
             alt="Wordle Street Logo"
             style={{
               height: 42,

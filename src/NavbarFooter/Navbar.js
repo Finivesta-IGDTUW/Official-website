@@ -55,6 +55,7 @@ const Navbar = () => {
                   &#9662;
               </button>
               <ul className={`nav-dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                  <li><a href="/resources/newsletter">Newsletter</a></li>
                   <li><a href="/resources/moneymasterclass">Money Masterclass</a></li>
                   <li><a href="/resources/blogs">Blogs</a></li>
                   <li><a href="/resources/bookreviews">Book Reviews</a></li>
@@ -65,6 +66,8 @@ const Navbar = () => {
               </ul>
           </li>
           <li><a href="/team">Our Team</a></li>
+          <li><a href="/games">Games</a></li>
+          {/* <li><a href="/hackathon">Hackathon</a></li> */}
           {/* <li><a href="/contact">Contact Us</a></li> */}
         </ul>
       </nav>

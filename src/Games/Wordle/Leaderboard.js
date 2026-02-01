@@ -15,6 +15,23 @@ import "./Leaderboard.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SignInRegister from "./SignInRegister";
 
+// Keep consistent: timeTaken must be in ms
+function calculateScore({ tries, timeTaken }) {
+  if (!tries || tries > 6) return 0;
+  // Ensure timeTaken is treated as milliseconds
+  const timeInMs = Math.floor(Number(timeTaken) || 0);
+  const score = 100000 - tries * 10000 - timeInMs;
+  return Math.max(0, score);
+}
+
+// Aggregate multiple results (average per attempt)
+function aggregateScores(results) {
+  if (!results.length) return 0;
+  const total = results.reduce((acc, r) => acc + calculateScore(r), 0);
+  return Math.round(total / results.length);
+}
+
+
 // Get today's date in IST (YYYY-MM-DD)
 function getTodayIST() {
   const now = new Date();
@@ -54,7 +71,7 @@ const fetchAllUserResults = async () => {
         name,
         date: result.dateOfAttempt,
         tries: result.numberOfTries,
-        timeTaken: result.timeTaken,
+        timeTaken: Number(result.timeTaken) || 0,
       });
     });
   });
@@ -142,47 +159,120 @@ const Leaderboard = ({
     );
   };
 
+  function getRankedLeaders(leaders, period) {
+    if (!leaders || !leaders.length) return [];
+
+    if (period === "day") {
+      // Filter results for the selected IST date
+       const filtered = leaders.filter((u) => u.date === selectedDay);
+       return filtered
+        .map((u) => ({
+          ...u,
+          score: calculateScore({ tries: u.tries, timeTaken: u.timeTaken }),
+        }))
+        .sort((a, b) => b.score - a.score);
+    }
+
+    if (period === "week") {
+      // Get all dates in the selected week (IST)
+      const weekStart = new Date(selectedWeek + "T00:00:00+05:30");
+      const weekDates = [];
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(weekStart);
+        d.setDate(weekStart.getDate() + i);
+        weekDates.push(d.toISOString().slice(0, 10));
+      }
+      // Filter results for the selected week
+      const filtered = leaders.filter((user) => weekDates.includes(user.date));
+      // Group by user, sum scores for the week, divide by days played
+      const userMap = {};
+       filtered.forEach((user) => {
+        if (!userMap[user.userId]) {
+          userMap[user.userId] = {
+            name: user.name,
+            results: []
+          };
+          
+          
+        }
+        userMap[user.userId].results.push({ tries: user.tries, timeTaken: user.timeTaken });
+        
+        
+      });
+      return Object.entries(userMap)
+        .map(([userId, data]) => ({ userId, name: data.name, score: aggregateScores(data.results), }))
+        .sort((a, b) => b.score - a.score); 
+    }
+    if (period === "all") {
+      const userMap = {};
+      leaders.forEach((user) => {
+        if (!userMap[user.userId]) {
+          userMap[user.userId] = {
+          name: user.name,
+          results: []
+        };
+        
+      }
+      userMap[user.userId].results.push({ tries: user.tries, timeTaken: user.timeTaken });
+      
+    });
+    return Object.entries(userMap)
+      .map(([userId, data]) => ({
+        userId,
+        name: data.name,
+        score: aggregateScores(data.results),
+      }))
+      .sort((a, b) => b.score - a.score); 
+  }
+
+    return [];
+  }
+
   // ...before your return statement...
   let rankedLeaders = getRankedLeaders(leaders, period);
 
   // Add anonymous user's result for all periods (day, week, all)
   // Only add anonymous user's result if not logged in
   if (!userProp?.uid) {
-    let anonResult = null;
-    try {
-      const lastResult = JSON.parse(localStorage.getItem("wordle_last_result"));
-      if (lastResult) {
-        // For day: only add if date matches
-        if (period === "day" && lastResult.date === selectedDay) {
-          anonResult = lastResult;
+  let anonResult = null;
+  try {
+    const lastResult = JSON.parse(localStorage.getItem("wordle_last_result"));
+    if (lastResult) {
+      // ENSURE: Convert time to milliseconds if needed
+      const normalizedResult = {
+        ...lastResult,
+        timeTaken: Number(lastResult.timeTaken) || 0
+      };
+
+      // For day: only add if date matches
+      if (period === "day" && normalizedResult.date === selectedDay) {
+        anonResult = normalizedResult;
+      }
+      // For week: only add if date is in selected week
+      if (period === "week") {
+        const weekStart = new Date(selectedWeek + "T00:00:00+05:30");
+        const weekDates = [];
+        for (let i = 0; i < 7; i++) {
+          const d = new Date(weekStart);
+          d.setDate(weekStart.getDate() + i);
+          weekDates.push(d.toISOString().slice(0, 10));
         }
-        // For week: only add if date is in selected week
-        if (period === "week") {
-          const weekStart = new Date(selectedWeek + "T00:00:00+05:30");
-          const weekDates = [];
-          for (let i = 0; i < 7; i++) {
-            const d = new Date(weekStart);
-            d.setDate(weekStart.getDate() + i);
-            weekDates.push(d.toISOString().slice(0, 10));
-          }
-          if (weekDates.includes(lastResult.date)) {
-            anonResult = lastResult;
-          }
-        }
-        // For all: always add
-        if (period === "all") {
-          anonResult = lastResult;
+        if (weekDates.includes(normalizedResult.date)) {
+          anonResult = normalizedResult;
         }
       }
-    } catch {}
+      // For all: always add
+      if (period === "all") {
+        anonResult = normalizedResult;
+      }
+    }
+  } catch {}
     if (anonResult) {
-      let anonScore = 0;
-      if (anonResult.tries <= 6) {
-        anonScore = Math.max(
-          1000,
-          10000 - (anonResult.tries * 1000 + anonResult.timeTaken)
-        );
-      } // else score remains 0
+      const anonScore = calculateScore({
+        tries: anonResult.tries,
+        timeTaken: anonResult.timeTaken,
+      });
+      // else score remains 0
       // For day/week: check userId+date, for all: check userId
       const alreadyInList =
         period === "all"
@@ -194,6 +284,7 @@ const Leaderboard = ({
       if (!alreadyInList) {
         rankedLeaders.push({
           ...anonResult,
+          userId: "anonymous",
           score: anonScore,
         });
         rankedLeaders = rankedLeaders.sort((a, b) => b.score - a.score);
@@ -262,89 +353,6 @@ const Leaderboard = ({
     fetchLeaders();
   }, [period, selectedDay, selectedWeek, userProp]);
 
-  function getRankedLeaders(leaders, period) {
-    if (period === "day") {
-      // Filter results for the selected IST date
-      const filtered = leaders.filter((user) => user.date === selectedDay);
-      return filtered
-        .map((user) => {
-          let score = 0;
-          if (user.tries <= 6) {
-            score = Math.max(
-              1000,
-              10000 - (user.tries * 1000 + user.timeTaken)
-            );
-          }
-          return {
-            ...user,
-            score,
-          };
-        })
-        .sort((a, b) => b.score - a.score);
-    }
-    if (period === "week") {
-      // Get all dates in the selected week (IST)
-      const weekStart = new Date(selectedWeek + "T00:00:00+05:30");
-      const weekDates = [];
-      for (let i = 0; i < 7; i++) {
-        const d = new Date(weekStart);
-        d.setDate(weekStart.getDate() + i);
-        weekDates.push(d.toISOString().slice(0, 10));
-      }
-      // Filter results for the selected week
-      const filtered = leaders.filter((user) => weekDates.includes(user.date));
-      // Group by user, sum scores for the week, divide by days played
-      const userMap = {};
-      filtered.forEach((user) => {
-        let score = 0;
-        if (user.tries <= 6) {
-          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
-        }
-        if (!userMap[user.userId]) {
-          userMap[user.userId] = {
-            name: user.name,
-            scores: [],
-          };
-        }
-        userMap[user.userId].scores.push(score);
-      });
-      return Object.entries(userMap)
-        .map(([userId, data]) => ({
-          id: userId,
-          name: data.name,
-          score: Math.round(
-            data.scores.reduce((a, b) => a + b, 0) / data.scores.length
-          ),
-        }))
-        .sort((a, b) => b.score - a.score);
-    }
-    if (period === "all") {
-      // Group by user, sum all scores, apply streak bonus if you want
-      const userMap = {};
-      leaders.forEach((user) => {
-        let score = 0;
-        if (user.tries <= 6) {
-          score = Math.max(1000, 10000 - (user.tries * 1000 + user.timeTaken));
-        }
-        if (!userMap[user.userId]) {
-          userMap[user.userId] = {
-            name: user.name,
-            scores: [],
-          };
-        }
-        userMap[user.userId].scores.push({ date: user.date, score });
-      });
-      // Optionally, add streak logic here
-      return Object.entries(userMap)
-        .map(([userId, data]) => ({
-          id: userId,
-          name: data.name,
-          score: data.scores.reduce((a, b) => a + b.score, 0),
-        }))
-        .sort((a, b) => b.score - a.score);
-    }
-    return [];
-  }
 
   // Replace all onClick handlers for arrows and options to play sound
   // Helper wrappers
@@ -408,7 +416,7 @@ const Leaderboard = ({
         await updateDoc(userDoc, {
           results: arrayUnion({
             dateOfAttempt: lastResult.date,
-            timeTaken: lastResult.timeTaken,
+            timeTaken: Number(lastResult.timeTaken) || 0,
             numberOfTries: lastResult.tries,
           }),
         });
@@ -428,6 +436,20 @@ const Leaderboard = ({
       transferAnonToFirebase();
     }
   }, [userProp, leaders]);
+
+function formatTime(ms) {
+  const totalMs = Number(ms) || 0;
+  const totalSeconds = Math.floor(totalMs / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  const milliseconds = totalMs % 1000;
+
+  if (minutes > 0) {
+    return `${minutes}:${seconds.toString().padStart(2, '0')}.${Math.floor(milliseconds / 10).toString().padStart(2, '0')}`;
+  } else {
+    return `${seconds}.${Math.floor(milliseconds / 10).toString().padStart(2, '0')}s`;
+  }
+}
 
   return (
     <div className="leaderboard-container">
@@ -601,7 +623,7 @@ const Leaderboard = ({
                     (userProp?.uid &&
                       (period === "day"
                         ? user.userId === userProp?.uid
-                        : user.id === userProp?.uid)) ||
+                        : user.userId === userProp?.uid)) ||
                     (!userProp?.uid &&
                       user.userId &&
                       localStorage.getItem("wordle_last_result") &&
@@ -613,8 +635,7 @@ const Leaderboard = ({
                           return (
                             anon &&
                             anon.date === selectedDay &&
-                            user.userId === anon.userId &&
-                            user.date === anon.date
+                            user.userId === "anonymous"
                           );
                         } catch {
                           return false;
@@ -634,10 +655,7 @@ const Leaderboard = ({
 
                 return displayRows.map((user, idx) => {
                   const isCurrent =
-                    (userProp?.uid &&
-                      (period === "day"
-                        ? user.userId === userProp?.uid
-                        : user.id === userProp?.uid)) ||
+                    (userProp?.uid && user.userId === userProp?.uid) ||
                     (!userProp?.uid &&
                       user.userId &&
                       localStorage.getItem("wordle_last_result") &&
@@ -649,8 +667,7 @@ const Leaderboard = ({
                           return (
                             anon &&
                             anon.date === selectedDay &&
-                            user.userId === anon.userId &&
-                            user.date === anon.date
+                            user.userId === "anonymous"
                           );
                         } catch {
                           return false;
@@ -659,7 +676,7 @@ const Leaderboard = ({
 
                   return (
                     <tr
-                      key={period === "day" ? user.userId + user.date : user.id}
+                      key={user.userId + (user.date || "")}              
                       className={isCurrent ? "highlight-current-user" : ""}
                     >
                       <td>
@@ -680,7 +697,9 @@ const Leaderboard = ({
                           user.name ||
                           "Anonymous"}
                       </td>
-                      <td>{user.score}</td>
+                      <td>
+                        {user.score ?? "-"}
+                      </td>
                     </tr>
                   );
                 });
