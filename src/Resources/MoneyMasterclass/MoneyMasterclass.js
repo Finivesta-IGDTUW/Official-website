@@ -92,6 +92,7 @@ const MoneyMasterclass = () => {
             time <br />– an initiative by Finivesta
           </p>
       </div>
+      
 
       <div className="box-main">
         <h1>Tenure 25-26</h1>
