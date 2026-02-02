@@ -15,8 +15,20 @@ import FinWeek3 from "./Images/FinWeek3.png";
 import FinWeek4 from "./Images/FinWeek4.png";
 import FinWeek5 from "./Images/FinWeek5.png";
 import Orientation25 from "./Images/Orientation_25.jpg";
+import BiddingBlitz3 from "./Images/BiddingBlitz3.jpg";
 
 const events = [
+
+  {
+    name: "Bidding Blitz 3.0",
+    photo: BiddingBlitz3,
+    link: "https://www.instagram.com/p/DRE-X0mE3SR/",
+    byline:
+      "Ready… Set… Bid! Join Finivesta's Bidding Blitz 3.0 where wit meets wealth and the highest stakes win!",
+    year: 2025,
+    backgroundColor: "#7c5745ff",
+  },
+
   {
     name: "Orientation",
     photo: Orientation25,

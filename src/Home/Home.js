@@ -48,7 +48,12 @@ const Home = () => {
   return (
     <div className="Home">
 
-      <section className="hero">
+     <section 
+  className="hero" 
+  onClick={() => window.location.href = '/hackathon'}
+  style={{ cursor: 'pointer' }}
+>
+        
         <div className="content">
           {/*}
           <h1>
