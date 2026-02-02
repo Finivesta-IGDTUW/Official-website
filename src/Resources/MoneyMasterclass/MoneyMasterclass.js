@@ -8,6 +8,27 @@ import Session4 from "../Images/moneymasterclass/Session4.png";
 import Session5 from "../Images/moneymasterclass/Session5.jpg";
 import Session6 from "../Images/moneymasterclass/Session6.png";
 import Session7 from "../Images/moneymasterclass/Session07.jpeg";
+import MM1 from "../Images/moneymasterclass/MM1.png";
+import MM2 from "../Images/moneymasterclass/MM2.png";
+
+const mm = [
+  {
+    id: 9,
+    title: "MM2",
+    description: "Money Masterclass 2025-2026",
+    image: MM2,
+    link: "https://www.canva.com/design/DAG_JKEinjo/EuRv0rBvMNJ_j3eir25tuw/view?utm_content=DAG_JKEinjo&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
+  },
+
+   {
+    id: 8,
+    title: "MM1",
+    description: "Money Masterclass 2024-2025",
+    image: MM1,
+    link: "https://www.canva.com/design/DAG4wXqrsF8/N62ipnFsosV86vJH_hHmug/view?utm_content=DAG4wXqrsF8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfe7b247e50"
+  }
+];
+
 
 const sessions = [
   {
@@ -66,10 +87,33 @@ const MoneyMasterclass = () => {
     <div className="MoneyMasterclass">
       <div className="header moneymc">
         <h1>Money Masterclass</h1>
-        <p>
-          Unlocking essential financial knowledge and skills, one session at a
-          time <br />– an initiative by Finivesta
-        </p>
+          <p>
+            Unlocking essential financial knowledge and skills, one session at a
+            time <br />– an initiative by Finivesta
+          </p>
+      </div>
+
+      <div className="box-main">
+        <h1>Tenure 25-26</h1>
+      </div>
+      <div className="resourcesbox">
+        {mm.map((session) => (
+          <div key={session.id} className="boxsmall">
+            <a href={session.link} target="_blank" rel="noreferrer">
+              <div className="landscape">
+                <img src={session.image} alt={`${session.title} Cover`} loading="lazy"/>
+              </div>
+              <div className="text">
+                <h2>{session.title}</h2>
+                <p>{session.description}</p>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div className="box-main">
+        <h1>Tenure 24-25</h1>
       </div>
 
       <div className="resourcesbox">
