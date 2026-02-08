@@ -1,24 +1,80 @@
 import "./Sponsor.css";
 
-import Finlatics from './SponsorImages/image16.png';
-import Csd from './SponsorImages/image1.png';
-import CodingNinjas from './SponsorImages/image2.png';
-import Adira from './SponsorImages/image4.png';
-import StoxHero from './SponsorImages/image5.png';
-import Onepercclub from './SponsorImages/image6.png';
-import TechnoLit from './SponsorImages/image7.png';
-import Bhav from './SponsorImages/image9.png';
-import Finshots from './SponsorImages/image10.png';
-import AssetsDtu from './SponsorImages/assets_dtu_logo.jpeg';
-import Markblend from './SponsorImages/image12.png';
-import Finwizz from './SponsorImages/image13.png';
-import Stockpe from './SponsorImages/image14.png';
-import Stockgro from './SponsorImages/image15.png';
-import Lwt from './SponsorImages/image.png';
-import StockEdge from './SponsorImages/StockEdge.png';
-import Unstop from './SponsorImages/Unstop11.png';
+import Finlatics from "./SponsorImages/image16.png";
+import Csd from "./SponsorImages/image1.png";
+import CodingNinjas from "./SponsorImages/image2.png";
+import Adira from "./SponsorImages/image4.png";
+import StoxHero from "./SponsorImages/image5.png";
+import Onepercclub from "./SponsorImages/image6.png";
+import TechnoLit from "./SponsorImages/image7.png";
+import Bhav from "./SponsorImages/image9.png";
+import Finshots from "./SponsorImages/image10.png";
+import AssetsDtu from "./SponsorImages/assets_dtu_logo.jpeg";
+import Markblend from "./SponsorImages/image12.png";
+import Finwizz from "./SponsorImages/image13.png";
+import Stockpe from "./SponsorImages/image14.png";
+import Stockgro from "./SponsorImages/image15.png";
+import Lwt from "./SponsorImages/image.png";
+import StockEdge from "./SponsorImages/StockEdge.png";
+import Unstop from "./SponsorImages/Unstop11.png";
+import YRI from "./SponsorImages/YRI.jpeg";
+import EduVitae from "./SponsorImages/EduVitae.jpeg";
+import InterviewBuddy from "./SponsorImages/InterviewBuddy.jpeg";
+import Daytone from "./SponsorImages/Daytone.png";
+import Osen from "./SponsorImages/Osen.png";
+import Devfolio from "./SponsorImages/Devfolio_Logo-Colored@2x.png";
+import ETHIndia from "./SponsorImages/ETH.png";
+import XYZ from "./SponsorImages/xyz.png";
 
 const sponsors = [
+  {
+    id: "a16",
+    name: ".xyz",
+    img: XYZ,
+    url: "https://gen.xyz/",
+  },
+  {
+    id: "a12",
+    name: "Daytona",
+    img: Daytone,
+    url: "https://www.daytona.io/",
+  },
+  {
+    id: "a15",
+    name: "ETH India",
+    img: ETHIndia,
+    url: "https://ethindia-villa.devfolio.co/",
+  },
+  {
+    id: "a14",
+    name: "Devfolio",
+    img: Devfolio,
+    url: "https://devfolio.co/",
+  },
+  {
+    id: "a11",
+    name: "YRI Fellowship",
+    img: YRI,
+    url: "https://www.yriscience.com/",
+  },
+  {
+    id: "a13",
+    name: "Osen",
+    img: Osen,
+    url: "https://www.linkedin.com/company/osenofficial/",
+  },
+  {
+    id: "a10",
+    name: "Interview Buddy",
+    img: InterviewBuddy,
+    url: "https://interviewbuddy.net/",
+  },
+  {
+    id: "a9",
+    name: "EduVitae Services",
+    img: EduVitae,
+    url: "https://eduvitae.in/",
+  },
   {
     id: "a7",
     name: "StockEdge",
@@ -37,30 +93,30 @@ const sponsors = [
     img: Finlatics,
     url: "https://www.linkedin.com/company/fincrux-enabling-insights/",
   },
-  {
-    id: "a2",
-    name: "StoxHero",
-    img: StoxHero,
-    url: "https://www.linkedin.com/company/stoxhero/",
-  },
-  {
-    id: "a3",
-    name: "One Percent Club",
-    img: Onepercclub,
-    url: null, // No link provided
-  },
-  {
-    id: "a4",
-    name: "Coding Ninjas",
-    img: CodingNinjas,
-    url: "https://www.linkedin.com/school/codingninjas/",
-  },
-  {
-    id: "a5",
-    name: "Stock Pe",
-    img: Stockpe,
-    url: "https://www.linkedin.com/company/stockpe/",
-  },
+  // {
+  //   id: "a2",
+  //   name: "StoxHero",
+  //   img: StoxHero,
+  //   url: "https://www.linkedin.com/company/stoxhero/",
+  // },
+  // {
+  //   id: "a3",
+  //   name: "One Percent Club",
+  //   img: Onepercclub,
+  //   url: null, // No link provided
+  // },
+  // {
+  //   id: "a4",
+  //   name: "Coding Ninjas",
+  //   img: CodingNinjas,
+  //   url: "https://www.linkedin.com/school/codingninjas/",
+  // },
+  // {
+  //   id: "a5",
+  //   name: "Stock Pe",
+  //   img: Stockpe,
+  //   url: "https://www.linkedin.com/company/stockpe/",
+  // },
   {
     id: "a6",
     name: "Learning While Travelling",
@@ -155,11 +211,11 @@ const Sponsor = () => {
 
       <div className="sponsors_container">{sponsors.map(renderLogo)}</div>
 
-      <div className="sponsi-vertical-line"></div>
+      {/* <div className="sponsi-vertical-line"></div> */}
 
-      <h1 className="our_partners">Our Partners</h1>
+      {/* <h1 className="our_partners">Our Partners</h1>
 
-      <div className="partners_container">{partners.map(renderLogo)}</div>
+      <div className="partners_container">{partners.map(renderLogo)}</div> */}
     </div>
   );
 };
