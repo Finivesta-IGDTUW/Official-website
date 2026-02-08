@@ -1,19 +1,19 @@
 import "./Sponsor.css";
 
 import Finlatics from "./SponsorImages/image16.png";
-import Csd from "./SponsorImages/image1.png";
-import CodingNinjas from "./SponsorImages/image2.png";
-import Adira from "./SponsorImages/image4.png";
-import StoxHero from "./SponsorImages/image5.png";
-import Onepercclub from "./SponsorImages/image6.png";
-import TechnoLit from "./SponsorImages/image7.png";
-import Bhav from "./SponsorImages/image9.png";
-import Finshots from "./SponsorImages/image10.png";
-import AssetsDtu from "./SponsorImages/assets_dtu_logo.jpeg";
-import Markblend from "./SponsorImages/image12.png";
-import Finwizz from "./SponsorImages/image13.png";
-import Stockpe from "./SponsorImages/image14.png";
-import Stockgro from "./SponsorImages/image15.png";
+// import Csd from "./SponsorImages/image1.png";
+// import CodingNinjas from "./SponsorImages/image2.png";
+// import Adira from "./SponsorImages/image4.png";
+// import StoxHero from "./SponsorImages/image5.png";
+// import Onepercclub from "./SponsorImages/image6.png";
+// import TechnoLit from "./SponsorImages/image7.png";
+// import Bhav from "./SponsorImages/image9.png";
+// import Finshots from "./SponsorImages/image10.png";
+// import AssetsDtu from "./SponsorImages/assets_dtu_logo.jpeg";
+// import Markblend from "./SponsorImages/image12.png";
+// import Finwizz from "./SponsorImages/image13.png";
+// import Stockpe from "./SponsorImages/image14.png";
+// import Stockgro from "./SponsorImages/image15.png";
 import Lwt from "./SponsorImages/image.png";
 import StockEdge from "./SponsorImages/StockEdge.png";
 import Unstop from "./SponsorImages/Unstop11.png";
@@ -125,62 +125,62 @@ const sponsors = [
   },
 ];
 
-const partners = [
-  {
-    id: "b1",
-    name: "StockGro",
-    img: Stockgro,
-    url: "https://www.linkedin.com/company/stockgro/",
-  },
-  {
-    id: "b2",
-    name: "FinShots",
-    img: Finshots,
-    url: "https://www.linkedin.com/showcase/finshots/",
-  },
-  {
-    id: "b3",
-    name: "Adira CSD",
-    img: Adira,
-    url: "https://www.linkedin.com/in/adira-csd-280a71226/",
-  },
-  {
-    id: "b4",
-    name: "Assets DTU",
-    img: AssetsDtu,
-    url: "https://www.linkedin.com/company/assets-dtu/",
-  },
-  {
-    id: "b5",
-    name: "CSD - IGDTUW",
-    img: Csd,
-    url: "https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all",
-  },
-  {
-    id: "b6",
-    name: "B. H. A. V.",
-    img: Bhav,
-    url: "https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/",
-  },
-  {
-    id: "b7",
-    name: "TechnoLiterati",
-    img: TechnoLit,
-    url: "https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all",
-  },
-  {
-    id: "b8",
-    name: "MarkBlend",
-    img: Markblend,
-    url: "https://www.linkedin.com/company/markblend-social-media-agency/",
-  },
-  {
-    id: "b9",
-    name: "FinWizz",
-    img: Finwizz,
-    url: "https://www.linkedin.com/company/beat-the-markets/",
-  },
-];
+// const partners = [
+//   {
+//     id: "b1",
+//     name: "StockGro",
+//     img: Stockgro,
+//     url: "https://www.linkedin.com/company/stockgro/",
+//   },
+//   {
+//     id: "b2",
+//     name: "FinShots",
+//     img: Finshots,
+//     url: "https://www.linkedin.com/showcase/finshots/",
+//   },
+//   {
+//     id: "b3",
+//     name: "Adira CSD",
+//     img: Adira,
+//     url: "https://www.linkedin.com/in/adira-csd-280a71226/",
+//   },
+//   {
+//     id: "b4",
+//     name: "Assets DTU",
+//     img: AssetsDtu,
+//     url: "https://www.linkedin.com/company/assets-dtu/",
+//   },
+//   {
+//     id: "b5",
+//     name: "CSD - IGDTUW",
+//     img: Csd,
+//     url: "https://www.linkedin.com/company/centre-for-sustainable-development-igdtuw/posts/?feedView=all",
+//   },
+//   {
+//     id: "b6",
+//     name: "B. H. A. V.",
+//     img: Bhav,
+//     url: "https://www.linkedin.com/company/b-h-a-v-behold-an-architect-s-view/",
+//   },
+//   {
+//     id: "b7",
+//     name: "TechnoLiterati",
+//     img: TechnoLit,
+//     url: "https://www.linkedin.com/company/technoliterati-igdtuw/posts/?feedView=all",
+//   },
+//   {
+//     id: "b8",
+//     name: "MarkBlend",
+//     img: Markblend,
+//     url: "https://www.linkedin.com/company/markblend-social-media-agency/",
+//   },
+//   {
+//     id: "b9",
+//     name: "FinWizz",
+//     img: Finwizz,
+//     url: "https://www.linkedin.com/company/beat-the-markets/",
+//   },
+// ];
 
 const Sponsor = () => {
   const renderLogo = ({ id, name, img, url }) => (
