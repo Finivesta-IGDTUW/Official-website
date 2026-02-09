@@ -117,7 +117,7 @@ const Leaderboard = ({
   const [userDisplayMap, setUserDisplayMap] = useState({});
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showAddAnon, setShowAddAnon] = useState(true);
-  const [anonResult] = useState(null);
+  const [anonResult, setAnonResult] = useState(null);
   const [localMessage, setLocalMessage] = useState("");
 
   const todayStr = getTodayIST();
