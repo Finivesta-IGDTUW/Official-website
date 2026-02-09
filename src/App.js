@@ -62,8 +62,8 @@ import DigitalPayments from "./Resources/Blogs/Blogpages/digital.js";
 import IndiaEconomicGrowth from "./Resources/Blogs/Blogpages/IndiaEconomicGrowth.js";
 import EconomicGrowth from "./Resources/Blogs/Blogpages/economicgrowth.js";
 
-import Louvre_heist from "./Resources/Blogs/Blogpages/Louvre-heist.js";
-import  UStariffs from "./Resources/Blogs/Blogpages/us-tariffs.js";
+import LouvreHeist from "./Resources/Blogs/Blogpages/Louvre-heist.js";
+import UStariffs from "./Resources/Blogs/Blogpages/us-tariffs.js";
 import TTT from "./Resources/Blogs/Blogpages/TTT";
 
 import BookReview from "./Resources/BookReviews/BookReview";
@@ -107,7 +107,7 @@ import MoneyExplained from "./Resources/Podcasts/podcastlist/MoneyExplained";
 import MoneyControl from "./Resources/Podcasts/podcastlist/moneycontrol.js";
 
 // import FinWeek25 from './Events/FinWeek25/FinWeek25.js';
-import Hackathon from './Hackathon/Hackathon';
+import Hackathon from "./Hackathon/Hackathon";
 
 const AppContent = () => {
   const location = useLocation();
@@ -140,19 +140,16 @@ const AppContent = () => {
       </Helmet>
       {!isGameFullScreen && <Navbar />}
       <Layout>
-      <PopupMessage />
+        <PopupMessage />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsor />} />
-          <Route path="/hackathon" element={<Hackathon/>}/>
+          <Route path="/hackathon" element={<Hackathon />} />
           <Route path="/resources" element={<Resources />} />
 
           {/* Under resources */}
-          <Route
-            path="/resources/newsletter"
-            element={<Newsletter />}
-          />
+          <Route path="/resources/newsletter" element={<Newsletter />} />
           <Route
             path="/resources/moneymasterclass"
             element={<MoneyMasterclass />}
@@ -160,7 +157,7 @@ const AppContent = () => {
           <Route path="/resources/blogs" element={<Blog />} />
 
           {/* Blog pages */}
-          
+
           <Route
             path="/resources/blogs/01-AI-in-finance"
             element={<AIinfinance />}
@@ -236,17 +233,10 @@ const AppContent = () => {
           />
           <Route
             path="/resources/blogs/20-Louvre-heist"
-            element={<Louvre_heist />}
+            element={<LouvreHeist />}
           />
-          <Route
-            path="/resources/blogs/20-UStariffs"
-            element={<UStariffs />}
-          />
-          <Route
-          path="/resources/blogs/20-TTT"
-          element={<TTT />}
-          />
-
+          <Route path="/resources/blogs/20-UStariffs" element={<UStariffs />} />
+          <Route path="/resources/blogs/20-TTT" element={<TTT />} />
 
           {/*Book pages*/}
           <Route path="/resources/bookreviews" element={<BookReview />} />
