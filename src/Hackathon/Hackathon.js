@@ -31,8 +31,8 @@ import {
 } from "react-icons/fa";
 // import devfolioBtn from "./apply-with-devfolio.png";
 //sponsors logos
-import interviewbuddylogo from "./SponsorImages/interviewbuddy.png";
-import yrilogo from "./SponsorImages/yri.png";
+// import interviewbuddylogo from "./SponsorImages/interviewbuddy.png";
+// import yrilogo from "./SponsorImages/yri.png";
 
 // const prizes = [
 //   {
@@ -418,7 +418,7 @@ const Hackathon = () => {
   //   window.open(website, "_blank");
   // };
 
-  const [flipped, setFlipped] = useState([false, false, false]);
+  // const [flipped, setFlipped] = useState([false, false, false]);
 
   // const handleFlip = (index) => {
   //   const updated = [...flipped];
@@ -435,7 +435,7 @@ const Hackathon = () => {
   return (
     <div className="hackathon-container">
       <div className="sidebar">
-        <a href="#" className="sidebar-icon" title="Hero Section">
+        <a href="#home" className="sidebar-icon" title="Hero Section">
           <FaHome />
         </a>
         <a href="#about" className="sidebar-icon" title="About Section">
