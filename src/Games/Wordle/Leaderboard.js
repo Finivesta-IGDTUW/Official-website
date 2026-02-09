@@ -231,6 +231,49 @@ const Leaderboard = ({
     return [];
   }
 
+  // Update anonResult based on period and user login status
+  useEffect(() => {
+    if (!userProp?.uid) {
+      try {
+        const lastResult = JSON.parse(
+          localStorage.getItem("wordle_last_result"),
+        );
+        if (lastResult) {
+          const normalizedResult = {
+            ...lastResult,
+            timeTaken: Number(lastResult.timeTaken) || 0,
+          };
+
+          // For day: only add if date matches
+          if (period === "day" && normalizedResult.date === selectedDay) {
+            setAnonResult(normalizedResult);
+            return;
+          }
+          // For week: only add if date is in selected week
+          if (period === "week") {
+            const weekStart = new Date(selectedWeek + "T00:00:00+05:30");
+            const weekDates = [];
+            for (let i = 0; i < 7; i++) {
+              const d = new Date(weekStart);
+              d.setDate(weekStart.getDate() + i);
+              weekDates.push(d.toISOString().slice(0, 10));
+            }
+            if (weekDates.includes(normalizedResult.date)) {
+              setAnonResult(normalizedResult);
+              return;
+            }
+          }
+          // For all: always add
+          if (period === "all") {
+            setAnonResult(normalizedResult);
+            return;
+          }
+        }
+      } catch {}
+    }
+    setAnonResult(null);
+  }, [userProp, period, selectedDay, selectedWeek]);
+
   // ...before your return statement...
   let rankedLeaders = getRankedLeaders(leaders, period);
 
@@ -292,6 +335,26 @@ const Leaderboard = ({
         });
         rankedLeaders = rankedLeaders.sort((a, b) => b.score - a.score);
       }
+  if (!userProp?.uid && anonResult) {
+    const anonScore = calculateScore({
+      tries: anonResult.tries,
+      timeTaken: anonResult.timeTaken,
+    });
+    // else score remains 0
+    // For day/week: check userId+date, for all: check userId
+    const alreadyInList =
+      period === "all"
+        ? rankedLeaders.some((u) => u.userId === anonResult.userId)
+        : rankedLeaders.some(
+            (u) => u.userId === anonResult.userId && u.date === anonResult.date,
+          );
+    if (!alreadyInList) {
+      rankedLeaders.push({
+        ...anonResult,
+        userId: "anonymous",
+        score: anonScore,
+      });
+      rankedLeaders = rankedLeaders.sort((a, b) => b.score - a.score);
     }
   }
 
