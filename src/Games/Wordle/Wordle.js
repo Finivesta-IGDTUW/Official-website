@@ -14,13 +14,12 @@ import "./Wordle.css";
 import winSound from "../sounds/win.mp3";
 import loseSound from "../sounds/lose.mp3";
 
-
 // Get today's date in IST (YYYY-MM-DD)
 function getTodayIST() {
   const now = new Date();
   const istOffset = 330 * 60 * 1000;
   const istTime = new Date(
-    now.getTime() + istOffset - now.getTimezoneOffset() * 60000
+    now.getTime() + istOffset - now.getTimezoneOffset() * 60000,
   );
   return istTime.toISOString().slice(0, 10);
 }
@@ -54,57 +53,56 @@ const Wordle = ({
   const [timer, setTimer] = useState(0);
   const [timerActive, setTimerActive] = useState(true);
   const [wordOfTheDay, setWordOfTheDay] = useState("MONEY");
-  const [rowAnimation, setRowAnimation] = useState({}); 
+  const [rowAnimation, setRowAnimation] = useState({});
   const [coins, setCoins] = useState([]);
 
   const spawnCoins = (count = 7) => {
-  const arr = Array.from({ length: count }, (_, i) => ({
-    id: `${Date.now()}-${i}`,
-    delay: i * 120, // ms between coins
-    stack: i,       // how high this coin stacks
-  }));
-  setCoins(arr);
+    const arr = Array.from({ length: count }, (_, i) => ({
+      id: `${Date.now()}-${i}`,
+      delay: i * 120, // ms between coins
+      stack: i, // how high this coin stacks
+    }));
+    setCoins(arr);
 
-  // auto-clear after the animation finishes
-  setTimeout(() => setCoins([]), 2200);
-};
+    // auto-clear after the animation finishes
+    setTimeout(() => setCoins([]), 2200);
+  };
 
-const spawnConfetti = (count = 30) => {
-  const confettiArr = Array.from({ length: count }, (_, i) => ({
-    id: `${Date.now()}-${i}`,
-    x: Math.random() * 300 - 150, // random horizontal offset
-    delay: Math.random() * 800,
-  }));
-  confettiArr.forEach(({ id, x, delay }) => {
-    const conf = document.createElement("div");
-    conf.className = "confetti";
-    conf.style.setProperty("--x", `${x}px`);
-    conf.style.animationDelay = `${delay}ms`;
-    conf.id = id;
-    document.body.appendChild(conf);
-    setTimeout(() => document.body.removeChild(conf), 2500);
-  });
-};
+  const spawnConfetti = (count = 30) => {
+    const confettiArr = Array.from({ length: count }, (_, i) => ({
+      id: `${Date.now()}-${i}`,
+      x: Math.random() * 300 - 150, // random horizontal offset
+      delay: Math.random() * 800,
+    }));
+    confettiArr.forEach(({ id, x, delay }) => {
+      const conf = document.createElement("div");
+      conf.className = "confetti";
+      conf.style.setProperty("--x", `${x}px`);
+      conf.style.animationDelay = `${delay}ms`;
+      conf.id = id;
+      document.body.appendChild(conf);
+      setTimeout(() => document.body.removeChild(conf), 2500);
+    });
+  };
 
-const spawnSparkles = (count = 20) => {
-  const sparkleArr = Array.from({ length: count }, (_, i) => ({
-    id: `${Date.now()}-${i}`,
-    x: Math.random() * 400 - 200,
-    y: Math.random() * 100,
-    delay: Math.random() * 1000,
-  }));
-  sparkleArr.forEach(({ id, x, y, delay }) => {
-    const sp = document.createElement("div");
-    sp.className = "sparkle";
-    sp.style.left = `calc(50% + ${x}px)`;
-    sp.style.top = `${y}px`;
-    sp.style.animationDelay = `${delay}ms`;
-    sp.id = id;
-    document.body.appendChild(sp);
-    setTimeout(() => document.body.removeChild(sp), 2000);
-  });
-};
-
+  const spawnSparkles = (count = 20) => {
+    const sparkleArr = Array.from({ length: count }, (_, i) => ({
+      id: `${Date.now()}-${i}`,
+      x: Math.random() * 400 - 200,
+      y: Math.random() * 100,
+      delay: Math.random() * 1000,
+    }));
+    sparkleArr.forEach(({ id, x, y, delay }) => {
+      const sp = document.createElement("div");
+      sp.className = "sparkle";
+      sp.style.left = `calc(50% + ${x}px)`;
+      sp.style.top = `${y}px`;
+      sp.style.animationDelay = `${delay}ms`;
+      sp.id = id;
+      document.body.appendChild(sp);
+      setTimeout(() => document.body.removeChild(sp), 2000);
+    });
+  };
 
   // Fetch today's word from Firestore if daily game
   useEffect(() => {
@@ -114,11 +112,11 @@ const spawnSparkles = (count = 20) => {
         const colRef = collection(db, "games", "wordle", "word_of_the_day");
         const today = getTodayIST(); // assuming this returns a Date object
 
-// Create a new Date object for 45 days ago
-const pastDate = new Date(today);
-pastDate.setDate(pastDate.getDate() - 30);
+        // Create a new Date object for 45 days ago
+        const pastDate = new Date(today);
+        pastDate.setDate(pastDate.getDate() - 30);
 
-console.log(pastDate); // Date object 45 days before today
+        console.log(pastDate); // Date object 45 days before today
 
         const q = query(colRef, where("date", "==", pastDate));
         const snap = await getDocs(q);
@@ -146,23 +144,22 @@ console.log(pastDate); // Date object 45 days before today
   }, [currentRow, currentCol]);
 
   // Timer effect
-const startRef = useRef(null);
+  const startRef = useRef(null);
 
-useEffect(() => {
-  let interval;
-  if (timerActive && !pauseTimer) {
-    if (!startRef.current) {
-      // set start time relative to existing timer (for resume after pause)
-      startRef.current = Date.now() - timer;
+  useEffect(() => {
+    let interval;
+    if (timerActive && !pauseTimer) {
+      if (!startRef.current) {
+        // set start time relative to existing timer (for resume after pause)
+        startRef.current = Date.now() - timer;
+      }
+      interval = setInterval(() => {
+        // calculate elapsed time from actual clock
+        setTimer(Date.now() - startRef.current);
+      }, 100); // update every 50ms, smooth but not overkill
     }
-    interval = setInterval(() => {
-      // calculate elapsed time from actual clock
-      setTimer(Date.now() - startRef.current);
-    }, 100); // update every 50ms, smooth but not overkill
-  }
-  return () => clearInterval(interval);
-}, [timerActive, pauseTimer]);
-
+    return () => clearInterval(interval);
+  }, [timerActive, pauseTimer, timer]); // Added 'timer' to dependencies
 
   // Stop timer on win or lose
   useEffect(() => {
@@ -204,7 +201,7 @@ useEffect(() => {
       const newGrid = grid.map((row, i) =>
         i === currentRow
           ? row.map((cell, j) => (j === currentCol ? letter : cell))
-          : row
+          : row,
       );
       setGrid(newGrid);
       setCurrentCol(currentCol + 1);
@@ -216,7 +213,7 @@ useEffect(() => {
       const newGrid = grid.map((row, i) =>
         i === currentRow
           ? row.map((cell, j) => (j === currentCol - 1 ? "" : cell))
-          : row
+          : row,
       );
       setGrid(newGrid);
       setCurrentCol(currentCol - 1);
@@ -241,7 +238,7 @@ useEffect(() => {
 
     // Check if word exists using dictionaryapi.dev
     fetch(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${guess.toLowerCase()}`
+      `https://api.dictionaryapi.dev/api/v2/entries/en/${guess.toLowerCase()}`,
     )
       .then((res) => {
         if (!res.ok) return null;
@@ -259,7 +256,7 @@ useEffect(() => {
         // Word exists, continue with game logic
         const { statusRow, newKeyboardStatus } = checkGuess(guess);
         const newStatusGrid = statusGrid.map((row, i) =>
-          i === currentRow ? statusRow : row
+          i === currentRow ? statusRow : row,
         );
         setStatusGrid(newStatusGrid);
         setKeyboardStatus((prev) => ({ ...prev, ...newKeyboardStatus }));
@@ -269,13 +266,13 @@ useEffect(() => {
           setMessage(
             `Congratulations!\nYou guessed the word correctly in ${
               currentRow + 1
-            } tries and ${m}:${s}:${ms} time`
+            } tries and ${m}:${s}:${ms} time`,
           );
           setTimerActive(false);
 
-            // animate winning row
+          // animate winning row
           setRowAnimation((prev) => ({ ...prev, [currentRow]: "dance" }));
-           // after a short delay, celebrate
+          // after a short delay, celebrate
           setTimeout(() => {
             setRowAnimation((prev) => ({ ...prev, [currentRow]: "win" }));
           }, 700);
@@ -289,7 +286,7 @@ useEffect(() => {
               showLeaderboard(
                 `Congratulations! You guessed the word in ${m}:${s}:${ms} time with ${
                   currentRow + 1
-                } guesses`
+                } guesses`,
               );
             }
           }, 2200);
@@ -313,16 +310,14 @@ useEffect(() => {
                 date: getTodayIST(),
                 tries: currentRow + 1,
                 timeTaken: timer,
-              })
+              }),
             );
           }
-
-          
         } else if (currentRow === 5) {
           // Last attempt failed, show final message
           setMessage(`Game Over!\nThe word was ${wordOfTheDay}.`);
           setTimerActive(false);
-            // animate shake on last wrong guess
+          // animate shake on last wrong guess
           setRowAnimation((prev) => ({ ...prev, [currentRow]: "shake" }));
 
           // Store failed result for daily challenge
@@ -346,16 +341,15 @@ useEffect(() => {
                   date: getTodayIST(),
                   tries: 7,
                   timeTaken: timer,
-                })
+                }),
               );
             }
           }
         } else {
           setCurrentRow(currentRow + 1);
           setCurrentCol(0);
-            // animate shake for wrong guess
+          // animate shake for wrong guess
           setRowAnimation((prev) => ({ ...prev, [currentRow]: "shake" }));
-
         }
       });
   };
@@ -406,11 +400,11 @@ useEffect(() => {
       }
       // Count how many are green
       const greenCount = guessPositions.filter(
-        (pos) => statusRow[pos] === "correct"
+        (pos) => statusRow[pos] === "correct",
       ).length;
       // Count how many are present (yellow)
       const yellowCount = guessPositions.filter(
-        (pos) => statusRow[pos] === "present"
+        (pos) => statusRow[pos] === "present",
       ).length;
 
       // Count how many times this letter is in the answer at the correct position
@@ -452,7 +446,7 @@ useEffect(() => {
             numberOfTries,
           }),
         },
-        { merge: true }
+        { merge: true },
       );
     } catch (e) {
       // Optionally handle error
@@ -472,193 +466,193 @@ useEffect(() => {
   };
 
   useEffect(() => {
-  if (message.startsWith("Congratulations!")) {
-    const audio = new Audio(winSound);
-    audio.play();
-  } else if (message.startsWith("Game Over!")) {
-    const audio = new Audio(loseSound);
-    audio.play();
-  }
-}, [message]);
+    if (message.startsWith("Congratulations!")) {
+      const audio = new Audio(winSound);
+      audio.play();
+    } else if (message.startsWith("Game Over!")) {
+      const audio = new Audio(loseSound);
+      audio.play();
+    }
+  }, [message]);
 
   return (
-  <div>
-    {/* Main game UI */}
-    {message &&
-    (message.startsWith("Congratulations!") ||
-      message.startsWith("Game Over!")) ? (
-      <div
-        className={
-          message.startsWith("Congratulations!")
-            ? "wordle-congrats-message"
-            : "wordle-gameover-message"
-        }
-      >
-        {message.split("\n").map((line, idx) => (
-          <div key={idx}>{line}</div>
-        ))}
-        <button
-          className="wordle-titlepage-btn"
-          style={{ marginTop: "24px" }}
-          onClick={() => {
-            if (typeof onCloseGame === "function") {
-              onCloseGame();
-            }
-            setGrid(getEmptyGrid());
-            setStatusGrid(getEmptyStatusGrid());
-            setCurrentRow(0);
-            setCurrentCol(0);
-            setKeyboardStatus({});
-            setMessage("");
-            setTimer(0);
-            setTimerActive(true);
-            if (gameType !== "daily") {
-              (async () => {
-                const db = getFirestore(getApp());
-                const colRef = collection(
-                  db,
-                  "games",
-                  "wordle",
-                  "word_of_the_day"
-                );
-                const snap = await getDocs(colRef);
-                const words = snap.docs.map((doc) =>
-                  doc.data().word.toUpperCase()
-                );
-                if (words.length > 0) {
-                  const randomWord =
-                    words[Math.floor(Math.random() * words.length)];
-                  setWordOfTheDay(randomWord);
-                }
-              })();
-            }
-          }}
+    <div>
+      {/* Main game UI */}
+      {message &&
+      (message.startsWith("Congratulations!") ||
+        message.startsWith("Game Over!")) ? (
+        <div
+          className={
+            message.startsWith("Congratulations!")
+              ? "wordle-congrats-message"
+              : "wordle-gameover-message"
+          }
         >
-          Go Back Home
-        </button>
-      </div>
-    ) : (
-      <div
-        className="wordle-container"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-      >
-        <input
-          ref={inputRef}
-          style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}
-          onKeyDown={handleKeyDown}
-          inputMode="none"
-          readOnly
-          tabIndex={-1}
-        />
-        <div className="wordle-grid">
-          {grid.map((row, rowIdx) => (
-            <div
-              className={`wordle-row ${rowAnimation[rowIdx] || ""}`}
-              key={rowIdx}
-              onAnimationEnd={() =>
-                setRowAnimation((prev) => ({ ...prev, [rowIdx]: "" }))
+          {message.split("\n").map((line, idx) => (
+            <div key={idx}>{line}</div>
+          ))}
+          <button
+            className="wordle-titlepage-btn"
+            style={{ marginTop: "24px" }}
+            onClick={() => {
+              if (typeof onCloseGame === "function") {
+                onCloseGame();
               }
-            >
-              {row.map((cell, colIdx) => (
-                <div
-                  className={`wordle-cell ${
-                    statusGrid[rowIdx][colIdx]
-                      ? "flip " + statusGrid[rowIdx][colIdx]
-                      : ""
-                  }`}
-                  key={colIdx}
-                >
-                  {cell}
-                  {rowIdx === currentRow &&
-                    colIdx === currentCol &&
-                    currentCol < 5 && <span className="typing-cursor" />}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="wordle-keyboard">
-          {QWERTY_ROWS.map((row, i) => (
-            <div className="wordle-key-row" key={i}>
-              {i === 2 && (
-                <button
-                  className="wordle-key special"
-                  onClick={() => handleKeyboardClick("ENTER")}
-                >
-                  ENTER
-                </button>
-              )}
-              {row.map((key) => (
-                <button
-                  key={key}
-                  className={`wordle-key ${
-                    keyboardStatus[key] ? keyboardStatus[key] : ""
-                  }`}
-                  onClick={() => handleKeyboardClick(key)}
-                  disabled={!!message}
-                >
-                  {key}
-                </button>
-              ))}
-              {i === 2 && (
-                <button
-                  className="wordle-key special"
-                  onClick={() => handleKeyboardClick("BACKSPACE")}
-                >
-                  ⌫
-                </button>
-              )}
-            </div>
-          ))}
-        </div>
-        {(() => {
-          const { m, s, ms } = getTimerParts(timer);
-          return (
-            <div
-              className="wordle-timer"
-              style={{
-                display: "flex",
-                gap: "0.25em",
-                fontVariantNumeric: "tabular-nums",
-              }}
-            >
-              <span className="wordle-timer-minutes">{m}</span>
-              <span>:</span>
-              <span className="wordle-timer-seconds">{s}</span>
-              <span>:</span>
-              <span className="wordle-timer-ms">{ms}</span>
-            </div>
-          );
-        })()}
-      </div>
-    )}
-
-    {/* Bottom-right popup for error/info messages */}
-    {message &&
-      !(
-        message.startsWith("Congratulations!") ||
-        message.startsWith("Game Over!")
-      ) && <div className="wordle-popup-message">{message}</div>}
-
-    {/* Win coins overlay */}
-    {coins.length > 0 && (
-      <div className="coin-layer">
-        {coins.map((c) => (
-          <div
-            key={c.id}
-            className="coin"
-            style={{
-              ["--delay"]: `${c.delay}ms`,
-              ["--stack"]: c.stack,
+              setGrid(getEmptyGrid());
+              setStatusGrid(getEmptyStatusGrid());
+              setCurrentRow(0);
+              setCurrentCol(0);
+              setKeyboardStatus({});
+              setMessage("");
+              setTimer(0);
+              setTimerActive(true);
+              if (gameType !== "daily") {
+                (async () => {
+                  const db = getFirestore(getApp());
+                  const colRef = collection(
+                    db,
+                    "games",
+                    "wordle",
+                    "word_of_the_day",
+                  );
+                  const snap = await getDocs(colRef);
+                  const words = snap.docs.map((doc) =>
+                    doc.data().word.toUpperCase(),
+                  );
+                  if (words.length > 0) {
+                    const randomWord =
+                      words[Math.floor(Math.random() * words.length)];
+                    setWordOfTheDay(randomWord);
+                  }
+                })();
+              }
             }}
           >
-            🪙
+            Go Back Home
+          </button>
+        </div>
+      ) : (
+        <div
+          className="wordle-container"
+          tabIndex={0}
+          onKeyDown={handleKeyDown}
+        >
+          <input
+            ref={inputRef}
+            style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}
+            onKeyDown={handleKeyDown}
+            inputMode="none"
+            readOnly
+            tabIndex={-1}
+          />
+          <div className="wordle-grid">
+            {grid.map((row, rowIdx) => (
+              <div
+                className={`wordle-row ${rowAnimation[rowIdx] || ""}`}
+                key={rowIdx}
+                onAnimationEnd={() =>
+                  setRowAnimation((prev) => ({ ...prev, [rowIdx]: "" }))
+                }
+              >
+                {row.map((cell, colIdx) => (
+                  <div
+                    className={`wordle-cell ${
+                      statusGrid[rowIdx][colIdx]
+                        ? "flip " + statusGrid[rowIdx][colIdx]
+                        : ""
+                    }`}
+                    key={colIdx}
+                  >
+                    {cell}
+                    {rowIdx === currentRow &&
+                      colIdx === currentCol &&
+                      currentCol < 5 && <span className="typing-cursor" />}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    )}
-  </div>
+          <div className="wordle-keyboard">
+            {QWERTY_ROWS.map((row, i) => (
+              <div className="wordle-key-row" key={i}>
+                {i === 2 && (
+                  <button
+                    className="wordle-key special"
+                    onClick={() => handleKeyboardClick("ENTER")}
+                  >
+                    ENTER
+                  </button>
+                )}
+                {row.map((key) => (
+                  <button
+                    key={key}
+                    className={`wordle-key ${
+                      keyboardStatus[key] ? keyboardStatus[key] : ""
+                    }`}
+                    onClick={() => handleKeyboardClick(key)}
+                    disabled={!!message}
+                  >
+                    {key}
+                  </button>
+                ))}
+                {i === 2 && (
+                  <button
+                    className="wordle-key special"
+                    onClick={() => handleKeyboardClick("BACKSPACE")}
+                  >
+                    ⌫
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+          {(() => {
+            const { m, s, ms } = getTimerParts(timer);
+            return (
+              <div
+                className="wordle-timer"
+                style={{
+                  display: "flex",
+                  gap: "0.25em",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                <span className="wordle-timer-minutes">{m}</span>
+                <span>:</span>
+                <span className="wordle-timer-seconds">{s}</span>
+                <span>:</span>
+                <span className="wordle-timer-ms">{ms}</span>
+              </div>
+            );
+          })()}
+        </div>
+      )}
+
+      {/* Bottom-right popup for error/info messages */}
+      {message &&
+        !(
+          message.startsWith("Congratulations!") ||
+          message.startsWith("Game Over!")
+        ) && <div className="wordle-popup-message">{message}</div>}
+
+      {/* Win coins overlay */}
+      {coins.length > 0 && (
+        <div className="coin-layer">
+          {coins.map((c) => (
+            <div
+              key={c.id}
+              className="coin"
+              style={{
+                "--delay": `${c.delay}ms`,
+                "--stack": c.stack,
+              }}
+            >
+              🪙
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 export default Wordle;
