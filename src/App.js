@@ -21,6 +21,7 @@ import Sponsor from "./Sponsors/Sponsor";
 import Resources from "./Resources/Resources";
 import MoneyMasterclass from "./Resources/MoneyMasterclass/MoneyMasterclass";
 import Newsletter from "./Resources/Newsletter/newsletter";
+import FinWeek from "./FinWeek/finweek.js";
 
 import Game from "./Games/Game.js";
 /*
@@ -146,6 +147,7 @@ const AppContent = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsor />} />
           <Route path="/hackathon" element={<Hackathon/>}/>
+          <Route path="/finweek" element={<FinWeek/>}/>
           <Route path="/resources" element={<Resources />} />
 
           {/* Under resources */}

@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --fw-lime: #C8F135;
+  --fw-dark: #0a0a0a;
+  --fw-card-w: 340px;
+  --fw-card-h: 72px;
+}
+
+.fw-body {
+  background: var(--fw-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ── BANNER ─────────────────────────────────────────── */
+#fw-banner {
+  width: 900px;
+  max-width: 95vw;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 60px rgba(200,241,53,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#fw-banner:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 80px rgba(200,241,53,0.25);
+}
+#fw-banner img { width: 100%; display: block; }
+
+/* ── STAGE ──────────────────────────────────────────── */
+#fw-stage {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.93);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  overflow-y: auto;
+  padding: 60px 20px;
+}
+#fw-stage.active { display: flex; }
+
+/* ── CLOSE BTN ──────────────────────────────────────── */
+#fw-close-btn {
+  position: fixed;
+  top: 22px;
+  right: 26px;
+  color: #444;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 300;
+  display: none;
+}
+#fw-stage.active ~ #fw-close-btn { display: block; }
+#fw-close-btn:hover { color: var(--fw-lime); }
+
+/* ── HINT ───────────────────────────────────────────── */
+#fw-hint {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  font-size: 10px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: opacity 0.4s;
+  z-index: 300;
+}
+
+/* ── DECK WRAP ──────────────────────────────────────── */
+#fw-deck-wrap {
+  position: relative;
+  width: var(--fw-card-w);
+  height: var(--fw-card-h);
+  cursor: pointer;
+}
+
+/* ── TIMELINE LINE ──────────────────────────────────── */
+#fw-timeline-line {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fw-lime) 60%, transparent);
+  transform-origin: top;
+  transition: height 1s ease 0.3s;
+  height: 0;
+  z-index: 0;
+}
+
+/* ── CARD BASE ──────────────────────────────────────── */
+.fw-card {
+  width: var(--fw-card-w);
+  height: var(--fw-card-h);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:
+    top    0.65s cubic-bezier(0.34, 1.15, 0.64, 1),
+    height 0.5s  cubic-bezier(0.34, 1.15, 0.64, 1),
+    transform 0.65s cubic-bezier(0.34, 1.15, 0.64, 1),
+    box-shadow 0.3s ease;
+  will-change: top, transform, height;
+  z-index: 1;
+}
+
+/* stacked rotations */
+#fw-deck-wrap.stacked .fw-card:nth-child(2) { transform: rotate(-4deg)   translateY(0px);  z-index: 4; }
+#fw-deck-wrap.stacked .fw-card:nth-child(3) { transform: rotate(-1.5deg) translateY(3px);  z-index: 3; }
+#fw-deck-wrap.stacked .fw-card:nth-child(4) { transform: rotate(1.5deg)  translateY(6px);  z-index: 2; }
+#fw-deck-wrap.stacked .fw-card:nth-child(5) { transform: rotate(4deg)    translateY(9px);  z-index: 1; }
+
+/* expanded — flat */
+#fw-deck-wrap.expanded .fw-card {
+  transform: rotate(0deg) !important;
+  cursor: pointer;
+}
+#fw-deck-wrap.expanded .fw-card:hover {
+  box-shadow: 0 6px 28px rgba(200,241,53,0.1);
+  z-index: 10;
+}
+
+/* ── FLIP (rotateX) ─────────────────────────────────── */
+.fw-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+.fw-card.flipped .fw-card-inner {
+  transform: rotateX(180deg);
+}
+
+.fw-card-front,
+.fw-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* ── CARD BACK (stacked face) ───────────────────────── */
+.fw-card-back {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  border: 1px solid #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue';
+  font-size: 22px;
+  color: var(--fw-lime);
+  letter-spacing: 3px;
+}
+
+/* ── CARD FRONT (collapsed timeline row) ────────────── */
+.fw-card-front {
+  transform: rotateX(180deg);
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-left: 3px solid var(--fw-lime);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px 0 20px;
+  gap: 3px;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  height: 100%;
+}
+.fw-card-front:hover {
+  background: #111;
+  border-left-color: #fff;
+}
+
+/* timeline dot */
+.fw-card-dot {
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--fw-dark);
+  border: 2px solid var(--fw-lime);
+  transition: background 0.25s, box-shadow 0.25s;
+  z-index: 5;
+}
+.fw-card:hover .fw-card-dot {
+  background: var(--fw-lime);
+  box-shadow: 0 0 10px var(--fw-lime);
+}
+
+/* collapsed text */
+.fw-card-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--fw-lime);
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+.fw-card-title {
+  font-family: 'Bebas Neue';
+  font-size: 19px;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.fw-card-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ── EXPANDED DETAIL PANEL ──────────────────────────── */
+/* The panel slides down inside the same card when .open */
+.fw-card-detail {
+  position: absolute;
+  top: var(--fw-card-h);
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-top: none;
+  border-left: 3px solid var(--fw-lime);
+  border-radius: 0 0 10px 10px;
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity    0.35s ease,
+    padding    0.4s ease;
+  pointer-events: none;
+}
+.fw-card.open .fw-card-detail {
+  max-height: 320px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* detail text */
+.fw-detail-desc {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+}
+
+/* detail meta row */
+.fw-detail-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.fw-detail-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fw-detail-meta-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: var(--fw-lime);
+  letter-spacing: 2px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+.fw-detail-meta-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* divider */
+.fw-detail-divider {
+  width: 100%;
+  height: 1px;
+  background: #1c1c1c;
+}
+
+/* register button */
+.fw-register-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  background: var(--fw-lime);
+  color: #000;
+  font-family: 'Bebas Neue';
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 9px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.fw-register-btn:hover {
+  background: #d9ff3d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(200,241,53,0.3);
+}
+.fw-register-btn:active {
+  transform: translateY(0);
+}
+.fw-register-btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* coming soon tag */
+.fw-coming-soon {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #444;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid #252525;
+  padding: 6px 14px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+/* ── HOVER PREVIEW BUBBLE ───────────────────────────────── */
+#fw-preview {
+  position: fixed;        /* ← was absolute */
+  transform: translateY(-50%) scale(0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+  z-index: 9999;          /* ← higher so it clears navbar etc */
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* the box itself */
+#fw-preview-inner {
+  width: 200px;
+  height: 240px;
+  background: #0e0e0e;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(200,241,53,0.08),
+    0 16px 48px rgba(0,0,0,0.7),
+    0 0 30px rgba(200,241,53,0.06);
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* image inside */
+#fw-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* placeholder when no image */
+#fw-preview-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #333;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* speech-bubble tail pointing RIGHT (toward the card) */
+#fw-preview-tail {
+  width: 0;
+  height: 0;
+  border-top:    10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left:   12px solid #2a2a2a;
+  flex-shrink: 0;
+  position: relative;
+}
+/* inner tail to fake border */
+#fw-preview-tail::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border-top:    9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left:   11px solid #0e0e0e;
+}
+
+/* lime accent corner strip */
+#fw-preview-inner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--fw-lime);
+  opacity: 0.7;
+}
