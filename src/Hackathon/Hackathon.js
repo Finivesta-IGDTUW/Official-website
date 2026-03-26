@@ -20,7 +20,6 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaRobot,
-  // FaGlobe,
   FaUserGraduate,
   FaHome,
   FaInfoCircle,
@@ -29,79 +28,6 @@ import {
   FaRocket,
   FaStar,
 } from "react-icons/fa";
-// import devfolioBtn from "./apply-with-devfolio.png";
-//sponsors logos
-
-import interviewbuddylogo from './SponsorImages/interviewbuddy.png';
-import yrilogo from './SponsorImages/yri.png';
-
-// const prizes = [
-//   { title: "1st Prize", short: "₹10,000 + Swags", detail: "Gold Medalist gets top prizes & exclusive merch!", medal: "🥇" },
-//   { title: "2nd Prize", short: "₹5,000 + Goodies", detail: "Silver Medal winner gets amazing goodies & swags!", medal: "🥈" },
-//   { title: "3rd Prize", short: "₹2,500 + Gifts", detail: "Bronze Medal winner receives exciting gifts!", medal: "🥉" }
-// ];
-
-const timelineEvents = [
-  { date: "5th January, 2026", title: "Registrations Open", desc: "Start forming your team and work on your project." },
-  { date: "2nd February, 2026", title: "Submission Deadline", desc: "Submit the prototype of your project." },
-  { date: "5th February, 2026", title: "First Round Result Announcement", desc: "Announcement of shortlisted teams for the final pitch round." },
-  { date: "7th February, 2026", title: "Final Pitch and Judgement", desc: "D-Day: Selected top 8 teams per problem statement pitch their projects to judges, demonstrating the functionality and potential impact of their solution." },
-];
-
-const faqs = [
-  { question: "Are cross-college and cross-specialization teams allowed?", answer: "Yes. Teams may include members from different colleges and different academic specializations." },
-  { question: "Who can participate?", answer: (<>The hackathon is open to students and early innovators with an interest in finance and technology.<ol>Team Size: 1 to 4 members</ol></>) },
-  { question: "Is a working prototype mandatory?", answer: "Yes. Teams must submit at least a basic working prototype or functional demo that clearly demonstrates the idea and core features of the solution." },
-  { question: "Is the pitch deck mandatory?", answer:"The pitch deck is strictly mandatory. It must be 5–7 slides only and should clearly explain the problem, solution, technology and impact." },
-  { question: "Can we submit projects built before the hackathon?", answer: "No. All submissions must be built during the hackathon period. Any reuse of old projects must be clearly disclosed and should not form the majority of the solution." },
-  { question: "Can a team participate in multiple problem statements?", answer: "No. Each team can submit only one project under one problem statement." },
-  { question: "How to create a team ?", answer: "Once you apply to Devfolio you can either apply as a solo team or a team of upto 2-4 members. If you apply as a solo team, wait for your application to get accepted. Once your application is accepted you can join or create a team. If you want to apply as a team then select create a team or join a team by entering the referral link. Once all team members join you can submit your application and wait for it to get reviewed. You can only submit your project once your application gets accepted."},
-  { question: "Will accommodation be provided ?", answer: "No, accommodation and travelling expenses will not be provided by the organizers." },
-  { question: "I’ve joined a team, but I’m not verified yet. What should I do?", answer: "Once your team leader has created the team, individual verification may take some time. The verification process can take up to 12 hours. If you are still not verified after 12 hours, please tag us on the Discord server for assistance." },
-];
-
-const problemStatements = [
-  { title: "OnChain Rewards - Blockchain (OnChain Rewards)", icon: <FaCreditCard />, desc: (<>Reimagine financial trust using blockchain. Build a secure, on-chain credibility system that verifies multiple user trust metrics and unlocks real-time rewards across e-commerce, travel, fintech, and lifestyle platforms.
-</>),},
-  { title: "Offroad Semantic Scene Segmentation Challenge", icon: <FaRobot />, desc: (<>Develop a semantic scene segmentation model for off-road environments using synthetic desert imagery generated via Duality AI’s Falcon digital twin platform. The model should accurately classify terrain and object classes and demonstrate strong generalization when evaluated on unseen desert locations.</>),},
-  { title: "Hostel Life Utility Manager - UI/UX Beginner Track (Freshers Only)", icon: <FaUserGraduate />, desc: (<>Simplify hostel finances. Design an intuitive budgeting app that helps students track expenses, split bills, manage shared utilities, and avoid end-of-month money stress through clean UI and smart reminders.
-</>),},
-  { title: "Financial Games & Finopoly - Game Development", icon: <FaGamepad />, desc: (<>Turn finance into fun. Create a finance-inspired game where earning, spending, trading, and risk drive gameplay, helping players learn financial concepts through strategy, storytelling, and interaction.
-</>),},
-  { title: "Quantifying the Markets - Machine Learning", icon: <FaChartLine />, desc: (<>Decode market data with machine learning. Analyze real-world financial datasets to identify trends, volatility, and short-term forecasts, focusing on strong quantitative reasoning and clear insights.
-</>),},
-  { title: "Open Innovation", icon: <FaLightbulb />, desc: (<>
-No rules, no limits. Bring bold, unconventional ideas that redefine finance - whether through health, accessibility, blockchain, or any unexpected intersection.
-</>),},
-];
-
-const words = ["You", "FinTech ", "AI Revolution ","Innovation", "Blockchain "];
-
-// const sponsors = [
-//   {
-//     name: "YRI Fellowship",
-//     image: yrilogo,
-//     website: 'https://www.yriscience.com/'
-//   },
-//   {
-//     name: "InterviewBuddy",
-//     image: interviewbuddylogo,
-//     website: 'https://interviewbuddy.net/'
-//   },
-//   {
-//     name: "xyz",
-//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-//     website: 'https://www.sponsor3.com'
-//   },
-//   {
-//     name: "abcd",
-//     image: 'https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp',
-//     website: 'https://www.sponsor4.com'
-//   }
-// ];
-=======
-// import interviewbuddylogo from "./SponsorImages/interviewbuddy.png";
-// import yrilogo from "./SponsorImages/yri.png";
 
 // const prizes = [
 //   {
@@ -192,6 +118,11 @@ const faqs = [
     answer:
       "No, accommodation and travelling expenses will not be provided by the organizers.",
   },
+  {
+    question: "I've joined a team, but I'm not verified yet. What should I do?",
+    answer:
+      "Once your team leader has created the team, individual verification may take some time. The verification process can take up to 12 hours. If you are still not verified after 12 hours, please tag us on the Discord server for assistance.",
+  },
 ];
 
 const problemStatements = [
@@ -213,7 +144,7 @@ const problemStatements = [
     desc: (
       <>
         Develop a semantic scene segmentation model for off-road environments
-        using synthetic desert imagery generated via Duality AI’s Falcon digital
+        using synthetic desert imagery generated via Duality AI's Falcon digital
         twin platform. The model should accurately classify terrain and object
         classes and demonstrate strong generalization when evaluated on unseen
         desert locations.
@@ -266,7 +197,6 @@ const problemStatements = [
   },
 ];
 
-
 const words = [
   "You",
   "FinTech ",
@@ -285,16 +215,6 @@ const words = [
 //     name: "InterviewBuddy",
 //     image: interviewbuddylogo,
 //     website: "https://interviewbuddy.net/",
-//   },
-//   {
-//     name: "xyz",
-//     image: "https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp",
-//     website: "https://www.sponsor3.com",
-//   },
-//   {
-//     name: "abcd",
-//     image: "https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp",
-//     website: "https://www.sponsor4.com",
 //   },
 // ];
 
@@ -329,10 +249,8 @@ const Hackathon = () => {
   }, []);
 
   useEffect(() => {
-    // GSAP Setup & Animations
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-    // Floating Crypto Icons
     gsap.utils.toArray(".crypto-icon").forEach((icon, index) => {
       gsap.to(icon, {
         y: index % 2 === 0 ? 20 : -20,
@@ -344,7 +262,6 @@ const Hackathon = () => {
       });
     });
 
-    // Hero Section - Staggered Entrance
     gsap.from(
       [
         ".hackathonhero-title",
@@ -360,7 +277,6 @@ const Hackathon = () => {
       },
     );
 
-    // Sections - Fade-in on Scroll
     const sections = [
       ".about-container",
       ".features-title",
@@ -383,7 +299,6 @@ const Hackathon = () => {
       });
     });
 
-    // Timeline Events - Slide In
     gsap.utils.toArray(".timeline-event").forEach((event, index) => {
       gsap.from(event, {
         opacity: 0,
@@ -398,7 +313,6 @@ const Hackathon = () => {
       });
     });
 
-    // Track & FAQ Cards Animation
     gsap.from(".faq-card", {
       opacity: 0,
       y: 30,
@@ -408,7 +322,7 @@ const Hackathon = () => {
       scrollTrigger: {
         trigger: ".faqs-container",
         start: "top 85%",
-        once: true, // 🔒 never hides again
+        once: true,
       },
     });
 
@@ -426,7 +340,6 @@ const Hackathon = () => {
       });
     });
 
-    // Star Background Effect
     document.querySelectorAll(".star-container").forEach((container) => {
       container.innerHTML = "";
       for (let i = 0; i < 200; i++) {
@@ -439,7 +352,6 @@ const Hackathon = () => {
       }
     });
 
-    // Hero Word Animation
     const tl = gsap.timeline({ repeat: -1 });
     words.forEach((word) => {
       tl.to(".hackathonhero-title span", {
@@ -466,7 +378,7 @@ const Hackathon = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const prevProblem = () => {
     setCurrentIndex((prev) =>
@@ -484,70 +396,51 @@ const Hackathon = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // const handleClick = (website) => {
-  //   window.open(website, "_blank");
-  // };
-
-  // const [flipped, setFlipped] = useState([false, false, false]);
-
-  // const handleFlip = (index) => {
-  //   const updated = [...flipped];
-  //   updated[index] = !updated[index];
-  //   setFlipped(updated);
-  // };
-
   const [activeContent, setActiveContent] = useState("content1");
 
   const handleMouseOver = (id) => {
     setActiveContent(id);
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const sidebarLinks = document.querySelectorAll(".sidebar-icon");
 
-useEffect(() => {
-  const sections = document.querySelectorAll('section[id]');
-  const sidebarLinks = document.querySelectorAll('.sidebar-icon');
+    const handleScroll = () => {
+      let currentSection = "";
 
-  const handleScroll = () => {
-    let currentSection = '';
-    
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      
-      // Check if we're in this section (with some offset for better UX)
-      if (window.scrollY >= sectionTop - 150) {
-        currentSection = section.getAttribute('id');
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 150) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      if (window.scrollY < 100) {
+        currentSection = "hero";
       }
-    });
 
-    // Special handling for hero section (when at top of page)
-    if (window.scrollY < 100) {
-      currentSection = 'hero';
-    }
+      sidebarLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
 
-    // Remove active class from all icons
-    sidebarLinks.forEach((link) => {
-      link.classList.remove('active');
-    });
+      sidebarLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (
+          (href === "#" && currentSection === "hero") ||
+          href === `#${currentSection}`
+        ) {
+          link.classList.add("active");
+        }
+      });
+    };
 
-    // Add active class to current section's icon
-    sidebarLinks.forEach((link) => {
-      const href = link.getAttribute('href');
-      if (
-        (href === '#' && currentSection === 'hero') ||
-        (href === `#${currentSection}`)
-      ) {
-        link.classList.add('active');
-      }
-    });
-  };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Call once on mount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
-  
   return (
     <div className="hackathon-container">
       <div className="sidebar">
@@ -578,7 +471,6 @@ useEffect(() => {
           <div className="crypto-icon bitcoin">
             <FaBitcoin size={50} />
           </div>
-          {/* <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div> */}
           <div className="crypto-icon ethereum">
             <FaEthereum size={45} />
           </div>
@@ -588,7 +480,6 @@ useEffect(() => {
           <div className="crypto-icon cardano">
             <SiCardano size={42} />
           </div>
-
           <div className="crypto-icon ripple">
             <SiRipple size={38} />
           </div>
@@ -607,7 +498,6 @@ useEffect(() => {
             alt="DEVFOLIO LOGO"
           ></div>
         </div>
-        {/* Fallback button if Devfolio doesn't load */}
         {!devfolioLoaded && (
           <a
             href="https://pay-load.devfolio.co/"
@@ -618,18 +508,6 @@ useEffect(() => {
             Apply with Devfolio
           </a>
         )}
-
-        {/* <a
-        href="https://pay-load.devfolio.co/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
-          <img
-          src={devfolioBtn}
-          alt="Apply with Devfolio"
-          className="devfolio-button"
-          />
-        </a> */}
       </section>
 
       {/* About Section */}
@@ -659,7 +537,7 @@ useEffect(() => {
             { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
           ].map((feature, index) => (
             <div className="feature-card" key={index}>
-              {feature.icon} {/* Renders the respective icon */}
+              {feature.icon}
               <h3 className="feature-text">{feature.text}</h3>
             </div>
           ))}
@@ -684,6 +562,7 @@ useEffect(() => {
         </div>
       </section>
 
+      {/* Tracks Section */}
       <section id="tracks">
         <h2 className="tracks-title">Tracks</h2>
         <div className="tracks-body">
@@ -805,7 +684,7 @@ useEffect(() => {
                   </div>
                   <div className="tracks-textBx">
                     <h3>Blockchain</h3>
-                    <p>OnChain Rewards(Ethereum Track)</p>
+                    <p>OnChain Rewards (Ethereum Track)</p>
                   </div>
                 </div>
               </div>
@@ -828,7 +707,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Problem-Carousel */}
+      {/* Problem Carousel */}
       <section className="problem-carousel">
         <div className="star-container"></div>
         <h2 className="carousel-title">Problem Statements</h2>
@@ -841,10 +720,7 @@ useEffect(() => {
             let position = "";
             if (index === currentIndex) {
               position = "active";
-            } else if (
-              index ===
-              (currentIndex + 1) % problemStatements.length
-            ) {
+            } else if (index === (currentIndex + 1) % problemStatements.length) {
               position = "right";
             } else if (
               index ===
@@ -878,54 +754,6 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Sponsors Slider */}
-      {/* <div className="sponsor-slider-section">
-        <h2>Our Sponsors</h2>
-        <div className="sponsor-slider">
-          <div className="slider-track">
-            {sponsors.concat(sponsors).concat(sponsors).map((sponsor, index) => (
-              <div
-                className="hack-slide"
-                onClick={() => handleClick(sponsor.website)}
-              >
-                <div className="sponsor-card">
-                  <img src={sponsor.image} alt={sponsor.name} />
-                  <span className="sponsor-name">{sponsor.name}</span>
-                </div>  
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* Prizes Section */}
-      {/* <div className="prizes-section">
-        <div className="star-container">  </div>
-        <h2> Prizes</h2>
-        <div className="prizes-container">
-          {prizes.map((prize, index) => (
-            <div
-              key={index}
-              className={`prize-card prize-${index} ${flipped[index] ? 'flipped' : ''}`}
-              onClick={() => handleFlip(index)}
-            >
-              <div className="card-inner">
-                <div className="card-front">
-                  <div className="medal-icon">{prize.medal}</div>
-                  <h3>{prize.title}</h3>
-                  <p>{prize.short}</p>
-                  <button>More</button>
-                </div>
-                <div className="card-back">
-                  <p>{prize.detail}</p>
-                  <button>Back</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
       {/* FAQs Section */}
       <section id="faqs" className="faqs">
         <div className="star-container"></div>
@@ -940,11 +768,9 @@ useEffect(() => {
               <h3 className="faq-question">
                 {faq.question} {openFAQ === index ? "▼" : "▶"}
               </h3>
-              {
-                <p className={`faq-answer ${openFAQ === index ? "open" : ""}`}>
-                  {faq.answer}
-                </p>
-              }
+              <p className={`faq-answer ${openFAQ === index ? "open" : ""}`}>
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>
