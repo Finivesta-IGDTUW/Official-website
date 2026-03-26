@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./finweek.css";
-import bannerImg from "./banner.png";
+// import bannerImg from "./banner.png";
 
 import pitchdeskImg from "./plan.png";
 import moneymasterclassImg from "./moneymasterclass.jpg";
