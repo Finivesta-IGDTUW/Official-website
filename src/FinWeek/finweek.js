@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import "./finweek.css";
 import bannerImg from "./banner.png";
 
-import event1Img from "./mun.png";
-import event2Img from "./plan.png";
-import event3Img from "./plan.png";
-import event4Img from "./plan.png";
+import pitchdeskImg from "./plan.png";
+import moneymasterclassImg from "./moneymasterclass.jpg";
+import speakersessionImg from "./speakersession.png";
 
 
 export default function FinWeek() {
@@ -17,51 +16,39 @@ export default function FinWeek() {
     const EVENTS = [
       {
         number:  "01",
-        title:   "PLAN YOUR PENNIES",
-        sub:     "DAY 1 · AUDITORIUM A",
-        desc:    "The ultimate personal finance challenge. Build a budget, defend your decisions, and outlast the competition. Ideal for aspiring financial planners.",
-        date:    "14 FEB 2025",
-        venue:   "Auditorium A",
-        team:    "2 Members",
-        link:    "https://unstop.com/o/vCRnEi7?lb=PiK21U6&utm_medium=Share&utm_source=competitions&utm_campaign=Finivigd80267",
-        preview: event1Img,           
-        previewAlt: "Plan Your Pennies event poster",
+        title:   "Pitch Desk 2.0",
+        // sub:     "2 Rounds · ",
+        desc:    "With 500+ submissions last year on Unstop, Pitch Desk 2.0 is back to scale innovation to the next level! COMPETE. INNOVATE. PITCH. WIN",
+        date:    "25 March 2026",
+        venue:   "Seminar Hall",
+        team:    " 1-4 members",
+        link:    null,
+        preview: pitchdeskImg,
+        previewAlt: "pitch desk 2.0 poster",
       },
       {
         number:  "02",
-        title:   "FINMUN",
-        sub:     "DAY 1 · SEMINAR HALL",
-        desc:    "A Model UN with a financial twist. Debate global economic policy, negotiate trade deals, and pass resolutions that shape fictional economies.",
-        date:    "14 FEB 2025",
-        venue:   "Seminar Hall",
-        team:    "1–2 Members",
-        link:    "https://unstop.com/o/vpOF9xL?lb=PiK21U6&utm_medium=Share&utm_source=conferences&utm_campaign=Finivigd80267",
-        preview: event2Img,
-        previewAlt: "FinMUN event poster",
+        title:   "Money MasterClass",
+        // sub:     "2 Rounds · ",
+        desc:    "Ever wondered what to do with your first paycheck? 💭Should you save, invest, or spend? This session will guide you through smart financial decisions from Day 1!",
+        date:    "26 March 2026",
+        venue:   "Online",
+        // team:    " 1-4 members",
+        link:    null,
+        preview: moneymasterclassImg,
+        previewAlt: "money masterclass poster",
       },
       {
         number:  "03",
-        title:   "EVENT THREE",
-        sub:     "DAY 2 · VENUE TBA",
-        desc:    "Details coming soon. Stay tuned for updates on this exciting FinWeek 2.0 event.",
-        date:    "15 FEB 2025",
-        venue:   "TBA",
-        team:    "TBA",
-        link:    null,
-        preview: event3Img,
-        previewAlt: "Event Three poster",
-      },
-      {
-        number:  "04",
-        title:   "EVENT FOUR",
-        sub:     "DAY 2 · VENUE TBA",
-        desc:    "Details coming soon. Stay tuned for updates on this exciting FinWeek 2.0 event.",
-        date:    "15 FEB 2025",
-        venue:   "TBA",
-        team:    "TBA",
-        link:    null,
-        preview: event4Img,
-        previewAlt: "Event Four poster",
+        title:   "Speaker Session: From Engineering to Finance",
+        // sub:     "2 Rounds · ",
+        desc:    "Join us for an insightful speaker session on “From Engineering to Finance: Cracking the Transition” featuring Nikita Garg, Credit Trading Desk Analyst at Barclays. Discover how to pivot your career into finance, build the right skill set, and gain practical insights from real industry experience.",
+        date:    "27 March 2026",
+        venue:   "Online",
+        // team:    " 1-4 members",
+        link:    "https://chat.whatsapp.com/Gfxg2YGlXd9AX7wBc0XQQD?mode=gi_t",
+        preview: speakersessionImg,
+        previewAlt: "speaker session poster",
       },
     ];
 
@@ -73,7 +60,9 @@ export default function FinWeek() {
 
     if (!stage || !deckWrap) return;
 
-    // ── HOVER PREVIEW BUBBLE ────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // HOVER PREVIEW BUBBLE  (mobile only — hidden via CSS on desktop)
+    // ─────────────────────────────────────────────────────
     const preview = document.createElement("div");
     preview.id = "fw-preview";
     preview.innerHTML = `
@@ -81,7 +70,8 @@ export default function FinWeek() {
         <img id="fw-preview-img" src="" alt="" />
         <div id="fw-preview-placeholder">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
             <polyline points="21 15 16 10 5 21"/>
           </svg>
           <span>No preview</span>
@@ -95,50 +85,162 @@ export default function FinWeek() {
     const previewPlaceholder = document.getElementById("fw-preview-placeholder");
     let hideTimer = null;
 
-function showPreview(card, ev) {
-  clearTimeout(hideTimer);
+    // FIX: showPreview positions bubble ABOVE card on mobile to prevent clipping
+    function showPreview(card, ev) {
+      clearTimeout(hideTimer);
+      if (ev.preview) {
+        previewImg.src = ev.preview;
+        previewImg.alt = ev.previewAlt || "";
+        previewImg.style.display = "block";
+        previewPlaceholder.style.display = "none";
+      } else {
+        previewImg.style.display = "none";
+        previewPlaceholder.style.display = "flex";
+      }
 
-  if (ev.preview) {
-    previewImg.src = ev.preview;
-    previewImg.alt = ev.previewAlt || "";
-    previewImg.style.display = "block";
-    previewPlaceholder.style.display = "none";
-  } else {
-    previewImg.style.display = "none";
-    previewPlaceholder.style.display = "flex";
-  }
+      const cardRect   = card.getBoundingClientRect();
+      const previewW   = 200;
+      const previewH   = 240;
+      const gap        = 12;
+      const mobile     = window.innerWidth < 768;
 
-  // Use viewport coords — position fixed, left of the card
-  const cardRect = card.getBoundingClientRect();
-  const previewWidth = 200;
-  const gap = 24;
+      if (mobile) {
+        // Place bubble ABOVE the card, horizontally centered and clamped to viewport
+        const centerX    = cardRect.left + cardRect.width / 2;
+        const bubbleLeft = Math.max(8, Math.min(
+          centerX - previewW / 2,
+          window.innerWidth - previewW - 8
+        ));
+        const bubbleTop  = cardRect.top - previewH - gap - 12;
 
-  preview.style.position   = "fixed";           // ← fixed not absolute
-  preview.style.top        = (cardRect.top + cardRect.height / 2) + "px";
-  preview.style.left       = (cardRect.left - previewWidth - gap - 12) + "px"; // 12 = tail width
-  preview.style.right      = "auto";
-  preview.style.opacity    = "1";
-  preview.style.transform  = "translateY(-50%) scale(1)";
-  preview.style.visibility = "visible";
-}
+        preview.style.flexDirection = "column";
+        preview.style.alignItems    = "center";
+        preview.style.top           = Math.max(8, bubbleTop) + "px";
+        preview.style.left          = bubbleLeft + "px";
+        preview.style.right         = "auto";
+        preview.style.transform     = "scale(1)";
+      } else {
+        // Desktop: to the left of the card
+        preview.style.flexDirection = "row";
+        preview.style.alignItems    = "center";
+        preview.style.top           = (cardRect.top + cardRect.height / 2) + "px";
+        preview.style.left          = (cardRect.left - previewW - gap - 12) + "px";
+        preview.style.right         = "auto";
+        preview.style.transform     = "translateY(-50%) scale(1)";
+      }
+
+      preview.style.opacity    = "1";
+      preview.style.visibility = "visible";
+    }
 
     function hidePreview() {
       hideTimer = setTimeout(() => {
         preview.style.opacity    = "0";
-        preview.style.transform  = "translateY(-50%) scale(0.92)";
+        preview.style.transform  = "scale(0.92)";
         preview.style.visibility = "hidden";
       }, 80);
     }
 
-    // ── BUILD TIMELINE LINE ────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // DESKTOP MODAL
+    // ─────────────────────────────────────────────────────
+    const modalOverlay = document.createElement("div");
+    modalOverlay.id = "fw-modal-overlay";
+    modalOverlay.innerHTML = `
+      <div id="fw-modal-box">
+        <div id="fw-modal-poster">
+          <div id="fw-modal-poster-gradient"></div>
+          <div id="fw-modal-close">✕</div>
+        </div>
+        <div id="fw-modal-body">
+          <span id="fw-modal-number"></span>
+          <div id="fw-modal-title"></div>
+          <div id="fw-modal-sub"></div>
+          <p id="fw-modal-desc"></p>
+          <div id="fw-modal-meta"></div>
+          <div id="fw-modal-divider"></div>
+          <div id="fw-modal-register-wrap"></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalOverlay);
+
+    const modalClose        = document.getElementById("fw-modal-close");
+    const modalPoster       = document.getElementById("fw-modal-poster");
+    const modalNumber       = document.getElementById("fw-modal-number");
+    const modalTitle        = document.getElementById("fw-modal-title");
+    const modalSub          = document.getElementById("fw-modal-sub");
+    const modalDesc         = document.getElementById("fw-modal-desc");
+    const modalMeta         = document.getElementById("fw-modal-meta");
+    const modalRegisterWrap = document.getElementById("fw-modal-register-wrap");
+
+    function openModal(ev) {
+      if (ev.preview) {
+        modalPoster.style.backgroundImage = `url(${ev.preview})`;
+      } else {
+        modalPoster.style.backgroundImage = "none";
+        modalPoster.style.background = "#111";
+      }
+
+      modalNumber.textContent = `— ${ev.number}`;
+      modalTitle.textContent  = ev.title;
+      modalSub.textContent    = ev.sub;
+      modalDesc.textContent   = ev.desc;
+
+      modalMeta.innerHTML = `
+        <div class="fw-modal-meta-item">
+          <span class="fw-modal-meta-label">DATE</span>
+          <span class="fw-modal-meta-value">${ev.date}</span>
+        </div>
+        <div class="fw-modal-meta-item">
+          <span class="fw-modal-meta-label">VENUE</span>
+          <span class="fw-modal-meta-value">${ev.venue}</span>
+        </div>
+        ${ev.team ? `
+  <div class="fw-modal-meta-item">
+    <span class="fw-modal-meta-label">TEAM SIZE</span>
+    <span class="fw-modal-meta-value">${ev.team}</span>
+  </div>` : ''}
+      `;
+
+      modalRegisterWrap.innerHTML = ev.link
+        ? `<a class="fw-register-btn" href="${ev.link}" target="_blank" rel="noopener noreferrer">
+             REGISTER NOW
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+             </svg>
+           </a>`
+        : `<span class="fw-coming-soon">EVENT OVER</span>`;
+
+      modalOverlay.classList.add("open");
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove("open");
+    }
+
+    modalClose.addEventListener("click", closeModal);
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    // ─────────────────────────────────────────────────────
+    // TIMELINE LINE
+    // ─────────────────────────────────────────────────────
     const timelineLine = document.createElement("div");
     timelineLine.id = "fw-timeline-line";
     deckWrap.appendChild(timelineLine);
 
-    // ── BUILD CARDS ────────────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // BUILD CARDS
+    // ─────────────────────────────────────────────────────
     EVENTS.forEach((ev, i) => {
       const card = document.createElement("div");
       card.className = "fw-card";
+
+      if (ev.preview) {
+        card.style.setProperty("--fw-poster", `url(${ev.preview})`);
+      }
 
       const registerHTML = ev.link
         ? `<a class="fw-register-btn" href="${ev.link}" target="_blank" rel="noopener noreferrer">
@@ -153,10 +255,12 @@ function showPreview(card, ev) {
         <div class="fw-card-inner">
           <div class="fw-card-back">FINWEEK 2.0</div>
           <div class="fw-card-front">
+            <div class="fw-poster-bg"></div>
+            <div class="fw-poster-gradient"></div>
             <div class="fw-card-dot"></div>
             <span class="fw-card-number">— ${ev.number}</span>
             <span class="fw-card-title">${ev.title}</span>
-            <span class="fw-card-sub">${ev.sub}</span>
+            ${ev.sub ? `<span class="fw-card-sub">${ev.sub}</span>` : ''}
           </div>
         </div>
         <div class="fw-card-detail">
@@ -170,19 +274,24 @@ function showPreview(card, ev) {
               <span class="fw-detail-meta-label">VENUE</span>
               <span class="fw-detail-meta-value">${ev.venue}</span>
             </div>
-            <div class="fw-detail-meta-item">
+            ${ev.team ? `
+              <div class="fw-detail-meta-item">
               <span class="fw-detail-meta-label">TEAM SIZE</span>
               <span class="fw-detail-meta-value">${ev.team}</span>
-            </div>
+              </div>` : ''}
           </div>
           <div class="fw-detail-divider"></div>
           ${registerHTML}
         </div>
       `;
 
-      // hover listeners — only show preview when timeline is expanded
+      if (ev.preview) {
+        const posterBg = card.querySelector(".fw-poster-bg");
+        if (posterBg) posterBg.style.backgroundImage = `url(${ev.preview})`;
+      }
+
       card.addEventListener("mouseenter", () => {
-        if (isExpanded) showPreview(card, ev);
+        if (isExpanded && isMobileView()) showPreview(card, ev);
       });
       card.addEventListener("mouseleave", hidePreview);
 
@@ -193,7 +302,13 @@ function showPreview(card, ev) {
     let isExpanded = false;
     let openIndex  = -1;
 
-    // ── HELPERS ────────────────────────────────────────────
+    function isMobileView() {
+      return window.innerWidth < 768;
+    }
+
+    // ─────────────────────────────────────────────────────
+    // MOBILE HELPERS
+    // ─────────────────────────────────────────────────────
     function getCardTop(i, openIdx) {
       let top = 0;
       for (let j = 0; j < i; j++) {
@@ -211,15 +326,17 @@ function showPreview(card, ev) {
 
     function repositionCards(openIdx) {
       const totalH = getTotalHeight(openIdx);
-      deckWrap.style.height      = totalH + "px";
-      timelineLine.style.height  = totalH + "px";
+      deckWrap.style.height     = totalH + "px";
+      timelineLine.style.height = totalH + "px";
       cards.forEach((card, i) => {
         card.style.top = getCardTop(i, openIdx) + "px";
         card.classList.toggle("open", i === openIdx);
       });
     }
 
-    // ── OPEN STACKED ──────────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // OPEN STACKED
+    // ─────────────────────────────────────────────────────
     function openDeck() {
       stage.classList.add("active");
       isExpanded = false;
@@ -242,61 +359,100 @@ function showPreview(card, ev) {
 
       if (hintEl) {
         hintEl.style.opacity = "1";
-        hintEl.textContent   = "CLICK STACK TO EXPAND TIMELINE";
+        hintEl.textContent   = "CLICK STACK TO EXPAND";
       }
     }
 
-    // ── EXPAND TIMELINE ───────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // EXPAND
+    // ─────────────────────────────────────────────────────
     function expandTimeline() {
       if (isExpanded) return;
       isExpanded = true;
       openIndex  = -1;
 
-      if (hintEl) hintEl.style.opacity = "0";
-
-      const totalH = getTotalHeight(-1);
+      if (hintEl) {
+        hintEl.style.opacity = "1";
+        hintEl.textContent   = isMobileView()
+          ? "CLICK AN EVENT FOR DETAILS"
+          : "HOVER TO PREVIEW · CLICK FOR DETAILS";
+        setTimeout(() => { hintEl.style.opacity = "0"; }, 2200);
+      }
 
       deckWrap.classList.remove("stacked");
       deckWrap.classList.add("expanded");
 
-      deckWrap.style.width      = "380px";
-      deckWrap.style.height     = totalH + "px";
-      deckWrap.style.marginLeft = "30px";
+      if (isMobileView()) {
+        // ── MOBILE: vertical timeline ──────────────────
+        const totalH = getTotalHeight(-1);
+        deckWrap.style.width      = "380px";
+        deckWrap.style.height     = totalH + "px";
+        deckWrap.style.marginLeft = "30px";
 
-      cards.forEach((card, i) => {
-        const targetTop = i * (CARD_H + GAP);
-        setTimeout(() => {
-          card.style.left = "30px";
-          card.style.top  = targetTop + "px";
-        }, i * 80);
-        setTimeout(() => {
-          card.classList.add("flipped");
-        }, 200 + i * 120);
-      });
+        cards.forEach((card, i) => {
+          const targetTop = i * (CARD_H + GAP);
+          setTimeout(() => {
+            card.style.left = "30px";
+            card.style.top  = targetTop + "px";
+          }, i * 80);
+          setTimeout(() => {
+            card.classList.add("flipped");
+          }, 200 + i * 120);
+        });
 
-      setTimeout(() => {
-        timelineLine.style.left   = "14px";
-        timelineLine.style.height = totalH + "px";
-      }, 300);
+        setTimeout(() => {
+          timelineLine.style.left   = "14px";
+          timelineLine.style.height = getTotalHeight(-1) + "px";
+        }, 300);
+
+      } else {
+        // ── DESKTOP: horizontal poster cards ──────────
+        deckWrap.style.width      = "auto";
+        deckWrap.style.height     = "auto";
+        deckWrap.style.marginLeft = "0";
+
+        cards.forEach((card, i) => {
+          card.style.top       = "";
+          card.style.left      = "";
+          card.style.opacity   = "0";
+          card.style.transform = "translateY(18px)";
+          card.style.transition = "opacity 0.4s ease, transform 0.4s cubic-bezier(0.34,1.2,0.64,1)";
+          setTimeout(() => {
+            card.style.opacity   = "1";
+            card.style.transform = "translateY(0px)";
+          }, 80 + i * 100);
+        });
+      }
     }
 
-    // ── COLLAPSE ──────────────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // COLLAPSE (close the whole stage)
+    // ─────────────────────────────────────────────────────
     function closeDeck() {
       stage.classList.remove("active");
       isExpanded = false;
       openIndex  = -1;
       deckWrap.style.marginLeft = "0";
+      deckWrap.style.width      = "";
+      deckWrap.style.height     = "";
       cards.forEach((c) => {
-        c.style.top  = "0px";
-        c.style.left = "0px";
+        c.style.top       = "";
+        c.style.left      = "";
+        c.style.opacity   = "";
+        c.style.transform = "";
+        c.style.transition = "";
         c.classList.remove("flipped", "open");
       });
       timelineLine.style.height = "0";
+      closeModal();
       hidePreview();
     }
 
-    // ── CLICK LISTENERS ───────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // CLICK LISTENERS
+    // ─────────────────────────────────────────────────────
     banner && banner.addEventListener("click", openDeck);
+    expandTimeline();
 
     deckWrap.addEventListener("click", (e) => {
       if (!isExpanded) { expandTimeline(); return; }
@@ -308,8 +464,12 @@ function showPreview(card, ev) {
       const idx = Array.from(cards).indexOf(card);
       if (idx === -1) return;
 
-      openIndex = openIndex === idx ? -1 : idx;
-      repositionCards(openIndex);
+      if (isMobileView()) {
+        openIndex = openIndex === idx ? -1 : idx;
+        repositionCards(openIndex);
+      } else {
+        openModal(EVENTS[idx]);
+      }
     });
 
     stage.addEventListener("click", (e) => {
@@ -318,22 +478,31 @@ function showPreview(card, ev) {
 
     closeBtn && closeBtn.addEventListener("click", closeDeck);
 
-    // ── CLEANUP ───────────────────────────────────────────
+    // ─────────────────────────────────────────────────────
+    // CLEANUP
+    // ─────────────────────────────────────────────────────
     return () => {
-        clearTimeout(hideTimer);
-        banner   && banner.removeEventListener("click", openDeck);
-        closeBtn && closeBtn.removeEventListener("click", closeDeck);
-        deckWrap.innerHTML = "";
-        if (document.body.contains(preview)) document.body.removeChild(preview); // ← updated
+      clearTimeout(hideTimer);
+      banner   && banner.removeEventListener("click", openDeck);
+      closeBtn && closeBtn.removeEventListener("click", closeDeck);
+      modalClose.removeEventListener("click", closeModal);
+      deckWrap.innerHTML = "";
+      if (document.body.contains(preview))       document.body.removeChild(preview);
+      if (document.body.contains(modalOverlay))  document.body.removeChild(modalOverlay);
     };
   }, []);
 
   return (
     <div className="fw-body">
-      <div id="fw-banner">
+      {/* <div id="fw-banner">
         <img src={bannerImg} alt="FinWeek 2.0" />
-      </div>
-      <div id="fw-stage">
+      </div> */}
+      
+      <div id="fw-stage" className="active">
+        <div id="fw-stage-header">
+          <div id="fw-heading">FINWEEK <span>2.0</span></div>
+          <p id="fw-subheading">Our Events</p>
+        </div>
         <div id="fw-deck-wrap" className="stacked"></div>
       </div>
       <div id="fw-close-btn">✕ CLOSE</div>

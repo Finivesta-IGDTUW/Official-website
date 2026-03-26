@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --fw-lime: #C8F135;
+  --fw-lime: #5f8e33;
   --fw-dark: #0a0a0a;
   --fw-card-w: 340px;
   --fw-card-h: 72px;
 }
 
-.fw-body {
-  background: var(--fw-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: 'Barlow Condensed', sans-serif;
-}
+
 
 /* ── BANNER ─────────────────────────────────────────── */
-#fw-banner {
+/* #fw-banner {
   width: 900px;
   max-width: 95vw;
   border-radius: 12px;
@@ -30,13 +23,53 @@
   transform: scale(1.01);
   box-shadow: 0 0 80px rgba(200,241,53,0.25);
 }
-#fw-banner img { width: 100%; display: block; }
+#fw-banner img { width: 100%; display: block; } */
 
+#fw-stage-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 32px;
+  align-self: flex-start;
+}
+
+#fw-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 5px;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+#fw-heading span {
+  color: var(--fw-lime);
+}
+
+#fw-subheading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #444;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.fw-body {
+  background: var(--fw-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif;
+}
 /* ── STAGE ──────────────────────────────────────────── */
 #fw-stage {
   position: fixed;
   inset: 0;
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgba(0,0,0,0.93);
@@ -167,7 +200,7 @@
   letter-spacing: 3px;
 }
 
-/* ── CARD FRONT (collapsed timeline row) ────────────── */
+/* ── CARD FRONT (mobile timeline row) ───────────────── */
 .fw-card-front {
   transform: rotateX(180deg);
   background: #0d0d0d;
@@ -229,8 +262,7 @@
   font-weight: 600;
 }
 
-/* ── EXPANDED DETAIL PANEL ──────────────────────────── */
-/* The panel slides down inside the same card when .open */
+/* ── MOBILE EXPANDED DETAIL PANEL ───────────────────── */
 .fw-card-detail {
   position: absolute;
   top: var(--fw-card-h);
@@ -260,7 +292,6 @@
   pointer-events: all;
 }
 
-/* detail text */
 .fw-detail-desc {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 14px;
@@ -268,8 +299,6 @@
   line-height: 1.55;
   letter-spacing: 0.3px;
 }
-
-/* detail meta row */
 .fw-detail-meta {
   display: flex;
   gap: 20px;
@@ -295,8 +324,6 @@
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-
-/* divider */
 .fw-detail-divider {
   width: 100%;
   height: 1px;
@@ -326,15 +353,9 @@
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(200,241,53,0.3);
 }
-.fw-register-btn:active {
-  transform: translateY(0);
-}
-.fw-register-btn svg {
-  width: 13px;
-  height: 13px;
-}
+.fw-register-btn:active { transform: translateY(0); }
+.fw-register-btn svg { width: 13px; height: 13px; }
 
-/* coming soon tag */
 .fw-coming-soon {
   font-family: 'Space Mono', monospace;
   font-size: 9px;
@@ -347,21 +368,19 @@
   align-self: flex-start;
 }
 
-/* ── HOVER PREVIEW BUBBLE ───────────────────────────────── */
+/* ── HOVER PREVIEW BUBBLE (mobile only) ─────────────── */
 #fw-preview {
-  position: fixed;        /* ← was absolute */
-  transform: translateY(-50%) scale(0.92);
+  position: fixed;
+  transform: scale(0.92);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.22s ease, transform 0.22s ease;
   pointer-events: none;
-  z-index: 9999;          /* ← higher so it clears navbar etc */
+  z-index: 9999;
   display: flex;
   align-items: center;
   gap: 0;
 }
-
-/* the box itself */
 #fw-preview-inner {
   width: 200px;
   height: 240px;
@@ -376,16 +395,12 @@
   flex-shrink: 0;
   position: relative;
 }
-
-/* image inside */
 #fw-preview-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-/* placeholder when no image */
 #fw-preview-placeholder {
   width: 100%;
   height: 100%;
@@ -400,8 +415,6 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-/* speech-bubble tail pointing RIGHT (toward the card) */
 #fw-preview-tail {
   width: 0;
   height: 0;
@@ -411,7 +424,6 @@
   flex-shrink: 0;
   position: relative;
 }
-/* inner tail to fake border */
 #fw-preview-tail::after {
   content: '';
   position: absolute;
@@ -423,8 +435,6 @@
   border-bottom: 9px solid transparent;
   border-left:   11px solid #0e0e0e;
 }
-
-/* lime accent corner strip */
 #fw-preview-inner::after {
   content: '';
   position: absolute;
@@ -435,3 +445,383 @@
   background: var(--fw-lime);
   opacity: 0.7;
 }
+
+/* ═══════════════════════════════════════════════════════
+   DESKTOP HORIZONTAL POSTER CARDS  (min-width: 768px)
+═══════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+
+  #fw-deck-wrap.expanded {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    gap: 16px;
+    cursor: default;
+    position: static;
+  }
+
+  #fw-deck-wrap.expanded .fw-card {
+    position: static !important;
+    width: 178px !important;
+    height: 268px !important;
+    flex-shrink: 0;
+    transform: none !important;
+    border-radius: 14px;
+    overflow: hidden;
+    transition:
+      transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1),
+      box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  #fw-deck-wrap.expanded .fw-card:hover {
+    transform: translateY(-10px) scale(1.04) !important;
+    box-shadow:
+      0 28px 60px rgba(0,0,0,0.7),
+      0 0 0 2px rgba(200,241,53,0.35) !important;
+    z-index: 10;
+  }
+
+  #fw-deck-wrap.expanded .fw-card .fw-card-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    transform: rotateX(0deg) !important;
+    transition: none;
+  }
+
+  /* desktop card front = poster image */
+  #fw-deck-wrap.expanded .fw-card .fw-card-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    border: 2px solid #1e1e1e;
+    border-left: 2px solid #1e1e1e !important;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #111;
+    height: 100%;
+    gap: 0;
+    cursor: pointer;
+    transition: border-color 0.25s ease;
+    transform: rotateX(0deg) !important;
+    backface-visibility: visible !important;
+  }
+
+  #fw-deck-wrap.expanded .fw-card:hover .fw-card-front {
+    border-color: rgba(200,241,53,0.5) !important;
+  }
+
+  /* poster bg */
+  #fw-deck-wrap.expanded .fw-card .fw-poster-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    transition: transform 0.5s ease;
+  }
+  #fw-deck-wrap.expanded .fw-card:hover .fw-poster-bg {
+    transform: scale(1.07);
+  }
+
+  /* gradient */
+  #fw-deck-wrap.expanded .fw-card .fw-poster-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.45) 42%,
+      transparent      68%
+    );
+  }
+
+  #fw-deck-wrap.expanded .fw-card .fw-card-back { display: none !important; }
+  #fw-deck-wrap.expanded .fw-card .fw-card-dot { display: none; }
+
+  #fw-deck-wrap.expanded .fw-card .fw-card-number {
+    position: relative;
+    z-index: 2;
+    font-size: 8px;
+    opacity: 0.5;
+    padding: 0 12px;
+    margin-bottom: 2px;
+    color: var(--fw-lime);
+  }
+  #fw-deck-wrap.expanded .fw-card .fw-card-title {
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
+    padding: 0 12px;
+    line-height: 1.1;
+    color: #fff;
+  }
+  #fw-deck-wrap.expanded .fw-card .fw-card-sub {
+    position: relative;
+    z-index: 2;
+    font-size: 9px;
+    color: #999;
+    padding: 3px 12px 12px;
+    letter-spacing: 0.8px;
+  }
+
+  #fw-deck-wrap.expanded .fw-card-detail { display: none !important; }
+  #fw-timeline-line { display: none; }
+  #fw-preview { display: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   DESKTOP MODAL POPUP
+═══════════════════════════════════════════════════════ */
+#fw-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+}
+#fw-modal-overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#fw-modal-box {
+  position: relative;
+  width: 480px;
+  max-width: 92vw;
+  background: #0e0e0e;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(200,241,53,0.07),
+    0 40px 100px rgba(0,0,0,0.9),
+    0 0 80px rgba(200,241,53,0.05);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.38s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+#fw-modal-overlay.open #fw-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+#fw-modal-poster {
+  width: 100%;
+  height: 210px;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  flex-shrink: 0;
+}
+#fw-modal-poster-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, #0e0e0e 100%);
+}
+
+#fw-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  border: 1px solid #333;
+  color: #999;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-family: 'Space Mono', monospace;
+  line-height: 1;
+}
+#fw-modal-close:hover {
+  background: rgba(200,241,53,0.12);
+  color: var(--fw-lime);
+  border-color: var(--fw-lime);
+}
+
+#fw-modal-body {
+  padding: 4px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#fw-modal-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: var(--fw-lime);
+  letter-spacing: 3px;
+  opacity: 0.55;
+}
+#fw-modal-title {
+  font-family: 'Bebas Neue';
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  margin-top: -2px;
+}
+#fw-modal-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-top: -8px;
+  text-transform: uppercase;
+}
+#fw-modal-desc {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  color: #888;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  border-left: 2px solid #222;
+  padding-left: 14px;
+  margin: 0;
+}
+#fw-modal-meta {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+.fw-modal-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.fw-modal-meta-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  color: var(--fw-lime);
+  letter-spacing: 2px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.fw-modal-meta-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#fw-modal-divider {
+  width: 100%;
+  height: 1px;
+  background: #1a1a1a;
+}
+
+#fw-modal-register-wrap .fw-register-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 17px;
+  padding: 14px 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+#fw-modal-register-wrap .fw-coming-soon {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 14px 0;
+  box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES  (max-width: 767px)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* FIX 1: Center deck vertically so blank space below is gone */
+  #fw-stage {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 16px 80px;
+    overflow-y: auto;
+  }
+  #fw-stage.active {
+    display: flex;
+  }
+
+  /* FIX 2: Correct deck width + left margin for timeline dot */
+  #fw-deck-wrap {
+    position: relative;
+  }
+  #fw-deck-wrap.expanded {
+    width: calc(100vw - 56px) !important;
+    max-width: 360px;
+    margin-left: 28px !important;
+  }
+
+  /* cards fill the deck width */
+  #fw-deck-wrap.expanded .fw-card {
+    width: 100% !important;
+  }
+
+  /* FIX 3: Preview bubble tail points downward (bubble is above card) */
+  #fw-preview {
+    flex-direction: column !important;
+    align-items: center !important;
+    transform: scale(0.92);
+  }
+
+  #fw-preview-tail {
+    width: 0 !important;
+    height: 0 !important;
+    border-left:   10px solid transparent !important;
+    border-right:  10px solid transparent !important;
+    border-top:    12px solid #2a2a2a !important;
+    border-bottom: none !important;
+  }
+  #fw-preview-tail::after {
+    content: '' !important;
+    position: absolute !important;
+    top: unset !important;
+    bottom: 2px !important;
+    left: -9px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left:   9px solid transparent !important;
+    border-right:  9px solid transparent !important;
+    border-top:    11px solid #0e0e0e !important;
+    border-bottom: none !important;
+  }
+
+  /* hint text */
+  #fw-hint {
+    font-size: 8px;
+    white-space: normal;
+    text-align: center;
+    width: 90vw;
+    left: 5vw;
+    transform: none;
+  }
+
+  #fw-close-btn {
+    top: 14px;
+    right: 16px;
+    font-size: 9px;
+  }
+}
+

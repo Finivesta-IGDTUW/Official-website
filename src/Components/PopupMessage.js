@@ -24,7 +24,7 @@ export default function PopupMessage() {
     setShowPopup(false);
     // Set the flag before navigation
     sessionStorage.setItem("popupShown", "true");
-    navigate("/hackathon");
+    navigate("/finweek");
   };
 
   if (!showPopup) return null;
@@ -39,14 +39,14 @@ export default function PopupMessage() {
           ✕
         </button>
 
-        <h2>Payload'26</h2>
-        <p>Finivesta's FinTech Hackathon!<br></br>Click on the banner to know more details</p>
+        <h2>FinWeek 2.0</h2>
+        <p>Finivesta's presents FinWeek 2.0 with various exciting events!<br></br>Click on the banner to know more details</p>
         <br/>
         <button
           onClick={handleNewsletterClick}
           className="button"
         >
-          Apply Now!
+          Check out
         </button>
       </div>
     </div>
