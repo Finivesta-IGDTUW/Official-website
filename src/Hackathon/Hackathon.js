@@ -20,7 +20,6 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaRobot,
-  // FaGlobe,
   FaUserGraduate,
   FaHome,
   FaInfoCircle,
@@ -29,10 +28,6 @@ import {
   FaRocket,
   FaStar,
 } from "react-icons/fa";
-// import devfolioBtn from "./apply-with-devfolio.png";
-//sponsors logos
-// import interviewbuddylogo from "./SponsorImages/interviewbuddy.png";
-// import yrilogo from "./SponsorImages/yri.png";
 
 // const prizes = [
 //   {
@@ -123,6 +118,11 @@ const faqs = [
     answer:
       "No, accommodation and travelling expenses will not be provided by the organizers.",
   },
+  {
+    question: "I've joined a team, but I'm not verified yet. What should I do?",
+    answer:
+      "Once your team leader has created the team, individual verification may take some time. The verification process can take up to 12 hours. If you are still not verified after 12 hours, please tag us on the Discord server for assistance.",
+  },
 ];
 
 const problemStatements = [
@@ -144,7 +144,7 @@ const problemStatements = [
     desc: (
       <>
         Develop a semantic scene segmentation model for off-road environments
-        using synthetic desert imagery generated via Duality AI’s Falcon digital
+        using synthetic desert imagery generated via Duality AI's Falcon digital
         twin platform. The model should accurately classify terrain and object
         classes and demonstrate strong generalization when evaluated on unseen
         desert locations.
@@ -216,16 +216,6 @@ const words = [
 //     image: interviewbuddylogo,
 //     website: "https://interviewbuddy.net/",
 //   },
-//   {
-//     name: "xyz",
-//     image: "https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp",
-//     website: "https://www.sponsor3.com",
-//   },
-//   {
-//     name: "abcd",
-//     image: "https://blithchron.iitgn.ac.in/_astro/InterviewBuddy.BVkItRdN.webp",
-//     website: "https://www.sponsor4.com",
-//   },
 // ];
 
 const Hackathon = () => {
@@ -259,10 +249,8 @@ const Hackathon = () => {
   }, []);
 
   useEffect(() => {
-    // GSAP Setup & Animations
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-    // Floating Crypto Icons
     gsap.utils.toArray(".crypto-icon").forEach((icon, index) => {
       gsap.to(icon, {
         y: index % 2 === 0 ? 20 : -20,
@@ -274,7 +262,6 @@ const Hackathon = () => {
       });
     });
 
-    // Hero Section - Staggered Entrance
     gsap.from(
       [
         ".hackathonhero-title",
@@ -290,7 +277,6 @@ const Hackathon = () => {
       },
     );
 
-    // Sections - Fade-in on Scroll
     const sections = [
       ".about-container",
       ".features-title",
@@ -313,7 +299,6 @@ const Hackathon = () => {
       });
     });
 
-    // Timeline Events - Slide In
     gsap.utils.toArray(".timeline-event").forEach((event, index) => {
       gsap.from(event, {
         opacity: 0,
@@ -328,7 +313,6 @@ const Hackathon = () => {
       });
     });
 
-    // Track & FAQ Cards Animation
     gsap.from(".faq-card", {
       opacity: 0,
       y: 30,
@@ -338,7 +322,7 @@ const Hackathon = () => {
       scrollTrigger: {
         trigger: ".faqs-container",
         start: "top 85%",
-        once: true, // 🔒 never hides again
+        once: true,
       },
     });
 
@@ -356,7 +340,6 @@ const Hackathon = () => {
       });
     });
 
-    // Star Background Effect
     document.querySelectorAll(".star-container").forEach((container) => {
       container.innerHTML = "";
       for (let i = 0; i < 200; i++) {
@@ -369,7 +352,6 @@ const Hackathon = () => {
       }
     });
 
-    // Hero Word Animation
     const tl = gsap.timeline({ repeat: -1 });
     words.forEach((word) => {
       tl.to(".hackathonhero-title span", {
@@ -396,7 +378,7 @@ const Hackathon = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const prevProblem = () => {
     setCurrentIndex((prev) =>
@@ -414,23 +396,50 @@ const Hackathon = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // const handleClick = (website) => {
-  //   window.open(website, "_blank");
-  // };
-
-  // const [flipped, setFlipped] = useState([false, false, false]);
-
-  // const handleFlip = (index) => {
-  //   const updated = [...flipped];
-  //   updated[index] = !updated[index];
-  //   setFlipped(updated);
-  // };
-
   const [activeContent, setActiveContent] = useState("content1");
 
   const handleMouseOver = (id) => {
     setActiveContent(id);
   };
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const sidebarLinks = document.querySelectorAll(".sidebar-icon");
+
+    const handleScroll = () => {
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 150) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      if (window.scrollY < 100) {
+        currentSection = "hero";
+      }
+
+      sidebarLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      sidebarLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (
+          (href === "#" && currentSection === "hero") ||
+          href === `#${currentSection}`
+        ) {
+          link.classList.add("active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="hackathon-container">
@@ -456,13 +465,12 @@ const Hackathon = () => {
       </div>
 
       {/* Hero Section */}
-      <section id="" className="hackathonhero">
+      <section id="hero" className="hackathonhero">
         <div className="star-container"></div>
         <div className="crypto-icons">
           <div className="crypto-icon bitcoin">
             <FaBitcoin size={50} />
           </div>
-          {/* <div className="crypto-icon bitcoin"><FaBitcoin size={50} /></div> */}
           <div className="crypto-icon ethereum">
             <FaEthereum size={45} />
           </div>
@@ -472,7 +480,6 @@ const Hackathon = () => {
           <div className="crypto-icon cardano">
             <SiCardano size={42} />
           </div>
-
           <div className="crypto-icon ripple">
             <SiRipple size={38} />
           </div>
@@ -491,7 +498,6 @@ const Hackathon = () => {
             alt="DEVFOLIO LOGO"
           ></div>
         </div>
-        {/* Fallback button if Devfolio doesn't load */}
         {!devfolioLoaded && (
           <a
             href="https://pay-load.devfolio.co/"
@@ -502,18 +508,6 @@ const Hackathon = () => {
             Apply with Devfolio
           </a>
         )}
-
-        {/* <a
-        href="https://pay-load.devfolio.co/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
-          <img
-          src={devfolioBtn}
-          alt="Apply with Devfolio"
-          className="devfolio-button"
-          />
-        </a> */}
       </section>
 
       {/* About Section */}
@@ -543,7 +537,7 @@ const Hackathon = () => {
             { text: "Learning", icon: <FaBookOpen className="feature-icon" /> },
           ].map((feature, index) => (
             <div className="feature-card" key={index}>
-              {feature.icon} {/* Renders the respective icon */}
+              {feature.icon}
               <h3 className="feature-text">{feature.text}</h3>
             </div>
           ))}
@@ -568,6 +562,7 @@ const Hackathon = () => {
         </div>
       </section>
 
+      {/* Tracks Section */}
       <section id="tracks">
         <h2 className="tracks-title">Tracks</h2>
         <div className="tracks-body">
@@ -689,7 +684,7 @@ const Hackathon = () => {
                   </div>
                   <div className="tracks-textBx">
                     <h3>Blockchain</h3>
-                    <p>OnChain Rewards(Ethereum Track)</p>
+                    <p>OnChain Rewards (Ethereum Track)</p>
                   </div>
                 </div>
               </div>
@@ -712,7 +707,7 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Problem-Carousel */}
+      {/* Problem Carousel */}
       <section className="problem-carousel">
         <div className="star-container"></div>
         <h2 className="carousel-title">Problem Statements</h2>
@@ -725,10 +720,7 @@ const Hackathon = () => {
             let position = "";
             if (index === currentIndex) {
               position = "active";
-            } else if (
-              index ===
-              (currentIndex + 1) % problemStatements.length
-            ) {
+            } else if (index === (currentIndex + 1) % problemStatements.length) {
               position = "right";
             } else if (
               index ===
@@ -762,54 +754,6 @@ const Hackathon = () => {
         </div>
       </section>
 
-      {/* Sponsors Slider */}
-      {/* <div className="sponsor-slider-section">
-        <h2>Our Sponsors</h2>
-        <div className="sponsor-slider">
-          <div className="slider-track">
-            {sponsors.concat(sponsors).concat(sponsors).map((sponsor, index) => (
-              <div
-                className="hack-slide"
-                onClick={() => handleClick(sponsor.website)}
-              >
-                <div className="sponsor-card">
-                  <img src={sponsor.image} alt={sponsor.name} />
-                  <span className="sponsor-name">{sponsor.name}</span>
-                </div>  
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* Prizes Section */}
-      {/* <div className="prizes-section">
-        <div className="star-container">  </div>
-        <h2> Prizes</h2>
-        <div className="prizes-container">
-          {prizes.map((prize, index) => (
-            <div
-              key={index}
-              className={`prize-card prize-${index} ${flipped[index] ? 'flipped' : ''}`}
-              onClick={() => handleFlip(index)}
-            >
-              <div className="card-inner">
-                <div className="card-front">
-                  <div className="medal-icon">{prize.medal}</div>
-                  <h3>{prize.title}</h3>
-                  <p>{prize.short}</p>
-                  <button>More</button>
-                </div>
-                <div className="card-back">
-                  <p>{prize.detail}</p>
-                  <button>Back</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
       {/* FAQs Section */}
       <section id="faqs" className="faqs">
         <div className="star-container"></div>
@@ -824,11 +768,9 @@ const Hackathon = () => {
               <h3 className="faq-question">
                 {faq.question} {openFAQ === index ? "▼" : "▶"}
               </h3>
-              {
-                <p className={`faq-answer ${openFAQ === index ? "open" : ""}`}>
-                  {faq.answer}
-                </p>
-              }
+              <p className={`faq-answer ${openFAQ === index ? "open" : ""}`}>
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>
