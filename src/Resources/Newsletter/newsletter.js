@@ -8,12 +8,22 @@ import new3 from '../Images/Newsletter/new3.png';
 import new4 from '../Images/Newsletter/new4.png';
 import new5 from '../Images/Newsletter/new5.png';
 import new6 from '../Images/Newsletter/jan.png';
+import new7 from '../Images/Newsletter/new7.png';
 
 
 const sessions = [
   {
+    id: 8,
+    title: "July Edition",
+    tenure: "2026-27",
+    image: new7,
+    link:'/Newsletter7.pdf'
+
+  },
+  {
     id: 7,
     title: "January Edition",
+    tenure: "2025-26",
     image: new6,
     link:'/Newsletter6.pdf'
 
@@ -23,6 +33,7 @@ const sessions = [
   {
     id: 6,
     title: "December Edition",
+    tenure: "2025-26",
     image: new5,
     link: '/Newsletter5.pdf',
   },
@@ -31,6 +42,7 @@ const sessions = [
   {
     id: 5,
     title: "November Edition",
+    tenure: "2025-26",
     image: new4,
     link: '/Newsletter4.pdf',
   },
@@ -38,6 +50,7 @@ const sessions = [
   {
     id: 4,
     title: "October Edition",
+    tenure: "2025-26",
     image: new3,
     link: '/Newsletter3.pdf',
   },
@@ -45,24 +58,28 @@ const sessions = [
   {
     id: 3,
     title: "September Edition",
+    tenure: "2025-26",
     image: new1,
     link: '/Newsletter1.pdf',
   },
   {
     id: 2,
     title: "August Edition",
+    tenure: "2025-26",
     image: new2,
     link: '/Newsletter2.pdf',
   },
   {
     id: 1,
     title: "24-25 Recap",
+    tenure: "2025-26",
     image: new0,
     link: '/Newsletter0.pdf',
   },
 ];
 
 const Newsletter = () => {
+  const tenures = [...new Set(sessions.map((session) => session.tenure))];
   return (
     <div className="MoneyMasterclass">
       <div className="header newslettermc">
@@ -71,22 +88,29 @@ const Newsletter = () => {
           A monthly dose of finance news and insights, delivered straight to you. <br />– an initiative by Finivesta
         </p>
       </div>
+      {tenures.map((tenure) => (
+        <section key={tenure}>
+          <h1 className="year">Tenure: {tenure}</h1>
 
-      <div className="resourcesbox">
-        {sessions.map((session) => (
-          <div key={session.id} className="boxsmall">
-            <a href={session.link} target="_blank" rel="noreferrer">
-              <div className="img review">
-                <img src={session.image} alt={`${session.title} Cover`} loading="lazy"/>
+          <div className="resourcesbox">
+            {sessions
+            .filter((session) => session.tenure === tenure)
+            .map((session) => (
+              <div key={session.id} className="boxsmall">
+                <a href={session.link} target="_blank" rel="noreferrer">
+                  <div className="img review">
+                    <img src={session.image} alt={`${session.title} Cover`} loading="lazy"/>
+                  </div>
+                  <div className="text">
+                    <h2>{session.title}</h2>
+                    <p>{session.description}</p>
+                  </div>
+                </a>
               </div>
-              <div className="text">
-                <h2>{session.title}</h2>
-                <p>{session.description}</p>
-              </div>
-            </a>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+      ))}
     </div>
   );
 };

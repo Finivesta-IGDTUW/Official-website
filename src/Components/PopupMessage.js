@@ -24,7 +24,7 @@ export default function PopupMessage() {
     setShowPopup(false);
     // Set the flag before navigation
     sessionStorage.setItem("popupShown", "true");
-    navigate("/finweek");
+    navigate("/resources/newsletter");
   };
 
   if (!showPopup) return null;
@@ -39,8 +39,8 @@ export default function PopupMessage() {
           ✕
         </button>
 
-        <h2>FinWeek 2.0</h2>
-        <p>Finivesta's presents FinWeek 2.0 with various exciting events!<br></br>Click on the banner to know more details</p>
+        <h2>Stay Updated</h2>
+        <p>Check out our newsletter for the latest updates!</p>
         <br/>
         <button
           onClick={handleNewsletterClick}
