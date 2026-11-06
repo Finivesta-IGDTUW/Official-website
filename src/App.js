@@ -24,6 +24,11 @@ import Newsletter from "./Resources/Newsletter/newsletter";
 import FinWeek from "./FinWeek/finweek.js";
 
 import Game from "./Games/Game.js";
+import QuizLanding from "./Quiz/QuizLanding";
+import QuizPlay from "./Quiz/QuizPlay";
+import QuizResult from "./Quiz/QuizResult";
+import QuizLeaderboard from "./Quiz/QuizLeaderboard";
+import QuizAdmin from "./Quiz/QuizAdmin";
 /*
 import BudgetingGameOne from "./Games/BudgetingGame/one.js";
 import BudgetingGameTwo from "./Games/BudgetingGame/two.js";
@@ -113,7 +118,8 @@ import Hackathon from "./Hackathon/Hackathon";
 const AppContent = () => {
   const location = useLocation();
   const isGameFullScreen =
-    location.pathname.startsWith("/games/") && location.pathname !== "/games/";
+    (location.pathname.startsWith("/games/") && location.pathname !== "/games/") ||
+    location.pathname.startsWith("/quiz");
 
   /*
   const location = useLocation();
@@ -372,6 +378,12 @@ const AppContent = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/games" element={<Game />} />
           <Route path="/games/wordle" element={<Wordle />} />
+
+          <Route path="/quiz" element={<QuizLanding />} />
+          <Route path="/quiz/admin" element={<QuizAdmin />} />
+          <Route path="/quiz/play" element={<QuizPlay />} />
+          <Route path="/quiz/result" element={<QuizResult />} />
+          <Route path="/quiz/leaderboard" element={<QuizLeaderboard />} />
 
           {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
