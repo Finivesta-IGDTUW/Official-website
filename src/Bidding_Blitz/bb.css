@@ -25,14 +25,14 @@
   display: block;
   position: relative;
   width: 100%;
-  height: clamp(90px, 25vw, 280px);
+  aspect-ratio: 851 / 315;
   min-height: 0;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #0b0d0b;
-  background-image: url("./FiniLogo.png");
-  background-size: contain;
+  background-image: url("./banner.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -236,6 +236,100 @@
   overflow-wrap: anywhere;
 }
 
+/* FAQ */
+.bidding-blitz-page .faq {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(45px, 7vw, 90px) 8%;
+  background: #0b0d0b;
+  color: #dfe8dd;
+}
+
+.bidding-blitz-page .faq h2 {
+  margin: 0 0 clamp(24px, 4vw, 40px);
+  font-size: clamp(32px, 5vw, 62px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+}
+
+.bidding-blitz-page .faq h2 span {
+  color: #4c792f;
+}
+
+.bidding-blitz-page .faq-list {
+  max-width: 900px;
+  border-top: 1px solid #2a2f29;
+}
+
+.bidding-blitz-page .faq-item {
+  border-bottom: 1px solid #2a2f29;
+}
+
+.bidding-blitz-page .faq-item summary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 36px 20px 0;
+  position: relative;
+  color: #fbfbfb;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  list-style: none;
+}
+
+.bidding-blitz-page .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.bidding-blitz-page .faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #71b139;
+  font-size: 26px;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.bidding-blitz-page .faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bidding-blitz-page .faq-item summary:hover,
+.bidding-blitz-page .faq-item summary:focus-visible {
+  color: #d0ffa0;
+}
+
+.bidding-blitz-page .faq-number {
+  flex-shrink: 0;
+  color: #71b139;
+}
+
+.bidding-blitz-page .faq-item p {
+  margin: 0;
+  padding: 0 36px 22px 0;
+  color: #a0a89e;
+  font-size: clamp(14px, 1.4vw, 17px);
+  line-height: 1.8;
+}
+
+.bidding-blitz-page .faq-note {
+  max-width: 900px;
+  margin: 28px 0 0;
+  color: #71b139;
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 700;
+}
+
 /* Registration */
 .bidding-blitz-page .register {
   display: block;
@@ -287,10 +381,6 @@
 
 /* Tablet and mobile */
 @media (max-width: 760px) {
-  .bidding-blitz-page .banner {
-    height: clamp(85px, 22vw, 155px);
-  }
-
   .bidding-blitz-page .hero {
     height: auto;
     min-height: 0;
@@ -364,10 +454,6 @@
 
 /* Small phones */
 @media (max-width: 400px) {
-  .bidding-blitz-page .banner {
-    height: 85px;
-  }
-
   .bidding-blitz-page .hero {
     padding: 32px 5% 40px;
   }
