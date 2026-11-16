@@ -27,14 +27,6 @@ export default function PopupMessage() {
     navigate("/biddingblitz");
   };
 
-
-  const handleNewsletterClick = () => {
-    setShowPopup(false);
-    // Set the flag before navigation
-    sessionStorage.setItem("popupShown", "true");
-    navigate("/resources/newsletter");
-  };
-
   if (!showPopup) return null;
 
   return (

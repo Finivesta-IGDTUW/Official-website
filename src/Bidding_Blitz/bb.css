@@ -47,6 +47,7 @@
   width: 100%;
   height: auto;
   min-height: auto;
+  aspect-ratio: auto;
   min-width: 0;
   margin: 0;
   padding: clamp(40px, 7vw, 85px) 5%;
