@@ -50,7 +50,7 @@ const Home = () => {
 
      <section 
   className="hero" 
-  onClick={() => window.location.href = '/resources/newsletter'}
+  onClick={() => window.location.href = '/biddingblitz'}
   style={{ cursor: 'pointer' }}
 >
         
