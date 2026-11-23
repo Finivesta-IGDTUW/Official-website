@@ -39,8 +39,8 @@ export default function PopupMessage() {
           ✕
         </button>
 
-        <h2>Register Now</h2>
-        <p>Bidding Blitz is live!</p>
+        <h2>Bidding Blitz</h2>
+        <p>Coming soon!</p>
         <br/>
         <button
           onClick={handleBiddingBlitzClick}

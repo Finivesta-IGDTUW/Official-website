@@ -1,6 +1,8 @@
 
 import "./bb.css";
 
+// Unused while registration shows "Coming soon"; keep for when it opens
+// eslint-disable-next-line no-unused-vars
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdBzF2uxvI1VNnNr-IBf-2Q0b63KfUT0dyJg4L0fD_wyUfnKg/viewform?usp=publish-editor";
 
@@ -56,14 +58,9 @@ function BiddingBlitz() {
             The game is on. Are you ready to make your move?
           </p>
 
-          <a
-            className="button button-primary"
-            //href={GOOGLE_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <span className="button button-primary">
             COMING SOON!
-          </a>
+          </span>
         </div>
       </section>
 
@@ -133,14 +130,9 @@ function BiddingBlitz() {
 
         <p>Secure your spot. Let the bidding begin.</p>
 
-        <a
-          className="button button-primary"
-          //href={GOOGLE_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <span className="button button-primary">
           COMING SOON!
-        </a>
+        </span>
       </section>
     </main>
   );
