@@ -11,10 +11,19 @@ import new6 from '../Images/Newsletter/jan.png';
 import new7 from '../Images/Newsletter/new7.png';
 import new8 from '../Images/Newsletter/feb.png';
 import new9 from '../Images/Newsletter/new8.png';
+import new10 from '../Images/Newsletter/new9.png';
 
 
 
 const sessions = [
+  {
+    id: 11,
+    title: "September Edition",
+    tenure: "2026-27",
+    image: new10,
+    link:'/Newsletter9.pdf'
+
+  },
   {
     id: 10,
     title: "August Edition",

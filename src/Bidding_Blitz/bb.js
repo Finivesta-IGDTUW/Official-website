@@ -58,11 +58,11 @@ function BiddingBlitz() {
 
           <a
             className="button button-primary"
-            href={GOOGLE_FORM_URL}
+            //href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Register Now
+            COMING SOON!
           </a>
         </div>
       </section>
@@ -88,14 +88,16 @@ function BiddingBlitz() {
               The details are coming soon.
             </p>
 
+            {/*
             <a
               className="button button-outline"
-              href={GOOGLE_FORM_URL}
+              //href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
               I'm Interested <span>↗</span>
             </a>
+            */}
           </div>
         </div>
       </section>
@@ -133,11 +135,11 @@ function BiddingBlitz() {
 
         <a
           className="button button-primary"
-          href={GOOGLE_FORM_URL}
+          //href={GOOGLE_FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Register for Bidding Blitz 
+          COMING SOON!
         </a>
       </section>
     </main>
